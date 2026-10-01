@@ -1,0 +1,4 @@
+This is a multi-page admin dashboard application called AdminLTE.
+The sidebar navigation links all pages together.
+Pages: Dashboard (main overview with stats and widgets), Dashboard v2 (alternate dashboard layout), Dashboard v3 (another dashboard variant), Starter (blank starter template), Users (user management page).
+Navigation flows from the sidebar menu present on all pages.

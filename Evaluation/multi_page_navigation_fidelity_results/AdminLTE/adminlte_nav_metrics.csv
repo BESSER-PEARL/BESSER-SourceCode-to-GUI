@@ -1,0 +1,2 @@
+application,pages,nav_topology,domain,gt_links,extracted_links,TP,FP,FN,precision_pct,recall_pct,f1_pct,screen_completeness_pct,entry_point_correct,targetscreen_binding_pct,react_pages_generated,react_nav_wired
+AdminLTE Dashboard,5,hierarchical_sidebar,admin back-office,20,20,20,0,0,100.0,100.0,100.0,100,True,100,5,True

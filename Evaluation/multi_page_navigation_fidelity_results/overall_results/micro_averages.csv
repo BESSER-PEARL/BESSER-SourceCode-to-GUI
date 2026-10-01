@@ -1,0 +1,2 @@
+total_gt_links,total_extracted_links,total_TP,total_FP,total_FN,micro_precision_pct,micro_recall_pct,micro_f1_pct,total_nav_buttons,total_resolved_bindings,micro_binding_pct,cases_with_react_app,cases_included
+46,46,46,0,0,100.0,100.0,100.0,52,52,100.0,2/3,"Library Management App, Shards Dashboard, AdminLTE Dashboard"
