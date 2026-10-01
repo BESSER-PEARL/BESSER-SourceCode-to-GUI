@@ -1,0 +1,45 @@
+{
+  "buttons": [
+    {
+      "name": "AddToChartButton",
+      "label": "Add to Chart",
+      "action_type": "Add"
+    }
+  ],
+  "forms": [],
+  "input_fields": [
+    {
+      "name": "DescriptionTabRadio",
+      "label": "Description",
+      "field_type": "Text"
+    },
+    {
+      "name": "DetailsTabRadio",
+      "label": "Details",
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "ProductImageSlider",
+      "label": null
+    },
+    {
+      "name": "ProductTitleHeader",
+      "label": "Stanley Kubrick \u2013 The Masterpiece Collection"
+    },
+    {
+      "name": "ProductPriceText",
+      "label": "\u20ac50.00"
+    },
+    {
+      "name": "DescriptionContent",
+      "label": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ut, aliquid rerum fugiat molestiae, mollitia inventore aut cupiditate. Omnis, asperiores minima?"
+    },
+    {
+      "name": "DetailsList",
+      "label": null
+    }
+  ]
+}

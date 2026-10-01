@@ -1,0 +1,225 @@
+{
+  "buttons": [
+    {
+      "name": "AddNewEmployeeButton",
+      "label": "Add New Employee",
+      "action_type": "OpenForm"
+    },
+    {
+      "name": "DeleteEmployeesButton",
+      "label": "Delete",
+      "action_type": "OpenForm"
+    },
+    {
+      "name": "EditEmployeeButton",
+      "label": "Edit",
+      "action_type": "Edit"
+    },
+    {
+      "name": "RowDeleteEmployeeButton",
+      "label": "Delete",
+      "action_type": "Delete"
+    },
+    {
+      "name": "PreviousPageButton",
+      "label": "Previous",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "Page1Button",
+      "label": "1",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "Page2Button",
+      "label": "2",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "Page3Button",
+      "label": "3",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "Page4Button",
+      "label": "4",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "Page5Button",
+      "label": "5",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "NextPageButton",
+      "label": "Next",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "AddEmployeeCloseModalButton",
+      "label": "×",
+      "action_type": "Cancel"
+    },
+    {
+      "name": "AddEmployeeCancelButton",
+      "label": "Cancel",
+      "action_type": "Cancel"
+    },
+    {
+      "name": "AddEmployeeSubmitButton",
+      "label": "Add",
+      "action_type": "Add"
+    },
+    {
+      "name": "EditEmployeeCloseModalButton",
+      "label": "×",
+      "action_type": "Cancel"
+    },
+    {
+      "name": "EditEmployeeCancelButton",
+      "label": "Cancel",
+      "action_type": "Cancel"
+    },
+    {
+      "name": "EditEmployeeSaveButton",
+      "label": "Save",
+      "action_type": "Save"
+    },
+    {
+      "name": "DeleteEmployeeCloseModalButton",
+      "label": "×",
+      "action_type": "Cancel"
+    },
+    {
+      "name": "DeleteEmployeeCancelButton",
+      "label": "Cancel",
+      "action_type": "Cancel"
+    },
+    {
+      "name": "DeleteEmployeeConfirmButton",
+      "label": "Delete",
+      "action_type": "Confirm"
+    }
+  ],
+  "forms": [
+    {
+      "name": "AddEmployeeForm"
+    },
+    {
+      "name": "EditEmployeeForm"
+    },
+    {
+      "name": "DeleteEmployeeForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "SelectAllCheckbox",
+      "label": null,
+      "field_type": "Text"
+    },
+    {
+      "name": "RowSelectCheckbox1",
+      "label": null,
+      "field_type": "Text"
+    },
+    {
+      "name": "RowSelectCheckbox2",
+      "label": null,
+      "field_type": "Text"
+    },
+    {
+      "name": "RowSelectCheckbox3",
+      "label": null,
+      "field_type": "Text"
+    },
+    {
+      "name": "RowSelectCheckbox4",
+      "label": null,
+      "field_type": "Text"
+    },
+    {
+      "name": "RowSelectCheckbox5",
+      "label": null,
+      "field_type": "Text"
+    },
+    {
+      "name": "AddEmployeeNameInput",
+      "label": "Name",
+      "field_type": "Text"
+    },
+    {
+      "name": "AddEmployeeEmailInput",
+      "label": "Email",
+      "field_type": "Email"
+    },
+    {
+      "name": "AddEmployeeAddressInput",
+      "label": "Address",
+      "field_type": "Text"
+    },
+    {
+      "name": "AddEmployeePhoneInput",
+      "label": "Phone",
+      "field_type": "Text"
+    },
+    {
+      "name": "EditEmployeeNameInput",
+      "label": "Name",
+      "field_type": "Text"
+    },
+    {
+      "name": "EditEmployeeEmailInput",
+      "label": "Email",
+      "field_type": "Email"
+    },
+    {
+      "name": "EditEmployeeAddressInput",
+      "label": "Address",
+      "field_type": "Text"
+    },
+    {
+      "name": "EditEmployeePhoneInput",
+      "label": "Phone",
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "EmployeeTable"
+    },
+    {
+      "name": "PaginationList"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "ManageEmployeesHeader",
+      "label": "Manage Employees"
+    },
+    {
+      "name": "EntriesHintText",
+      "label": "Showing 5 out of 25 entries"
+    },
+    {
+      "name": "AddEmployeeModalTitle",
+      "label": "Add Employee"
+    },
+    {
+      "name": "EditEmployeeModalTitle",
+      "label": "Edit Employee"
+    },
+    {
+      "name": "DeleteEmployeeModalTitle",
+      "label": "Delete Employee"
+    },
+    {
+      "name": "DeleteEmployeeConfirmationText",
+      "label": "Are you sure you want to delete these Records?"
+    },
+    {
+      "name": "DeleteEmployeeWarningText",
+      "label": "This action cannot be undone."
+    }
+  ]
+}

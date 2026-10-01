@@ -1,0 +1,107 @@
+{
+  "buttons": [
+    {
+      "name": "GenerateButton",
+      "label": "Generate",
+      "action_type": "SubmitForm"
+    },
+    {
+      "name": "ClearButton",
+      "label": "Clear",
+      "action_type": "Cancel"
+    },
+    {
+      "name": "DownloadButton",
+      "label": "Download",
+      "action_type": "Save"
+    },
+    {
+      "name": "ApiKeyHereLink",
+      "label": "HERE",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "ChatGpt4oHereLink",
+      "label": "HERE!",
+      "action_type": "Navigate"
+    }
+  ],
+  "forms": [
+    {
+      "name": "TextToSpeechGenerationForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "OpenAiApiKeyInput",
+      "label": "Input your OpenAI API key",
+      "field_type": "Text"
+    },
+    {
+      "name": "InputTextField",
+      "label": "Input Text:",
+      "field_type": "Text"
+    },
+    {
+      "name": "OutputFileNameInput",
+      "label": "File Name:",
+      "field_type": "Text"
+    },
+    {
+      "name": "SelectVoiceSelect",
+      "label": "Select Voice:",
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "PageHeader",
+      "label": "OpenAI Text To Speech Generation"
+    },
+    {
+      "name": "WelcomeDescription",
+      "label": "Welcome to Open Ai TTS Generation demo. Open Ai has one of the lowest cost for text to speech generation. Estimated cost of $0.015 per 1000 characters SD and $0.030 for HD."
+    },
+    {
+      "name": "ApiKeyInstructions",
+      "label": "You will need your own API key and have credit available. Sign up for your Open-AI API key HERE. Minimum credit deposit is only $5 + tax."
+    },
+    {
+      "name": "WarningNote",
+      "label": "Warning! This is a demo to show you TTS using JS, I suggest you modify the script to keep your own api key secure or use as a stand alone HTML file from your own device..."
+    },
+    {
+      "name": "UpdatesNotice",
+      "label": "Updates: additional New voices realeased Jan-25, check additonal script comments for generated speed and output formats"
+    },
+    {
+      "name": "NewChatGptLinkNotice",
+      "label": "**NEW** Build your own ChatGPT-4o using Javascript and Openai API HERE!"
+    },
+    {
+      "name": "UsageInstructions",
+      "label": "Enter or paste your text, add a file name, select your voice option."
+    },
+    {
+      "name": "CharacterCountAndCostLabel",
+      "label": "Character Count: 0. Estimated cost: $ 0"
+    },
+    {
+      "name": "SuccessMessageContainer",
+      "label": null
+    },
+    {
+      "name": "AudioPlayerLabel",
+      "label": "Listen to your genrated voice :"
+    },
+    {
+      "name": "AudioPlayerComponent",
+      "label": null
+    },
+    {
+      "name": "ErrorMessageContainer",
+      "label": null
+    }
+  ]
+}

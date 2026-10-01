@@ -1,0 +1,61 @@
+{
+  "buttons": [
+    {
+      "name": "LogoLinkButton",
+      "label": "Logo",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "HeroImageLinkButton",
+      "label": "Please enable images to view this content",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "ViewOnGitHubButton",
+      "label": "View on GitHub",
+      "action_type": "View"
+    },
+    {
+      "name": "SubscriptionSettingsButton",
+      "label": "subscription settings",
+      "action_type": "Settings"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "PreheaderText",
+      "label": "Available on\u00a0GitHub and\u00a0CodePen. Highly compatible. Designer friendly. More than 50%\u00a0of\u00a0total email opens occurred on\u00a0a\u00a0mobile device\u00a0\u2014 a\u00a0mobile-friendly design is\u00a0a\u00a0must for\u00a0email campaigns."
+    },
+    {
+      "name": "SupheaderText",
+      "label": "INTRODUCING"
+    },
+    {
+      "name": "HeaderText",
+      "label": "Responsive HTML email templates"
+    },
+    {
+      "name": "ParagraphText",
+      "label": "More than 50%\u00a0of\u00a0total email opens occurred on\u00a0a\u00a0mobile device\u00a0\u2014 a\u00a0mobile-friendly design is\u00a0a\u00a0must for\u00a0email campaigns."
+    },
+    {
+      "name": "FooterText",
+      "label": "This email template was sent to\u00a0you becouse we\u00a0want to\u00a0make the\u00a0world a\u00a0better place. You\u00a0could change your subscription settings anytime."
+    },
+    {
+      "name": "LogoImage",
+      "label": "Logo"
+    },
+    {
+      "name": "HeroImage",
+      "label": "Hero Image"
+    },
+    {
+      "name": "AnalyticsTrackerImage",
+      "label": null
+    }
+  ]
+}

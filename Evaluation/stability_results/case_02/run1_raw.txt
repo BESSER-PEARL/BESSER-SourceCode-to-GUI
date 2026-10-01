@@ -1,0 +1,74 @@
+{
+  "buttons": [
+    {
+      "name": "LogoLinkButton",
+      "label": "Logo",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "HeroImageLinkButton",
+      "label": "Please enable images to view this content",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "ExploreTemplatesButton",
+      "label": "Explore templates",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "GridItem1LinkButton",
+      "label": "Gerenal template",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "GridItem2LinkButton",
+      "label": "Grid Item",
+      "action_type": "Navigate"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "EmailTitle",
+      "label": "Get this responsive email template"
+    },
+    {
+      "name": "PreheaderText",
+      "label": "Available on GitHub and CodePen. Highly compatible. Designer friendly. More than 50% of total email opens occurred on a mobile device — a mobile-friendly design is a must for email campaigns."
+    },
+    {
+      "name": "HeaderText",
+      "label": "Explore responsive email templates"
+    },
+    {
+      "name": "SubheaderText",
+      "label": "Available on GitHub and CodePen"
+    },
+    {
+      "name": "HeroImage",
+      "label": "Please enable images to view this content"
+    },
+    {
+      "name": "MainParagraph",
+      "label": "More than 50% of total email opens occurred on a mobile device — a mobile-friendly design is a must for email campaigns."
+    },
+    {
+      "name": "LogoImage",
+      "label": "Logo"
+    },
+    {
+      "name": "GridItem1Image",
+      "label": "Grid Item"
+    },
+    {
+      "name": "GridItem1Description",
+      "label": "The perfect choice for any purpose of a message."
+    },
+    {
+      "name": "GridItem2Image",
+      "label": "Grid Item"
+    }
+  ]
+}

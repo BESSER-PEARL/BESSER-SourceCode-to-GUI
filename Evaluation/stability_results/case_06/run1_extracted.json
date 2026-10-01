@@ -1,0 +1,152 @@
+{
+  "buttons": [
+    {
+      "name": "LoginButton",
+      "label": "Login",
+      "action_type": "Login"
+    },
+    {
+      "name": "EmployeeTabButton",
+      "label": "Employee",
+      "action_type": "Select"
+    },
+    {
+      "name": "HirerTabButton",
+      "label": "Hirer",
+      "action_type": "Select"
+    },
+    {
+      "name": "EmployeeRegisterButton",
+      "label": "Register",
+      "action_type": "SubmitForm"
+    },
+    {
+      "name": "HirerRegisterButton",
+      "label": "Register",
+      "action_type": "SubmitForm"
+    }
+  ],
+  "forms": [
+    {
+      "name": "EmployeeRegistrationForm"
+    },
+    {
+      "name": "HirerRegistrationForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "EmployeeFirstNameInput",
+      "label": "First Name *",
+      "field_type": "Text"
+    },
+    {
+      "name": "EmployeeLastNameInput",
+      "label": "Last Name *",
+      "field_type": "Text"
+    },
+    {
+      "name": "EmployeePasswordInput",
+      "label": "Password *",
+      "field_type": "Password"
+    },
+    {
+      "name": "EmployeeConfirmPasswordInput",
+      "label": "Confirm Password *",
+      "field_type": "Password"
+    },
+    {
+      "name": "GenderMaleRadio",
+      "label": "Male",
+      "field_type": "Text"
+    },
+    {
+      "name": "GenderFemaleRadio",
+      "label": "Female",
+      "field_type": "Text"
+    },
+    {
+      "name": "EmployeeEmailInput",
+      "label": "Your Email *",
+      "field_type": "Email"
+    },
+    {
+      "name": "EmployeePhoneInput",
+      "label": "Your Phone *",
+      "field_type": "Tel"
+    },
+    {
+      "name": "EmployeeSecurityQuestionSelect",
+      "label": "Please select your Sequrity Question",
+      "field_type": "Text"
+    },
+    {
+      "name": "EmployeeSecurityAnswerInput",
+      "label": "Enter Your Answer *",
+      "field_type": "Text"
+    },
+    {
+      "name": "HirerFirstNameInput",
+      "label": "First Name *",
+      "field_type": "Text"
+    },
+    {
+      "name": "HirerLastNameInput",
+      "label": "Last Name *",
+      "field_type": "Text"
+    },
+    {
+      "name": "HirerEmailInput",
+      "label": "Email *",
+      "field_type": "Email"
+    },
+    {
+      "name": "HirerPhoneInput",
+      "label": "Phone *",
+      "field_type": "Tel"
+    },
+    {
+      "name": "HirerPasswordInput",
+      "label": "Password *",
+      "field_type": "Password"
+    },
+    {
+      "name": "HirerConfirmPasswordInput",
+      "label": "Confirm Password *",
+      "field_type": "Password"
+    },
+    {
+      "name": "HirerSecurityQuestionSelect",
+      "label": "Please select your Sequrity Question",
+      "field_type": "Text"
+    },
+    {
+      "name": "HirerSecurityAnswerInput",
+      "label": "`Answer *",
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "LogoImage",
+      "label": null
+    },
+    {
+      "name": "WelcomeHeader",
+      "label": "Welcome"
+    },
+    {
+      "name": "WelcomeMessage",
+      "label": "You are 30 seconds away from earning your own money!"
+    },
+    {
+      "name": "EmployeeRegistrationHeader",
+      "label": "Apply as a Employee"
+    },
+    {
+      "name": "HirerRegistrationHeader",
+      "label": "Apply as a Hirer"
+    }
+  ]
+}

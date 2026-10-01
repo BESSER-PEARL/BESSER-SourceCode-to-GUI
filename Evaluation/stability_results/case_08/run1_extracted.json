@@ -1,0 +1,67 @@
+{
+  "buttons": [
+    {
+      "name": "AddItemButton",
+      "label": "Add Item",
+      "action_type": "Add"
+    },
+    {
+      "name": "RemoveItemButton",
+      "label": "Remove",
+      "action_type": "Delete"
+    }
+  ],
+  "forms": [
+    {
+      "name": "AddItemForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "ItemNameInput",
+      "label": "Item Name:",
+      "field_type": "Text"
+    },
+    {
+      "name": "QuantityInput",
+      "label": "Quantity:",
+      "field_type": "Number"
+    },
+    {
+      "name": "AlertThresholdInput",
+      "label": "Alert Threshold:",
+      "field_type": "Number"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "InventoryTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "PageHeader",
+      "label": "Grocery Inventory Tracker"
+    },
+    {
+      "name": "AddItemSectionHeader",
+      "label": "Add Item"
+    },
+    {
+      "name": "InventoryListSectionHeader",
+      "label": "Inventory List"
+    },
+    {
+      "name": "ItemNameLabel",
+      "label": "Item Name:"
+    },
+    {
+      "name": "QuantityLabel",
+      "label": "Quantity:"
+    },
+    {
+      "name": "AlertThresholdLabel",
+      "label": "Alert Threshold:"
+    }
+  ]
+}

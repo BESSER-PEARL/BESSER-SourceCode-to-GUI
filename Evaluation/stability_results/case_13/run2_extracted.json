@@ -1,0 +1,30 @@
+{
+  "buttons": [
+    {
+      "name": "LogoLinkButton",
+      "label": null,
+      "action_type": "Navigate"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "SvgSpriteSheet",
+      "label": null
+    },
+    {
+      "name": "PageHeader",
+      "label": null
+    },
+    {
+      "name": "NavigationBar",
+      "label": null
+    },
+    {
+      "name": "LogoIcon",
+      "label": "forecastr logo"
+    }
+  ]
+}

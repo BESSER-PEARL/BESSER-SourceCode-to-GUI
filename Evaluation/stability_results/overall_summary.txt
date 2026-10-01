@@ -1,0 +1,41 @@
+Non-Determinism Study -- gpt-5.2 -- 3 runs per case
+Cases: 17  |  Valid run instances: 51
+
+Overall (mean +/- std across all run instances):
+  Structural F1 : 0.3011 +/- 0.1598
+  Type F1       : 0.6551 +/- 0.2390
+  Recall        : 0.8924 +/- 0.2598
+
+======================================================================
+LaTeX table:
+======================================================================
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{\scriptsize Category} & \textbf{\scriptsize Struct.\ F1} & \textbf{\scriptsize Type F1} & \textbf{\scriptsize Recall} \\
+\hline\hline
+\scriptsize 1 Social Apps & \scriptsize 0.454$\pm$0.041 & \scriptsize 1.000$\pm$0.000 & \scriptsize 1.000$\pm$0.000 \\
+\scriptsize 1 Social Apps & \scriptsize 0.135$\pm$0.014 & \scriptsize 0.667$\pm$0.000 & \scriptsize 1.000$\pm$0.000 \\
+\scriptsize 2 Search Engines & \scriptsize 0.273$\pm$0.009 & \scriptsize 0.571$\pm$0.000 & \scriptsize 1.000$\pm$0.000 \\
+\scriptsize 2 Search Engines & \scriptsize 0.353$\pm$0.014 & \scriptsize 0.400$\pm$0.000 & \scriptsize 1.000$\pm$0.000 \\
+\scriptsize 3 Registration & \scriptsize 0.280$\pm$0.012 & \scriptsize 0.857$\pm$0.000 & \scriptsize 1.000$\pm$0.000 \\
+\scriptsize 3 Registration & \scriptsize 0.182$\pm$0.000 & \scriptsize 0.857$\pm$0.000 & \scriptsize 1.000$\pm$0.000 \\
+\scriptsize 4 Inventory & \scriptsize 0.333$\pm$0.000 & \scriptsize 0.750$\pm$0.000 & \scriptsize 1.000$\pm$0.000 \\
+\scriptsize 4 Inventory & \scriptsize 0.169$\pm$0.018 & \scriptsize 0.333$\pm$0.000 & \scriptsize 1.000$\pm$0.000 \\
+\scriptsize 5 Educational & \scriptsize 0.533$\pm$0.000 & \scriptsize 0.800$\pm$0.000 & \scriptsize 1.000$\pm$0.000 \\
+\scriptsize 5 Educational & \scriptsize 0.177$\pm$0.007 & \scriptsize 0.667$\pm$0.000 & \scriptsize 1.000$\pm$0.000 \\
+\scriptsize 6 E-Commerce & \scriptsize 0.169$\pm$0.037 & \scriptsize 0.500$\pm$0.000 & \scriptsize 1.000$\pm$0.000 \\
+\scriptsize 6 E-Commerce & \scriptsize 0.000$\pm$0.000 & \scriptsize 0.000$\pm$0.000 & \scriptsize 0.000$\pm$0.000 \\
+\scriptsize 8 CRUD Applications & \scriptsize 0.200$\pm$0.005 & \scriptsize 0.571$\pm$0.000 & \scriptsize 1.000$\pm$0.000 \\
+\scriptsize 9 Contact Manager & \scriptsize 0.444$\pm$0.000 & \scriptsize 0.750$\pm$0.000 & \scriptsize 1.000$\pm$0.000 \\
+\scriptsize 9 Contact Manager & \scriptsize 0.353$\pm$0.040 & \scriptsize 0.889$\pm$0.000 & \scriptsize 0.571$\pm$0.000 \\
+\scriptsize 10 Authentication & \scriptsize 0.635$\pm$0.045 & \scriptsize 0.857$\pm$0.000 & \scriptsize 1.000$\pm$0.000 \\
+\scriptsize 10 Authentication & \scriptsize 0.429$\pm$0.000 & \scriptsize 0.667$\pm$0.000 & \scriptsize 0.600$\pm$0.000 \\
+\hline
+\textbf{\scriptsize Mean} & \textbf{\scriptsize 0.301$\pm$0.160} & \textbf{\scriptsize 0.655$\pm$0.239} & \textbf{\scriptsize 0.892$\pm$0.260} \\
+\hline
+\end{tabular}
+
+======================================================================
+Paper text snippet:
+======================================================================
+To assess the stability of the extraction step under LLM non-determinism, we executed the extraction 3 times independently on all 17 case studies using gpt-5.2 (without HCI enhancement or human-in-the-loop feedback). Across 51 run instances, the pipeline achieved mean Structural F1 = 0.301 $\pm$ 0.160, Type F1 = 0.655 $\pm$ 0.239, and Recall = 0.892 $\pm$ 0.260, confirming that the reported results are stable and are not an artefact of a single favourable draw.

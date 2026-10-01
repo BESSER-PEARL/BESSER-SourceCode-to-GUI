@@ -1,0 +1,49 @@
+{
+  "buttons": [
+    {
+      "name": "LogoLinkButton",
+      "label": "Logo",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "HeroImageLinkButton",
+      "label": "Please enable images to view this content",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "ViewOnGitHubButton",
+      "label": "View on GitHub",
+      "action_type": "View"
+    },
+    {
+      "name": "SubscriptionSettingsLinkButton",
+      "label": "subscription settings",
+      "action_type": "Settings"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "PreheaderText",
+      "label": "Available on GitHub and CodePen. Highly compatible. Designer friendly. More than 50% of total email opens occurred on a mobile device — a mobile-friendly design is a must for email campaigns."
+    },
+    {
+      "name": "SupheaderText",
+      "label": "INTRODUCING"
+    },
+    {
+      "name": "HeaderText",
+      "label": "Responsive HTML email templates"
+    },
+    {
+      "name": "IntroParagraph",
+      "label": "More than 50% of total email opens occurred on a mobile device — a mobile-friendly design is a must for email campaigns."
+    },
+    {
+      "name": "FooterText",
+      "label": "This email template was sent to you becouse we want to make the world a better place. You could change your subscription settings anytime."
+    }
+  ]
+}

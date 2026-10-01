@@ -1,0 +1,176 @@
+{
+  "buttons": [
+    {
+      "name": "SignOutLinkButton",
+      "label": "Sign out",
+      "action_type": "Logout"
+    },
+    {
+      "name": "DashboardNavLinkButton",
+      "label": "Dashboard",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "OrdersNavLinkButton",
+      "label": "Orders",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "ProductsNavLinkButton",
+      "label": "Products",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "CustomersNavLinkButton",
+      "label": "Customers",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "ReportsNavLinkButton",
+      "label": "Reports",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "IntegrationsNavLinkButton",
+      "label": "Integrations",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "AddSavedReportButton",
+      "label": null,
+      "action_type": "Add"
+    },
+    {
+      "name": "CurrentMonthReportLinkButton",
+      "label": "Current month",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "LastQuarterReportLinkButton",
+      "label": "Last quarter",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "SocialEngagementReportLinkButton",
+      "label": "Social engagement",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "YearEndSaleReportLinkButton",
+      "label": "Year-end sale",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "RadarChartMenuButton",
+      "label": null,
+      "action_type": "Settings"
+    },
+    {
+      "name": "RadarChartDropdownActionButton",
+      "label": "Action",
+      "action_type": "Select"
+    },
+    {
+      "name": "RadarChartDropdownAnotherActionButton",
+      "label": "Another action",
+      "action_type": "Select"
+    },
+    {
+      "name": "RadarChartDropdownSomethingElseButton",
+      "label": "Something else here",
+      "action_type": "Select"
+    },
+    {
+      "name": "BarChartMenuButton",
+      "label": null,
+      "action_type": "Settings"
+    },
+    {
+      "name": "BarChartDropdownActionButton",
+      "label": "Action",
+      "action_type": "Select"
+    },
+    {
+      "name": "BarChartDropdownAnotherActionButton",
+      "label": "Another action",
+      "action_type": "Select"
+    },
+    {
+      "name": "BarChartDropdownSomethingElseButton",
+      "label": "Something else here",
+      "action_type": "Select"
+    },
+    {
+      "name": "DoughnutChartMenuButton",
+      "label": null,
+      "action_type": "Settings"
+    },
+    {
+      "name": "DoughnutChartDropdownActionButton",
+      "label": "Action",
+      "action_type": "Select"
+    },
+    {
+      "name": "DoughnutChartDropdownAnotherActionButton",
+      "label": "Another action",
+      "action_type": "Select"
+    },
+    {
+      "name": "DoughnutChartDropdownSomethingElseButton",
+      "label": "Something else here",
+      "action_type": "Select"
+    }
+  ],
+  "forms": [
+    {
+      "name": "ProjectRowActionsForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "NavbarSearchInput",
+      "label": "Search",
+      "field_type": "Text"
+    },
+    {
+      "name": "ProjectActionsSelect",
+      "label": "Actions",
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "OngoingProjectsTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "CompanyNameBrand",
+      "label": "Company name"
+    },
+    {
+      "name": "SavedReportsHeading",
+      "label": "Saved reports"
+    },
+    {
+      "name": "AllProjectsCard",
+      "label": "all projects"
+    },
+    {
+      "name": "TeamMembersCard",
+      "label": "team members"
+    },
+    {
+      "name": "TotalBudgetCard",
+      "label": "total budget"
+    },
+    {
+      "name": "NewCustomersCard",
+      "label": "new customers"
+    },
+    {
+      "name": "OngoingProjectsHeader",
+      "label": "Ongoing Projects"
+    },
+    {
+      "name": "HouseholdExpenditureChartTitle

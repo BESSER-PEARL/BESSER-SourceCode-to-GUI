@@ -1,0 +1,51 @@
+{
+  "buttons": [
+    {
+      "name": "SearchImagesButton",
+      "label": null,
+      "action_type": "Search"
+    },
+    {
+      "name": "TailwindCssLinkButton",
+      "label": "tailwindcss",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "AlpineJsLinkButton",
+      "label": "alpinejs",
+      "action_type": "Navigate"
+    }
+  ],
+  "forms": [],
+  "input_fields": [
+    {
+      "name": "ImageSearchInput",
+      "label": "search for images",
+      "field_type": "Search"
+    },
+    {
+      "name": "ImageTypeSelect",
+      "label": null,
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "PhotosGrid"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "HeroHeadline",
+      "label": "Stunning free images & royalty free stock"
+    },
+    {
+      "name": "HeroSubtitle",
+      "label": "high quality stock images and videos shared by our talented community."
+    },
+    {
+      "name": "FooterText",
+      "label": "Made by tailwindcss & alpinejs"
+    }
+  ]
+}

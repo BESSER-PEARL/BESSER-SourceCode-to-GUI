@@ -1,0 +1,59 @@
+{
+  "buttons": [
+    {
+      "name": "ExplainAnswerButton",
+      "label": "Explain Answer",
+      "action_type": "Help"
+    },
+    {
+      "name": "SubmitButton",
+      "label": "Submit",
+      "action_type": "SubmitForm"
+    },
+    {
+      "name": "NextQuestionButton",
+      "label": "Next Question",
+      "action_type": "Next"
+    },
+    {
+      "name": "CloseModalButton",
+      "label": "\u00d7",
+      "action_type": "Cancel"
+    }
+  ],
+  "forms": [],
+  "input_fields": [
+    {
+      "name": "AnswerInput",
+      "label": "Enter your answer",
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "PageHeader",
+      "label": "Interactive Quiz"
+    },
+    {
+      "name": "QuestionHeader",
+      "label": null
+    },
+    {
+      "name": "ResultText",
+      "label": null
+    },
+    {
+      "name": "ExplanationText",
+      "label": null
+    },
+    {
+      "name": "QuizContainer",
+      "label": null
+    },
+    {
+      "name": "ModalDialog",
+      "label": null
+    }
+  ]
+}

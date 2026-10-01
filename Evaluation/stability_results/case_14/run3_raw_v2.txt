@@ -1,0 +1,204 @@
+{
+  "buttons": [
+    {
+      "name": "SignOutLink",
+      "label": "Sign out",
+      "action_type": "Logout"
+    },
+    {
+      "name": "DashboardLink",
+      "label": "Dashboard",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "OrdersLink",
+      "label": "Orders",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "ProductsLink",
+      "label": "Products",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "CustomersLink",
+      "label": "Customers",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "ReportsLink",
+      "label": "Reports",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "IntegrationsLink",
+      "label": "Integrations",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "AddSavedReportButton",
+      "label": null,
+      "action_type": "Add"
+    },
+    {
+      "name": "CurrentMonthReportLink",
+      "label": "Current month",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "LastQuarterReportLink",
+      "label": "Last quarter",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "SocialEngagementReportLink",
+      "label": "Social engagement",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "YearEndSaleReportLink",
+      "label": "Year-end sale",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "RadarChartMenuButton",
+      "label": null,
+      "action_type": "Settings"
+    },
+    {
+      "name": "RadarChartActionButton",
+      "label": "Action",
+      "action_type": "Select"
+    },
+    {
+      "name": "RadarChartAnotherActionButton",
+      "label": "Another action",
+      "action_type": "Select"
+    },
+    {
+      "name": "RadarChartSomethingElseButton",
+      "label": "Something else here",
+      "action_type": "Select"
+    },
+    {
+      "name": "BarChartMenuButton",
+      "label": null,
+      "action_type": "Settings"
+    },
+    {
+      "name": "BarChartActionButton",
+      "label": "Action",
+      "action_type": "Select"
+    },
+    {
+      "name": "BarChartAnotherActionButton",
+      "label": "Another action",
+      "action_type": "Select"
+    },
+    {
+      "name": "BarChartSomethingElseButton",
+      "label": "Something else here",
+      "action_type": "Select"
+    },
+    {
+      "name": "DoughnutChartMenuButton",
+      "label": null,
+      "action_type": "Settings"
+    },
+    {
+      "name": "DoughnutChartActionButton",
+      "label": "Action",
+      "action_type": "Select"
+    },
+    {
+      "name": "DoughnutChartAnotherActionButton",
+      "label": "Another action",
+      "action_type": "Select"
+    },
+    {
+      "name": "DoughnutChartSomethingElseButton",
+      "label": "Something else here",
+      "action_type": "Select"
+    }
+  ],
+  "forms": [
+    {
+      "name": "ProjectActionsForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "SearchInput",
+      "label": "Search",
+      "field_type": "Text"
+    },
+    {
+      "name": "ProjectActionsSelect",
+      "label": "Actions",
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "OngoingProjectsTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "CompanyNameBrand",
+      "label": "Company name"
+    },
+    {
+      "name": "SavedReportsHeading",
+      "label": "Saved reports"
+    },
+    {
+      "name": "AllProjectsCard",
+      "label": "all projects"
+    },
+    {
+      "name": "TeamMembersCard",
+      "label": "team members"
+    },
+    {
+      "name": "TotalBudgetCard",
+      "label": "total budget"
+    },
+    {
+      "name": "NewCustomersCard",
+      "label": "new customers"
+    },
+    {
+      "name": "OngoingProjectsHeaderTitle",
+      "label": "Ongoing Projects"
+    },
+    {
+      "name": "OngoingProjectsCount",
+      "label": "| 32 Projects"
+    },
+    {
+      "name": "HouseholdExpenditureChartTitle",
+      "label": "Household Expenditure"
+    },
+    {
+      "name": "HouseholdExpenditureChartTagline",
+      "label": "Yearly"
+    },
+    {
+      "name": "MonthlyRevenueChartTitle",
+      "label": "Monthly revenue"
+    },
+    {
+      "name": "MonthlyRevenueChartTagline",
+      "label": "2015 (in thousands US$)"
+    },
+    {
+      "name": "ExportsOfGoodsChartTitle",
+      "label": "Exports of Goods"
+    },
+    {
+      "name": "ExportsOfGoodsChartTagline",
+      "label": "2015 (in billion US$)"
+    }
+  ]
+}

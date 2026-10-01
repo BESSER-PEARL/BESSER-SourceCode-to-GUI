@@ -1,0 +1,172 @@
+{
+  "buttons": [
+    {
+      "name": "NavbarTogglerButton",
+      "label": null,
+      "action_type": "View"
+    },
+    {
+      "name": "HomeNavButton",
+      "label": "Home",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "MoreInfoNavButton",
+      "label": "More Info",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "LoginNavButton",
+      "label": "Login",
+      "action_type": "Login"
+    },
+    {
+      "name": "RegisterNavButton",
+      "label": "Register",
+      "action_type": "OpenForm"
+    },
+    {
+      "name": "ClearAllButton",
+      "label": "Clear All",
+      "action_type": "Delete"
+    },
+    {
+      "name": "CurrentInventoryTabButton",
+      "label": "Current Inventory",
+      "action_type": "View"
+    },
+    {
+      "name": "IncomingPurchaseTabButton",
+      "label": "Incoming Purchase",
+      "action_type": "View"
+    },
+    {
+      "name": "OutgoingOrdersTabButton",
+      "label": "Outgoing Orders",
+      "action_type": "View"
+    },
+    {
+      "name": "ClearInventoryButton",
+      "label": "Clear Inventory",
+      "action_type": "Delete"
+    },
+    {
+      "name": "AddCurrentInventoryButton",
+      "label": "Add",
+      "action_type": "Add"
+    },
+    {
+      "name": "ResetCurrentInventoryFormButton",
+      "label": "Reset",
+      "action_type": "Cancel"
+    },
+    {
+      "name": "ClearIncomingButton",
+      "label": "Clear Incoming",
+      "action_type": "Delete"
+    },
+    {
+      "name": "AddIncomingOrderButton",
+      "label": "Add",
+      "action_type": "Add"
+    },
+    {
+      "name": "ResetIncomingOrderFormButton",
+      "label": "Reset",
+      "action_type": "Cancel"
+    },
+    {
+      "name": "ClearOutgoingButton",
+      "label": "Clear Outgoing",
+      "action_type": "Delete"
+    }
+  ],
+  "forms": [
+    {
+      "name": "CurrentInventoryForm"
+    },
+    {
+      "name": "IncomingOrderForm"
+    },
+    {
+      "name": "OutgoingOrderForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "CurrentOrderProductNameInput",
+      "label": "Product Name:",
+      "field_type": "Text"
+    },
+    {
+      "name": "CurrentOrderProductBrandInput",
+      "label": "Product Brand:",
+      "field_type": "Text"
+    },
+    {
+      "name": "CurrentOrderProductQuantityInput",
+      "label": "Quantity:",
+      "field_type": "Number"
+    },
+    {
+      "name": "CurrentOrderProductPriceInput",
+      "label": "Product Price:",
+      "field_type": "Number"
+    },
+    {
+      "name": "IncomingOrderProductNameInput",
+      "label": "Product Name:",
+      "field_type": "Text"
+    },
+    {
+      "name": "IncomingOrderProductBrandInput",
+      "label": "Product Brand:",
+      "field_type": "Text"
+    },
+    {
+      "name": "IncomingOrderProductQuantityInput",
+      "label": "Quantity:",
+      "field_type": "Number"
+    },
+    {
+      "name": "IncomingOrderProductPriceInput",
+      "label": "Product Price:",
+      "field_type": "Number"
+    },
+    {
+      "name": "OutgoingOrderProductNameInput",
+      "label": "Product Name:",
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "CurrentInventoryTable"
+    },
+    {
+      "name": "IncomingInventoryTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "NavbarBrand",
+      "label": "Inventory Management"
+    },
+    {
+      "name": "MainHeader",
+      "label": "Inventory Manager"
+    },
+    {
+      "name": "CurrentInventorySectionHeader",
+      "label": "Current Inventory"
+    },
+    {
+      "name": "IncomingProductSectionHeader",
+      "label": "Incoming Product"
+    },
+    {
+      "name": "OutgoingOrdersSectionHeader",
+      "label": "Outgoing Orders"
+    }
+  ]
+}
