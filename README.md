@@ -67,6 +67,102 @@ We encourage contributions from the community and any comment is welcome!
 If you are interested in contributing to this project, please read the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 You can also explore our step-by-step [Contributor Guide](https://besser.readthedocs.io/en/latest/contributor_guide.html) and the dedicated [AI Assistant Guide](https://besser.readthedocs.io/en/latest/ai_assistant_guide.html) to understand the workflows and expectations before opening a pull request.
 
+## GUI Re-generation: Source Code to B-UML
+
+This repository includes an extension to BESSER for **automated GUI re-generation** from HTML/CSS source code, as described in:
+
+> **Integrating LLMs and Model-Driven Engineering for Automated GUI Re-generation**  
+> Atefeh Nirumand, Jordi Cabot — Luxembourg Institute of Science and Technology (LIST)
+
+The approach takes HTML/CSS web pages as input and automatically produces platform-independent B-UML models (Structural + IFML-like GUI), optionally enhances them using HCI principles, and re-generates executable web applications via deterministic model-to-code generation.
+
+### Overview
+
+The pipeline consists of two core phases and two optional refinement phases:
+
+1. **LLM-based Code-to-Model Extraction** *(Core)* — Derives a Structural (data) model and an IFML-like GUI model from HTML/CSS source files using LLM-assisted prompting.
+2. **LLM-based Model Enhancement guided by HCI Principles** *(Optional)* — Refines the extracted IFML-like GUI model according to established HCI principles (Usefulness, Usability, Findability, Desirability) and exports an SVG-based visual representation.
+3. **Human-in-the-Loop Interaction** *(Optional)* — Allows designers to inspect, edit, and refine the SVG representation in tools such as Figma before final code generation.
+4. **Deterministic Model-to-Code Generation** *(Core)* — Consumes the Structural and IFML-like GUI models and produces executable applications (Django or React) with integrated CRUD logic and styling.
+
+The pipeline handles both single-page and multi-page applications, automatically binding inter-page navigation relationships into the unified GUI model.
+
+### Key Results (evaluated on 200 real-world web pages)
+
+| Metric | Result |
+|--------|--------|
+| GUI extraction precision | 99% |
+| GUI extraction recall | 94% |
+| GUI extraction F-measure | 97% |
+| End-to-end fidelity score | 0.860 |
+| Multi-page navigation fidelity | 100% (P/R/F1) |
+| HCI enhancement user preference | 74.7% (blind study, 34 participants) |
+
+### Relevant Source Code
+
+The implementation is located under `besser/BUML/notations/`:
+
+- **`sourceCode_to_structural/`** — Extracts the Structural (data) model from HTML/CSS source code. Uses an LLM to generate a PlantUML class diagram, then refines and converts it to a B-UML `DomainModel`.
+  - Entry point: `sourceCode_to_structural.py` → `source_code_to_structural(api_key, input_folder, output_folder, additional_info_path)`
+  - Supports single-page (`one_page.py`) and multi-page (`multiple_pages.py`) workflows.
+
+- **`sourceCode_to_buml/`** — Extracts the IFML-like GUI model from HTML/CSS source code. Uses direct prompting + self-improvement prompting to generate a Python-serialized B-UML GUI model, then generates an SVG representation and optionally applies HCI-based enhancements.
+  - Entry point: `sourceCode_to_buml.py` → `source_code_to_buml(api_key, input_folder, ...)`
+  - Supports single-page (`one_page.py`) and multi-page (`multiple_pages.py`) workflows.
+  - Optional CSS styling file and navigation image inputs for improved fidelity.
+
+### Usage
+
+```python
+from besser.BUML.notations.sourceCode_to_buml.sourceCode_to_buml import source_code_to_buml
+
+source_code_to_buml(
+    api_key="<your-openai-api-key>",
+    input_folder="path/to/html/folder",
+    # Optional inputs for multi-page applications:
+    navigation_image_path="path/to/navigation_diagram.png",
+    pages_order_file_path="path/to/pages_order.txt",
+    additional_info_path="path/to/additional_info.txt",
+    styling_file_path="path/to/css/folder",
+    output_folder="path/to/output",
+)
+```
+
+For Structural model extraction only:
+
+```python
+from besser.BUML.notations.sourceCode_to_structural.sourceCode_to_structural import source_code_to_structural
+
+source_code_to_structural(
+    api_key="<your-openai-api-key>",
+    input_folder="path/to/html/folder",
+    output_folder="path/to/output",
+    additional_info_path="path/to/additional_info.txt",  # optional
+)
+```
+
+The functions automatically detect whether the input folder contains one or multiple HTML files and dispatch to the appropriate single-page or multi-page pipeline.
+
+### Output Structure
+
+```
+output/
+├── plantuml/
+│   └── generated_plantuml.puml    # Intermediate PlantUML structural model
+├── buml/
+│   └── model.py                   # B-UML Structural (DomainModel) representation
+├── gui_model/
+│   └── generated_gui_model.py     # B-UML IFML-like GUI model
+└── hci_enhanced/
+    └── enhanced_svg/              # HCI-enhanced SVG representations
+```
+
+### Evaluation Data
+
+The full replication package — datasets, generated artifacts, and evaluation results for all eight research questions — is available in the [`Evaluation/`](./Evaluation/) directory.
+
+---
+
 ## How to cite BESSER
 
 This repository has the CITATION.cff file, which activates the "Cite this repository" button in the About section (right side of the repository). The citation is in APA and BibTex format.
