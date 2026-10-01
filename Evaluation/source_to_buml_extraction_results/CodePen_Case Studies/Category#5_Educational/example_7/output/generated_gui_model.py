@@ -1,0 +1,26 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+ButtonColor = Color(background_color="#007BFF", text_color="#FFFFFF", border_color="#0056b3")
+buttonPosition = Position(type=PositionType.Relative, z_index=10)
+buttonSize = Size(width="100%", height="40px", padding="12px", margin="24px", font_size="14px", unit_size=UnitSize.PIXELS)
+buttonStyling = Styling(size=buttonSize, position=buttonPosition, color=ButtonColor)
+inputFieldPosition = Position(type=PositionType.Relative, z_index=0)
+inputFieldSize = Size(width="100%", padding="10px", unit_size=UnitSize.PIXELS)
+inputFieldStyling = Styling(size=inputFieldSize, position=inputFieldPosition)
+viewComponent = ViewComponent(name="SurveyFormView", description="Survey form for user feedback")
+nameInput = InputField(name="NameInput", description="User's name", type="Text", validationRules="required", styling=inputFieldStyling)
+emailInput = InputField(name="EmailInput", description="User's email", type="Email", validationRules="required", styling=inputFieldStyling)
+ageInput = InputField(name="AgeInput", description="User's age", type="Number", validationRules="optional", styling=inputFieldStyling)
+roleInput = InputField(name="RoleInput", description="User's role", type="Text", validationRules="required", styling=inputFieldStyling)
+recommendInput = InputField(name="RecommendInput", description="Recommendation", type="Radio", validationRules="required", styling=inputFieldStyling)
+serviceInput = InputField(name="ServiceInput", description="Service used", type="Select", validationRules="optional", styling=inputFieldStyling)
+improvementsInput = InputField(name="ImprovementsInput", description="Improvements", type="Checkbox", validationRules="optional", styling=inputFieldStyling)
+commentsInput = InputField(name="CommentsInput", description="User's comments", type="TextArea", validationRules="optional", styling=inputFieldStyling)
+surveyForm = Form(name="SurveyForm", description="Form for collecting user feedback", inputFields={nameInput, emailInput, ageInput, roleInput, recommendInput, serviceInput, improvementsInput, commentsInput}, styling=inputFieldStyling)
+submitButton = Button(name="SubmitButton", description="Submit the survey", label="Submit", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Submit, styling=buttonStyling)
+SurveyScreen = Screen(name="SurveyScreen", description="Screen for the survey form", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={surveyForm, submitButton}, is_main_page=True, layout=ScreenLayout)
+SurveyModule = Module(name="SurveyModule", screens={SurveyScreen})
+gui_model = GUIModel(name="SurveyApp", package="com.example.surveyapp", versionCode="1", versionName="1.0", description="Application for collecting user feedback", screenCompatibility=True, modules={SurveyModule})

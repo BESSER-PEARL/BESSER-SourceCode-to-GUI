@@ -1,0 +1,134 @@
+<html lang="en-US">
+    <head>
+        <title>Contact Manager with ES6 classes</title>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/united/bootstrap.min.css" />
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript" ></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.9/howler.core.min.js"></script>
+
+        <link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css' rel='stylesheet' type='text/css' />
+        <link rel="stylesheet" href="css/style-contact-manager-classes.css"/>
+        <script src="js/script-contact-manager-classes.js"></script>
+     
+  </head>
+  <body>
+    <div class='container-fluid'>
+        <div class='row'>
+            <div class='col-md-10 col-md-offset-1 col-xs-12'>
+                <div class='jumbotron'>
+                    <h2>Contact Manager</h2>
+                    <p>Browse through your Contacts with ease</p>
+                    
+                </div>
+                <div class='well'>
+                    <div class='buttonsDiv row'>
+                        <div class='col-md-3 col-xs-12'>
+                            <button type='button' id='listAllContacts' class='btn btn-primary'>List Contacts</button>
+                            <button type='button' id='addNewContact' class='btn btn-primary' data-toggle='modal' data-target="#addContactModal">Add Contact</button>
+                        </div>
+                        <div class='col-md-9 col-xs-12'>
+                             <form class='inline-form' onSubmit="return false;">
+                                <div class='form-group'>
+                                    <label for='searchString'><p>Live search enabled for 'Names' only. For other queries press enter or click Go!</p></label>
+                                    <div class='input-group'>
+                                        <span class='input-group-addon'>
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                        </span>
+                                        <input type='text' class='form-control' id='searchString' placeholder="Search Contacts..."/>
+                                        <span class='input-group-btn'>
+                                            <button id='searchQueryBtn' class='btn btn-secondary' type='button'>Go!</button>
+                                        </span> 
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class='contactsDiv'>
+                        <div id='listContacts'></div>
+                    </div>
+
+                    <div class='modal fade' id='addContactModal' tabindex="-1" role="dialog" aria-labelledby="addContactModal">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Add Contact</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form onSubmit="return false;">
+                                        <div class='row'>
+                                            <div class='col-xs-12 col-md-6'>
+                                                <div class='form-group'>
+                                                    <label for='inputGivenName'>First Name</label>
+                                                    <input type='text' class='form-control' id='inputGivenName' placeholder='First Name'/>
+                                                </div>
+                                            </div>
+                                            <div class='col-xs-12 col-md-6'>
+                                                <div class='form-group'>
+                                                    <label for='inputFamilyName'>Last Name</label>
+                                                    <input type='text' class='form-control' id='inputFamilyName' placeholder='First Name'/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class='row'>
+                                            <div class='col-xs-12 col-md-6'>
+                                                <div class='form-group'>
+                                                    <label for='inputPhoneNumber'>Phone Number</label>
+                                                    <input type='text' class='form-control' id='inputPhoneNumber' placeholder='First Name'/>
+                                                </div>
+                                            </div>
+                                            <div class='col-xs-12 col-md-6'>
+                                                <div class='form-group'>
+                                                    <label for='inputEmail'>Email Address</label>
+                                                    <input type='email' class='form-control' id='inputEmail' placeholder='First Name'/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class='row'>
+                                            <div class='col-xs-12 col-md-6'>
+                                                <div class='form-group'>
+                                                    <label for='inputLocationCity'>Location - City</label>
+                                                    <input type='text' class='form-control' id='inputLocationCity' placeholder='First Name'/>
+                                                </div>
+                                            </div>
+                                            <div class='col-xs-12 col-md-6'>
+                                                <div class='form-group'>
+                                                    <label for='inputLocationCountry'>Location - Country</label>
+                                                    <input type='text' class='form-control' id='inputLocationCountry' placeholder='First Name'/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class='row'>
+                                            <div class='col-xs-12 col-md-6'>
+                                                <div class='form-group'>
+                                                    <label for='inputYourRelation'>Your Relation</label>
+                                                    <input type='text' class='form-control' id='inputYourRelation' placeholder='First Name'/>
+                                                </div>
+                                            </div>
+                                            <div class='col-xs-12 col-md-6'>
+                                                <div class='form-group'>
+                                                    <label for='inputBirthday'>Birthday</label>
+                                                    <input type='date' class='form-control' id='inputBirthday' placeholder='First Name'/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" id='saveContact' class="btn btn-primary">Save Contact</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

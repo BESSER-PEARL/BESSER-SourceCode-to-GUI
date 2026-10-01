@@ -1,0 +1,28 @@
+ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+li {
+    text-decoration: none;
+}
+
+
+table {
+/*    width: 100%;  */
+    overflow-x: auto !important;
+}
+
+td, th {
+    border: 1px solid #dddddd !important;
+    text-align: left !important;
+    padding: 8px !important;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.buttonsDiv > div > button {
+    margin-bottom: 10px;
+}

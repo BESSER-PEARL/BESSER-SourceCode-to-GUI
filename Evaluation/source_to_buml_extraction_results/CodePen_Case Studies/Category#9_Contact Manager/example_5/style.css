@@ -1,0 +1,30 @@
+table{
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+table, tr, td{
+  border: 1px solid darkorange;
+}
+
+fieldset{
+  padding: 20px;
+  border-radius: 5px;
+  
+}
+#name, #email{
+  margin: 10px;
+}
+
+
+
+
+input{
+  display: inline-block;
+ 
+}
+input:invalid{
+  background-color: #FF9898;
+}
+input:valid{
+  background-color: lightgreen;
+}

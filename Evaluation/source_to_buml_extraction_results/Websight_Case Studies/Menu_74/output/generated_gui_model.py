@@ -1,0 +1,25 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="horizontal", gap="0", alignment=JustificationType.Left)
+HeaderImageColor = Color(background_color="", text_color="", border_color="")
+HeaderImagePosition = Position(type=PositionType.Relative, top="", left="", right="", bottom="", alignment="", z_index=0)
+HeaderImageSize = Size(width="100%", height="400px", padding="", margin="", font_size="", icon_size="", unit_size=UnitSize.PIXELS)
+HeaderImageStyling = Styling(size=HeaderImageSize, position=HeaderImagePosition, color=HeaderImageColor)
+NavColor = Color(background_color="#BFDBFE", text_color="#1E3A8A", border_color="")
+NavPosition = Position(type=PositionType.Relative, top="", left="", right="", bottom="", alignment="", z_index=0)
+NavSize = Size(width="25%", height="", padding="16px", margin="", font_size="16px", icon_size="", unit_size=UnitSize.PIXELS)
+NavStyling = Styling(size=NavSize, position=NavPosition, color=NavColor)
+MainContentColor = Color(background_color="", text_color="#1E3A8A", border_color="")
+MainContentPosition = Position(type=PositionType.Relative, top="", left="", right="", bottom="", alignment="", z_index=0)
+MainContentSize = Size(width="75%", height="", padding="16px", margin="", font_size="16px", icon_size="", unit_size=UnitSize.PIXELS)
+MainContentStyling = Styling(size=MainContentSize, position=MainContentPosition, color=MainContentColor)
+headerImage: Image = Image(name="HeaderImage", description="Header Image", styling=HeaderImageStyling)
+navMenu: Menu = Menu(name="NavigationMenu", description="Navigation Menu", menuItems={MenuItem(label=Navigation_homeLink.name), MenuItem(label=Navigation_aboutLink.name), MenuItem(label=Navigation_servicesLink.name), MenuItem(label=Navigation_contactLink.name)}, styling=NavStyling)
+welcomeMessage: ViewComponent = ViewComponent(name=MainContent_welcomeMessage.name, description="Welcome to Our Tech Company", styling=MainContentStyling)
+servicesDescription: ViewComponent = ViewComponent(name=MainContent_servicesDescription.name, description="Our Services", styling=MainContentStyling)
+contactInformation: ViewComponent = ViewComponent(name=MainContent_contactInformation.name, description="Contact Us", styling=MainContentStyling)
+WebPageScreen: Screen = Screen(name="WebPageScreen", description="Web Page Screen", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Large", view_elements={headerImage, navMenu, welcomeMessage, servicesDescription, contactInformation}, is_main_page=True, layout=ScreenLayout)
+WebPageModule: Module = Module(name="WebPageModule", screens={WebPageScreen})
+gui_model: GUIModel = GUIModel(name="WebPageApp", package="com.example.webpageapp", versionCode="1", versionName="1.0", description="A web page application with navigation and content.", screenCompatibility=True, modules={WebPageModule})

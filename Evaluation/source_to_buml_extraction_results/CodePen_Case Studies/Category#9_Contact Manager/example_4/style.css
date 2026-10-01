@@ -1,0 +1,103 @@
+body {
+  font-family: Helvetica;
+  margin-left: 30px;
+}
+ 
+fieldset {
+  width: 230px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+fieldset label {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+}
+
+form button {
+  margin-top: 10px;
+}
+
+input {
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #96858F;
+  border: 0px solid black;
+  border-radius: 3px ;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 0.9em;   
+}
+
+button:hover {
+  color: white
+}
+
+p button {
+  margin: 0px 10px 10px 0px;
+}
+
+#labelSearch {
+  float: left;
+}
+
+#searchResult {
+  margin-left: 270px;
+  color: chocolate;
+}
+
+#divSearch {
+  height: 30px;
+}
+
+#listContacts {
+  margin-bottom: -10px;
+}
+
+table {
+  margin-top: 20px;
+  display: none;
+  border-collapse: collapse;
+}
+
+thead {
+  font-weight: bold;   
+  background-color: darkgray; 
+}
+
+#sortName:hover, #sortEmail:hover {
+  background-color: chocolate; 
+}
+
+td {
+  border: 2px solid black;
+  border-collapse: collapse;
+} 
+
+td:focus {
+  background-color: white;
+  border: 3px solid #add8e6;
+}
+
+table tr:nth-child(even) {
+  background-color: lightgray;
+}
+
+.deleteRow {
+  text-align: center;
+}
+.deleteRow:hover {
+  background-color: chocolate;
+}
+
+/*input:invalid {
+  background-color:pink;
+} */
+
+/*input:valid {
+  background-color:lightgray;
+} */

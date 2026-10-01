@@ -1,0 +1,26 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+inputFieldSize = Size(width="100%", height="40px", padding="8px", margin="10px", font_size="14px", unit_size=UnitSize.PIXELS)
+inputFieldPosition = Position(type=PositionType.Relative, alignment="left")
+inputFieldColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#CCCCCC")
+inputFieldStyling = Styling(size=inputFieldSize, position=inputFieldPosition, color=inputFieldColor)
+buttonSize = Size(width="120px", height="40px", padding="8px", margin="10px", font_size="14px", unit_size=UnitSize.PIXELS)
+buttonPosition = Position(type=PositionType.Relative, alignment="center")
+buttonColor = Color(background_color="#007BFF", text_color="#FFFFFF", border_color="#0056b3")
+buttonStyling = Styling(size=buttonSize, position=buttonPosition, color=buttonColor)
+fullNameInput = InputField(name="FullNameInput", description="Input for full name", type=ContactPage_fullName.type, validationRules="", styling=inputFieldStyling)
+emailInput = InputField(name="EmailInput", description="Input for email", type=ContactPage_email.type, validationRules="", styling=inputFieldStyling)
+phoneNumberInput = InputField(name="PhoneNumberInput", description="Input for phone number", type=ContactPage_phoneNumber.type, validationRules="", styling=inputFieldStyling)
+positionInput = InputField(name="PositionInput", description="Input for position", type=ContactPage_position.type, validationRules="", styling=inputFieldStyling)
+contactForm = Form(name="ContactForm", description="Form to add a new contact", inputFields={fullNameInput, emailInput, phoneNumberInput, positionInput}, styling=None)
+addContactButton = Button(name="AddContactButton", description="Button to add a new contact", label="Add Contact", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Add, styling=buttonStyling)
+editButton = Button(name="EditButton", description="Button to edit contact", label="Edit", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Edit, styling=buttonStyling)
+removeButton = Button(name="RemoveButton", description="Button to remove contact", label="Remove", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Delete, styling=buttonStyling)
+contactEntryDataSource = DataSourceElement(name="ContactEntryDataSource", dataSourceClass=ContactEntry, fields={ContactEntry_fullName, ContactEntry_email, ContactEntry_phoneNumber, ContactEntry_position})
+contactList = DataList(name="ContactList", description="List of contacts", list_sources={contactEntryDataSource}, styling=None)
+screenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="10px", alignment=JustificationType.Center)
+contactScreen = Screen(name="ContactScreen", description="Screen for managing contacts", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={contactForm, addContactButton, contactList, editButton, removeButton}, is_main_page=True, layout=screenLayout)
+contactModule = Module(name="ContactModule", screens={contactScreen})
+guiModel = GUIModel(name="ContactManagementApp", package="com.example.contactmanagement", versionCode="1", versionName="1.0", description="App for managing contacts", screenCompatibility=True, modules={contactModule})

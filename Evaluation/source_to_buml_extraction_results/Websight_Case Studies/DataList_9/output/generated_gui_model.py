@@ -1,0 +1,25 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="horizontal", gap="0", alignment=JustificationType.Center)
+LeftPanelColor = Color(background_color="#2D3748", text_color="#FFFFFF", border_color="#2D3748")
+LeftPanelPosition = Position(type=PositionType.Relative)
+LeftPanelSize = Size(width="50%", height="100%", padding="10px", font_size="16", unit_size=UnitSize.PIXELS)
+LeftPanelStyling = Styling(size=LeftPanelSize, position=LeftPanelPosition, color=LeftPanelColor)
+RightPanelColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#FFFFFF")
+RightPanelPosition = Position(type=PositionType.Relative)
+RightPanelSize = Size(width="50%", height="100%", padding="10px", font_size="16", unit_size=UnitSize.PIXELS)
+RightPanelStyling = Styling(size=RightPanelSize, position=RightPanelPosition, color=RightPanelColor)
+ButtonColor = Color(background_color="#FFFFFF", text_color="#2D3748", border_color="#CBD5E0")
+ButtonPosition = Position(type=PositionType.Relative)
+ButtonSize = Size(width="auto", height="40px", padding="8px", font_size="14", unit_size=UnitSize.PIXELS)
+ButtonStyling = Styling(size=ButtonSize, position=ButtonPosition, color=ButtonColor)
+WelcomeText = ViewComponent(name="WelcomeText", description="Welcome message for the fitness center", styling=LeftPanelStyling)
+MembershipPricingText = ViewComponent(name="MembershipPricingText", description="Membership pricing details", styling=RightPanelStyling)
+JoinNowButton = Button(name="JoinNowButton", description="Call to action button to join the fitness center", label="Join Now", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Navigate, styling=ButtonStyling)
+MembershipPricingDataSource = DataSourceElement(name="MembershipPricingDataSource", dataSourceClass=MembershipPricing, fields={MembershipPricing_plan, MembershipPricing_cost})
+MembershipPricingList = DataList(name="MembershipPricingList", description="List of membership plans and prices", list_sources={MembershipPricingDataSource}, styling=RightPanelStyling)
+FitnessCenterScreen = Screen(name="FitnessCenterScreen", description="Screen displaying fitness center welcome and membership pricing", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={WelcomeText, JoinNowButton, MembershipPricingText, MembershipPricingList}, is_main_page=True, layout=ScreenLayout)
+FitnessCenterModule = Module(name="FitnessCenterModule", screens={FitnessCenterScreen})
+gui_model = GUIModel(name="FitnessCenterApp", package="com.example.fitnesscenter", versionCode="1", versionName="1.0", description="A web application for a fitness center with membership pricing.", screenCompatibility=True, modules={FitnessCenterModule})

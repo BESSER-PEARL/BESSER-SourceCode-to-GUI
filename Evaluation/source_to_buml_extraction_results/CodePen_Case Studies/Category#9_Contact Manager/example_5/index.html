@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Contact Manager Project</title>
+</head>
+<body>
+  <h1>Contact Manager Software</h1>
+  <form onsubmit = 'return formSubmitted();'>
+    <fieldset>
+      <legend>Personal Informations</legend>
+      <label>Name :<input type = 'text' id = 'name' required>
+      </label><br>
+      <label>Email :<input type = 'email' id = 'email' required>
+      </label>
+      <br>
+      <button>New Contact</button>
+    </fieldset>
+  </form>
+  
+  <h3>List of Contacts</h3>
+  <div id = 'contacts'></div>
+  <p>
+  <button onclick = 'emptyList();'>Empty</button>
+  <button onclick = 'cm.save();'>Save</button>
+  <button onclick = 'loadList();'>Load</button>
+  </p>
+  
+</body>
+</html>

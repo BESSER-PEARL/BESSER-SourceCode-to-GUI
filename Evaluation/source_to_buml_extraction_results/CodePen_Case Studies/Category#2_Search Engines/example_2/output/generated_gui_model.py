@@ -1,0 +1,26 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+ButtonColor = Color(background_color="#007BFF", text_color="#FFFFFF", border_color="#0056b3")
+buttonPosition = Position(type=PositionType.Relative, z_index=10)
+buttonSize = Size(height="40px", padding="8px", font_size="14px", unit_size=UnitSize.PIXELS)
+buttonStyling = Styling(size=buttonSize, position=buttonPosition, color=ButtonColor)
+inputFieldColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#CCCCCC")
+inputFieldPosition = Position(type=PositionType.Relative)
+inputFieldSize = Size(width="90%", height="40px", padding="8px", font_size="14px", unit_size=UnitSize.PIXELS)
+inputFieldStyling = Styling(size=inputFieldSize, position=inputFieldPosition, color=inputFieldColor)
+viewComponent: ViewComponent = ViewComponent(name="WikipediaSearchView", description="Search Wikipedia and view results")
+headline: ViewComponent = ViewComponent(name="Headline", description="Wikipedia Search Engine", styling=None)
+searchInput: InputField = InputField(name="wiki-search-input", description="Search Wikipedia...", type="search", validationRules="", styling=inputFieldStyling)
+wikiSearchButton: Button = Button(name="WikiSearchButton", description="Search Wikipedia", label="Wiki Search", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Search, styling=buttonStyling)
+luckyButton: Button = Button(name="FeelingLuckyButton", description="I'm Feeling Lucky", label="I'm Feeling Lucky", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Navigate, styling=buttonStyling)
+attributionFooter: ViewComponent = ViewComponent(name="AttributionFooter", description="Designed and coded by Ayo Isaiah", styling=None)
+HomePageScreen: Screen = Screen(name="HomePage", description="Wikipedia Search Engine Home Page", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={headline, searchInput, wikiSearchButton, luckyButton, attributionFooter}, is_main_page=True, layout=ScreenLayout)
+resultSearchInput: InputField = InputField(name="result-wiki-search-form-input", description="Search Wikipedia...", type="text", validationRules="", styling=inputFieldStyling)
+resultWikiSearchButton: Button = Button(name="ResultWikiSearchButton", description="Search Wikipedia", label="Wiki Search", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Search, styling=buttonStyling)
+searchResults: ViewComponent = ViewComponent(name="SearchResults", description="Display search results", styling=None)
+ResultsPageScreen: Screen = Screen(name="ResultsPage", description="Wikipedia Search Results Page", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={resultSearchInput, resultWikiSearchButton, searchResults}, is_main_page=False, layout=ScreenLayout)
+WikipediaSearchModule: Module = Module(name="WikipediaSearchModule", screens={HomePageScreen, ResultsPageScreen})
+gui_model: GUIModel = GUIModel(name="WikipediaSearchApp", package="com.example.wikipediasearch", versionCode="1", versionName="1.0", description="A web application for searching Wikipedia.", screenCompatibility=True, modules={WikipediaSearchModule})

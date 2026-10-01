@@ -1,0 +1,26 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+ButtonColor = Color(background_color="#27AE60", text_color="#FFFFFF", border_color="#0056b3")
+buttonPosition = Position(type=PositionType.Relative, alignment="center", z_index=10)
+buttonSize = Size(width="100px", height="40px", padding="10px", margin="10px", font_size="14px", unit_size=UnitSize.PIXELS)
+buttonStyling = Styling(size=buttonSize, position=buttonPosition, color=ButtonColor)
+inputFieldSize = Size(width="200px", height="30px", padding="15px", margin="10px", font_size="13px", unit_size=UnitSize.PIXELS)
+inputFieldPosition = Position(type=PositionType.Relative, alignment="center", z_index=0)
+inputFieldColor = Color(background_color="#FFFFFF", text_color="#2C3E50", border_color="#CCCCCC")
+inputFieldStyling = Styling(size=inputFieldSize, position=inputFieldPosition, color=inputFieldColor)
+viewComponent = ViewComponent(name="PatientFormView", description="Form for patient details")
+ageInput = InputField(name="AgeInput", description="Input for age", type="Number", validationRules="min:30,max:50", styling=inputFieldStyling)
+diabetesTypeInput = InputField(name="DiabetesTypeInput", description="Select diabetes type", type="Text", styling=inputFieldStyling)
+treatmentTypeInput = InputField(name="TreatmentTypeInput", description="Select treatment type", type="Text", styling=inputFieldStyling)
+averageFastGlucoseInput = InputField(name="AverageFastGlucoseInput", description="Input for average fast glucose", type="Number", validationRules="min:30,max:50", styling=inputFieldStyling)
+hba1cInput = InputField(name="HBA1CInput", description="Input for HBA1C", type="Text", styling=inputFieldStyling)
+nextButton = Button(name="NextButton", description="Proceed to next step", label="Next", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Next, styling=buttonStyling)
+previousButton = Button(name="PreviousButton", description="Go back to previous step", label="Previous", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Back, styling=buttonStyling)
+submitButton = Button(name="SubmitButton", description="Submit the form", label="Calculate", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.SubmitForm, styling=buttonStyling)
+patientForm = Form(name="PatientForm", description="Form to capture patient details", inputFields={ageInput, diabetesTypeInput, treatmentTypeInput, averageFastGlucoseInput, hba1cInput}, styling=None)
+PatientFormScreen = Screen(name="PatientFormScreen", description="Screen for patient form", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={patientForm, nextButton, previousButton, submitButton}, is_main_page=True, layout=ScreenLayout)
+PatientModule = Module(name="PatientModule", screens={PatientFormScreen})
+gui_model = GUIModel(name="PatientApp", package="com.example.patientapp", versionCode="1", versionName="1.0", description="Application for managing patient data", screenCompatibility=True, modules={PatientModule})

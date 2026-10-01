@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Inventory Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            padding: 8px;
+            width: calc(100% - 20px);
+            margin-top: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .alert {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grocery Inventory Tracker</h1>
+    
+    <div class="container">
+        <h2>Add Item</h2>
+        <form id="addItemForm">
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName" required>
+            
+            <label for="itemQuantity">Quantity:</label>
+            <input type="number" id="itemQuantity" required>
+            
+            <label for="itemThreshold">Alert Threshold:</label>
+            <input type="number" id="itemThreshold" required>
+            
+            <button type="submit">Add Item</button>
+        </form>
+
+        <h2>Inventory List</h2>
+        <table id="inventoryTable">
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Quantity</th>
+                    <th>Alert Threshold</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const initialItems = [
+                { name: 'Milk', quantity: 10, threshold: 2 },
+                { name: 'Eggs', quantity: 12, threshold: 6 },
+                { name: 'Bread', quantity: 5, threshold: 2 },
+                { name: 'Butter', quantity: 8, threshold: 4 },
+                { name: 'Cheese', quantity: 3, threshold: 1 },
+                { name: 'Apples', quantity: 15, threshold: 5 },
+                { name: 'Oranges', quantity: 10, threshold: 4 },
+                { name: 'Chicken', quantity: 7, threshold: 3 },
+                { name: 'Rice', quantity: 20, threshold: 10 },
+                { name: 'Pasta', quantity: 6, threshold: 2 },
+                { name: 'Tomatoes', quantity: 8, threshold: 4 },
+                { name: 'Onions', quantity: 5, threshold: 3 },
+                { name: 'Garlic', quantity: 12, threshold: 5 },
+                { name: 'Potatoes', quantity: 10, threshold: 6 },
+                { name: 'Carrots', quantity: 7, threshold: 3 },
+                { name: 'Spinach', quantity: 4, threshold: 2 },
+                { name: 'Yogurt', quantity: 6, threshold: 3 },
+                { name: 'Cereal', quantity: 3, threshold: 1 },
+                { name: 'Juice', quantity: 5, threshold: 2 },
+                { name: 'Tea', quantity: 10, threshold: 5 },
+                { name: 'Coffee', quantity: 8, threshold: 4 },
+                { name: 'Sugar', quantity: 2, threshold: 1 },
+                { name: 'Flour', quantity: 15, threshold: 7 },
+                { name: 'Salt', quantity: 20, threshold: 10 },
+                { name: 'Oil', quantity: 7, threshold: 3 },
+                { name: 'Vinegar', quantity: 3, threshold: 1 }
+            ];
+
+            initialItems.forEach(item => addItemToTable(item.name, item.quantity, item.threshold));
+        });
+
+        document.getElementById('addItemForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const itemName = document.getElementById('itemName').value;
+            const itemQuantity = parseInt(document.getElementById('itemQuantity').value, 10);
+            const itemThreshold = parseInt(document.getElementById('itemThreshold').value, 10);
+
+            addItemToTable(itemName, itemQuantity, itemThreshold);
+            this.reset();
+        });
+
+        function addItemToTable(name, quantity, threshold) {
+            const tableBody = document.getElementById('inventoryTable').getElementsByTagName('tbody')[0];
+            const row = tableBody.insertRow();
+
+            row.innerHTML = `
+                <td>${name}</td>
+                <td class="${quantity <= threshold ? 'alert' : ''}">${quantity}</td>
+                <td>${threshold}</td>
+                <td><button onclick="removeItem(this)">Remove</button></td>
+            `;
+        }
+
+        function removeItem(button) {
+            const row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+    </script>
+</body>
+</html>

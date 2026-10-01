@@ -1,0 +1,61 @@
+<div class=" mycontainer centerDiv">
+
+  <h1>OpenAI Text To Speech Generation</h1>
+
+  <p> Welcome to Open Ai TTS Generation demo. Open Ai has one of the lowest cost for text to speech generation. Estimated cost of $0.015 per 1000 characters SD and $0.030 for HD.
+    <br>
+    You will need your own API key and have credit available. Sign up for your Open-AI API key <a href="https://platform.openai.com/settings/organization/api-keys" target="_blank"> HERE</a>. Minimum credit deposit is only $5 + tax.
+    <br>
+    <i> Warning! This is a demo to show you TTS using JS, I suggest you modify the script to keep your own api key secure or use as a stand alone HTML file from your own device...</i> <br>Give it a little LOVE, click the ❤️icon above.
+  </p>
+  <p id="update"><i>Updates: additional New voices realeased Jan-25, check additonal script comments for generated speed and output formats</i></p>
+  <p style="color:blue"> **NEW** Build your own ChatGPT-4o using Javascript and Openai API <a href=" https://codepen.io/jcb01/pen/yyBoozj" target="_blank"> HERE!</a>
+  </p>
+  <p> Enter or paste your text, add a file name, select your voice option. <br> </p>
+
+  <form onsubmit="submitForm(event)">
+    <div>
+      <label for="openKey"> Input your OpenAI API key</label>
+      <input type="text" id="openKey" Placeholder="Your own OpenAi API required! You will need to add credits to your account " required>
+      <label for="inputText">Input Text:</label>
+      <textarea id="inputText" placeholder="Enter your text here max 4,096 characters" rows="10" required></textarea>
+      <p>Character Count: <span id="charCount"><strong>0</strong></span>. Estimated cost: $ <span id="cost"><strong>0</strong></span> </p>
+      <div class="row">
+        <div class="column 1">
+          <label for="outputFileName">File Name:</label>
+          <input type="text" id="outputFileName" placeholder="Enter file name" required>
+        </div>
+
+        <div class="column 2">
+          <label for="selectVoice">Select Voice:</label>
+          <select id="selectVoice" required>
+            <option value="echo">Echo (M)</option>
+            <option value="alloy">Alloy (M)</option>
+            <option value="fable">Fable (M)</option>
+            <option value="coral">Coral (F)</option>
+            <option value="ash">Ash (M)</option>
+            <option value="sage">Sage (F)</option>
+            <option value="onyx">Onyx (M)</option>
+            <option value="nova">Nova (F)</option>
+            <option value="shimmer">Shimmer (F)</option>
+            <!--<option value="ballad">Ballad(M)</option> waiting for this to drop in-->
+          </select>
+        </div>
+      </div>
+      <div class="centerDiv">
+        <button type="submit">Generate</button>
+        <button type="button" onclick="clearForm()">Clear</button>
+        <button type="button" onclick="downloadButtonClick()">Download</button>
+      </div>
+    </div>
+  </form>
+  <div>
+    <div id="successMessage"></div>
+    <p>Listen to your genrated voice : <span> <audio id="audioPlayer" controls style="margin-top: 15px;" disabled></audio></span></p>
+
+  </div>
+
+  <div id="errorMessage"></div>
+
+  <!-- Your existing HTML code -->
+</div>

@@ -1,0 +1,59 @@
+body{
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/323039/black-wood-small.jpg);
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+h1 { 
+  color: #c4c4c4;
+  font-family: "Montserrat", sans-serif; 
+  font-size: 40px; 
+  margin: 0 0 38px; 
+  text-align: center; 
+  text-transform: uppercase; 
+}
+
+.container {
+  margin: auto;
+  width: 940px;
+}
+  
+.col {
+  background-color: #FFF;
+  border-right: 1px solid #222;
+  box-sizing: border-box;
+  float: left;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  text-align: center;
+  width: 235px;
+}
+
+.col:last-child {
+  border:none;
+}
+
+@media all and (min-width:1300px) {
+  .col {
+    width: 240px;
+  }
+      
+  .container {
+    margin: auto;
+    width: 1200px;
+  }
+}
+
+@media all and (min-width:1700px) {
+  .col {
+    width: 265px;
+  }
+      
+  .container {
+    margin: auto;
+    width: 1590px;
+  }
+}

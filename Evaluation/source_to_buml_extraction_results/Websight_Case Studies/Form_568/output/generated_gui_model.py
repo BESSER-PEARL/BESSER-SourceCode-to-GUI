@@ -1,0 +1,33 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+HeaderColor = Color(background_color="transparent", text_color="#FFFFFF", border_color="transparent")
+HeaderPosition = Position(type=PositionType.Relative, alignment="center")
+HeaderSize = Size(width="100%", height="100vh", font_size="32px", unit_size=UnitSize.PIXELS)
+HeaderStyling = Styling(size=HeaderSize, position=HeaderPosition, color=HeaderColor)
+ButtonColor = Color(background_color="#6B46C1", text_color="#FFFFFF", border_color="#4A3A8C")
+ButtonPosition = Position(type=PositionType.Relative)
+ButtonSize = Size(height="40px", padding="8px", font_size="14px", unit_size=UnitSize.PIXELS)
+ButtonStyling = Styling(size=ButtonSize, position=ButtonPosition, color=ButtonColor)
+NavColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#E2E8F0")
+NavPosition = Position(type=PositionType.Relative)
+NavSize = Size(width="100%", padding="16px", font_size="16px", unit_size=UnitSize.PIXELS)
+NavStyling = Styling(size=NavSize, position=NavPosition, color=NavColor)
+MainColor = Color(background_color="#F7FAFC", text_color="#000000", border_color="transparent")
+MainPosition = Position(type=PositionType.Relative)
+MainSize = Size(width="100%", padding="16px", font_size="16px", unit_size=UnitSize.PIXELS)
+MainStyling = Styling(size=MainSize, position=MainPosition, color=MainColor)
+header: ViewComponent = ViewComponent(name="Header", description="Welcome header with search", styling=HeaderStyling)
+searchInput: InputField = InputField(name="SearchInput", description="Search for destinations", type="Text", styling=ButtonStyling)
+searchButton: Button = Button(name="SearchButton", description="Search for destinations", label="Search", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Search, styling=ButtonStyling)
+nav: ViewComponent = ViewComponent(name="Nav", description="Navigation bar", styling=NavStyling)
+main: ViewComponent = ViewComponent(name="Main", description="Main content area", styling=MainStyling)
+TravelAgencyPageScreen: Screen = Screen(name="TravelAgencyPage", description="Travel agency homepage with header, nav, and main content", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Large", view_elements={header, searchInput, searchButton, nav, main}, is_main_page=True, layout=ScreenLayout)
+TravelModule: Module = Module(name="TravelModule", screens={TravelAgencyPageScreen})
+gui_model: GUIModel = GUIModel(name="TravelAgencyApp", package="com.example.travelagency", versionCode="1", versionName="1.0", description="A web application for a travel agency.", screenCompatibility=True, modules={TravelModule})
+header_property = Property(name="Header", type=Header, multiplicity=Multiplicity(1, 1))
+nav_property = Property(name="Nav", type=Nav, multiplicity=Multiplicity(1, 1))
+main_property = Property(name="Main", type=Main, multiplicity=Multiplicity(1, 1))
+TravelAgencyPageScreen.view_elements = {header_property, searchInput, searchButton, nav_property, main_property}

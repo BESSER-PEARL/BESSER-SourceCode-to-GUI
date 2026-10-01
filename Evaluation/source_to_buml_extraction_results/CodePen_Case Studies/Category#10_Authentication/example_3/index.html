@@ -1,0 +1,33 @@
+<script src="https://s3.amazonaws.com/stitch-sdks/js/library/v3/stable/stitch.min.js"></script>
+
+<div class="container">
+  <div id="phone-input">
+    <label for="telephone">Enter Your Phone Number:</label>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" id="telephone"
+             placeholder="1-212-555-1234" aria-label="telephone"
+      />
+    </div>
+    <button class="btn btn-success" type="submit" onclick="processPhone()">
+      Send Me a Two-Factor Authentication Code
+    </button>
+  </div>
+  
+  <div id="2fa-input"class="hidden">
+    <label for="two-factor-auth">Enter Your Two-Factor Code:</label>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" id="two-factor-auth"
+             placeholder="XXXXXX" aria-label="two-factor-auth"
+      />
+    </div>
+    <button class="btn btn-success" type="submit" onclick="processCode()">
+      Submit My Two-Factor Authentication Code
+    </button>
+  </div>
+
+  <div id="notification-box">
+    <span id="success"></span>
+    <span id="error"></span>
+  </div>
+
+</div>

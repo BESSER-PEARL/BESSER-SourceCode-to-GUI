@@ -1,0 +1,27 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+HeaderColor = Color(background_color="transparent", text_color="#FFFFFF", border_color="transparent")
+HeaderPosition = Position(type=PositionType.Relative, alignment="center")
+HeaderSize = Size(width="100%", height="auto", padding="20px", font_size="5xl", unit_size=UnitSize.PIXELS)
+HeaderStyling = Styling(size=HeaderSize, position=HeaderPosition, color=HeaderColor)
+NavColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="transparent")
+NavPosition = Position(type=PositionType.Relative, alignment="center")
+NavSize = Size(width="100%", height="auto", padding="10px", font_size="sm", unit_size=UnitSize.PIXELS)
+NavStyling = Styling(size=NavSize, position=NavPosition, color=NavColor)
+InputFieldColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#D1D5DB")
+InputFieldPosition = Position(type=PositionType.Relative)
+InputFieldSize = Size(width="auto", height="auto", padding="8px", font_size="sm", unit_size=UnitSize.PIXELS)
+InputFieldStyling = Styling(size=InputFieldSize, position=InputFieldPosition, color=InputFieldColor)
+headerTitle: ViewComponent = ViewComponent(name=Header_title.name, description="Main title of the page", styling=HeaderStyling)
+headerSubtitle: ViewComponent = ViewComponent(name=Header_subtitle.name, description="Subtitle of the page", styling=HeaderStyling)
+navDestinations: Button = Button(name=Navigation_destinationsLink.name, description="Link to Destinations", label="Destinations", buttonType=ButtonType.TextButton, actionType=ButtonActionType.Navigate, styling=NavStyling)
+navTravelStyles: Button = Button(name=Navigation_travelStylesLink.name, description="Link to Travel Styles", label="Travel Styles", buttonType=ButtonType.TextButton, actionType=ButtonActionType.Navigate, styling=NavStyling)
+navTours: Button = Button(name=Navigation_toursLink.name, description="Link to Tours", label="Tours", buttonType=ButtonType.TextButton, actionType=ButtonActionType.Navigate, styling=NavStyling)
+navDeals: Button = Button(name=Navigation_dealsLink.name, description="Link to Deals", label="Deals", buttonType=ButtonType.TextButton, actionType=ButtonActionType.Navigate, styling=NavStyling)
+searchInput: InputField = InputField(name=Navigation_searchInput.name, description="Search bar", type="Text", validationRules="", styling=InputFieldStyling)
+TravelAgencyScreen: Screen = Screen(name="TravelAgencyPage", description="Main page for the travel agency", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Large", view_elements={headerTitle, headerSubtitle, navDestinations, navTravelStyles, navTours, navDeals, searchInput}, is_main_page=True, layout=ScreenLayout)
+TravelModule: Module = Module(name="TravelModule", screens={TravelAgencyScreen})
+gui_model: GUIModel = GUIModel(name="TravelAgencyApp", package="com.example.travelagency", versionCode="1", versionName="1.0", description="A web application for exploring travel destinations and deals.", screenCompatibility=True, modules={TravelModule})

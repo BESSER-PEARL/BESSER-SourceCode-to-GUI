@@ -1,0 +1,26 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+ButtonColor = Color(background_color="#eee", text_color="grey", border_color="#bfb4b4")
+buttonPosition = Position(type=PositionType.Relative, alignment="center", z_index=10)
+buttonSize = Size(width="100px", height="40px", padding="8px", margin="24px", font_size="14px", unit_size=UnitSize.PIXELS)
+buttonStyling = Styling(size=buttonSize, position=buttonPosition, color=ButtonColor)
+InputFieldColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#CCCCCC")
+inputFieldPosition = Position(type=PositionType.Relative, alignment="center", z_index=0)
+inputFieldSize = Size(width="500px", height="30px", padding="8px", margin="10px", font_size="14px", unit_size=UnitSize.PIXELS)
+inputFieldStyling = Styling(size=inputFieldSize, position=inputFieldPosition, color=InputFieldColor)
+FooterColor = Color(background_color="#F8F9FA", text_color="#6C757D", border_color="#E9ECEF")
+footerPosition = Position(type=PositionType.Relative, alignment="center", z_index=0)
+footerSize = Size(width="100%", height="auto", padding="20px", margin="0", font_size="12px", unit_size=UnitSize.PIXELS)
+footerStyling = Styling(size=footerSize, position=footerPosition, color=FooterColor)
+viewComponent: ViewComponent = ViewComponent(name="WikiSearchView", description="Wikipedia Search Engine Interface")
+beforeSearchInput: InputField = InputField(name="BeforeSearchInput", description="Search input before search", type="Text", validationRules="", styling=inputFieldStyling)
+afterSearchInput: InputField = InputField(name="AfterSearchInput", description="Search input after search", type="Text", validationRules="", styling=inputFieldStyling)
+searchButton: Button = Button(name="SearchButton", description="Search Wikipedia", label="Search", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Search, styling=buttonStyling)
+randomButton: Button = Button(name="RandomButton", description="Go to a random Wikipedia page", label="Random", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Navigate, styling=buttonStyling)
+footer: ViewComponent = ViewComponent(name="Footer", description="Footer with copyright and social links", styling=footerStyling)
+WikiSearchScreen: Screen = Screen(name="WikiSearchScreen", description="Search Wikipedia articles", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={beforeSearchInput, afterSearchInput, searchButton, randomButton, footer}, is_main_page=True, layout=ScreenLayout)
+WikiSearchModule: Module = Module(name="WikiSearchModule", screens={WikiSearchScreen})
+gui_model: GUIModel = GUIModel(name="WikipediaSearchEngine", package="com.example.wikisearch", versionCode="1", versionName="1.0", description="A simple Wikipedia search engine interface.", screenCompatibility=True, modules={WikiSearchModule})

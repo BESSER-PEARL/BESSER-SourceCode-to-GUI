@@ -1,0 +1,33 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+HeaderColor = Color(background_color="#8B4513", text_color="#FFFFFF", border_color="#8B4513")
+headerPosition = Position(type=PositionType.Relative, alignment="center")
+headerSize = Size(width="100%", height="128px", font_size="32px", unit_size=UnitSize.PIXELS)
+headerStyling = Styling(size=headerSize, position=headerPosition, color=HeaderColor)
+NavColor = Color(background_color="#8B4513", text_color="#FFFFFF", border_color="#8B4513")
+navPosition = Position(type=PositionType.Relative, alignment="center")
+navSize = Size(width="100%", height="64px", font_size="16px", unit_size=UnitSize.PIXELS)
+navStyling = Styling(size=navSize, position=navPosition, color=NavColor)
+FormColor = Color(background_color="#8B4513", text_color="#FFFFFF", border_color="#8B4513")
+formPosition = Position(type=PositionType.Relative, alignment="center")
+formSize = Size(width="100%", height="256px", font_size="16px", unit_size=UnitSize.PIXELS)
+formStyling = Styling(size=formSize, position=formPosition, color=FormColor)
+ContentColor = Color(background_color="#F0FFF0", text_color="#000000", border_color="#F0FFF0")
+contentPosition = Position(type=PositionType.Relative, alignment="center")
+contentSize = Size(width="100%", height="auto", padding="16px", font_size="18px", unit_size=UnitSize.PIXELS)
+contentStyling = Styling(size=contentSize, position=contentPosition, color=ContentColor)
+headerComponent = ViewComponent(name=RealEstatePage_title, description=RealEstatePage_description, styling=headerStyling)
+navComponent = ViewComponent(name=Navigation_homeLink, description=Navigation_aboutUsLink, styling=navStyling)
+formComponent = ViewComponent(name=RealEstatePage_searchPlaceholder, description=RealEstatePage_description, styling=formStyling)
+contentComponent = ViewComponent(name=RealEstatePage_welcomeMessage, description=RealEstatePage_description, styling=contentStyling)
+menuItems = {MenuItem(label=Navigation_homeLink), MenuItem(label=Navigation_propertiesLink), MenuItem(label=Navigation_aboutUsLink), MenuItem(label=Navigation_contactLink)}
+menu = Menu(name="MainMenu", description="Main Navigation Menu", menuItems=menuItems, styling=navStyling)
+searchInputField = InputField(name=RealEstatePage_searchPlaceholder, description="Search for properties", type=InputFieldType.Text, styling=None)
+searchButton = Button(name="SearchButton", description="Search Button", label="Search", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Search, styling=None)
+searchForm = Form(name="PropertySearchForm", description="Form to search properties", inputFields={searchInputField}, styling=formStyling)
+RealEstateScreen = Screen(name="RealEstateScreen", description="Real Estate Application Main Screen", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={headerComponent, navComponent, formComponent, contentComponent, menu, searchForm, searchButton}, is_main_page=True, layout=ScreenLayout)
+RealEstateModule = Module(name="RealEstateModule", screens={RealEstateScreen})
+gui_model = GUIModel(name="RealEstateApp", package="com.example.realestate", versionCode="1", versionName="1.0", description="A web application for real estate management.", screenCompatibility=True, modules={RealEstateModule})

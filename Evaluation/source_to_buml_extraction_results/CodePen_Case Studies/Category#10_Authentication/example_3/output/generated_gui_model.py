@@ -1,0 +1,26 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+ButtonColor = Color(background_color="#28a745", text_color="#FFFFFF", border_color="#218838")
+buttonPosition = Position(type=PositionType.Relative, z_index=0)
+buttonSize = Size(width="100%", height="40px", padding="8px", margin="24px", font_size="14px", unit_size=UnitSize.PIXELS)
+buttonStyling = Styling(size=buttonSize, position=buttonPosition, color=ButtonColor)
+InputFieldColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#CED4DA")
+inputFieldPosition = Position(type=PositionType.Relative, z_index=0)
+inputFieldSize = Size(width="100%", height="auto", padding="10px", font_size="14px", unit_size=UnitSize.PIXELS)
+inputFieldStyling = Styling(size=inputFieldSize, position=inputFieldPosition, color=InputFieldColor)
+NotificationBoxColor = Color(background_color="transparent", text_color="#000000", border_color="transparent")
+notificationBoxPosition = Position(type=PositionType.Relative, z_index=0)
+notificationBoxSize = Size(width="100%", height="auto", padding="10px", unit_size=UnitSize.PIXELS)
+notificationBoxStyling = Styling(size=notificationBoxSize, position=notificationBoxPosition, color=NotificationBoxColor)
+viewComponent = ViewComponent(name="PhoneAuthView", description="Phone number and two-factor authentication input")
+phoneInputField = InputField(name="PhoneInputField", description="Enter your phone number", type="Tel", validationRules="", styling=inputFieldStyling)
+twoFactorInputField = InputField(name="TwoFactorInputField", description="Enter your two-factor code", type="Text", validationRules="", styling=inputFieldStyling)
+sendButton = Button(name="SendButton", description="Send two-factor authentication code", label="Send Me a Two-Factor Authentication Code", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Send, styling=buttonStyling)
+submitButton = Button(name="SubmitButton", description="Submit two-factor authentication code", label="Submit My Two-Factor Authentication Code", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.SubmitForm, styling=buttonStyling)
+notificationBox = ViewComponent(name="NotificationBox", description="Display success or error messages", styling=notificationBoxStyling)
+PhoneAuthScreen = Screen(name="PhoneAuthScreen", description="Screen for phone number and two-factor authentication", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={phoneInputField, twoFactorInputField, sendButton, submitButton, notificationBox}, is_main_page=True, layout=ScreenLayout)
+AuthModule = Module(name="AuthModule", screens={PhoneAuthScreen})
+gui_model = GUIModel(name="PhoneAuthApp", package="com.example.phoneauth", versionCode="1", versionName="1.0", description="An application for phone number and two-factor authentication.", screenCompatibility=True, modules={AuthModule})

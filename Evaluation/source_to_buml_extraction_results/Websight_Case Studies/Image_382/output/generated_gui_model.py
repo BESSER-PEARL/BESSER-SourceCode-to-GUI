@@ -1,0 +1,27 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+ImagePosition = Position(type=PositionType.Relative, alignment="center", z_index=0)
+ImageSize = Size(width="128", height="128", unit_size=UnitSize.PIXELS)
+ImageColor = Color(border_color="", text_color="", background_color="")
+ImageStyling = Styling(size=ImageSize, position=ImagePosition, color=ImageColor)
+MenuColor = Color(text_color="#10B981", border_color="", background_color="")
+MenuPosition = Position(type=PositionType.Relative, alignment="center", z_index=0)
+MenuSize = Size(font_size="16", unit_size=UnitSize.PIXELS)
+MenuStyling = Styling(size=MenuSize, position=MenuPosition, color=MenuColor)
+viewComponent: ViewComponent = ViewComponent(name="WebPageView", description="Display educational content")
+educationalLogo: Image = Image(name="EducationalLogo", description="Educational Logo", styling=ImageStyling)
+programsMenuItem: MenuItem = MenuItem(label=WebPage_programs.name)
+coursesMenuItem: MenuItem = MenuItem(label=WebPage_courses.name)
+facultyMenuItem: MenuItem = MenuItem(label=WebPage_faculty.name)
+achievementsMenuItem: MenuItem = MenuItem(label=WebPage_achievements.name)
+navigationMenu: Menu = Menu(name="NavigationMenu", description="Main navigation menu", menuItems={programsMenuItem, coursesMenuItem, facultyMenuItem, achievementsMenuItem}, styling=MenuStyling)
+programsSection: ViewComponent = ViewComponent(name="ProgramsSection", description="Programs section")
+coursesSection: ViewComponent = ViewComponent(name="CoursesSection", description="Courses section")
+facultySection: ViewComponent = ViewComponent(name="FacultySection", description="Faculty section")
+achievementsSection: ViewComponent = ViewComponent(name="AchievementsSection", description="Achievements section")
+WebPageScreen: Screen = Screen(name="WebPageScreen", description="Educational web page", x_dpi=WebPage_programs.name, y_dpi=WebPage_courses.name, screen_size="Medium", view_elements={educationalLogo, navigationMenu, programsSection, coursesSection, facultySection, achievementsSection}, is_main_page=WebPage_isActive.name, layout=ScreenLayout)
+WebPageModule: Module = Module(name="WebPageModule", screens={WebPageScreen})
+gui_model: GUIModel = GUIModel(name="EducationalApp", package="com.example.educationalapp", versionCode="1", versionName="1.0", description="An educational web application.", screenCompatibility=True, modules={WebPageModule})

@@ -1,0 +1,28 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="0", alignment=JustificationType.Center)
+HeaderColor = Color(background_color="#4F46E5", text_color="#FFFFFF", border_color="")
+HeaderPosition = Position(type=PositionType.Relative, alignment="center", z_index=0)
+HeaderSize = Size(width="100%", height="100px", unit_size=UnitSize.PIXELS)
+HeaderStyling = Styling(size=HeaderSize, position=HeaderPosition, color=HeaderColor)
+NavColor = Color(background_color="#4338CA", text_color="#FFFFFF", border_color="")
+NavPosition = Position(type=PositionType.Relative, alignment="center", z_index=0)
+NavSize = Size(width="100%", height="50px", unit_size=UnitSize.PIXELS)
+NavStyling = Styling(size=NavSize, position=NavPosition, color=NavColor)
+MainContentColor = Color(background_color="#F3F4F6", text_color="#1F2937", border_color="")
+MainContentPosition = Position(type=PositionType.Relative, alignment="center", z_index=0)
+MainContentSize = Size(width="100%", height="auto", padding="20px", unit_size=UnitSize.PIXELS)
+MainContentStyling = Styling(size=MainContentSize, position=MainContentPosition, color=MainContentColor)
+FooterColor = Color(background_color="#4F46E5", text_color="#FFFFFF", border_color="")
+FooterPosition = Position(type=PositionType.Relative, alignment="center", z_index=0)
+FooterSize = Size(width="100%", height="50px", unit_size=UnitSize.PIXELS)
+FooterStyling = Styling(size=FooterSize, position=FooterPosition, color=FooterColor)
+headerImage: Image = Image(name=WebPage_logo.name, description="Company Logo", styling=HeaderStyling)
+navMenu: Menu = Menu(name="MainNavigation", description="Main navigation menu", menuItems={MenuItem(label=Navigation_home.name), MenuItem(label=Navigation_about.name), MenuItem(label=Navigation_products.name), MenuItem(label=Navigation_contact.name)}, styling=NavStyling)
+mainContent: ViewComponent = ViewComponent(name=WebPage_description.name, description="Welcome message and description", styling=MainContentStyling)
+footer: ViewComponent = ViewComponent(name=WebPage_footer.name, description="Footer content", styling=FooterStyling)
+FashionBrandScreen: Screen = Screen(name="FashionBrandScreen", description="Fashion brand homepage", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={headerImage, navMenu, mainContent, footer}, is_main_page=True, layout=ScreenLayout)
+FashionBrandModule: Module = Module(name="FashionBrandModule", screens={FashionBrandScreen})
+gui_model: GUIModel = GUIModel(name="FashionBrandApp", package="com.example.fashionbrand", versionCode="1", versionName="1.0", description="A web application for a fashion brand.", screenCompatibility=True, modules={FashionBrandModule})

@@ -1,0 +1,28 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+HeaderColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#DDDDDD")
+HeaderPosition = Position(type=PositionType.Relative, top="", left="", right="", bottom="", alignment="", z_index=0)
+HeaderSize = Size(width="100%", height="auto", padding="16px", margin="0", font_size="24px", icon_size="", unit_size=UnitSize.PIXELS)
+HeaderStyling = Styling(size=HeaderSize, position=HeaderPosition, color=HeaderColor)
+ButtonColor = Color(background_color="#4F46E5", text_color="#FFFFFF", border_color="#3B82F6")
+ButtonPosition = Position(type=PositionType.Relative, top="", left="", right="", bottom="", alignment="", z_index=0)
+ButtonSize = Size(width="auto", height="40px", padding="8px", margin="16px", font_size="14px", icon_size="", unit_size=UnitSize.PIXELS)
+ButtonStyling = Styling(size=ButtonSize, position=ButtonPosition, color=ButtonColor)
+SectionColor = Color(background_color="#F3F4F6", text_color="#000000", border_color="#DDDDDD")
+SectionPosition = Position(type=PositionType.Relative, top="", left="", right="", bottom="", alignment="", z_index=0)
+SectionSize = Size(width="100%", height="auto", padding="16px", margin="0", font_size="18px", icon_size="", unit_size=UnitSize.PIXELS)
+SectionStyling = Styling(size=SectionSize, position=SectionPosition, color=SectionColor)
+FooterColor = Color(background_color="#FFFFFF", text_color="#6B7280", border_color="#DDDDDD")
+FooterPosition = Position(type=PositionType.Relative, top="", left="", right="", bottom="", alignment="", z_index=0)
+FooterSize = Size(width="100%", height="auto", padding="16px", margin="0", font_size="14px", icon_size="", unit_size=UnitSize.PIXELS)
+FooterStyling = Styling(size=FooterSize, position=FooterPosition, color=FooterColor)
+header: ViewComponent = ViewComponent(name="Header", description=Header_description, styling=HeaderStyling)
+learnMoreButton: Button = Button(name="LearnMoreButton", description="Learn more about the company", label="Learn More", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Navigate, styling=ButtonStyling)
+ourProductsSection: ViewComponent = ViewComponent(name="OurProductsSection", description=Section_sectionDescription, styling=SectionStyling)
+footer: ViewComponent = ViewComponent(name="Footer", description=Footer_copyrightInfo, styling=FooterStyling)
+SoftwareCompanyPageScreen: Screen = Screen(name="SoftwareCompanyPage", description=Header_description, x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={header, learnMoreButton, ourProductsSection, footer}, is_main_page=True, layout=ScreenLayout)
+SoftwareCompanyModule: Module = Module(name="SoftwareCompanyModule", screens={SoftwareCompanyPageScreen})
+gui_model: GUIModel = GUIModel(name="SoftwareCompanyApp", package="com.example.softwarecompany", versionCode="1", versionName="1.0", description="A web application for showcasing software company information.", screenCompatibility=True, modules={SoftwareCompanyModule})

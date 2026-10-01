@@ -1,0 +1,50 @@
+<div ng-app="inventoryApp">
+  <div ng-controller="invertoryListController as inv">
+    <div class="input-group search-input">
+      <span class="input-group-addon">
+        <span class="glyphicon glyphicon-search"></span>
+      </span>
+      <input class="form-control" ng-model="query" placeholder="Search">
+    </div>
+    <p class="text-center">Total Inventory Value: {{inv.stockValue() | currency}}</p>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th class="text-center">#</th>
+          <th class="text-center">Part Name</th>
+          <th class="text-center">Price</th>
+          <th class="text-center">Quantity</th>
+          <th class="text-center">Stock Value</th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="item in inv.items  | filter:query | orderBy: 'number'">
+        <tr>
+          <td class="text-center">{{item.number}}</td>
+          <td>{{item.name}}</td>
+          <td class="text-center">{{item.price | currency}}</td>
+          <td class="quantity">
+            <div class="input-group quantity-input ">
+              <span class="input-group-btn">
+                <button class="btn btn-default btn-number" ng-click="inv.minusOne(item)">
+                    <span class="glyphicon glyphicon-minus"></span>
+                </button>
+              </span>
+              <input type="text" class="form-control input-number text-center" ng-model="item.quantity">
+              <span class="input-group-btn ">
+                <button class="btn btn-default btn-number" ng-click="inv.plusOne(item)">
+                  <span class="glyphicon glyphicon-plus"></span>
+                </button>
+              </span>
+            </div>
+          </td>
+          <td class="text-center">{{item.price * item.quantity | currency}}</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

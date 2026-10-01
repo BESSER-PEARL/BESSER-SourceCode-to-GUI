@@ -1,0 +1,25 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+HeaderImageColor = Color(background_color="#4F46E5", text_color="#FFFFFF", border_color="#4F46E5")
+HeaderImagePosition = Position(type=PositionType.Relative, alignment="center")
+HeaderImageSize = Size(width="100%", height="256px", unit_size=UnitSize.PIXELS)
+HeaderImageStyling = Styling(size=HeaderImageSize, position=HeaderImagePosition, color=HeaderImageColor)
+ArticleCardColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#E5E7EB")
+ArticleCardPosition = Position(type=PositionType.Relative)
+ArticleCardSize = Size(width="100%", height="auto", padding="16px", margin="16px", unit_size=UnitSize.PIXELS)
+ArticleCardStyling = Styling(size=ArticleCardSize, position=ArticleCardPosition, color=ArticleCardColor)
+FooterColor = Color(background_color="#4F46E5", text_color="#FFFFFF", border_color="#4F46E5")
+FooterPosition = Position(type=PositionType.Relative)
+FooterSize = Size(width="100%", height="auto", padding="24px", unit_size=UnitSize.PIXELS)
+FooterStyling = Styling(size=FooterSize, position=FooterPosition, color=FooterColor)
+headerImage: Image = Image(name=Header_logo.name, description="Logo image", styling=HeaderImageStyling)
+articleCard: ViewComponent = ViewComponent(name=Article_title.name, description="Tech article card", styling=ArticleCardStyling)
+footer: ViewComponent = ViewComponent(name=Footer_newsletterEmail.name, description="Footer with newsletter and social links", styling=FooterStyling)
+newsletterInput: InputField = InputField(name=Footer_newsletterEmail.name, description="Input field for newsletter email", type="Email", styling=Styling(size=Size(width="100%", padding="2px", unit_size=UnitSize.PIXELS)))
+subscribeButton: Button = Button(name="SubscribeButton", description="Button to subscribe to newsletter", label="Subscribe", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.SubmitForm, styling=Styling(size=Size(width="100%", padding="2px", unit_size=UnitSize.PIXELS)))
+WebPageScreen: Screen = Screen(name="WebPageScreen", description="Web page with header, articles, and footer", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={headerImage, articleCard, footer, newsletterInput, subscribeButton}, is_main_page=True, layout=ScreenLayout)
+WebPageModule: Module = Module(name="WebPageModule", screens={WebPageScreen})
+gui_model: GUIModel = GUIModel(name="WebPageApp", package="com.example.webpageapp", versionCode="1", versionName="1.0", description="A web page with a header, articles, and footer.", screenCompatibility=True, modules={WebPageModule})

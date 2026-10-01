@@ -1,0 +1,28 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+InputFieldColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#CCCCCC")
+InputFieldPosition = Position(type=PositionType.Relative, z_index=0)
+InputFieldSize = Size(width="100%", height="40px", padding="10px", margin="5px", font_size="14px", unit_size=UnitSize.PIXELS)
+InputFieldStyling = Styling(size=InputFieldSize, position=InputFieldPosition, color=InputFieldColor)
+ButtonColor = Color(background_color="#007BFF", text_color="#FFFFFF", border_color="#0056b3")
+ButtonPosition = Position(type=PositionType.Relative, z_index=0)
+ButtonSize = Size(width="100%", height="40px", padding="10px", margin="5px", font_size="14px", unit_size=UnitSize.PIXELS)
+ButtonStyling = Styling(size=ButtonSize, position=ButtonPosition, color=ButtonColor)
+viewComponent: ViewComponent = ViewComponent(name="RegistrationFormView", description="Responsive Registration Form")
+emailInput: InputField = InputField(name="EmailInput", description="Email input field", type=InputFieldType.Email, validationRules="required", styling=InputFieldStyling)
+passwordInput: InputField = InputField(name="PasswordInput", description="Password input field", type=InputFieldType.Password, validationRules="required", styling=InputFieldStyling)
+retypePasswordInput: InputField = InputField(name="RetypePasswordInput", description="Re-type Password input field", type=InputFieldType.Password, validationRules="required", styling=InputFieldStyling)
+firstNameInput: InputField = InputField(name="FirstNameInput", description="First Name input field", type=InputFieldType.Text, validationRules="", styling=InputFieldStyling)
+lastNameInput: InputField = InputField(name="LastNameInput", description="Last Name input field", type=InputFieldType.Text, validationRules="required", styling=InputFieldStyling)
+genderRadio: InputField = InputField(name="GenderRadio", description="Gender selection", type=InputFieldType.Text, validationRules="", styling=InputFieldStyling)
+countrySelect: InputField = InputField(name="CountrySelect", description="Country selection", type=InputFieldType.Text, validationRules="", styling=InputFieldStyling)
+agreeTermsCheckbox: InputField = InputField(name="AgreeTermsCheckbox", description="Agree with terms and conditions", type=InputFieldType.Text, validationRules="", styling=InputFieldStyling)
+receiveNewsletterCheckbox: InputField = InputField(name="ReceiveNewsletterCheckbox", description="Receive newsletter", type=InputFieldType.Text, validationRules="", styling=InputFieldStyling)
+registerButton: Button = Button(name="RegisterButton", description="Register button", label="Register", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.SubmitForm, styling=ButtonStyling)
+registrationForm: Form = Form(name="RegistrationForm", description="User registration form", inputFields={emailInput, passwordInput, retypePasswordInput, firstNameInput, lastNameInput, genderRadio, countrySelect, agreeTermsCheckbox, receiveNewsletterCheckbox}, styling=None)
+RegistrationScreen: Screen = Screen(name="RegistrationScreen", description="Screen for user registration", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={registrationForm, registerButton}, is_main_page=True, layout=ScreenLayout)
+RegistrationModule: Module = Module(name="RegistrationModule", screens={RegistrationScreen})
+gui_model: GUIModel = GUIModel(name="RegistrationApp", package="com.example.registrationapp", versionCode="1", versionName="1.0", description="A responsive registration form application.", screenCompatibility=True, modules={RegistrationModule})
