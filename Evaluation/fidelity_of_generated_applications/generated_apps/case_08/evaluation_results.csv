@@ -1,0 +1,2 @@
+case_id,category,example,label,element_type,element_name,element_label,found_in_app,total_elements,matched_elements,element_coverage,id_match_rate,label_match_rate,overall_score
+case_08,Category#4_Inventory,example_3,Inventory (list view),DataList,InventoryList,,True,1,1,1.0,1.0,1.0,1.0

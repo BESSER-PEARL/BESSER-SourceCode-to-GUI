@@ -1,0 +1,40 @@
+@startuml
+class Dashboard {
+  newOrders : int
+  bounceRatePercent : float
+  userRegistrations : int
+  uniqueVisitors : int
+  directChatNewMessages : int
+}
+class DashboardV2 {
+  cpuTrafficPercent : float
+  likes : int
+  sales : int
+  newMembers : int
+  totalRevenue : float
+  totalCost : float
+  totalProfit : float
+  goalCompletions : int
+  inventory : int
+  mentions : int
+  downloads : int
+}
+class DashboardV3 {
+  visitorsTotal : int
+  visitorsChangePercent : float
+  salesTotal : float
+  salesChangePercent : float
+  conversionRatePercent : float
+  salesRatePercent : float
+  registrationRatePercent : float
+}
+class StarterPage {
+  starterCardTitle : str
+  starterCardBodyText : str
+}
+class Users {
+  usersShowingFrom : int
+  usersShowingTo : int
+  usersTotal : int
+}
+@enduml

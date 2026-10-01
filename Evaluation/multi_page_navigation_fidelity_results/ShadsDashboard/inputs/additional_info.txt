@@ -1,0 +1,4 @@
+This is a multi-page admin dashboard application called Shards Dashboard.
+The sidebar navigation links all pages together.
+Pages: Dashboard (main overview with stats and charts), User Profile (user info and account settings), Add New Post (form to create blog content), Tables (data tables view), Errors (error/404 page).
+Navigation flows from the sidebar menu present on all main pages.

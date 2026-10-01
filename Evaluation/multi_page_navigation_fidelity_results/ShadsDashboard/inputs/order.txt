@@ -1,0 +1,5 @@
+1. Dashboard (index)
+2. User Profile
+3. Add New Post
+4. Tables
+5. Errors

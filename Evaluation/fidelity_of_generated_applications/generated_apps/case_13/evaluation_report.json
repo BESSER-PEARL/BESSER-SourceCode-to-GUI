@@ -1,0 +1,17 @@
+{
+  "summary": {
+    "total_elements": 0,
+    "matched_elements": 0,
+    "element_coverage": 0.0,
+    "id_match_rate": 0.0,
+    "label_match_rate": 0.0,
+    "overall_score": 0.0
+  },
+  "details": {
+    "buttons": [],
+    "forms": [],
+    "input_fields": [],
+    "data_lists": [],
+    "view_components": []
+  }
+}

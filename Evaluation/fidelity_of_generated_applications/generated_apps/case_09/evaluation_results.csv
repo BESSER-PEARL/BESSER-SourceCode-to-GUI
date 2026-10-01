@@ -1,0 +1,5 @@
+case_id,category,example,label,element_type,element_name,element_label,found_in_app,total_elements,matched_elements,element_coverage,id_match_rate,label_match_rate,overall_score
+case_09,Category#5_Educational,example_2,Educational (quiz + modal),Button,ExplainButton,Explain,True,4,4,1.0,1.0,1.0,1.0
+case_09,Category#5_Educational,example_2,Educational (quiz + modal),Button,SubmitButton,Submit,True,4,4,1.0,1.0,1.0,1.0
+case_09,Category#5_Educational,example_2,Educational (quiz + modal),Button,NextButton,Next,True,4,4,1.0,1.0,1.0,1.0
+case_09,Category#5_Educational,example_2,Educational (quiz + modal),ViewComponent,ExplanationModal,,True,4,4,1.0,1.0,1.0,1.0

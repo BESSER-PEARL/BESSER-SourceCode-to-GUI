@@ -1,88 +1,181 @@
-<div align="center">
-  <img src="./docs/source/_static/besser_logo_light.png" alt="BESSER platform" width="500"/>
-</div>
+# Integrating LLMs and Model-Driven Engineering for Automated GUI Re-generation
 
 [![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue?logo=python&logoColor=gold)](https://pypi.org/project/besser/)
-[![PyPI version](https://img.shields.io/pypi/v/besser?logo=pypi&logoColor=white)](https://pypi.org/project/besser/)
-[![PyPI - Downloads](https://static.pepy.tech/badge/besser)](https://pypi.org/project/besser/)
-[![Documentation Status](https://readthedocs.org/projects/besser/badge/?version=latest)](https://besser.readthedocs.io/en/latest/)
 [![PyPI - License](https://img.shields.io/pypi/l/besser)](https://opensource.org/license/MIT)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?logo=Linkedin&logoColor=white)](https://www.linkedin.com/company/besser-pearl)
-[![GitHub Repo stars](https://img.shields.io/github/stars/besser-pearl/besser?style=social)](https://star-history.com/#besser-pearl/besser)
 
-BESSER is a [low-modeling](https://modeling-languages.com/welcome-to-the-low-modeling-revolution/) [low-code](https://lowcode-book.com/) open-source platform. BESSER (Building bEtter Smart Software fastER) is funded thanks to an [FNR Pearl grant](https://modeling-languages.com/a-smart-low-code-platform-for-smart-software-in-luxembourg-goodbye-barcelona/) led by the [Luxembourg Institute of Science and Technology](https://www.list.lu/) with the participation of the [Snt/University of Luxembourg](https://www.uni.lu/snt-en/) and open to all your contributions!
+This repository contains the implementation of the approach proposed in the paper **"Integrating LLMs and Model-Driven Engineering for Automated GUI Re-generation"** (Atefeh Nirumand, Jordi Cabot — Luxembourg Institute of Science and Technology & University of Luxembourg). The approach provides an end-to-end, platform-independent pipeline for GUI extraction, enhancement, and re-generation: it lifts existing HTML/CSS implementations into platform-independent B-UML models using LLM-assisted prompting, optionally refines those models through HCI-guided enhancement and human-in-the-loop designer interaction, and re-generates executable web applications via deterministic model-to-code transformation — all implemented on top of the [BESSER](https://github.com/BESSER-PEARL/BESSER) low-code platform.
 
-The BESSER low-code platform is built on top of [B-UML](https://besser.readthedocs.io/en/latest/buml_language.html) our Python-based personal interpretation of a "Universal Modeling Language" (yes, heavily inspired and a simplified version of the better known UML, the Unified Modeling Language).
-With B-UML you can specify your software application and then use any of the [code-generators available](https://besser.readthedocs.io/en/latest/generators.html) to translate your model into executable code suitable for various applications, such as Django web apps or database structures compatible with SQLAlchemy.
+---
 
-This repository contains the backend foundation for the ecosystem: the
-metamodel, code generators, notations, utilities, and services that drive the web modeling editor and the Python SDK. The editor's frontend is maintained in the companion [BESSER_WME_standalone](https://github.com/BESSER-PEARL/BESSER_WME_standalone) repository and is included here only as a submodule for local deployments.
+## Overview
 
-**Check out the [BESSER Web Modeling Editor online](https://editor.besser-pearl.org/)**
-![BESSER Web Modeling Editor Demo](./docs/source/img/besser_new.gif)
+The pipeline takes HTML/CSS web pages as input, lifts them to platform-independent B-UML models, optionally enhances them using HCI principles and human feedback, and re-generates executable web applications through deterministic model-to-code transformation.
 
-**Check out the official [documentation](https://besser.readthedocs.io/en/latest/)**
+The approach consists of **two core phases** and **two optional refinement phases**:
 
-## Basic Installation
+| Phase | Type | Description |
+|-------|------|-------------|
+| 1. LLM-based Code-to-Model Extraction | **Core** | Derives a Structural (data) model and an IFML-like GUI model from HTML/CSS source files using LLM-assisted prompting |
+| 2. LLM-based Model Enhancement (HCI) | *Optional* | Refines the extracted IFML-like GUI model according to HCI principles (Usefulness, Usability, Findability, Desirability) and exports an SVG visual representation |
+| 3. Human-in-the-Loop Interaction | *Optional* | Allows designers to inspect, edit, and refine the SVG representation in tools such as Figma before final code generation |
+| 4. Deterministic Model-to-Code Generation | **Core** | Consumes the validated B-UML models and produces executable applications (Django or React) with integrated CRUD logic and styling |
 
-BESSER works with Python 3.10+. We recommend creating a virtual environment (e.g. [venv](https://docs.python.org/3/tutorial/venv.html), [conda](https://docs.conda.io/en/latest/)).
+The pipeline supports both single-page and multi-page applications, automatically binding inter-page navigation relationships into a unified GUI model.
 
-The latest stable version of BESSER is available in the Python Package Index (PyPi) and can be installed using
+---
 
-    $ pip install besser
+## Repository Structure
 
-BESSER can be used with any of the popular IDEs for Python development such as [VScode](https://code.visualstudio.com/), [PyCharm](https://www.jetbrains.com/pycharm/), [Sublime Text](https://www.sublimetext.com/), etc.
+```
+BESSER-SourceCode-to-GUI/
+├── besser/
+│   ├── BUML/
+│   │   └── notations/
+│   │       ├── sourceCode_to_structural/   # HTML/CSS → Structural model
+│   │       └── sourceCode_to_buml/         # HTML/CSS → IFML-like GUI model + SVG + HCI
+│   └── generators/                         # Structural + GUI model → Django/React app
+└── Evaluation/                             # Full replication package (RQ1–RQ8)
+```
 
-## Running BESSER Locally
+---
 
-If you are interested in developing new code generators or designing BESSER extensions, you can download and modify the full codebase, including tests and examples.
+## Installation
 
-### Step 1: Clone the repository
+The implementation requires Python 3.10+ and is built on top of the BESSER platform.
 
-    $ git clone https://github.com/BESSER-PEARL/BESSER.git
-    $ cd BESSER
+```bash
+git clone https://github.com/BESSER-PEARL/BESSER-SourceCode-to-GUI.git
+cd BESSER-SourceCode-to-GUI
+python setup_environment.py
+```
 
-### Step 2: Create a virtual environment
+An OpenAI API key is required (GPT-5.2 was used as the primary backbone in the paper).
 
-Run the setup script to create a virtual environment (if not already created), install the requirements, and configure the ``PYTHONPATH``. This ensures compatibility with IDEs (like VSCode) that may not automatically set the ``PYTHONPATH`` for recognizing *besser* as an importable module.
+---
 
-    $ python setup_environment.py
+## Usage (example)
 
-**Note:** Each time you start your IDE, run the `setup_environment.py` script to ensure the environment is properly configured.
+### Full Pipeline: HTML/CSS → B-UML GUI Model → SVG
 
-### Step 3: Run an example
+```python
+from besser.BUML.notations.sourceCode_to_buml.sourceCode_to_buml import source_code_to_buml
 
-To verify the setup, you can run a basic example.
+source_code_to_buml(
+    api_key="<your-openai-api-key>",
+    input_folder="path/to/html/folder",       # folder with .html / .htm files
+    output_folder="path/to/output",            # default: ./output
+    # Optional — for multi-page applications:
+    navigation_image_path="path/to/nav_diagram.png",
+    pages_order_file_path="path/to/pages_order.txt",
+    additional_info_path="path/to/app_description.txt",
+    # Optional — for styling-aware extraction:
+    styling_file_path="path/to/css/folder",
+)
+```
 
-    $ cd tests/BUML/metamodel/structural/library
-    $ python library.py
+The function automatically detects whether the input folder contains one or multiple HTML files and dispatches to the appropriate single-page or multi-page pipeline.
 
-## Examples
-If you want to try examples, check out the [BESSER-examples](https://github.com/BESSER-PEARL/BESSER-examples) repository!
+### Structural Model Extraction Only
 
-## Contributing
+```python
+from besser.BUML.notations.sourceCode_to_structural.sourceCode_to_structural import source_code_to_structural
 
-We encourage contributions from the community and any comment is welcome!
+source_code_to_structural(
+    api_key="<your-openai-api-key>",
+    input_folder="path/to/html/folder",
+    output_folder="path/to/output",
+    additional_info_path="path/to/app_description.txt",  # optional
+)
+```
 
-If you are interested in contributing to this project, please read the [CONTRIBUTING.md](CONTRIBUTING.md) file.
-You can also explore our step-by-step [Contributor Guide](https://besser.readthedocs.io/en/latest/contributor_guide.html) and the dedicated [AI Assistant Guide](https://besser.readthedocs.io/en/latest/ai_assistant_guide.html) to understand the workflows and expectations before opening a pull request.
+### Output Structure
 
-## How to cite BESSER
+```
+output/
+├── plantuml/
+│   └── generated_plantuml.puml      # Intermediate PlantUML class diagram
+├── buml/
+│   └── model.py                     # B-UML Structural (DomainModel)
+├── gui_model/
+│   └── generated_gui_model.py       # B-UML IFML-like GUI model
+└── hci_enhanced/
+    └── enhanced_svg/                # HCI-enhanced SVG representations
+```
 
-This repository has the CITATION.cff file, which activates the "Cite this repository" button in the About section (right side of the repository). The citation is in APA and BibTex format.
+---
 
-## Code of Conduct
+## Implementation Details
 
-At BESSER, our commitment is centered on establishing and maintaining development environments that are welcoming, inclusive, safe and free from all forms of harassment. All participants are expected to voluntarily respect and support our [Code of Conduct](CODE_OF_CONDUCT.md).
+### Phase 1 — LLM-based Code-to-Model Extraction
 
-## Governance
+Located in `besser/BUML/notations/sourceCode_to_structural/` and `besser/BUML/notations/sourceCode_to_buml/`.
 
-The development of this project follows the governance rules described in the [GOVERNANCE.md](GOVERNANCE.md) document.
+**Structural model extraction** uses a two-step pipeline:
+1. A direct prompt instructs the LLM to generate a PlantUML class diagram from the HTML/CSS input.
+2. A self-improvement prompt refines the diagram for syntactic correctness, removes duplicates, and enforces type consistency.
+The final PlantUML is converted to a B-UML `DomainModel` via the existing BESSER `plantuml_to_buml` converter.
 
-## Contact
-You can reach us at: [info@besser-pearl.org](mailto:info@besser-pearl-org)
+**IFML-like GUI model extraction** uses:
+1. *Direct prompting* — the LLM generates an initial GUI model (screens, buttons, forms, data lists, layout, styling) from the source code, guided by the GUI metamodel image and few-shot HTML-to-Python examples.
+2. *Self-improvement prompting* — iterative refinement comparing the generated model against the source code and the Structural model to resolve inconsistencies and align attributes.
+3. *Property binding* — a dedicated pass replaces string literals with actual `Property` objects from the Structural model.
+4. When a CSS file is provided, additional styling passes integrate layout, color, and size attributes.
 
-Website: https://besser-pearl.org
+For multi-page applications, the pipeline additionally performs: shared structural model generation, per-page GUI model generation with cross-page context, whole-application unification into a single `Module`, and navigation binding (resolving `targetScreen` references for all `Navigate` buttons).
+
+### Phase 2 — LLM-based HCI Enhancement
+
+The IFML-like GUI model is first converted to SVG using a deterministic Jinja-template-based generator. An LLM-based enhancement pipeline then applies four HCI principles sequentially to the SVG:
+
+| Principle | Focus |
+|-----------|-------|
+| Usefulness | Remove redundant elements, improve task relevance, grid-based alignment |
+| Usability | Readability, contrast, navigation flow, accessible UI structures |
+| Findability | Visual hierarchy, navigation cues, scanability, whitespace |
+| Desirability | Color harmony, typography, shadows, visual polish |
+
+### Phase 3 — Human-in-the-Loop
+
+The generated SVG can be imported into Figma for visual inspection and manual refinement. The updated SVG is exported (with bounding boxes and preserved IDs) and converted back to an updated B-UML GUI model before code generation.
+
+### Phase 4 — Deterministic Model-to-Code Generation
+
+Located in `besser/generators/django/`. The generator transforms the Structural and IFML-like GUI models into a fully functional Django web application, including ORM models, CRUD views, URL routing, and styled HTML templates. A React generator is also available for front-end-only generation from the same models.
+
+---
+
+## IFML-like GUI Metamodel
+
+The metamodel (in `besser/BUML/notations/sourceCode_to_buml/llm_assistant/gui_metamodel_spec/`) provides a platform-independent abstract representation of GUIs organized around four dimensions:
+
+- **Application Structure** — `GUIModel`, `Module`, `Screen`
+- **Visual Elements** — `ViewContainer`, `ViewComponent`, `Button`, `InputField`, `Form`, `DataList`, `Image`, `Menu`, `MenuItem`
+- **Data Source Layer** — `DataSource`, `CollectionDataSource`, `DataSourceElement`, `FileDataSource`
+- **Layout and Styling** — `Layout`, `Size`, `Position`, `Color`, aggregated through a `Styling` object
+
+---
+
+## Evaluation
+
+The full replication package is in the [`Evaluation/`](./Evaluation/) directory, including:
+
+- **200 HTML/CSS case studies** from WebSight and CodePen with their generated Structural and IFML-like GUI models
+- **Backbone comparison results** for GPT-4o-mini, Gemini 2.5 Flash, and Llama 4 Scout
+- **Ablation study results** for each prompt component (task description, few-shot examples, metamodel reference)
+- **Stability results** across three independent runs per case
+- **HCI preference study** data (34 participants, 10 cases)
+- **Fidelity evaluation** for 20 generated web applications (element coverage + visual similarity)
+- **Navigation fidelity** results for 3 multi-page applications
+
+See [`Evaluation/README.md`](./Evaluation/README.md) for detailed results and tables.
+
+---
+
+## Acknowledgements
+
+This research is supported by the Luxembourg National Research Fund (FNR) through the PEARL program under grant agreement 16544475.
+
+---
 
 ## License
 

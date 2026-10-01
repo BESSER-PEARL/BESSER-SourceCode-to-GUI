@@ -1,0 +1,3 @@
+case_id,category,example,label,element_type,element_name,element_label,found_in_app,total_elements,matched_elements,element_coverage,id_match_rate,label_match_rate,overall_score
+case_03,Category#2_Search Engines,example_2,Search Engines (Wikipedia search),Button,ResultWikiSearchButton,ResultWikiSearch,True,2,2,1.0,1.0,1.0,1.0
+case_03,Category#2_Search Engines,example_2,Search Engines (Wikipedia search),ViewComponent,SearchResults,,True,2,2,1.0,1.0,1.0,1.0

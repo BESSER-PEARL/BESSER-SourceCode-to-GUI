@@ -1,0 +1,3 @@
+case_id,category,example,label,element_type,element_name,element_label,found_in_app,total_elements,matched_elements,element_coverage,id_match_rate,label_match_rate,overall_score
+case_04,Category#2_Search Engines,example_3,Search Engines (acronym lookup),Button,SearchButton,Search,True,2,2,1.0,1.0,1.0,1.0
+case_04,Category#2_Search Engines,example_3,Search Engines (acronym lookup),Button,ClearButton,Clear,True,2,2,1.0,1.0,1.0,1.0

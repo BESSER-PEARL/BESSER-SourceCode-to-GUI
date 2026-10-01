@@ -1,0 +1,67 @@
+{
+  "summary": {
+    "total_elements": 7,
+    "matched_elements": 7,
+    "element_coverage": 1.0,
+    "id_match_rate": 1.0,
+    "label_match_rate": 1.0,
+    "overall_score": 1.0
+  },
+  "details": {
+    "buttons": [
+      {
+        "name": "EmptyButton",
+        "label": "Empty",
+        "action_type": "Navigate",
+        "name_found": true,
+        "label_found": true,
+        "found": true
+      },
+      {
+        "name": "SaveButton",
+        "label": "Save",
+        "action_type": "SubmitForm",
+        "name_found": true,
+        "label_found": true,
+        "found": true
+      },
+      {
+        "name": "NewContactButton",
+        "label": "NewContact",
+        "action_type": "Add",
+        "name_found": true,
+        "label_found": true,
+        "found": true
+      },
+      {
+        "name": "LoadButton",
+        "label": "Load",
+        "action_type": "Navigate",
+        "name_found": true,
+        "label_found": true,
+        "found": true
+      }
+    ],
+    "forms": [
+      {
+        "name": "ContactForm",
+        "found": true
+      }
+    ],
+    "input_fields": [
+      {
+        "name": "InputField1",
+        "form": "ContactForm",
+        "field_type": "Text",
+        "found": true
+      }
+    ],
+    "data_lists": [
+      {
+        "name": "ContactList",
+        "found": true
+      }
+    ],
+    "view_components": []
+  }
+}

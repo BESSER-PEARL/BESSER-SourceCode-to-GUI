@@ -1,0 +1,2 @@
+case_id,category,example,label,element_type,element_name,element_label,found_in_app,total_elements,matched_elements,element_coverage,id_match_rate,label_match_rate,overall_score
+case_11,Category#6_E-Commerce,example_2,E-Commerce (product info + tabs),Button,AddToChartButton,AddToChart,True,1,1,1.0,1.0,1.0,1.0

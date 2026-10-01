@@ -1,0 +1,3 @@
+case_id,category,example,label,element_type,element_name,element_label,found_in_app,total_elements,matched_elements,element_coverage,id_match_rate,label_match_rate,overall_score
+case_12,Category#6_E-Commerce,example_3,E-Commerce (product view),Button,PurchaseButton,Purchase,True,2,2,1.0,1.0,1.0,1.0
+case_12,Category#6_E-Commerce,example_3,E-Commerce (product view),DataList,ProductList,,True,2,2,1.0,1.0,1.0,1.0

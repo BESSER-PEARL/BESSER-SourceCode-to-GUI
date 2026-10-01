@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "total_elements": 5,
+    "matched_elements": 5,
+    "element_coverage": 1.0,
+    "id_match_rate": 1.0,
+    "label_match_rate": 1.0,
+    "overall_score": 1.0
+  },
+  "details": {
+    "buttons": [
+      {
+        "name": "SignInButton",
+        "label": "SignIn",
+        "action_type": "Login",
+        "name_found": true,
+        "label_found": true,
+        "found": true
+      }
+    ],
+    "forms": [
+      {
+        "name": "SignupForm",
+        "found": true
+      },
+      {
+        "name": "LoginForm",
+        "found": true
+      }
+    ],
+    "input_fields": [
+      {
+        "name": "InputField1",
+        "form": "SignupForm",
+        "field_type": "Text",
+        "found": true
+      },
+      {
+        "name": "InputField1",
+        "form": "LoginForm",
+        "field_type": "Text",
+        "found": true
+      }
+    ],
+    "data_lists": [],
+    "view_components": []
+  }
+}

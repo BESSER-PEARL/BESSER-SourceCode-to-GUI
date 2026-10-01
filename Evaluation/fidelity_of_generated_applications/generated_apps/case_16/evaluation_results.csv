@@ -1,0 +1,4 @@
+case_id,category,example,label,element_type,element_name,element_label,found_in_app,total_elements,matched_elements,element_coverage,id_match_rate,label_match_rate,overall_score
+case_16,Category#8_CRUD Applications,example_3,CRUD Applications (superheroes CRUD),Button,AddSuperheroButton,AddSuperhero,True,3,3,1.0,1.0,1.0,1.0
+case_16,Category#8_CRUD Applications,example_3,CRUD Applications (superheroes CRUD),Button,DeleteHeroButton,DeleteHero,True,3,3,1.0,1.0,1.0,1.0
+case_16,Category#8_CRUD Applications,example_3,CRUD Applications (superheroes CRUD),DataList,SuperheroList,,True,3,3,1.0,1.0,1.0,1.0

@@ -1,0 +1,7 @@
+case_id,category,example,label,element_type,element_name,element_label,found_in_app,total_elements,matched_elements,element_coverage,id_match_rate,label_match_rate,overall_score
+case_17,Category#9_Contact Manager,example_2,Contact Manager (CRUD contacts),Button,PrintContactsButton,PrintContacts,True,6,6,1.0,1.0,1.0,1.0
+case_17,Category#9_Contact Manager,example_2,Contact Manager (CRUD contacts),Button,AddRandomContactsButton,AddRandomContacts,True,6,6,1.0,1.0,1.0,1.0
+case_17,Category#9_Contact Manager,example_2,Contact Manager (CRUD contacts),Button,SearchContactButton,SearchContact,True,6,6,1.0,1.0,1.0,1.0
+case_17,Category#9_Contact Manager,example_2,Contact Manager (CRUD contacts),Button,AddContactButton,AddContact,True,6,6,1.0,1.0,1.0,1.0
+case_17,Category#9_Contact Manager,example_2,Contact Manager (CRUD contacts),Form,PersonalInfoForm,,True,6,6,1.0,1.0,1.0,1.0
+case_17,Category#9_Contact Manager,example_2,Contact Manager (CRUD contacts),InputField,InputField1,Text,True,6,6,1.0,1.0,1.0,1.0

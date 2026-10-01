@@ -1,0 +1,67 @@
+
+@startuml
+' UI Structure Model - Shards Dashboard
+
+skinparam classAttributeIconSize 0
+
+class DashboardPage {
+  posts_count: int
+  posts_change_percent: float
+  pages_count: int
+  pages_change_percent: float
+  comments_count: int
+  comments_change_percent: float
+  users_count: int
+  users_change_percent: float
+  subscribers_count: int
+  subscribers_change_percent: float
+  new_draft_title: str
+  new_draft_body: str
+}
+
+class AddNewPostPage {
+  post_title: str
+  post_content: str
+  status: str
+  visibility: str
+  readability: str
+  category_uncategorized: bool
+  category_design: bool
+  category_development: bool
+  category_writing: bool
+  new_category_name: str
+}
+
+class TablesPage {
+  active_users_table: str
+  inactive_users_table: str
+}
+
+class UserProfilePage {
+  profile_name: str
+  profile_role: str
+  workload_percent: int
+  first_name: str
+  last_name: str
+  email: str
+  password: str
+  address: str
+  city: str
+  state: str
+  zip: str
+  account_description: str
+}
+
+class ErrorsPage {
+  error_code: int
+  error_title: str
+  error_message: str
+}
+
+' Sidebar navigation (unidirectional to avoid duplicate end names)
+DashboardPage --> AddNewPostPage
+DashboardPage --> TablesPage
+DashboardPage --> UserProfilePage
+DashboardPage --> ErrorsPage
+
+@enduml

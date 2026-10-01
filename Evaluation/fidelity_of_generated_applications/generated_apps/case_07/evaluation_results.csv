@@ -1,0 +1,8 @@
+case_id,category,example,label,element_type,element_name,element_label,found_in_app,total_elements,matched_elements,element_coverage,id_match_rate,label_match_rate,overall_score
+case_07,Category#4_Inventory,example_2,Inventory (tabs + forms),Button,OutgoingOrdersTab,OutgoingOrders,True,7,7,1.0,1.0,1.0,1.0
+case_07,Category#4_Inventory,example_2,Inventory (tabs + forms),Button,CurrentInventoryTab,CurrentInventory,True,7,7,1.0,1.0,1.0,1.0
+case_07,Category#4_Inventory,example_2,Inventory (tabs + forms),Button,IncomingPurchaseTab,IncomingPurchase,True,7,7,1.0,1.0,1.0,1.0
+case_07,Category#4_Inventory,example_2,Inventory (tabs + forms),Form,IncomingPurchaseForm,,True,7,7,1.0,1.0,1.0,1.0
+case_07,Category#4_Inventory,example_2,Inventory (tabs + forms),Form,CurrentInventoryForm,,True,7,7,1.0,1.0,1.0,1.0
+case_07,Category#4_Inventory,example_2,Inventory (tabs + forms),InputField,InputField1,Text,True,7,7,1.0,1.0,1.0,1.0
+case_07,Category#4_Inventory,example_2,Inventory (tabs + forms),InputField,InputField2,Text,True,7,7,1.0,1.0,1.0,1.0
