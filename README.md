@@ -3,13 +3,7 @@
 [![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue?logo=python&logoColor=gold)](https://pypi.org/project/besser/)
 [![PyPI - License](https://img.shields.io/pypi/l/besser)](https://opensource.org/license/MIT)
 
-This repository is the replication package for the paper:
-
-> **Integrating LLMs and Model-Driven Engineering for Automated GUI Re-generation**
-> Atefeh Nirumand, Jordi Cabot
-> Luxembourg Institute of Science and Technology (LIST) & University of Luxembourg
-
-The work proposes an end-to-end, platform-independent approach for GUI extraction, enhancement, and re-generation. It integrates LLM-assisted source-to-model extraction with deterministic model-to-code generation, implemented on top of the [BESSER](https://github.com/BESSER-PEARL/BESSER) low-code platform.
+This repository contains the implementation of the approach proposed in the paper **"Integrating LLMs and Model-Driven Engineering for Automated GUI Re-generation"** (Atefeh Nirumand, Jordi Cabot — Luxembourg Institute of Science and Technology & University of Luxembourg). The approach provides an end-to-end, platform-independent pipeline for GUI extraction, enhancement, and re-generation: it lifts existing HTML/CSS implementations into platform-independent B-UML models using LLM-assisted prompting, optionally refines those models through HCI-guided enhancement and human-in-the-loop designer interaction, and re-generates executable web applications via deterministic model-to-code transformation — all implemented on top of the [BESSER](https://github.com/BESSER-PEARL/BESSER) low-code platform.
 
 ---
 
