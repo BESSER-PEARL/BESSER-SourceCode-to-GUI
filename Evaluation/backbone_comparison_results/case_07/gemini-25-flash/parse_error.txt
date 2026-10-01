@@ -1,0 +1,154 @@
+```json
+{
+  "buttons": [
+    {
+      "name": "NavbarTogglerButton",
+      "label": null,
+      "action_type": "View"
+    },
+    {
+      "name": "ClearAllButton",
+      "label": "Clear All",
+      "action_type": "Delete"
+    },
+    {
+      "name": "CurrentInventoryTabButton",
+      "label": "Current Inventory",
+      "action_type": "View"
+    },
+    {
+      "name": "IncomingPurchaseTabButton",
+      "label": "Incoming Purchase",
+      "action_type": "View"
+    },
+    {
+      "name": "OutgoingOrdersTabButton",
+      "label": "Outgoing Orders",
+      "action_type": "View"
+    },
+    {
+      "name": "ClearInventoryButton",
+      "label": "Clear Inventory",
+      "action_type": "Delete"
+    },
+    {
+      "name": "AddCurrentInventoryButton",
+      "label": "Add",
+      "action_type": "Add"
+    },
+    {
+      "name": "ResetCurrentInventoryFormButton",
+      "label": "Reset",
+      "action_type": "Cancel"
+    },
+    {
+      "name": "ClearIncomingButton",
+      "label": "Clear Incoming",
+      "action_type": "Delete"
+    },
+    {
+      "name": "AddIncomingOrderButton",
+      "label": "Add",
+      "action_type": "Add"
+    },
+    {
+      "name": "ResetIncomingOrderFormButton",
+      "label": "Reset",
+      "action_type": "Cancel"
+    },
+    {
+      "name": "ClearOutgoingButton",
+      "label": "Clear Outgoing",
+      "action_type": "Delete"
+    }
+  ],
+  "forms": [
+    {
+      "name": "CurrentInventoryForm"
+    },
+    {
+      "name": "IncomingPurchaseForm"
+    },
+    {
+      "name": "OutgoingOrdersForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "CurrentOrderProductNameInput",
+      "label": "Product Name:",
+      "field_type": "Text"
+    },
+    {
+      "name": "CurrentOrderProductBrandInput",
+      "label": "Product Brand:",
+      "field_type": "Text"
+    },
+    {
+      "name": "CurrentOrderProductQuantityInput",
+      "label": "Quantity:",
+      "field_type": "Number"
+    },
+    {
+      "name": "CurrentOrderProductPriceInput",
+      "label": "Product Price:",
+      "field_type": "Number"
+    },
+    {
+      "name": "IncomingOrderProductNameInput",
+      "label": "Product Name:",
+      "field_type": "Text"
+    },
+    {
+      "name": "IncomingOrderProductBrandInput",
+      "label": "Product Brand:",
+      "field_type": "Text"
+    },
+    {
+      "name": "IncomingOrderProductQuantityInput",
+      "label": "Quantity:",
+      "field_type": "Number"
+    },
+    {
+      "name": "IncomingOrderProductPriceInput",
+      "label": "Product Price:",
+      "field_type": "Number"
+    },
+    {
+      "name": "OutgoingOrderProductNameInput",
+      "label": "Product Name:",
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "CurrentInventoryList"
+    },
+    {
+      "name": "IncomingInventoryList"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "NavbarBrand",
+      "label": "Inventory Management"
+    },
+    {
+      "name": "HomeNavLink",
+      "label": "Home"
+    },
+    {
+      "name": "MoreInfoNavLink",
+      "label": "More Info"
+    },
+    {
+      "name": "LoginNavLink",
+      "label": "Login"
+    },
+    {
+      "name": "RegisterNavLink",
+      "label": "Register"
+    },
+    {
+      "name": "InventoryManagerHeader",
+      "label": "Inventory Manager"

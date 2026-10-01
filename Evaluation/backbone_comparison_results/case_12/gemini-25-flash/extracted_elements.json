@@ -1,0 +1,40 @@
+{
+  "buttons": [],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "PageHeader",
+      "label": "Responsive 'Up' Web Design... The Future"
+    },
+    {
+      "name": "ContainerSection",
+      "label": null
+    },
+    {
+      "name": "ColumnViewComponent1",
+      "label": "Wow! I'm A Column"
+    },
+    {
+      "name": "ColumnViewComponent2",
+      "label": "Wow! I'm A Column"
+    },
+    {
+      "name": "ColumnViewComponent3",
+      "label": "Wow! I'm A Column"
+    },
+    {
+      "name": "ColumnViewComponent4",
+      "label": "Wow! I'm A Column"
+    },
+    {
+      "name": "ColumnViewComponent5",
+      "label": "Wow! I'm A Column"
+    },
+    {
+      "name": "ColumnViewComponent6",
+      "label": "Wow! I'm A Column"
+    }
+  ]
+}

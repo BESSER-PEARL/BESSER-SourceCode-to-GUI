@@ -1,0 +1,50 @@
+{
+  "buttons": [
+    {
+      "name": "AddItemButton",
+      "label": "Add Item",
+      "action_type": "SubmitForm"
+    }
+  ],
+  "forms": [
+    {
+      "name": "AddItemForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "ItemNameInput",
+      "label": "Item Name:",
+      "field_type": "Text"
+    },
+    {
+      "name": "ItemQuantityInput",
+      "label": "Quantity:",
+      "field_type": "Number"
+    },
+    {
+      "name": "ItemThresholdInput",
+      "label": "Alert Threshold:",
+      "field_type": "Number"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "InventoryTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "PageHeader",
+      "label": "Grocery Inventory Tracker"
+    },
+    {
+      "name": "AddItemSection",
+      "label": "Add Item"
+    },
+    {
+      "name": "InventoryListSection",
+      "label": "Inventory List"
+    }
+  ]
+}

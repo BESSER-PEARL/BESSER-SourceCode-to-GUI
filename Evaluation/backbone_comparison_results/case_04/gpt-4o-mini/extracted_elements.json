@@ -1,0 +1,33 @@
+{
+  "buttons": [
+    {
+      "name": "SearchButton",
+      "label": null,
+      "action_type": "Search"
+    }
+  ],
+  "forms": [],
+  "input_fields": [
+    {
+      "name": "ImageSearchInput",
+      "label": "search for images",
+      "field_type": "Search"
+    },
+    {
+      "name": "ImageTypeSelect",
+      "label": null,
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "PageHeader",
+      "label": "Stunning free images & royalty free stock"
+    },
+    {
+      "name": "PageDescription",
+      "label": "high quality stock images and videos shared by our talented community."
+    }
+  ]
+}

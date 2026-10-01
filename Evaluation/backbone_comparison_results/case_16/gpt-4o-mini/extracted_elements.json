@@ -1,0 +1,96 @@
+{
+  "buttons": [
+    {
+      "name": "EmailAllVolunteersButton",
+      "label": "Email All {{selected.field}} Volunteers ({{(names | filter:filters).length}})",
+      "action_type": "Send"
+    },
+    {
+      "name": "ViewListOfEmailAddressesButton",
+      "label": "View List of Email Addresses ({{(names | filter:filters).length}})",
+      "action_type": "OpenForm"
+    },
+    {
+      "name": "EditVolunteerButton",
+      "label": "Edit",
+      "action_type": "Edit"
+    },
+    {
+      "name": "DeleteVolunteerButton",
+      "label": "Delete",
+      "action_type": "Delete"
+    },
+    {
+      "name": "CreateVolunteerButton",
+      "label": "Create",
+      "action_type": "SubmitForm"
+    },
+    {
+      "name": "SaveChangesButton",
+      "label": "Save Changes",
+      "action_type": "Save"
+    },
+    {
+      "name": "CloseButton",
+      "label": "Close",
+      "action_type": "Cancel"
+    },
+    {
+      "name": "FloatingCreateVolunteerButton",
+      "label": null,
+      "action_type": "OpenForm"
+    }
+  ],
+  "forms": [
+    {
+      "name": "VolunteerForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "SearchInput",
+      "label": "Search volunteers...",
+      "field_type": "Text"
+    },
+    {
+      "name": "NameInput",
+      "label": "Name",
+      "field_type": "Text"
+    },
+    {
+      "name": "EmailInput",
+      "label": "Email Address",
+      "field_type": "Email"
+    },
+    {
+      "name": "PhoneInput",
+      "label": "Phone Number",
+      "field_type": "Tel"
+    },
+    {
+      "name": "StatusSelect",
+      "label": "Status",
+      "field_type": "Text"
+    },
+    {
+      "name": "ResultsPerPageSelect",
+      "label": "Results per page:",
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "VolunteerTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "PageHeader",
+      "label": "Volunteers"
+    },
+    {
+      "name": "ModalVolunteerTitle",
+      "label": "Create New Volunteer Record"
+    }
+  ]
+}

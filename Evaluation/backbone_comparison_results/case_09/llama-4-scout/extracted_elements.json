@@ -1,0 +1,46 @@
+{
+  "buttons": [
+    {
+      "name": "ExplainAnswerButton",
+      "label": "Explain Answer",
+      "action_type": "ShowForm"
+    },
+    {
+      "name": "SubmitButton",
+      "label": "Submit",
+      "action_type": "SubmitForm"
+    },
+    {
+      "name": "NextQuestionButton",
+      "label": "Next Question",
+      "action_type": "Navigate"
+    }
+  ],
+  "forms": [],
+  "input_fields": [
+    {
+      "name": "AnswerInput",
+      "label": "Enter your answer",
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "QuizHeader",
+      "label": "Interactive Quiz"
+    },
+    {
+      "name": "QuestionText",
+      "label": "question"
+    },
+    {
+      "name": "ResultText",
+      "label": "result"
+    },
+    {
+      "name": "ExplanationText",
+      "label": "explanation"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+```json
+{
+  "buttons": [
+    {
+      "name": "EmailAllVolunteersButton",
+      "label": "Email All {{selected.field}} Volunteers ({{(names | filter:filters).length}})",
+      "action_type": "Send"
+    },
+    {
+      "name": "ViewListOfEmailAddressesButton",
+      "label": "View List of Email Addresses ({{(names | filter:filters).length}})",
+      "action_type": "View"
+    },
+    {
+      "name": "SortByNameButton",
+      "label": "Name",
+      "action_type": "Sort"
+    },
+    {
+      "name": "SortByPhoneButton",
+      "label": "Phone",
+      "action_type": "Sort"
+    },
+    {
+      "name": "SortByEmailButton",
+      "label": "Email",
+      "action_type": "Sort"
+    },
+    {
+      "name": "SortByStatusButton",
+      "label": "Status",
+      "action_type": "Sort"
+    },
+    {
+      "name": "SortBySubmittedButton",
+      "label": "Submited",
+      "action_type": "Sort"
+    },
+    {
+      "name": "SortByIdButton",
+      "label": "ID",
+      "action_type": "Sort"
+    },
+    {
+      "name": "SortByNameTableButton",
+      "label": "Name",
+      "action_type": "Sort"
+    },
+    {
+      "name": "SortByPhoneTableButton",
+      "label": "Phone",
+      "action_type": "Sort"
+    },
+    {
+      "name": "SortByEmailTableButton",
+      "label": "Email",
+      "action_type": "Sort"
+    },
+    {
+      "name": "SortByStatusTableButton",
+      "label": "Status",
+      "action_type": "Sort"
+    },
+    {
+      "name": "SortBySubmittedTableButton",
+      "label": "Submitted",
+      "action_type": "Sort"
+    },
+    {
+      "name": "EditButton",
+      "label": "Edit",
+      "action_type": "Edit"
+    },
+    {
+      "name": "DeleteButton",
+      "label": "Delete",
+      "action_type": "Delete"
+    },
+    {
+      "name": "CreateVolunteerButton",
+      "label": "Create",
+      "action_type": "Add"
+    },
+    {
+      "name": "SaveChangesButton",
+      "label": "Save Changes",
+      "action_type": "Save"
+    },
+    {
+      "name": "CloseButton",
+      "label": "Close",
+      "action_type": "Cancel"
+    },
+    {
+      "name": "AddVolunteerButton",
+      "label": null,
+      "action_type": "Add"
+    }
+  ],
+  "forms": [
+    {
+      "name": "VolunteerForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "FieldTableSelect",
+      "label": null,
+      "field_type": "Select"
+    },
+    {
+      "name": "SearchVolunteersInput",
+      "label": "Search volunteers...",
+      "field_type": "Search"
+    },
+    {
+      "name": "ResultLimitSelect",
+      "label": "Results per page:",
+      "field_type": "Select"
+    },
+    {
+      "name": "NameInput",
+      "label": "Name",
+      "field_type": "Text"
+    },
+    {
+      "name": "EmailInput",
+      "label": "Email Address",
+      "field_type": "Email"
+    },
+    {
+      "name": "PhoneInput",
+      "label": "Phone Number",
+      "field_type": "Tel"
+    },
+    {
+      "name": "StatusSelect",
+      "label": "Status:",
+      "field_type": "Select"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "EmailList"
+    },
+    {
+      "name": "VolunteerListTable"
+    }
+  ],

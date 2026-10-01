@@ -1,0 +1,62 @@
+{
+  "buttons": [
+    {
+      "name": "WikiSearchButton",
+      "label": "Wiki Search",
+      "action_type": "Search"
+    },
+    {
+      "name": "ImFeelingLuckyButton",
+      "label": "I'm Feeling Lucky",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "ResultWikiSearchButton",
+      "label": "Wiki Search",
+      "action_type": "Search"
+    }
+  ],
+  "forms": [
+    {
+      "name": "WikiSearchForm"
+    },
+    {
+      "name": "ResultWikiSearchForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "WikiSearchInput",
+      "label": "Search Wikipedia...",
+      "field_type": "Search"
+    },
+    {
+      "name": "ResultWikiSearchFormInput",
+      "label": "Search Wikipedia...",
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "Headline",
+      "label": "Wikipedia Search Engine"
+    },
+    {
+      "name": "AttributionFooter",
+      "label": "Designed and coded by Ayo Isaiah"
+    },
+    {
+      "name": "WikipediaSearchHeader",
+      "label": "Wikipedia Search"
+    },
+    {
+      "name": "SearchResultsSection",
+      "label": null
+    },
+    {
+      "name": "DisplayResults",
+      "label": null
+    }
+  ]
+}

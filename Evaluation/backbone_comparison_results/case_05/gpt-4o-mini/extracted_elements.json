@@ -1,0 +1,113 @@
+{
+  "buttons": [
+    {
+      "name": "NextButton",
+      "label": "Next",
+      "action_type": "Next"
+    },
+    {
+      "name": "PreviousButton",
+      "label": "Previous",
+      "action_type": "Back"
+    },
+    {
+      "name": "NextButton",
+      "label": "Next",
+      "action_type": "Next"
+    },
+    {
+      "name": "PreviousButton",
+      "label": "Previous",
+      "action_type": "Back"
+    },
+    {
+      "name": "SubmitButton",
+      "label": "Submit",
+      "action_type": "SubmitForm"
+    }
+  ],
+  "forms": [
+    {
+      "name": "MultiStepForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "EmailInput",
+      "label": "Email",
+      "field_type": "Text"
+    },
+    {
+      "name": "PasswordInput",
+      "label": "Password",
+      "field_type": "Password"
+    },
+    {
+      "name": "ConfirmPasswordInput",
+      "label": "Confirm Password",
+      "field_type": "Password"
+    },
+    {
+      "name": "TwitterInput",
+      "label": "Twitter",
+      "field_type": "Text"
+    },
+    {
+      "name": "FacebookInput",
+      "label": "Facebook",
+      "field_type": "Text"
+    },
+    {
+      "name": "GooglePlusInput",
+      "label": "Google Plus",
+      "field_type": "Text"
+    },
+    {
+      "name": "FirstNameInput",
+      "label": "First Name",
+      "field_type": "Text"
+    },
+    {
+      "name": "LastNameInput",
+      "label": "Last Name",
+      "field_type": "Text"
+    },
+    {
+      "name": "PhoneInput",
+      "label": "Phone",
+      "field_type": "Text"
+    },
+    {
+      "name": "AddressInput",
+      "label": "Address",
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "AccountSetupHeader",
+      "label": "Create your account"
+    },
+    {
+      "name": "SocialProfilesHeader",
+      "label": "Social Profiles"
+    },
+    {
+      "name": "PersonalDetailsHeader",
+      "label": "Personal Details"
+    },
+    {
+      "name": "AccountSetupSubtitle",
+      "label": "This is step 1"
+    },
+    {
+      "name": "SocialProfilesSubtitle",
+      "label": "Your presence on the social network"
+    },
+    {
+      "name": "PersonalDetailsSubtitle",
+      "label": "We will never sell it"
+    }
+  ]
+}

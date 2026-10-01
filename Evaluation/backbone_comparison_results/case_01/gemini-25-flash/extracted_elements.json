@@ -1,0 +1,42 @@
+{
+  "buttons": [
+    {
+      "name": "ViewOnGitHubButton",
+      "label": "View on GitHub",
+      "action_type": "View"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "PreheaderText",
+      "label": "Available on GitHub and CodePen. Highly compatible. Designer friendly. More than 50% of total email opens occurred on a mobile device \u2014 a mobile-friendly design is a must for email campaigns."
+    },
+    {
+      "name": "LogoImage",
+      "label": "Logo"
+    },
+    {
+      "name": "HeroImage",
+      "label": "Please enable images to view this content"
+    },
+    {
+      "name": "SupheaderText",
+      "label": "INTRODUCING"
+    },
+    {
+      "name": "HeaderTitle",
+      "label": "Responsive HTML email templates"
+    },
+    {
+      "name": "ParagraphText",
+      "label": "More than 50% of total email opens occurred on a mobile device \u2014 a mobile-friendly design is a must for email campaigns."
+    },
+    {
+      "name": "FooterText",
+      "label": "This email template was sent to you becouse we want to make the world a better place. You could change your subscription settings anytime."
+    }
+  ]
+}

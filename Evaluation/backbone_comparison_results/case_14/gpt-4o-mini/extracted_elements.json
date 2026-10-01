@@ -1,0 +1,99 @@
+{
+  "buttons": [
+    {
+      "name": "SignOutButton",
+      "label": "Sign out",
+      "action_type": "Logout"
+    },
+    {
+      "name": "DashboardButton",
+      "label": "Dashboard",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "OrdersButton",
+      "label": "Orders",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "ProductsButton",
+      "label": "Products",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "CustomersButton",
+      "label": "Customers",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "ReportsButton",
+      "label": "Reports",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "IntegrationsButton",
+      "label": "Integrations",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "CurrentMonthButton",
+      "label": "Current month",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "LastQuarterButton",
+      "label": "Last quarter",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "SocialEngagementButton",
+      "label": "Social engagement",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "YearEndSaleButton",
+      "label": "Year-end sale",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "DropdownActionButton",
+      "label": "More actions",
+      "action_type": "OpenForm"
+    }
+  ],
+  "forms": [],
+  "input_fields": [
+    {
+      "name": "SearchInput",
+      "label": "Search",
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "ProjectsTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "CompanyName",
+      "label": "Company name"
+    },
+    {
+      "name": "OngoingProjectsHeader",
+      "label": "Ongoing Projects"
+    },
+    {
+      "name": "HouseholdExpenditureChart",
+      "label": "Household Expenditure"
+    },
+    {
+      "name": "MonthlyRevenueChart",
+      "label": "Monthly revenue"
+    },
+    {
+      "name": "ExportsOfGoodsChart",
+      "label": "Exports of Goods"
+    }
+  ]
+}

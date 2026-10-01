@@ -1,0 +1,129 @@
+{
+  "buttons": [
+    {
+      "name": "LoginButton",
+      "label": "Login",
+      "action_type": "Login"
+    },
+    {
+      "name": "RegisterButton",
+      "label": "Register",
+      "action_type": "SubmitForm"
+    },
+    {
+      "name": "RegisterButton",
+      "label": "Register",
+      "action_type": "SubmitForm"
+    }
+  ],
+  "forms": [],
+  "input_fields": [
+    {
+      "name": "FirstNameInput",
+      "label": "First Name *",
+      "field_type": "Text"
+    },
+    {
+      "name": "LastNameInput",
+      "label": "Last Name *",
+      "field_type": "Text"
+    },
+    {
+      "name": "PasswordInput",
+      "label": "Password *",
+      "field_type": "Password"
+    },
+    {
+      "name": "ConfirmPasswordInput",
+      "label": "Confirm Password *",
+      "field_type": "Password"
+    },
+    {
+      "name": "EmailInput",
+      "label": "Your Email *",
+      "field_type": "Email"
+    },
+    {
+      "name": "PhoneInput",
+      "label": "Your Phone *",
+      "field_type": "Text"
+    },
+    {
+      "name": "SecurityQuestionSelect",
+      "label": "Please select your Sequrity Question",
+      "field_type": "Text"
+    },
+    {
+      "name": "AnswerInput",
+      "label": "Enter Your Answer *",
+      "field_type": "Text"
+    },
+    {
+      "name": "FirstNameInputHirer",
+      "label": "First Name *",
+      "field_type": "Text"
+    },
+    {
+      "name": "LastNameInputHirer",
+      "label": "Last Name *",
+      "field_type": "Text"
+    },
+    {
+      "name": "EmailInputHirer",
+      "label": "Email *",
+      "field_type": "Email"
+    },
+    {
+      "name": "PhoneInputHirer",
+      "label": "Phone *",
+      "field_type": "Text"
+    },
+    {
+      "name": "PasswordInputHirer",
+      "label": "Password *",
+      "field_type": "Password"
+    },
+    {
+      "name": "ConfirmPasswordInputHirer",
+      "label": "Confirm Password *",
+      "field_type": "Password"
+    },
+    {
+      "name": "SecurityQuestionSelectHirer",
+      "label": "Please select your Sequrity Question",
+      "field_type": "Text"
+    },
+    {
+      "name": "AnswerInputHirer",
+      "label": "`Answer *",
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "WelcomeHeader",
+      "label": "Welcome"
+    },
+    {
+      "name": "WelcomeMessage",
+      "label": "You are 30 seconds away from earning your own money!"
+    },
+    {
+      "name": "EmployeeTab",
+      "label": "Employee"
+    },
+    {
+      "name": "HirerTab",
+      "label": "Hirer"
+    },
+    {
+      "name": "EmployeeHeading",
+      "label": "Apply as a Employee"
+    },
+    {
+      "name": "HirerHeading",
+      "label": "Apply as a Hirer"
+    }
+  ]
+}

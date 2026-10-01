@@ -1,0 +1,34 @@
+{
+  "buttons": [
+    {
+      "name": "ExploreTemplatesButton",
+      "label": "Explore templates",
+      "action_type": "Navigate"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "PageHeader",
+      "label": "Explore responsive email templates"
+    },
+    {
+      "name": "PageSubheader",
+      "label": "Available on GitHub and CodePen"
+    },
+    {
+      "name": "HeroImage",
+      "label": "Please enable images to view this content"
+    },
+    {
+      "name": "ParagraphText",
+      "label": "More than 50% of total email opens occurred on a mobile device \u2014 a mobile-friendly design is a must for email campaigns."
+    },
+    {
+      "name": "GeneralTemplateSection",
+      "label": "General template"
+    }
+  ]
+}

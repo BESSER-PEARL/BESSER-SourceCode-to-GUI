@@ -1,0 +1,49 @@
+{
+  "buttons": [
+    {
+      "name": "SendTwoFactorAuthButton",
+      "label": "Send Me a Two-Factor Authentication Code",
+      "action_type": "Send"
+    },
+    {
+      "name": "SubmitTwoFactorAuthButton",
+      "label": "Submit My Two-Factor Authentication Code",
+      "action_type": "SubmitForm"
+    }
+  ],
+  "forms": [
+    {
+      "name": "PhoneInputForm"
+    },
+    {
+      "name": "TwoFactorAuthForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "TelephoneInput",
+      "label": "Enter Your Phone Number:",
+      "field_type": "Tel"
+    },
+    {
+      "name": "TwoFactorAuthInput",
+      "label": "Enter Your Two-Factor Code:",
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "NotificationBox",
+      "label": null
+    },
+    {
+      "name": "PhoneInputSection",
+      "label": "Enter Your Phone Number:"
+    },
+    {
+      "name": "TwoFactorAuthSection",
+      "label": "Enter Your Two-Factor Code:"
+    }
+  ]
+}

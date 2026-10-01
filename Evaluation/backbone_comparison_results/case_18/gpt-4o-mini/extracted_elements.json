@@ -1,0 +1,69 @@
+{
+  "buttons": [
+    {
+      "name": "CreateContactButton",
+      "label": "Create Contact",
+      "action_type": "SubmitForm"
+    }
+  ],
+  "forms": [
+    {
+      "name": "ContactForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "FirstNameInput",
+      "label": "First Name:",
+      "field_type": "Text"
+    },
+    {
+      "name": "FamilyNameInput",
+      "label": "Family Name:",
+      "field_type": "Text"
+    },
+    {
+      "name": "AgeInput",
+      "label": "Age:",
+      "field_type": "Number"
+    },
+    {
+      "name": "NumberInput",
+      "label": "Number:",
+      "field_type": "Number"
+    },
+    {
+      "name": "EmailInput",
+      "label": "Email:",
+      "field_type": "Email"
+    },
+    {
+      "name": "AddressInput",
+      "label": "Address:",
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "ContactsTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "PageHeader",
+      "label": "Contact Manager"
+    },
+    {
+      "name": "TabSection",
+      "label": null
+    },
+    {
+      "name": "TableFooter",
+      "label": "This is the footer of the table"
+    },
+    {
+      "name": "CopyrightSection",
+      "label": "\u00a9 Lyndon Panton | All Rights Reserved"
+    }
+  ]
+}

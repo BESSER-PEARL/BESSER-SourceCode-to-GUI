@@ -1,0 +1,87 @@
+{
+  "buttons": [
+    {
+      "name": "AddNewEmployeeButton",
+      "label": "Add New Employee",
+      "action_type": "OpenForm"
+    },
+    {
+      "name": "DeleteButton",
+      "label": "Delete",
+      "action_type": "OpenForm"
+    },
+    {
+      "name": "EditButton",
+      "label": "Edit",
+      "action_type": "OpenForm"
+    },
+    {
+      "name": "CancelButton",
+      "label": "Cancel",
+      "action_type": "Cancel"
+    },
+    {
+      "name": "AddButton",
+      "label": "Add",
+      "action_type": "Add"
+    },
+    {
+      "name": "SaveButton",
+      "label": "Save",
+      "action_type": "Save"
+    },
+    {
+      "name": "DeleteConfirmButton",
+      "label": "Delete",
+      "action_type": "Delete"
+    }
+  ],
+  "forms": [
+    {
+      "name": "AddEmployeeForm"
+    },
+    {
+      "name": "EditEmployeeForm"
+    },
+    {
+      "name": "DeleteEmployeeForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "NameInput",
+      "label": "Name",
+      "field_type": "Text"
+    },
+    {
+      "name": "EmailInput",
+      "label": "Email",
+      "field_type": "Email"
+    },
+    {
+      "name": "AddressInput",
+      "label": "Address",
+      "field_type": "Text"
+    },
+    {
+      "name": "PhoneInput",
+      "label": "Phone",
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "EmployeeTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "PageHeader",
+      "label": "Manage Employees"
+    },
+    {
+      "name": "TableTitle",
+      "label": "Employee List"
+    }
+  ]
+}

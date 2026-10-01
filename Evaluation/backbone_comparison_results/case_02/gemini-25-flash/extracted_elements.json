@@ -1,0 +1,54 @@
+{
+  "buttons": [
+    {
+      "name": "ExploreTemplatesButton",
+      "label": "Explore templates",
+      "action_type": "Navigate"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "PreheaderText",
+      "label": "Available on GitHub and CodePen. Highly compatible. Designer friendly. More than 50% of total email opens occurred on a mobile device \u2014 a mobile-friendly design is a must for email campaigns."
+    },
+    {
+      "name": "LogoImage",
+      "label": "Logo"
+    },
+    {
+      "name": "HeaderTitle",
+      "label": "Explore responsive email templates"
+    },
+    {
+      "name": "SubheaderText",
+      "label": "Available on GitHub and CodePen"
+    },
+    {
+      "name": "HeroImage",
+      "label": "Please enable images to view this content"
+    },
+    {
+      "name": "ParagraphText",
+      "label": "More than 50% of total email opens occurred on a mobile device \u2014 a mobile-friendly design is a must for email campaigns."
+    },
+    {
+      "name": "GeneralTemplateImage",
+      "label": "Grid Item"
+    },
+    {
+      "name": "GeneralTemplateTitle",
+      "label": "Gerenal template"
+    },
+    {
+      "name": "GeneralTemplateDescription",
+      "label": "The perfect choice for any purpose of a message."
+    },
+    {
+      "name": "GridItemImage",
+      "label": "Grid Item"
+    }
+  ]
+}

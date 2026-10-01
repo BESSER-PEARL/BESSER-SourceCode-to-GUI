@@ -1,0 +1,100 @@
+{
+  "buttons": [
+    {
+      "name": "AddNewContactButton",
+      "label": "Add new Contact",
+      "action_type": "SubmitForm"
+    },
+    {
+      "name": "AddTwoRandomContactsButton",
+      "label": "Add two random Contacts",
+      "action_type": "Add"
+    },
+    {
+      "name": "PrintContactsButton",
+      "label": "Print contacts to console",
+      "action_type": "View"
+    },
+    {
+      "name": "EmptyButton",
+      "label": "Empty",
+      "action_type": "Delete"
+    },
+    {
+      "name": "SaveButton",
+      "label": "Save",
+      "action_type": "Save"
+    },
+    {
+      "name": "LoadButton",
+      "label": "Load",
+      "action_type": "OpenForm"
+    }
+  ],
+  "forms": [
+    {
+      "name": "InputForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "NameInput",
+      "label": "Name :",
+      "field_type": "Text"
+    },
+    {
+      "name": "AgeInput",
+      "label": "Age :",
+      "field_type": "Number"
+    },
+    {
+      "name": "EmailInput",
+      "label": "Email :",
+      "field_type": "Email"
+    },
+    {
+      "name": "CityInput",
+      "label": "City :",
+      "field_type": "Text"
+    },
+    {
+      "name": "ZipCodeInput",
+      "label": "Zip Code :",
+      "field_type": "Number"
+    },
+    {
+      "name": "CountryInput",
+      "label": "Country :",
+      "field_type": "Text"
+    },
+    {
+      "name": "SearchInput",
+      "label": "Search contact by name:",
+      "field_type": "Text"
+    },
+    {
+      "name": "MatchDisplayInput",
+      "label": null,
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "PageTitle",
+      "label": "A contact manager, v3"
+    },
+    {
+      "name": "PersonalInformationLegend",
+      "label": "Personal information"
+    },
+    {
+      "name": "ContactsHeader",
+      "label": "List of contacts"
+    },
+    {
+      "name": "SortInstruction",
+      "label": "To sort, click on the corresponding table header."
+    }
+  ]
+}

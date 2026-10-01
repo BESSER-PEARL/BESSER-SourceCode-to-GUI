@@ -1,0 +1,38 @@
+{
+  "buttons": [
+    {
+      "name": "ViewOnGitHubButton",
+      "label": "View on GitHub",
+      "action_type": "Navigate"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "Logo",
+      "label": "Logo"
+    },
+    {
+      "name": "HeroImage",
+      "label": "Please enable images to view this content"
+    },
+    {
+      "name": "Supheader",
+      "label": "INTRODUCING"
+    },
+    {
+      "name": "Header",
+      "label": "Responsive HTML email templates"
+    },
+    {
+      "name": "Paragraph",
+      "label": "More than 50% of total email opens occurred on a mobile device \u2014 a mobile-friendly design is a must for email campaigns."
+    },
+    {
+      "name": "Footer",
+      "label": "This email template was sent to you because we want to make the world a better place. You could change your subscription settings anytime."
+    }
+  ]
+}

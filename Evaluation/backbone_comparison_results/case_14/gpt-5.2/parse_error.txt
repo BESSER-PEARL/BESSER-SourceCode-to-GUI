@@ -1,0 +1,176 @@
+{
+  "buttons": [
+    {
+      "name": "SignOutLinkButton",
+      "label": "Sign out",
+      "action_type": "Logout"
+    },
+    {
+      "name": "DashboardNavLinkButton",
+      "label": "Dashboard",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "OrdersNavLinkButton",
+      "label": "Orders",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "ProductsNavLinkButton",
+      "label": "Products",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "CustomersNavLinkButton",
+      "label": "Customers",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "ReportsNavLinkButton",
+      "label": "Reports",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "IntegrationsNavLinkButton",
+      "label": "Integrations",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "AddSavedReportButton",
+      "label": null,
+      "action_type": "Add"
+    },
+    {
+      "name": "CurrentMonthReportButton",
+      "label": "Current month",
+      "action_type": "View"
+    },
+    {
+      "name": "LastQuarterReportButton",
+      "label": "Last quarter",
+      "action_type": "View"
+    },
+    {
+      "name": "SocialEngagementReportButton",
+      "label": "Social engagement",
+      "action_type": "View"
+    },
+    {
+      "name": "YearEndSaleReportButton",
+      "label": "Year-end sale",
+      "action_type": "View"
+    },
+    {
+      "name": "RadarChartMenuButton",
+      "label": null,
+      "action_type": "Settings"
+    },
+    {
+      "name": "RadarChartDropdownActionButton",
+      "label": "Action",
+      "action_type": "Confirm"
+    },
+    {
+      "name": "RadarChartDropdownAnotherActionButton",
+      "label": "Another action",
+      "action_type": "Confirm"
+    },
+    {
+      "name": "RadarChartDropdownSomethingElseButton",
+      "label": "Something else here",
+      "action_type": "Confirm"
+    },
+    {
+      "name": "BarChartMenuButton",
+      "label": null,
+      "action_type": "Settings"
+    },
+    {
+      "name": "BarChartDropdownActionButton",
+      "label": "Action",
+      "action_type": "Confirm"
+    },
+    {
+      "name": "BarChartDropdownAnotherActionButton",
+      "label": "Another action",
+      "action_type": "Confirm"
+    },
+    {
+      "name": "BarChartDropdownSomethingElseButton",
+      "label": "Something else here",
+      "action_type": "Confirm"
+    },
+    {
+      "name": "DoughnutChartMenuButton",
+      "label": null,
+      "action_type": "Settings"
+    },
+    {
+      "name": "DoughnutChartDropdownActionButton",
+      "label": "Action",
+      "action_type": "Confirm"
+    },
+    {
+      "name": "DoughnutChartDropdownAnotherActionButton",
+      "label": "Another action",
+      "action_type": "Confirm"
+    },
+    {
+      "name": "DoughnutChartDropdownSomethingElseButton",
+      "label": "Something else here",
+      "action_type": "Confirm"
+    }
+  ],
+  "forms": [
+    {
+      "name": "ProjectRowActionsForm"
+    },
+    {
+      "name": "DangerProjectRowActionsForm"
+    },
+    {
+      "name": "ProjectRowActionsForm2"
+    },
+    {
+      "name": "ProjectRowActionsForm3"
+    },
+    {
+      "name": "ProjectRowActionsForm4"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "SearchInput",
+      "label": "Search",
+      "field_type": "Text"
+    },
+    {
+      "name": "ProjectActionsSelect",
+      "label": "Actions",
+      "field_type": "Text"
+    },
+    {
+      "name": "DangerProjectActionsSelect",
+      "label": "Actions",
+      "field_type": "Text"
+    },
+    {
+      "name": "ProjectActionsSelect2",
+      "label": "Actions",
+      "field_type": "Text"
+    },
+    {
+      "name": "ProjectActionsSelect3",
+      "label": "Actions",
+      "field_type": "Text"
+    },
+    {
+      "name": "ProjectActionsSelect4",
+      "label": "Actions",
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "OngoingProjectsTable"
+   

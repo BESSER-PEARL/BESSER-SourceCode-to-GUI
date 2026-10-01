@@ -1,0 +1,28 @@
+{
+  "buttons": [
+    {
+      "name": "Back to Home Page Button",
+      "label": "Back to Home Page"
+    },
+    {
+      "name": "Add Library Button",
+      "label": "Add Library"
+    },
+    {
+      "name": "Edit Library Button",
+      "label": "Edit"
+    },
+    {
+      "name": "Delete Library Button",
+      "label": "Delete"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [
+    {
+      "name": "LibraryList"
+    }
+  ],
+  "view_components": []
+}

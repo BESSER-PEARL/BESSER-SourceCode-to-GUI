@@ -1,0 +1,110 @@
+{
+  "buttons": [
+    {
+      "name": "SearchButton",
+      "label": "Search",
+      "action_type": "Search"
+    },
+    {
+      "name": "SignOutButton",
+      "label": "Sign out",
+      "action_type": "Logout"
+    },
+    {
+      "name": "MoreVertButton",
+      "label": null,
+      "action_type": "Settings"
+    }
+  ],
+  "forms": [],
+  "input_fields": [
+    {
+      "name": "SearchInput",
+      "label": null,
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "OngoingProjectsTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "CompanyName",
+      "label": "Company name"
+    },
+    {
+      "name": "DashboardNavLink",
+      "label": "Dashboard"
+    },
+    {
+      "name": "OrdersNavLink",
+      "label": "Orders"
+    },
+    {
+      "name": "ProductsNavLink",
+      "label": "Products"
+    },
+    {
+      "name": "CustomersNavLink",
+      "label": "Customers"
+    },
+    {
+      "name": "ReportsNavLink",
+      "label": "Reports"
+    },
+    {
+      "name": "IntegrationsNavLink",
+      "label": "Integrations"
+    },
+    {
+      "name": "SavedReportsHeader",
+      "label": "Saved reports"
+    },
+    {
+      "name": "CurrentMonthReportLink",
+      "label": "Current month"
+    },
+    {
+      "name": "LastQuarterReportLink",
+      "label": "Last quarter"
+    },
+    {
+      "name": "SocialEngagementReportLink",
+      "label": "Social engagement"
+    },
+    {
+      "name": "YearEndSaleReportLink",
+      "label": "Year-end sale"
+    },
+    {
+      "name": "AllProjectsCard",
+      "label": "all projects"
+    },
+    {
+      "name": "TeamMembersCard",
+      "label": "team members"
+    },
+    {
+      "name": "TotalBudgetCard",
+      "label": "total budget"
+    },
+    {
+      "name": "NewCustomersCard",
+      "label": "new customers"
+    },
+    {
+      "name": "HouseholdExpenditureChart",
+      "label": "Household Expenditure"
+    },
+    {
+      "name": "MonthlyRevenueChart",
+      "label": "Monthly revenue"
+    },
+    {
+      "name": "ExportsOfGoodsChart",
+      "label": "Exports of Goods"
+    }
+  ]
+}

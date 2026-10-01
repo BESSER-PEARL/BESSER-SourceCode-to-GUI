@@ -1,0 +1,128 @@
+{
+  "buttons": [
+    {
+      "name": "LoginButton",
+      "label": "Login",
+      "action_type": "Login"
+    },
+    {
+      "name": "RegisterButton1",
+      "label": "Register",
+      "action_type": "SubmitForm"
+    },
+    {
+      "name": "RegisterButton2",
+      "label": "Register",
+      "action_type": "SubmitForm"
+    }
+  ],
+  "forms": [
+    {
+      "name": "EmployeeRegistrationForm"
+    },
+    {
+      "name": "HirerRegistrationForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "FirstNameInput",
+      "label": "First Name *",
+      "field_type": "Text"
+    },
+    {
+      "name": "LastNameInput",
+      "label": "Last Name *",
+      "field_type": "Text"
+    },
+    {
+      "name": "PasswordInput1",
+      "label": "Password *",
+      "field_type": "Password"
+    },
+    {
+      "name": "ConfirmPasswordInput1",
+      "label": "Confirm Password *",
+      "field_type": "Password"
+    },
+    {
+      "name": "EmailInput",
+      "label": "Your Email *",
+      "field_type": "Email"
+    },
+    {
+      "name": "PhoneInput",
+      "label": "Your Phone *",
+      "field_type": "Text"
+    },
+    {
+      "name": "SecurityQuestionSelect",
+      "label": null,
+      "field_type": "Text"
+    },
+    {
+      "name": "SecurityQuestionAnswerInput",
+      "label": "Enter Your Answer *",
+      "field_type": "Text"
+    },
+    {
+      "name": "FirstNameInput2",
+      "label": "First Name *",
+      "field_type": "Text"
+    },
+    {
+      "name": "LastNameInput2",
+      "label": "Last Name *",
+      "field_type": "Text"
+    },
+    {
+      "name": "EmailInput2",
+      "label": "Email *",
+      "field_type": "Email"
+    },
+    {
+      "name": "PhoneInput2",
+      "label": "Phone *",
+      "field_type": "Text"
+    },
+    {
+      "name": "PasswordInput2",
+      "label": "Password *",
+      "field_type": "Password"
+    },
+    {
+      "name": "ConfirmPasswordInput2",
+      "label": "Confirm Password *",
+      "field_type": "Password"
+    },
+    {
+      "name": "SecurityQuestionSelect2",
+      "label": null,
+      "field_type": "Text"
+    },
+    {
+      "name": "SecurityQuestionAnswerInput2",
+      "label": "Answer *",
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "WelcomeMessage",
+      "label": "Welcome"
+    },
+    {
+      "name": "RegistrationTabs",
+      "label": null
+    },
+    {
+      "name": "EmployeeRegistrationSection",
+      "label": "Apply as a Employee"
+    },
+    {
+      "name": "HirerRegistrationSection",
+      "label": "Apply as a Hirer"
+    }
+  ]
+}

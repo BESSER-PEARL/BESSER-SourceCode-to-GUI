@@ -1,0 +1,73 @@
+{
+  "buttons": [
+    {
+      "name": "GenerateButton",
+      "label": "Generate",
+      "action_type": "SubmitForm"
+    },
+    {
+      "name": "ClearButton",
+      "label": "Clear",
+      "action_type": "Cancel"
+    },
+    {
+      "name": "DownloadButton",
+      "label": "Download",
+      "action_type": "Download"
+    }
+  ],
+  "forms": [
+    {
+      "name": "TextToSpeechForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "OpenAiApiKeyInput",
+      "label": "Input your OpenAI API key",
+      "field_type": "Text"
+    },
+    {
+      "name": "InputTextArea",
+      "label": "Input Text:",
+      "field_type": "Text"
+    },
+    {
+      "name": "OutputFileNameInput",
+      "label": "File Name:",
+      "field_type": "Text"
+    },
+    {
+      "name": "SelectVoiceOption",
+      "label": "Select Voice:",
+      "field_type": "Select"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "PageHeader",
+      "label": "OpenAI Text To Speech Generation"
+    },
+    {
+      "name": "UpdateMessage",
+      "label": "Updates: additional New voices realeased Jan-25, check additonal script comments for generated speed and output formats"
+    },
+    {
+      "name": "CharacterCountInfo",
+      "label": "Character Count: 0"
+    },
+    {
+      "name": "EstimatedCostInfo",
+      "label": "Estimated cost: $ 0"
+    },
+    {
+      "name": "SuccessMessage",
+      "label": null
+    },
+    {
+      "name": "ErrorMessage",
+      "label": null
+    }
+  ]
+}

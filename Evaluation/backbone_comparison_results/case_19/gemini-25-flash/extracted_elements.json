@@ -1,0 +1,46 @@
+{
+  "buttons": [
+    {
+      "name": "SubmitButton",
+      "label": "Submit",
+      "action_type": "SubmitForm"
+    },
+    {
+      "name": "RulesButton",
+      "label": "Rules",
+      "action_type": "View"
+    }
+  ],
+  "forms": [
+    {
+      "name": "AuthenticationForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "UsernameInput",
+      "label": "Enter your username :",
+      "field_type": "Text"
+    },
+    {
+      "name": "PasswordInput",
+      "label": "Enter your password :",
+      "field_type": "Password"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "HintText",
+      "label": "- Actually the right username is SuperBob and passsword 12RobotoLove -"
+    },
+    {
+      "name": "AuthenticationHeader",
+      "label": "Authentication yourself"
+    },
+    {
+      "name": "RulesList",
+      "label": null
+    }
+  ]
+}

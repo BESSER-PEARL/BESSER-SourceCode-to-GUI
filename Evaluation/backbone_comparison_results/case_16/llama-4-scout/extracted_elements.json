@@ -1,0 +1,76 @@
+{
+  "buttons": [
+    {
+      "name": "EmailAllVolunteersButton",
+      "label": "Email All Volunteers",
+      "action_type": "Send"
+    },
+    {
+      "name": "ViewListOfEmailAddressesButton",
+      "label": "View List of Email Addresses",
+      "action_type": "ShowList"
+    },
+    {
+      "name": "CreateVolunteerButton",
+      "label": "Create",
+      "action_type": "Add"
+    },
+    {
+      "name": "SaveChangesButton",
+      "label": "Save Changes",
+      "action_type": "Save"
+    },
+    {
+      "name": "CloseButton",
+      "label": "Close",
+      "action_type": "Cancel"
+    }
+  ],
+  "forms": [
+    {
+      "name": "VolunteerForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "NameInput",
+      "label": "Name",
+      "field_type": "Text"
+    },
+    {
+      "name": "EmailInput",
+      "label": "Email Address",
+      "field_type": "Email"
+    },
+    {
+      "name": "PhoneInput",
+      "label": "Phone Number",
+      "field_type": "Tel"
+    },
+    {
+      "name": "StatusInput",
+      "label": "Status",
+      "field_type": "Text"
+    },
+    {
+      "name": "SearchInput",
+      "label": null,
+      "field_type": "Text"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "VolunteersTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "PageHeader",
+      "label": "Volunteers"
+    },
+    {
+      "name": "VolunteerListHeader",
+      "label": "Volunteer List"
+    }
+  ]
+}

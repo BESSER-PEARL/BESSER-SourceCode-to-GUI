@@ -1,0 +1,151 @@
+```json
+{
+  "buttons": [
+    {
+      "name": "CompanyNameButton",
+      "label": "Company name",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "SignOutButton",
+      "label": "Sign out",
+      "action_type": "Logout"
+    },
+    {
+      "name": "DashboardButton",
+      "label": "Dashboard",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "OrdersButton",
+      "label": "Orders",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "ProductsButton",
+      "label": "Products",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "CustomersButton",
+      "label": "Customers",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "ReportsButton",
+      "label": "Reports",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "IntegrationsButton",
+      "label": "Integrations",
+      "action_type": "Navigate"
+    },
+    {
+      "name": "AddSavedReportButton",
+      "label": null,
+      "action_type": "Add"
+    },
+    {
+      "name": "CurrentMonthReportButton",
+      "label": "Current month",
+      "action_type": "View"
+    },
+    {
+      "name": "LastQuarterReportButton",
+      "label": "Last quarter",
+      "action_type": "View"
+    },
+    {
+      "name": "SocialEngagementReportButton",
+      "label": "Social engagement",
+      "action_type": "View"
+    },
+    {
+      "name": "YearEndSaleReportButton",
+      "label": "Year-end sale",
+      "action_type": "View"
+    },
+    {
+      "name": "HouseholdExpenditureActionsButton",
+      "label": null,
+      "action_type": "View"
+    },
+    {
+      "name": "HouseholdExpenditureActionButton",
+      "label": "Action",
+      "action_type": "View"
+    },
+    {
+      "name": "HouseholdExpenditureAnotherActionButton",
+      "label": "Another action",
+      "action_type": "View"
+    },
+    {
+      "name": "HouseholdExpenditureSomethingElseButton",
+      "label": "Something else here",
+      "action_type": "View"
+    },
+    {
+      "name": "MonthlyRevenueActionsButton",
+      "label": null,
+      "action_type": "View"
+    },
+    {
+      "name": "MonthlyRevenueActionButton",
+      "label": "Action",
+      "action_type": "View"
+    },
+    {
+      "name": "MonthlyRevenueAnotherActionButton",
+      "label": "Another action",
+      "action_type": "View"
+    },
+    {
+      "name": "MonthlyRevenueSomethingElseButton",
+      "label": "Something else here",
+      "action_type": "View"
+    },
+    {
+      "name": "ExportsOfGoodsActionsButton",
+      "label": null,
+      "action_type": "View"
+    },
+    {
+      "name": "ExportsOfGoodsActionButton",
+      "label": "Action",
+      "action_type": "View"
+    },
+    {
+      "name": "ExportsOfGoodsAnotherActionButton",
+      "label": "Another action",
+      "action_type": "View"
+    },
+    {
+      "name": "ExportsOfGoodsSomethingElseButton",
+      "label": "Something else here",
+      "action_type": "View"
+    }
+  ],
+  "forms": [
+    {
+      "name": "ProjectActionForm1"
+    },
+    {
+      "name": "ProjectActionForm2"
+    },
+    {
+      "name": "ProjectActionForm3"
+    },
+    {
+      "name": "ProjectActionForm4"
+    },
+    {
+      "name": "ProjectActionForm5"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "SearchInput",
+      "label": "Search",
+      "field_
