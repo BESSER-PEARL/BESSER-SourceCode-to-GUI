@@ -1,0 +1,141 @@
+
+<div class="container">
+
+    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+<fieldset>
+
+<!-- Form Name -->
+  <h1 align="center">Add item to Inventory</h1><p style="color:red; font-size:10px;"align="center">* indicated the field must be filled</p>
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">  Serial Number </label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-tag"></i></span>
+  <input  name="serial" placeholder="Serial Number" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Item<a style="color:red;" title="This field must be filled">*</a></label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign"></i></span>
+  <input name="item_name" placeholder="Item Name" class="form-control"  type="text" required title="This field must be filled">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">Subtype
+</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+  <input name="subtype" placeholder="Subtype" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">Type</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-th-large"></i></span>
+  <input name="type" placeholder="Type
+" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">Assigned to
+</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="assignedto" placeholder="Assignee's Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+    
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">Location
+</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="location" placeholder="Item's Location" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- radio checks -->
+ <div class="form-group">
+                        <label class="col-md-4 control-label">Checkoutable?</label>
+                        <div class="col-md-4">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="checkout" value="yes" /> Yes
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="checkout" value="no" /> No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+  
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">  Number in Stock 
+</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-question-sign"></i></span>
+  <input class="form-control"  input type="number" name="quantity"
+   min="0" max="100" step="1" value="0">
+    </div>
+  </div>
+</div>
+  <!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">MAC Address:<p style="color:red; font-size:10px;">to view an example, hover over the field</p>
+</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-microchip"></i></span>
+  <input name="mac_address" data-fv-mac="true" placeholder="Item's MAC" class="form-control"  type="text" title="MAC address should look like 00-15-E9-2B-99-3C">
+    </div>
+  </div>
+</div>
+ <!-- Text input-->
+       <div class="form-group">
+         <label class="col-md-4 control-label">IP Address:<p style="color:red; font-size:10px;">to view an example, hover over the field</p>
+</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-microchip"></i></span>
+  <input name="ip_address" data-fv-mac="true" placeholder="Item's IP Address" class="form-control"  type="text" title="IP addresses (IPv4) look like four blocks of digits ranging from 0 to 255 separated by a period like 192.168.0.255">
+    </div>
+  </div>
+</div>
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-warning btn-block" >Send <span ></span></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>

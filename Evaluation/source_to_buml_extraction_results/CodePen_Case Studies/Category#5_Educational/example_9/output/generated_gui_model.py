@@ -1,0 +1,25 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+ButtonColor = Color(background_color="#007BFF", text_color="#FFFFFF", border_color="#0056b3")
+buttonPosition = Position(type=PositionType.Relative, alignment="center", z_index=10)
+buttonSize = Size(width="100%", height="40px", padding="8px", font_size="14px", unit_size=UnitSize.PIXELS)
+buttonStyling = Styling(size=buttonSize, position=buttonPosition, color=ButtonColor)
+FormColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#CCCCCC")
+formPosition = Position(type=PositionType.Relative, alignment="center", z_index=0)
+formSize = Size(width="100%", height="auto", padding="10px", unit_size=UnitSize.PIXELS)
+formStyling = Styling(size=formSize, position=formPosition, color=FormColor)
+viewComponent = ViewComponent(name="EducationBoardResultsView", description="Display education board results form")
+examinationField = InputField(name="ExaminationField", description="Select Examination", type=InputFieldType.Text, styling=formStyling)
+yearField = InputField(name="YearField", description="Select Year", type=InputFieldType.Number, styling=formStyling)
+boardField = InputField(name="BoardField", description="Select Board", type=InputFieldType.Text, styling=formStyling)
+rollNoField = InputField(name="RollNoField", description="Enter Roll No", type=InputFieldType.Number, styling=formStyling)
+regNoField = InputField(name="RegNoField", description="Enter Reg No", type=InputFieldType.Number, styling=formStyling)
+educationForm = Form(name="EducationForm", description="Form to input education board results", inputFields={examinationField, yearField, boardField, rollNoField, regNoField}, styling=formStyling)
+resetButton = Button(name="ResetButton", description="Reset the form", label="Reset", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Cancel, styling=buttonStyling)
+submitButton = Button(name="SubmitButton", description="Submit the form", label="Submit", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.SubmitForm, styling=buttonStyling)
+MainContentScreen = Screen(name="MainContentScreen", description="Main content for education board results", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={educationForm, resetButton, submitButton}, layout=ScreenLayout, is_main_page=True)
+EducationModule = Module(name="EducationModule", screens={MainContentScreen})
+gui_model = GUIModel(name="EducationBoardResultsApp", package="com.example.educationboardresults", versionCode="1", versionName="1.0", description="Application for displaying education board results", screenCompatibility=True, modules={EducationModule})

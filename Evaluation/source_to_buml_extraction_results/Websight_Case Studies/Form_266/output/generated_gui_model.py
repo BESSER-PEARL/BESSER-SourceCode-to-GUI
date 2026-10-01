@@ -1,0 +1,28 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+NavBarColor = Color(background_color="#38B2AC", text_color="#FFFFFF", border_color="")
+NavBarPosition = Position(type=PositionType.Relative)
+NavBarSize = Size(width="100%", height="auto", padding="24px", font_size="18", unit_size=UnitSize.PIXELS)
+NavBarStyling = Styling(size=NavBarSize, position=NavBarPosition, color=NavBarColor)
+ButtonColor = Color(background_color="#4299E1", text_color="#FFFFFF", border_color="")
+ButtonPosition = Position(type=PositionType.Relative)
+ButtonSize = Size(width="", height="40", padding="8px", margin="4", font_size="14", unit_size=UnitSize.PIXELS)
+ButtonStyling = Styling(size=ButtonSize, position=ButtonPosition, color=ButtonColor)
+SectionColor = Color(background_color="#F7FAFC", text_color="#2D3748", border_color="")
+SectionPosition = Position(type=PositionType.Relative)
+SectionSize = Size(width="100%", height="auto", padding="32px", font_size="16", unit_size=UnitSize.PIXELS)
+SectionStyling = Styling(size=SectionSize, position=SectionPosition, color=SectionColor)
+FooterColor = Color(background_color="#2D3748", text_color="#A0AEC0", border_color="")
+FooterPosition = Position(type=PositionType.Relative)
+FooterSize = Size(width="100%", height="auto", padding="32px", font_size="14", unit_size=UnitSize.PIXELS)
+FooterStyling = Styling(size=FooterSize, position=FooterPosition, color=FooterColor)
+navBar: Menu = Menu(name=NavBar_title, description="Navigation bar with links", menuItems={MenuItem(label="Home"), MenuItem(label="About"), MenuItem(label="Contact")}, styling=NavBarStyling)
+mainSection: ViewComponent = ViewComponent(name=Section_title, description=Section_description, styling=SectionStyling)
+buyTicketsButton: Button = Button(name="BuyTicketsButton", description="Button to buy tickets", label="Buy Tickets", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Navigate, styling=ButtonStyling)
+pageFooter: ViewComponent = ViewComponent(name="Footer", description="Footer with social media links and newsletter signup", styling=FooterStyling)
+MusicWebsiteScreen: Screen = Screen(name="MusicWebsiteScreen", description="Main screen for the music website", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={navBar, mainSection, buyTicketsButton, pageFooter}, is_main_page=True, layout=ScreenLayout)
+MusicWebsiteModule: Module = Module(name="MusicWebsiteModule", screens={MusicWebsiteScreen})
+gui_model: GUIModel = GUIModel(name="MusicWebsiteApp", package="com.example.musicwebsite", versionCode="1", versionName="1.0", description="A music website with navigation, main content, and footer.", screenCompatibility=True, modules={MusicWebsiteModule})

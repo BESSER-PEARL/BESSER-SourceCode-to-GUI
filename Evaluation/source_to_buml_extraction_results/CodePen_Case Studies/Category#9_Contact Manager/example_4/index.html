@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>A contact manager, v4</title>
+  <meta charset="utf-8"/>
+</head>
+<body> 
+	<form onsubmit="return formSubmitted();">
+	 <fieldset>
+		<legend>&nbspPersonal informations&nbsp</legend>
+		<label for="name">Name:
+			<input type="text" id="name" required>
+		</label>
+		<label for="email">Email:
+			<input type="email" id="email" required>
+		</label>
+		<button>Add new Contact</button>
+		 </fieldset>
+	</form>
+	<div id="divSearch">
+		<label id="labelSearch" for="search">Name Search:
+			<input type="search" id="search" oninput="nameSearch()" size=17> 
+		</label>	
+		<h2 id="searchResult"></h2><br>
+	</div>
+<!--	<button onclick="nameSearch()">Search</button> -->
+  <h2 id="listContacts">List of contacts</h2> 
+  <div id="contacts"></div>
+	<p><button onclick="emptyList();">&nbspEmpty&nbsp</button> 
+	 <button onclick="cm.save();">&nbspSave&nbsp</button> 
+   <button onclick="loadList();">&nbspLoad&nbsp</button>
+	</p>
+
+</body>
+</html>

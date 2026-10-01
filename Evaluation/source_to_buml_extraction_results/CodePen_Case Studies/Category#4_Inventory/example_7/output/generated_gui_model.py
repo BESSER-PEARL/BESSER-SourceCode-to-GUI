@@ -1,0 +1,28 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+InputFieldColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#CCCCCC")
+InputFieldPosition = Position(type=PositionType.Relative, z_index=0)
+InputFieldSize = Size(width="200px", height="30px", padding="5px", margin="10px", font_size="14px", unit_size=UnitSize.PIXELS)
+InputFieldStyling = Styling(size=InputFieldSize, position=InputFieldPosition, color=InputFieldColor)
+ButtonColor = Color(background_color="#007BFF", text_color="#FFFFFF", border_color="#0056b3")
+ButtonPosition = Position(type=PositionType.Relative, z_index=0)
+ButtonSize = Size(width="100px", height="40px", padding="8px", margin="8px", font_size="14px", unit_size=UnitSize.PIXELS)
+ButtonStyling = Styling(size=ButtonSize, position=ButtonPosition, color=ButtonColor)
+TableColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#CCCCCC")
+TablePosition = Position(type=PositionType.Relative, z_index=0)
+TableSize = Size(width="100%", height="auto", padding="10px", margin="20px", font_size="14px", unit_size=UnitSize.PIXELS)
+TableStyling = Styling(size=TableSize, position=TablePosition, color=TableColor)
+nameInputField = InputField(name="NameInput", description="Input for name", type="Text", validationRules="", styling=InputFieldStyling)
+dateInputField = InputField(name="DateInput", description="Input for date assigned", type="Date", validationRules="", styling=InputFieldStyling)
+amountInputField = InputField(name="AmountInput", description="Input for amount paid", type="Number", validationRules="", styling=InputFieldStyling)
+balanceInputField = InputField(name="BalanceInput", description="Input for original balance", type="Number", validationRules="", styling=InputFieldStyling)
+addDataButton = Button(name="AddDataButton", description="Button to add data", label="Add Data", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Add, styling=ButtonStyling)
+sortByDateButton = Button(name="SortByDateButton", description="Button to sort by date", label="Sort by Date", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Sort, styling=ButtonStyling)
+datasource_sortingApp = DataSourceElement(name="SortingAppDataSource", dataSourceClass=SortingApp, fields=[SortingApp_name, SortingApp_dateAssigned, SortingApp_amountPaid, SortingApp_originalBalance])
+dataTable = DataList(name="DataTable", description="Table displaying sorting app data", list_sources={datasource_sortingApp}, styling=TableStyling)
+SortingAppScreen = Screen(name="SortingAppScreen", description="Screen for sorting app data entry and display", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", is_main_page=True, view_elements={nameInputField, dateInputField, amountInputField, balanceInputField, addDataButton, sortByDateButton, dataTable}, layout=ScreenLayout)
+SortingAppModule = Module(name="SortingAppModule", screens={SortingAppScreen})
+gui_model = GUIModel(name="SortingApp", package="com.example.sortingapp", versionCode="1", versionName="1.0", description="A web application for sorting app data management.", screenCompatibility=True, modules={SortingAppModule})

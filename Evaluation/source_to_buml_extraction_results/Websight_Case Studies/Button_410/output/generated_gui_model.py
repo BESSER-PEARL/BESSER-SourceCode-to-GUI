@@ -1,0 +1,26 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+NavBarColor = Color(background_color="#38B2AC", text_color="#FFFFFF", border_color="")
+NavBarPosition = Position(type=PositionType.Relative)
+NavBarSize = Size(width="100%", height="auto", padding="24px", font_size="16", unit_size=UnitSize.PIXELS)
+NavBarStyling = Styling(size=NavBarSize, position=NavBarPosition, color=NavBarColor)
+ButtonColor = Color(background_color="#FFFFFF", text_color="#4FD1C5", border_color="")
+ButtonPosition = Position(type=PositionType.Relative)
+ButtonSize = Size(height="40", padding="8px", margin="4", font_size="14", unit_size=UnitSize.PIXELS)
+ButtonStyling = Styling(size=ButtonSize, position=ButtonPosition, color=ButtonColor)
+FooterColor = Color(background_color="#2D3748", text_color="#A0AEC0", border_color="")
+FooterPosition = Position(type=PositionType.Relative)
+FooterSize = Size(width="100%", height="auto", padding="24px", font_size="14", unit_size=UnitSize.PIXELS)
+FooterStyling = Styling(size=FooterSize, position=FooterPosition, color=FooterColor)
+viewComponent: ViewComponent = ViewComponent(name="HomePageView", description="Display the home page with navigation and footer")
+navBar: Menu = Menu(name="NavBar", description="Main navigation bar", menuItems={MenuItem(label=Navigation_homeLink.name), MenuItem(label=Navigation_aboutLink.name), MenuItem(label=Navigation_contactLink.name)}, styling=NavBarStyling)
+welcomeSection: ViewComponent = ViewComponent(name="WelcomeSection", description="Welcome message and introduction")
+getStartedButton: Button = Button(name="GetStartedButton", description="Get started with the tech startup", label="Get Started", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Navigate, styling=ButtonStyling)
+techImage: Image = Image(name="TechImage", description="")
+footer: ViewComponent = ViewComponent(name="Footer", description="Footer with privacy policy and terms of use", styling=FooterStyling)
+HomePageScreen: Screen = Screen(name="HomePage", description="Welcome to our tech startup", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={navBar, welcomeSection, getStartedButton, techImage, footer}, is_main_page=True, layout=ScreenLayout)
+MyModule: Module = Module(name="TechStartupModule", screens={HomePageScreen})
+gui_model: GUIModel = GUIModel(name="TechStartupApp", package="com.example.techstartup", versionCode="1", versionName="1.0", description="A tech startup web application", screenCompatibility=True, modules={MyModule})

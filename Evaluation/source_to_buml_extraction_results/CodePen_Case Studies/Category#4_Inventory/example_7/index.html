@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sorting App</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Sorting App</h1>
+
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+    <label for="date">Date Assigned:</label>
+    <input type="date" id="date">
+    <label for="amount">Amount Paid:</label>
+    <input type="number" id="amount">
+    <label for="balance">Original Balance:</label>
+    <input type="number" id="balance">
+    <button onclick="addData()">Add Data</button>
+  </div>
+
+  <table id="data-table">
+    <tr>
+      <th>Name</th>
+      <th>Date Assigned</th>
+      <th>Amount Paid</th>
+      <th>Original Balance</th>
+    </tr>
+    <tr>
+      <td>John Doe</td>
+      <td>2022-01-01</td>
+      <td>$100</td>
+      <td>$500</td>
+    </tr>
+    <tr>
+      <td>Jane Smith</td>
+      <td>2022-02-15</td>
+      <td>$200</td>
+      <td>$800</td>
+    </tr>
+    <tr>
+      <td>Mike Johnson</td>
+      <td>2022-03-10</td>
+      <td>$150</td>
+      <td>$700</td>
+    </tr>
+  </table>
+
+  <button onclick="sortByDateAndAmount()">Sort by Date</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

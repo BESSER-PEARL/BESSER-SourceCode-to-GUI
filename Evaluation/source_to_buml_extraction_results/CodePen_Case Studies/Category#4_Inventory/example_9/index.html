@@ -1,0 +1,55 @@
+<div ng-app="IMS">
+  <div ng-controller="MainController">
+<!-- Side navigation -->
+<div class="sidenav">
+  <a href="#">Inventory</a>
+  <a href="#">Transactions</a>
+  <a href="#">Settings</a>
+</div>
+
+<!-- Page content -->
+<div class="main">
+  <div class="header">
+    <h1 class="pageTitle">Inventory</h1>
+    <button type="button " class="btn btn-secondary btn-lg addNewProduct">Add Product</button>
+  </div>
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Product</th>
+      <th scope="col">Type</th>
+      <th scope="col">Quantity</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="x in products">
+      <td>{{x.product.name}}</td>
+      <td>{{x.product.category.name}}</td>
+      <td>{{x.product.name}}</td>
+      <td>
+        <!--start of dropdown menu-->
+        <div class="dropdown">
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="actionMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Action
+    </a>
+    <div class="dropdown-menu" aria-labelledby="actionMenuLink">
+      <a class="dropdown-item" href="#">Details</a>
+      <a class="dropdown-item" href="#">Add</a>
+      <a class="dropdown-item" href="#">Remove</a>
+    </div>
+  </div>
+        <!--end of dropdown menu-->
+      </td>
+    </tr>
+  </tbody>
+</table>
+  
+  
+    </div>
+    
+
+  
+</div>
+
+  

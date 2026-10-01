@@ -1,0 +1,26 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+HeaderColor = Color(background_color=Header_bgColor, text_color=Header_textColor, border_color="")
+HeaderPosition = Position(type=PositionType.Relative, alignment="center")
+HeaderSize = Size(width="100%", height="96px", unit_size=UnitSize.PIXELS)
+HeaderStyling = Styling(size=HeaderSize, position=HeaderPosition, color=HeaderColor)
+NavColor = Color(background_color=Nav_bgColor, text_color=Nav_textColor, border_color="")
+NavPosition = Position(type=PositionType.Relative, alignment="center")
+NavSize = Size(width="100%", height="48px", unit_size=UnitSize.PIXELS)
+NavStyling = Styling(size=NavSize, position=NavPosition, color=NavColor)
+SectionColor = Color(background_color=Section_bgColor, text_color="#000000", border_color="")
+SectionPosition = Position(type=PositionType.Relative, alignment="center")
+SectionSize = Size(width="100%", height="auto", padding="16px", margin="16px", unit_size=UnitSize.PIXELS)
+SectionStyling = Styling(size=SectionSize, position=SectionPosition, color=SectionColor)
+headerComponent: ViewComponent = ViewComponent(name="Header", description="University Header", styling=HeaderStyling)
+navComponent: ViewComponent = ViewComponent(name="Navigation", description="Navigation Bar", styling=NavStyling)
+admissionsSection: ViewComponent = ViewComponent(name="AdmissionsSection", description="Admissions Information", styling=SectionStyling)
+academicsSection: ViewComponent = ViewComponent(name="AcademicsSection", description="Academics Information", styling=SectionStyling)
+studentLifeSection: ViewComponent = ViewComponent(name="StudentLifeSection", description="Student Life Information", styling=SectionStyling)
+researchSection: ViewComponent = ViewComponent(name="ResearchSection", description="Research Information", styling=SectionStyling)
+UniversityPageScreen: Screen = Screen(name="UniversityPage", description="University Information Page", x_dpi=UniversityPage_bgColor, y_dpi=UniversityPage_bgColor, screen_size="Medium", view_elements={headerComponent, navComponent, admissionsSection, academicsSection, studentLifeSection, researchSection}, is_main_page=True, layout=ScreenLayout)
+UniversityModule: Module = Module(name="UniversityModule", screens={UniversityPageScreen})
+gui_model: GUIModel = GUIModel(name="UniversityApp", package="com.example.universityapp", versionCode="1", versionName="1.0", description="A web application for university information.", screenCompatibility=True, modules={UniversityModule})

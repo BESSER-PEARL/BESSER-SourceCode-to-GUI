@@ -1,0 +1,28 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+ImagePosition = Position(type=PositionType.Relative, alignment="center", z_index=0)
+ImageSize = Size(width="100%", height="auto", padding="0", margin="0", unit_size=UnitSize.PIXELS)
+ImageColor = Color(background_color="", text_color="", border_color="")
+ImageStyling = Styling(size=ImageSize, position=ImagePosition, color=ImageColor)
+TextPosition = Position(type=PositionType.Relative, alignment="center", z_index=0)
+TextSize = Size(width="", height="", padding="0", margin="0", font_size="24", unit_size=UnitSize.PIXELS)
+TextColor = Color(background_color="", text_color="#343A40", border_color="")
+TextStyling = Styling(size=TextSize, position=TextPosition, color=TextColor)
+ButtonPosition = Position(type=PositionType.Inline, alignment="center", z_index=0)
+ButtonSize = Size(width="", height="40", padding="8px", margin="5px", font_size="14", unit_size=UnitSize.PIXELS)
+ButtonColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#CCCCCC")
+ButtonStyling = Styling(size=ButtonSize, position=ButtonPosition, color=ButtonColor)
+viewComponent: ViewComponent = ViewComponent(name="WebPageView", description="Display a webpage with sections and navigation links")
+heroImage: Image = Image(name="HeroImage", description="A creative hero image", styling=ImageStyling)
+inspirationSection: ViewComponent = ViewComponent(name="InspirationSection", description="Inspiration section", styling=TextStyling)
+workSection: ViewComponent = ViewComponent(name="WorkSection", description="Work section", styling=TextStyling)
+aboutUsSection: ViewComponent = ViewComponent(name="AboutUsSection", description="About Us section", styling=TextStyling)
+inspirationLink: Button = Button(name="InspirationLink", description="Navigate to Inspiration", label=NavigationLink_text, buttonType=ButtonType.TextButton, actionType=ButtonActionType.Navigate, styling=ButtonStyling)
+workLink: Button = Button(name="WorkLink", description="Navigate to Work", label=NavigationLink_text, buttonType=ButtonType.TextButton, actionType=ButtonActionType.Navigate, styling=ButtonStyling)
+aboutUsLink: Button = Button(name="AboutUsLink", description="Navigate to About Us", label=NavigationLink_text, buttonType=ButtonType.TextButton, actionType=ButtonActionType.Navigate, styling=ButtonStyling)
+WebPageScreen: Screen = Screen(name="WebPageScreen", description="A webpage with a hero image, sections, and navigation links", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", is_main_page=True, view_elements={heroImage, inspirationSection, workSection, aboutUsSection, inspirationLink, workLink, aboutUsLink}, layout=ScreenLayout)
+WebPageModule: Module = Module(name="WebPageModule", screens={WebPageScreen})
+gui_model: GUIModel = GUIModel(name="WebPageApp", package="com.example.webpageapp", versionCode="1", versionName="1.0", description="A web application displaying a creative webpage.", screenCompatibility=True, modules={WebPageModule})

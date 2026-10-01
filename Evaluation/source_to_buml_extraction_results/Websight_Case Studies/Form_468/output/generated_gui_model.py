@@ -1,0 +1,25 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+headerImageSize = Size(width="100px", height="100px", unit_size=UnitSize.PIXELS)
+headerImagePosition = Position(type=PositionType.Relative)
+headerImageColor = Color(background_color="#FFFFFF", border_color="", text_color="")
+headerImageStyling = Styling(size=headerImageSize, position=headerImagePosition, color=headerImageColor)
+buttonColor = Color(background_color="#007BFF", text_color="#FFFFFF", border_color="#0056b3")
+buttonPosition = Position(type=PositionType.Relative)
+buttonSize = Size(width="100px", height="40px", unit_size=UnitSize.PIXELS)
+buttonStyling = Styling(size=buttonSize, position=buttonPosition, color=buttonColor)
+viewComponent: ViewComponent = ViewComponent(name="EducationProviderView", description="Display education provider information")
+classroomImage: Image = Image(name=Header_classroomImage.name, styling=headerImageStyling, description="")
+logoImage: Image = Image(name=Header_logoImage.name, styling=headerImageStyling, description="")
+coursesMenu: Menu = Menu(name=Aside_courses.name, description="List of courses", menuItems={MenuItem(label="Course 1"), MenuItem(label="Course 2"), MenuItem(label="Course 3")})
+mainTitle: ViewComponent = ViewComponent(name=Main_title.name, description="Main title of the page")
+mainDescription: ViewComponent = ViewComponent(name=Main_description.name, description="Description of the education provider")
+contactInfo: ViewComponent = ViewComponent(name=Footer_contactPhone.name, description="Contact information")
+testimonials: ViewComponent = ViewComponent(name=Footer_testimonials.name, description="User testimonials")
+newsletterForm: Form = Form(name=Footer_newsletterEmail.name, description="Newsletter sign-up form", inputFields={InputField(name="EmailInput", type=InputFieldType.Email, description="Email input field")})
+EducationProviderScreen: Screen = Screen(name="EducationProviderScreen", description="Screen displaying education provider information", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={classroomImage, logoImage, coursesMenu, mainTitle, mainDescription, contactInfo, testimonials, newsletterForm}, is_main_page=True, layout=ScreenLayout)
+EducationModule: Module = Module(name="EducationModule", screens={EducationProviderScreen})
+gui_model: GUIModel = GUIModel(name="EducationProviderApp", package="com.example.educationprovider", versionCode="1", versionName="1.0", description="An application for managing education provider information.", screenCompatibility=True, modules={EducationModule})

@@ -1,0 +1,25 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+ButtonColor = Color(background_color="#0C4B33", text_color="#FFFFFF", border_color="#0A3A28")
+buttonPosition = Position(type=PositionType.Relative, z_index=0)
+buttonSize = Size(width="200px", height="40px", padding="15px 10px", margin="10px", font_size="14px", unit_size=UnitSize.PIXELS)
+buttonStyling = Styling(size=buttonSize, position=buttonPosition, color=ButtonColor)
+inputFieldColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#CED4DA")
+inputFieldPosition = Position(type=PositionType.Relative, z_index=0)
+inputFieldSize = Size(width="100%", height="auto", padding="10px", font_size="14px", unit_size=UnitSize.PIXELS)
+inputFieldStyling = Styling(size=inputFieldSize, position=inputFieldPosition, color=inputFieldColor)
+viewComponent = ViewComponent(name="OpenAITextToSpeechGenerationView", description="OpenAI Text To Speech Generation Interface")
+openKeyField = InputField(name="OpenKeyField", description="Input your OpenAI API key", type=InputFieldType.Text, validationRules="required", styling=inputFieldStyling)
+inputTextField = InputField(name="InputTextField", description="Input Text", type=InputFieldType.Text, validationRules="required", styling=inputFieldStyling)
+outputFileNameField = InputField(name="OutputFileNameField", description="File Name", type=InputFieldType.Text, validationRules="required", styling=inputFieldStyling)
+selectVoiceField = InputField(name="SelectVoiceField", description="Select Voice", type=InputFieldType.Text, validationRules="required", styling=inputFieldStyling)
+generateButton = Button(name="GenerateButton", description="Generate TTS", label="Generate", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.SubmitForm, styling=buttonStyling)
+clearButton = Button(name="ClearButton", description="Clear Form", label="Clear", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Cancel, styling=buttonStyling)
+downloadButton = Button(name="DownloadButton", description="Download Audio", label="Download", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Download, styling=buttonStyling)
+ttsForm = Form(name="TTSForm", description="Text to Speech Form", inputFields={openKeyField, inputTextField, outputFileNameField, selectVoiceField}, styling=None)
+OpenAITextToSpeechScreen = Screen(name="OpenAITextToSpeechScreen", description="OpenAI Text To Speech Generation Screen", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={ttsForm, generateButton, clearButton, downloadButton}, is_main_page=True, layout=ScreenLayout)
+OpenAITextToSpeechModule = Module(name="OpenAITextToSpeechModule", screens={OpenAITextToSpeechScreen})
+gui_model = GUIModel(name="OpenAITextToSpeechApp", package="com.example.openaitts", versionCode="1", versionName="1.0", description="OpenAI Text To Speech Generation Application", screenCompatibility=True, modules={OpenAITextToSpeechModule})

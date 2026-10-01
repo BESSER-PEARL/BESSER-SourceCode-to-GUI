@@ -1,0 +1,28 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+HeaderColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#E5E7EB")
+HeaderPosition = Position(type=PositionType.Relative)
+HeaderSize = Size(width="100%", height="auto", padding="16px", margin="0", font_size="16", unit_size=UnitSize.PIXELS)
+HeaderStyling = Styling(size=HeaderSize, position=HeaderPosition, color=HeaderColor)
+NavColor = Color(background_color="#FFFFFF", text_color="#F59E0B", border_color="#E5E7EB")
+NavPosition = Position(type=PositionType.Relative)
+NavSize = Size(width="100%", height="auto", padding="8px", margin="0", font_size="14", unit_size=UnitSize.PIXELS)
+NavStyling = Styling(size=NavSize, position=NavPosition, color=NavColor)
+FooterColor = Color(background_color="#E5E7EB", text_color="#000000", border_color="#E5E7EB")
+FooterPosition = Position(type=PositionType.Absolute, bottom="0")
+FooterSize = Size(width="100%", height="auto", padding="8px", margin="0", font_size="12", unit_size=UnitSize.PIXELS)
+FooterStyling = Styling(size=FooterSize, position=FooterPosition, color=FooterColor)
+viewComponent: ViewComponent = ViewComponent(name="WebPageView", description="Display a webpage with header, navigation, main content, and footer")
+header: ViewComponent = ViewComponent(name="Header", description="Page header with logo and navigation", styling=HeaderStyling)
+navMenu: Menu = Menu(name="NavigationMenu", description="Main navigation menu", menuItems={MenuItem(label="Home"), MenuItem(label="Services"), MenuItem(label="Projects"), MenuItem(label="Testimonials")}, styling=NavStyling)
+mainContent: ViewContainer = ViewContainer(name="MainContent", description="Main content area", layout=ScreenLayout, view_elements="")
+servicesSection: ViewComponent = ViewComponent(name="ServicesSection", description="Our Services section")
+projectsSection: ViewComponent = ViewComponent(name="ProjectsSection", description="Completed Projects section")
+testimonialsSection: ViewComponent = ViewComponent(name="TestimonialsSection", description="Client Testimonials section")
+footer: ViewComponent = ViewComponent(name="Footer", description="Page footer", styling=FooterStyling)
+WebPageScreen: Screen = Screen(name="WebPageScreen", description="A webpage with header, navigation, main content, and footer", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", is_main_page=True, view_elements={header, navMenu, mainContent, footer}, layout=ScreenLayout)
+WebModule: Module = Module(name="WebModule", screens={WebPageScreen})
+gui_model: GUIModel = GUIModel(name="WebApp", package="com.example.webapp", versionCode="1", versionName="1.0", description="A web application with a structured layout.", screenCompatibility=True, modules={WebModule})

@@ -1,0 +1,33 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+menuHeaderColor = Color(background_color="#4B4F55", text_color="#FFFFFF", border_color="#353A40")
+navItemColorActive = Color(background_color="#6E757F", text_color="#FFFFFF", border_color="#4B4F55")
+navItemColorInactive = Color(background_color="#FFFFFF", text_color="#8B8E93", border_color="#F0F0F0")
+badgeColorWarning = Color(background_color="#ED373F", text_color="#FFFFFF", border_color="#ED373F")
+menuHeaderPosition = Position(type=PositionType.Relative, alignment="center", z_index=0)
+navItemPosition = Position(type=PositionType.Relative, z_index=0)
+badgePosition = Position(type=PositionType.Absolute, alignment="right", z_index=1)
+menuHeaderSize = Size(width="100%", height="auto", padding="15px", font_size="24px", unit_size=UnitSize.PIXELS)
+navItemSize = Size(width="100%", height="auto", padding="10px 15px", font_size="16px", unit_size=UnitSize.PIXELS)
+badgeSize = Size(width="auto", height="auto", padding="2px 8px", font_size="12px", unit_size=UnitSize.PIXELS)
+menuHeaderStyling = Styling(size=menuHeaderSize, position=menuHeaderPosition, color=menuHeaderColor)
+badgeStyling = Styling(size=badgeSize, position=badgePosition, color=badgeColorWarning)
+menuHeader = ViewComponent(name="MenuHeader", description="Header for the menu", styling=menuHeaderStyling)
+navItemNews = ViewComponent(name="NavItemNews", description="News item", styling=Styling(size=navItemSize, position=navItemPosition, color=navItemColorActive))
+navItemPriority = ViewComponent(name="NavItemPriority", description="Priority item", styling=Styling(size=navItemSize, position=navItemPosition, color=navItemColorInactive))
+navItemAssigned = ViewComponent(name="NavItemAssigned", description="Assigned item", styling=Styling(size=navItemSize, position=navItemPosition, color=navItemColorInactive))
+navItemArchived = ViewComponent(name="NavItemArchived", description="Archived item", styling=Styling(size=navItemSize, position=navItemPosition, color=navItemColorInactive))
+navItemDeleted = ViewComponent(name="NavItemDeleted", description="Deleted item", styling=Styling(size=navItemSize, position=navItemPosition, color=navItemColorInactive))
+navItemShowAll = ViewComponent(name="NavItemShowAll", description="Show all item", styling=Styling(size=navItemSize, position=navItemPosition, color=navItemColorInactive))
+badgeNews = ViewComponent(name="BadgeNews", description="Badge for news", styling=badgeStyling)
+badgePriority = ViewComponent(name="BadgePriority", description="Badge for priority", styling=badgeStyling)
+badgeAssigned = ViewComponent(name="BadgeAssigned", description="Badge for assigned", styling=badgeStyling)
+badgeArchived = ViewComponent(name="BadgeArchived", description="Badge for archived", styling=badgeStyling)
+badgeDeleted = ViewComponent(name="BadgeDeleted", description="Badge for deleted", styling=badgeStyling)
+menuItems = {navItemNews, navItemPriority, navItemAssigned, navItemArchived, navItemDeleted, navItemShowAll}
+menu = Menu(name="MainMenu", description="Main navigation menu", menuItems=menuItems, styling=None)
+mainPageScreen = Screen(name="MainPageScreen", description="Main page with navigation", x_dpi="160", y_dpi="160", screen_size="Medium", view_elements={menuHeader, menu}, is_main_page=True, layout=Layout(orientation="vertical", padding="10px", margin="10px", gap="5px", alignment=JustificationType.Center, wrap=True))
+mainModule = Module(name="MainModule", screens={mainPageScreen})
+guiModel = GUIModel(name="IncomingMessagesApp", package="com.example.incomingmessages", versionCode="1", versionName="1.0", description="Application for managing incoming messages", screenCompatibility=True, modules={mainModule})

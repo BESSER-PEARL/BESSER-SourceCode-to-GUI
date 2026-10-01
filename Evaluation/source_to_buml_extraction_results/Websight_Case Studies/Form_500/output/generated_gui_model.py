@@ -1,0 +1,28 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="horizontal", gap="0", alignment=JustificationType.Center)
+VideoSize = Size(width="75%", height="auto", padding="0", margin="0", unit_size=UnitSize.PERCENT)
+VideoPosition = Position(type=PositionType.Relative)
+VideoColor = Color(background_color="", text_color="", border_color="")
+VideoStyling = Styling(size=VideoSize, position=VideoPosition, color=VideoColor)
+FormSize = Size(width="75%", height="auto", padding="8px", margin="0", unit_size=UnitSize.PERCENT)
+FormPosition = Position(type=PositionType.Relative)
+FormColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="")
+FormStyling = Styling(size=FormSize, position=FormPosition, color=FormColor)
+ButtonColor = Color(background_color="#007BFF", text_color="#FFFFFF", border_color="#0056b3")
+ButtonPosition = Position(type=PositionType.Relative)
+ButtonSize = Size(width="", height="40", padding="8px", margin="0", font_size="14", unit_size=UnitSize.PIXELS)
+ButtonStyling = Styling(size=ButtonSize, position=ButtonPosition, color=ButtonColor)
+TextColor = Color(text_color="#343A40", background_color="", border_color="")
+TextPosition = Position(type=PositionType.Relative)
+TextSize = Size(font_size="16", unit_size=UnitSize.PIXELS)
+TextStyling = Styling(size=TextSize, position=TextPosition, color=TextColor)
+videoComponent: ViewComponent = ViewComponent(name="VideoComponent", description="Video player for e-learning", styling=VideoStyling)
+formComponent: Form = Form(name="RegistrationForm", description="User registration form", inputFields={InputField(name="UsernameField", description="Enter your username", type="Text", styling=FormStyling), InputField(name="PasswordField", description="Enter your password", type="Password", styling=FormStyling)}, styling=FormStyling)
+registerButton: Button = Button(name="RegisterButton", description="Register for the platform", label="Register", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.SubmitForm, styling=ButtonStyling)
+courseDetailsText: ViewComponent = ViewComponent(name="CourseDetailsText", description="Details about the courses offered", styling=TextStyling)
+WebPageScreen: Screen = Screen(name="WebPageScreen", description="E-learning platform registration page", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={videoComponent, formComponent, registerButton, courseDetailsText}, is_main_page=True, layout=ScreenLayout)
+MyModule: Module = Module(name="E-LearningModule", screens={WebPageScreen})
+gui_model: GUIModel = GUIModel(name="E-LearningPlatform", package="com.example.elearning", versionCode="1", versionName="1.0", description="An e-learning platform for various courses.", screenCompatibility=True, modules={MyModule})

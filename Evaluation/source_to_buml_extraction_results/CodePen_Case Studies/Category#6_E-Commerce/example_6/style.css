@@ -1,0 +1,167 @@
+body{
+  background:white;
+  margin:0 auto;
+  padding:0;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Staatliches', cursive;
+}
+
+h1{
+  font-size:4.5em;
+  margin-top:-35px;
+    letter-spacing:2px;
+  color:#353997;
+}
+h6{
+  font-size:0.9em;
+  margin-top:50px;
+  letter-spacing:2px;
+}
+
+p{
+  font-family: 'Slabo 27px', serif;
+  color:#333;
+  margin-top:-65px;
+}
+
+
+.container{
+  margin:10px auto;
+  background:linear-gradient(-35deg, #EBEAEA,#fff);
+  height:658px;
+  width:960px;
+  display:grid;
+  grid-template-rows:1fr 9fr;
+  border-radius:16px;
+  border:1px solid #fff;
+  box-shadow:0px 67px 113px -36px rgba(0,0,0,0.4);
+  overflow:hidden;
+  
+}
+.main-nav{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  max-height:70px;
+  overflow:hidden
+}
+
+.logo{
+  grid-column-start:1;
+  height:25px;
+  width:25px;
+  border:11px solid #353997;
+  box-shadow:4px 1px rgba(255,90,200,0.5);
+  border-radius:30px;
+  text-align:center;
+  margin:15px auto;
+  background:transparent;
+}
+
+.navigation{
+  grid-column:6/11;
+  padding-top:15px;
+}
+
+.navigation a{
+  text-decoration:none;
+  color:#222;
+}
+
+.navigation a:hover{
+  color:#353997;
+}
+
+.navigation li{
+  font-family: 'Staatliches', cursive;
+  text-decoration:none;
+  display:inline;
+  margin-left:30px;
+}
+
+.search{
+  grid-column-start:11;
+  text-align:center;
+  color:#bbb;
+  padding:20px;
+}
+.cart{
+  text-align:center;
+  grid-column-start:12;
+  max-height:70px;
+  background:#353997;
+  color:white;
+  padding:20px
+  
+}
+
+.wrapper{
+  display:grid;
+  grid-template-columns:6fr 9fr;
+}
+
+.product-section{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  grid-template-rows:repeat(6,1fr);
+}
+
+.circle{
+  position:relative;
+  background:black;
+  grid-column:1/8;
+  grid-row:3/9;
+  border-radius:50% 50% 50% 50%;
+  background:linear-gradient(-95deg,rgba(0,0,0,0.8) 30%,#353997);
+  transform: scale(1.4); 
+  z-index:2;
+  
+}
+
+.circle img{
+  position:absolute;
+  bottom:105px;
+  right:-100px;
+ height:362px;
+  width:362px;
+}
+
+.prod-description{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+
+}
+
+.prod-description article{
+  grid-column:3/11;
+  z-index:2;
+  overflow:hidden;
+}
+
+.prod-description button{
+  width:170px;
+  height:32px;
+  border:1px solid black;
+  border-radius:24px;
+  font-family: 'Staatliches', cursive;
+  font-size:0.75em;
+  background:transparent;
+  margin-top:20px;
+}
+
+.prod-description button:last-child{
+  margin-left:20px;
+  background:black;
+  color:white
+}
+
+h1.shadow_H1{
+  position:absolute;
+  color:rgba(150,150,150,0.15);
+  font-size:9em;
+  bottom:-170px;
+  display:block;
+  width:960px;
+}

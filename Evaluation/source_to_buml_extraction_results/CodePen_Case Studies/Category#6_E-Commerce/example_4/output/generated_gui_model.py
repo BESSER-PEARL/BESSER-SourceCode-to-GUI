@@ -1,0 +1,27 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+inputFieldColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#CCCCCC")
+inputFieldPosition = Position(type=PositionType.Relative, alignment="center")
+inputFieldSize = Size(width="100%", height="40px", padding="10px", margin="5px", font_size="16px", unit_size=UnitSize.PIXELS)
+inputFieldStyling = Styling(size=inputFieldSize, position=inputFieldPosition, color=inputFieldColor)
+buttonColor = Color(background_color="#28a745", text_color="#FFFFFF", border_color="#218838")
+buttonPosition = Position(type=PositionType.Relative, alignment="center")
+buttonSize = Size(width="100%", height="50px", padding="10px", margin="10px", font_size="18px", unit_size=UnitSize.PIXELS)
+buttonStyling = Styling(size=buttonSize, position=buttonPosition, color=buttonColor)
+viewComponent = ViewComponent(name="ECommerceCustomerEnquiryFormView", description="Form for customer enquiries")
+firstNameField = InputField(name="FirstNameField", description="Input for first name", type="Text", validationRules="required", styling=inputFieldStyling)
+lastNameField = InputField(name="LastNameField", description="Input for last name", type="Text", validationRules="required", styling=inputFieldStyling)
+storeNameField = InputField(name="StoreNameField", description="Input for store name", type="Text", validationRules="", styling=inputFieldStyling)
+storeNumberField = InputField(name="StoreNumberField", description="Input for store number", type="Text", validationRules="", styling=inputFieldStyling)
+memberNumberField = InputField(name="MemberNumberField", description="Input for member number", type="Text", validationRules="", styling=inputFieldStyling)
+emailField = InputField(name="EmailField", description="Input for email", type="Email", validationRules="required", styling=inputFieldStyling)
+confirmEmailField = InputField(name="ConfirmEmailField", description="Input for confirming email", type="Email", validationRules="required", styling=inputFieldStyling)
+antiSpamField = InputField(name="AntiSpamField", description="Input for anti-spam", type="Text", validationRules="", styling=inputFieldStyling)
+getInfoButton = Button(name="GetInfoButton", description="Button to get more info", label="Get more Info", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.SubmitForm, styling=buttonStyling)
+enquiryForm = Form(name="ECommerceCustomerEnquiryForm", description="Customer enquiry form", inputFields={firstNameField, lastNameField, storeNameField, storeNumberField, memberNumberField, emailField, confirmEmailField, antiSpamField}, styling=None)
+ECommerceCustomerEnquiryScreen = Screen(name="ECommerceCustomerEnquiryScreen", description="Screen for customer enquiry form", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={enquiryForm, getInfoButton}, is_main_page=True, layout=ScreenLayout)
+ECommerceModule = Module(name="ECommerceModule", screens={ECommerceCustomerEnquiryScreen})
+gui_model = GUIModel(name="ECommerceApp", package="com.example.ecommerce", versionCode="1", versionName="1.0", description="E-Commerce application for customer enquiries", screenCompatibility=True, modules={ECommerceModule})

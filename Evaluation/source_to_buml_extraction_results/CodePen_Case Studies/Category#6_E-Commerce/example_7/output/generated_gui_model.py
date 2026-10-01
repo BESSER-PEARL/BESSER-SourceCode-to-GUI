@@ -1,0 +1,25 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+CardColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#CCCCCC")
+CardPosition = Position(type=PositionType.Relative, alignment="center", z_index=0)
+CardSize = Size(width="100%", height="auto", padding="10px", margin="10px", font_size="14px", unit_size=UnitSize.PIXELS)
+CardStyling = Styling(size=CardSize, position=CardPosition, color=CardColor)
+ButtonColor = Color(background_color="#FFC107", text_color="#000000", border_color="#FFA000")
+ButtonPosition = Position(type=PositionType.Relative, alignment="center", z_index=0)
+ButtonSize = Size(width="100%", height="40px", padding="8px", margin="10px", font_size="14px", unit_size=UnitSize.PIXELS)
+ButtonStyling = Styling(size=ButtonSize, position=ButtonPosition, color=ButtonColor)
+viewComponent = ViewComponent(name="ProductListView", description="Display a list of products with actions")
+productCard1 = ViewComponent(name="ProductCard1", description="ASUS TUF FX505DT Gaming Laptop", styling=CardStyling)
+productCard2 = ViewComponent(name="ProductCard2", description="Razer Blade 15 Base Gaming Laptop 2020", styling=CardStyling)
+productCard3 = ViewComponent(name="ProductCard3", description="Lenovo Legion 5 Gaming Laptop", styling=CardStyling)
+productCard4 = ViewComponent(name="ProductCard4", description="MSI GL66 Gaming Laptop", styling=CardStyling)
+addToCartButton1 = Button(name="AddToCartButton1", description="Add ASUS TUF FX505DT to cart", label="Add to cart", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Add, styling=ButtonStyling)
+addToCartButton2 = Button(name="AddToCartButton2", description="Add Razer Blade 15 to cart", label="Add to cart", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Add, styling=ButtonStyling)
+addToCartButton3 = Button(name="AddToCartButton3", description="Add Lenovo Legion 5 to cart", label="Add to cart", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Add, styling=ButtonStyling)
+addToCartButton4 = Button(name="AddToCartButton4", description="Add MSI GL66 to cart", label="Add to cart", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Add, styling=ButtonStyling)
+ProductListScreen = Screen(name="ProductListScreen", description="Explore a collection of products", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", is_main_page=True, view_elements={productCard1, productCard2, productCard3, productCard4, addToCartButton1, addToCartButton2, addToCartButton3, addToCartButton4}, layout=ScreenLayout)
+MyModule = Module(name="ProductModule", screens={ProductListScreen})
+gui_model = GUIModel(name="ProductApp", package="com.example.productapp", versionCode="1", versionName="1.0", description="A web application for browsing and purchasing products.", screenCompatibility=True, modules={MyModule})

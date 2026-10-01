@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scal=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1 id="title">Our Services Survey Form</h1>
+        <p id="description">
+          Thank you for taking the time to help us improve the platform
+        </p>
+      </header>
+      <main>
+        <form id="survey-form" action="#" method="post">
+          <label id="name-label" for="name"
+            >Name<input
+              id="name"
+              type="text"
+              placeholder="Enter your Name"
+              required
+          /></label>
+          <label id="email-label" for="email"
+            >Email<input
+              id="email"
+              type="Email"
+              placeholder="Enter your Email"
+              required
+          /></label>
+          <label id="number-label" for="number"
+            >Age (optional)<input
+              id="number"
+              type="number"
+              placeholder="Enter your Age"
+              min="13"
+              max="120"
+          /></label>
+          <label for="dropdown">
+            Which option best describes your current role?
+            <select id="dropdown" name="role" required>
+              <option value="" disabled selected>Select current role</option>
+              <option value="1">Student</option>
+              <option value="2">Full Time Job</option>
+              <option value="3">Full Time Learner</option>
+              <option value="4">Prefer not to say</option>
+              <option value="5">Other</option>
+            </select>
+          </label>
+          <fieldset>
+            <legend>Would you recommend us to a friend?</legend>
+            <label for="yes"
+              ><input id="yes" type="radio" name="recomend" value="yes" />
+              Definitly</label
+            >
+            <label for="maybe"
+              ><input id="maybe" type="radio" name="recomend" value="maybe" />
+              Maybe</label
+            >
+            <label for="no"
+              ><input id="no" type="radio" name="recomend" value="no" /> Not
+              Sure</label
+            >
+          </fieldset>
+          <label for="services">
+            What service have you done with us before?
+            <select id="services" name="service">
+              <option value="" disabled selected>Select an option</option>
+              <option value="1">UI/UX Design</option>
+              <option value="2">Frontend Dev</option>
+              <option value="3">Backend Dev</option>
+              <option value="4">Mobile Dev</option>
+            </select>
+          </label>
+          <fieldset>
+            <legend>
+              What would you like to see improved? (Check all that apply)
+            </legend>
+            <label for="frontend"
+              ><input
+                id="frontend"
+                type="checkbox"
+                name="improvement"
+                value="frontend"
+              />
+              Front-end Projects</label
+            >
+            <label for="backend"
+              ><input
+                id="backend"
+                type="checkbox"
+                name="improvement"
+                value="backend"
+              />
+              Back-end Projects</label
+            >
+            <label for="ui-ux"
+              ><input
+                id="ui-ux"
+                type="checkbox"
+                name="improvement"
+                value="ui-ux"
+              />
+              UI/UX Projects</label
+            >
+            <label for="mobile"
+              ><input
+                id="mobile"
+                type="checkbox"
+                name="improvement"
+                value="mobile"
+              />
+              Mobile Projects</label
+            >
+            <label for="support"
+              ><input
+                id="support"
+                type="checkbox"
+                name="improvement"
+                value="support"
+              />
+              Customer Support</label
+            >
+            <label for="website"
+              ><input
+                id="website"
+                type="checkbox"
+                name="improvement"
+                value="website"
+              />
+              Our Website</label
+            >
+            <label for="survey"
+              ><input
+                id="survey"
+                type="checkbox"
+                name="improvement"
+                value="survey"
+              />
+              Survey Form</label
+            >
+            <label for="additions"
+              ><input
+                id="additions"
+                type="checkbox"
+                name="improvement"
+                value="additions"
+              />
+              Additional Services</label
+            >
+          </fieldset>
+          <label for="note">
+            Any comments or suggestions?
+            <textarea
+              id="note"
+              placeholder="Enter yor comment here..."
+              rows="7"
+            ></textarea>
+          </label>
+          <button id="submit">Submit</button>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>

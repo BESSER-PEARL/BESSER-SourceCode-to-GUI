@@ -1,0 +1,27 @@
+from besser.BUML.notations.source_code_to_gui.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="10px", alignment=JustificationType.Center)
+InputFieldColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#CCCCCC")
+InputFieldPosition = Position(type=PositionType.Relative, z_index=0)
+InputFieldSize = Size(width="400px", height="40px", padding="2px", margin="10px", font_size="14px", unit_size=UnitSize.PIXELS)
+InputFieldStyling = Styling(size=InputFieldSize, position=InputFieldPosition, color=InputFieldColor)
+ButtonColor = Color(background_color="#007BFF", text_color="#FFFFFF", border_color="#0056b3")
+ButtonPosition = Position(type=PositionType.Relative, z_index=0)
+ButtonSize = Size(width="150px", height="40px", padding="10px", margin="10px", font_size="14px", unit_size=UnitSize.PIXELS)
+ButtonStyling = Styling(size=ButtonSize, position=ButtonPosition, color=ButtonColor)
+TextareaColor = Color(background_color="#F8F9FA", text_color="#000000", border_color="#CED4DA")
+TextareaPosition = Position(type=PositionType.Relative, z_index=0)
+TextareaSize = Size(width="100%", height="80px", padding="10px", margin="10px", font_size="14px", unit_size=UnitSize.PIXELS)
+TextareaStyling = Styling(size=TextareaSize, position=TextareaPosition, color=TextareaColor)
+urlInputField = InputField(name="urlInputField", description="Input field for URL", type="Text", validationRules="", styling=InputFieldStyling)
+tweetInputField = InputField(name="tweetInputField", description="Input field for Tweet", type="Text", validationRules="", styling=InputFieldStyling)
+hashtagsInputField = InputField(name="hashtagsInputField", description="Input field for Hashtags", type="Text", validationRules="", styling=InputFieldStyling)
+titleInputField = InputField(name="titleInputField", description="Input field for Title", type="Text", validationRules="", styling=InputFieldStyling)
+summaryInputField = InputField(name="summaryInputField", description="Input field for Summary", type="Text", validationRules="", styling=InputFieldStyling)
+shareLinksTextarea = InputField(name="shareLinksTextarea", description="Textarea for generated share links", type="Text", validationRules="", styling=TextareaStyling)
+copyButton = Button(name="copyButton", description="Button to copy share links to clipboard", label="Copy to Clipboard", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Copy, styling=ButtonStyling)
+SocialMediaSharingScreen = Screen(name="SocialMediaSharingScreen", description="Screen for generating social media share links", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={urlInputField, tweetInputField, hashtagsInputField, titleInputField, summaryInputField, shareLinksTextarea, copyButton}, is_main_page=True, layout=ScreenLayout)
+SocialMediaModule = Module(name="SocialMediaModule", screens={SocialMediaSharingScreen})
+gui_model = GUIModel(name="SocialMediaSharingApp", package="com.example.socialmediasharing", versionCode="1", versionName="1.0", description="An application for generating social media share links.", screenCompatibility=True, modules={SocialMediaModule})

@@ -1,0 +1,28 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+ContainerColor = Color(background_color="#E0EAFC", text_color="#000000", border_color="#FFFFFF")
+ContainerPosition = Position(type=PositionType.Relative, top="8%", left="", right="", bottom="", alignment="", z_index=0)
+ContainerSize = Size(width="400px", height="auto", padding="20px", margin="", font_size="", icon_size="", unit_size=UnitSize.PIXELS)
+ContainerStyling = Styling(size=ContainerSize, position=ContainerPosition, color=ContainerColor)
+ButtonColor = Color(background_color="#007BFF", text_color="#FFFFFF", border_color="#0056b3")
+ButtonPosition = Position(type=PositionType.Relative, top="", left="", right="", bottom="", alignment="", z_index=10)
+ButtonSize = Size(width="", height="40px", padding="8px", margin="24px", font_size="14px", icon_size="", unit_size=UnitSize.PIXELS)
+ButtonStyling = Styling(size=ButtonSize, position=ButtonPosition, color=ButtonColor)
+InputFieldColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#CED4DA")
+InputFieldPosition = Position(type=PositionType.Relative, top="", left="", right="", bottom="", alignment="", z_index=0)
+InputFieldSize = Size(width="100%", height="auto", padding="10px", margin="", font_size="", icon_size="", unit_size=UnitSize.PIXELS)
+InputFieldStyling = Styling(size=InputFieldSize, position=InputFieldPosition, color=InputFieldColor)
+viewComponent: ViewComponent = ViewComponent(name="RegistrationFormView", description="User registration form")
+firstnameField: InputField = InputField(name="FirstNameField", description="First Name", type=RegistrationForm_firstname.type, validationRules="", styling=InputFieldStyling)
+lastnameField: InputField = InputField(name="LastNameField", description="Last Name", type=RegistrationForm_lastname.type, validationRules="", styling=InputFieldStyling)
+phonenoField: InputField = InputField(name="PhoneNumberField", description="Phone Number", type=RegistrationForm_phoneno.type, validationRules="", styling=InputFieldStyling)
+emailField: InputField = InputField(name="EmailField", description="Email Address", type=RegistrationForm_email.type, validationRules="", styling=InputFieldStyling)
+passwordField: InputField = InputField(name="PasswordField", description="Password", type=RegistrationForm_password.type, validationRules="", styling=InputFieldStyling)
+registrationForm: Form = Form(name="RegistrationForm", description="User registration form", inputFields={firstnameField, lastnameField, phonenoField, emailField, passwordField}, styling=ContainerStyling)
+submitButton: Button = Button(name="SubmitButton", description="Submit registration form", label="Sign up", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Submit, styling=ButtonStyling)
+RegistrationFormScreen: Screen = Screen(name="RegistrationFormScreen", description="User registration form screen", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", is_main_page=True, view_elements={registrationForm, submitButton}, layout=ScreenLayout)
+RegistrationModule: Module = Module(name="RegistrationModule", screens={RegistrationFormScreen})
+gui_model: GUIModel = GUIModel(name="RegistrationApp", package="com.example.registrationapp", versionCode="1", versionName="1.0", description="A web application for user registration.", screenCompatibility=True, modules={RegistrationModule})

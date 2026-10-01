@@ -1,0 +1,35 @@
+#container{
+
+}
+
+#search-btn {
+  cursor: pointer; 
+  zoom: 1;
+  
+}
+
+#results {
+  padding: 10px 0;
+  list-style: none; /* get rid of bullets */
+  overflow: auto;
+}
+
+.list-left /*holds image*/ {
+  float: left;
+  width: 20%;
+}
+
+.list-left img {
+  width: 100%;
+  padding: 3px;
+  border: solid #ccc 1px;
+}
+
+.list-right {
+  width: 78%;
+  float: right;
+}
+
+.cTitle {
+  color: #dd2826;
+}

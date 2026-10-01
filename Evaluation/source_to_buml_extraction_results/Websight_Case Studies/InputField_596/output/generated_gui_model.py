@@ -1,0 +1,28 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+HeaderColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#DDDDDD")
+HeaderPosition = Position(type=PositionType.Relative, alignment=JustificationType.Center)
+HeaderSize = Size(width="100%", height="auto", padding="10px", font_size="16", unit_size=UnitSize.PIXELS)
+HeaderStyling = Styling(size=HeaderSize, position=HeaderPosition, color=HeaderColor)
+ButtonColor = Color(background_color="#F472B6", text_color="#FFFFFF", border_color="#EC4899")
+ButtonPosition = Position(type=PositionType.Relative)
+ButtonSize = Size(width="auto", height="40px", padding="8px", margin="24px", font_size="14", unit_size=UnitSize.PIXELS)
+ButtonStyling = Styling(size=ButtonSize, position=ButtonPosition, color=ButtonColor)
+ImagePosition = Position(type=PositionType.Relative)
+ImageSize = Size(width="300px", height="200px", unit_size=UnitSize.PIXELS)
+ImageStyling = Styling(size=ImageSize, position=ImagePosition, color=None)
+viewComponent: ViewComponent = ViewComponent(name="TravelPackageView", description="Display travel packages with booking options")
+header: ViewComponent = ViewComponent(name="Header", description="Page header with navigation and search", styling=HeaderStyling)
+navMenu: Menu = Menu(name="NavigationMenu", description="Main navigation menu", menuItems={MenuItem(label="Home"), MenuItem(label="Packages"), MenuItem(label="About Us"), MenuItem(label="Contact")}, styling=None)
+searchBar: InputField = InputField(name="SearchBar", description="Search input field", type=InputFieldType.Text, validationRules="", styling=None)
+travelPackageImage: Image = Image(name="TravelPackageImage", description="Image of travel package", styling=ImageStyling)
+bookNowButton: Button = Button(name="BookNowButton", description="Button to book travel package", label="Book Now", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Navigate, styling=ButtonStyling)
+datasource_travelPackage: DataSourceElement = DataSourceElement(name="TravelPackageDataSource", dataSourceClass=TravelPackage, fields={TravelPackage_title, TravelPackage_description})
+travelPackageList: DataList = DataList(name="TravelPackageList", description="List of travel packages", list_sources={datasource_travelPackage}, styling=None)
+mainContent: ViewContainer = ViewContainer(name="MainContent", description="Main content area", layout=ScreenLayout, view_elements={travelPackageImage, bookNowButton})
+WebPageScreen: Screen = Screen(name="WebPageScreen", description="Web page with travel packages", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={header, navMenu, searchBar, mainContent}, is_main_page=True, layout=ScreenLayout)
+WebPageModule: Module = Module(name="WebPageModule", screens={WebPageScreen})
+gui_model: GUIModel = GUIModel(name="TravelApp", package="com.example.travelapp", versionCode="1", versionName="1.0", description="A web application for exploring travel packages.", screenCompatibility=True, modules={WebPageModule})

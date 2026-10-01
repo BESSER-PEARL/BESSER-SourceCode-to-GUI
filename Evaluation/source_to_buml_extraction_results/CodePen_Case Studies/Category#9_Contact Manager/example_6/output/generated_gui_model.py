@@ -1,0 +1,26 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+formControlColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#CCCCCC")
+formControlPosition = Position(type=PositionType.Relative)
+formControlSize = Size(width="100%", height="auto", padding="10px", margin="5px", font_size="14px", unit_size=UnitSize.PIXELS)
+formControlStyling = Styling(size=formControlSize, position=formControlPosition, color=formControlColor)
+buttonColor = Color(background_color="#007BFF", text_color="#FFFFFF", border_color="#0056b3")
+buttonPosition = Position(type=PositionType.Relative)
+buttonSize = Size(width="100%", height="40px", padding="10px", margin="5px", font_size="14px", unit_size=UnitSize.PIXELS)
+buttonStyling = Styling(size=buttonSize, position=buttonPosition, color=buttonColor)
+tableColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#CCCCCC")
+tablePosition = Position(type=PositionType.Relative)
+tableSize = Size(width="100%", height="auto", padding="10px", margin="5px", font_size="14px", unit_size=UnitSize.PIXELS)
+tableStyling = Styling(size=tableSize, position=tablePosition, color=tableColor)
+nameInputField = InputField(name="NameInput", description="Input for contact name", type=InputFieldType.Text, styling=formControlStyling)
+emailInputField = InputField(name="EmailInput", description="Input for contact email", type=InputFieldType.Email, styling=formControlStyling)
+phoneInputField = InputField(name="PhoneInput", description="Input for contact phone", type=InputFieldType.Text, styling=formControlStyling)
+saveButton = Button(name="SaveButton", description="Button to save contact", label="Save", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.Save, styling=buttonStyling)
+contactForm = Form(name="ContactForm", description="Form to add or edit a contact", inputFields={nameInputField, emailInputField, phoneInputField}, styling=formControlStyling)
+contactDataSource = DataSourceElement(name="ContactDataSource", dataSourceClass=Contact, fields={Contact_name, Contact_email, Contact_phone})
+contactList = DataList(name="ContactList", description="List of contacts", list_sources={contactDataSource}, styling=tableStyling)
+ContactManagerScreen = Screen(name="ContactManagerScreen", description="Screen for managing contacts", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={contactForm, saveButton, contactList}, is_main_page=True, layout=Layout(type=LayoutType.Flex, orientation="vertical", gap="10px", alignment=JustificationType.Center))
+ContactModule = Module(name="ContactModule", screens={ContactManagerScreen})
+gui_model = GUIModel(name="ContactApp", package="com.example.contactapp", versionCode="1", versionName="1.0", description="An application for managing contacts.", screenCompatibility=True, modules={ContactModule})

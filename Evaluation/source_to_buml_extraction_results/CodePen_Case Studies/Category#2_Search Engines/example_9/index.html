@@ -1,0 +1,15 @@
+<div class="container" ng-app="myApp" ng-controller="MainController as main">
+  <h1>Search Wikipedia</h1>
+  <form>
+    <input class="search-box" type="text" ng-model="searchWord" />
+    <button type="reset" ng-click="removeResults()" ng-show="reset" class="reset">X</button>
+    <br />
+    <button type="submit" ng-click="getSearchWord()">Search</button>
+    <button ng-click="getRandom()">Random Article</button>
+  </form>
+  <div class="search-results" ng-repeat="result in searchResultsTitles">
+    <a href="{{searchResultsHyperlink[$index]}}" target="_blank">
+      <h4>{{searchResultsTitles[$index]}}</h4></a>
+    <p>{{searchResultsDescriptions[$index]}}</p>
+  </div>
+</div>

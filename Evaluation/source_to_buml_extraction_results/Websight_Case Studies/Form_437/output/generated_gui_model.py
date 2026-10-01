@@ -1,0 +1,32 @@
+from besser.BUML.notations.source_code_to_buml.output.buml.model import *
+from besser.BUML.metamodel.structural import *
+from besser.BUML.metamodel.gui import *
+
+ScreenLayout = Layout(type=LayoutType.Flex, orientation="vertical", gap="15px", alignment=JustificationType.Center)
+MenuColor = Color(background_color="#FFFFFF", text_color="#F59E0B", border_color="#FFFFFF")
+MenuPosition = Position(type=PositionType.Relative)
+MenuSize = Size(width="100%", height="auto", padding="24px", font_size="16", unit_size=UnitSize.PIXELS)
+MenuStyling = Styling(size=MenuSize, position=MenuPosition, color=MenuColor)
+FormColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#E5E7EB")
+FormPosition = Position(type=PositionType.Relative)
+FormSize = Size(width="100%", height="auto", padding="24px", font_size="16", unit_size=UnitSize.PIXELS)
+FormStyling = Styling(size=FormSize, position=FormPosition, color=FormColor)
+ButtonColor = Color(background_color="#F59E0B", text_color="#FFFFFF", border_color="#F59E0B")
+ButtonPosition = Position(type=PositionType.Relative)
+ButtonSize = Size(width="auto", height="40px", padding="8px", font_size="16", unit_size=UnitSize.PIXELS)
+ButtonStyling = Styling(size=ButtonSize, position=ButtonPosition, color=ButtonColor)
+FooterColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#FFFFFF")
+FooterPosition = Position(type=PositionType.Relative)
+FooterSize = Size(width="100%", height="auto", padding="24px", font_size="16", unit_size=UnitSize.PIXELS)
+FooterStyling = Styling(size=FooterSize, position=FooterPosition, color=FooterColor)
+menuItems = {MenuItem(label="Properties for Sale"), MenuItem(label="Properties for Rent"), MenuItem(label="About Us")}
+mainMenu = Menu(name="MainMenu", description="Main navigation menu", menuItems=menuItems, styling=MenuStyling)
+nameField = InputField(name="NameField", description="Input for name", type=InputFieldType.Text, styling=FormStyling)
+emailField = InputField(name="EmailField", description="Input for email", type=InputFieldType.Email, styling=FormStyling)
+messageField = InputField(name="MessageField", description="Input for message", type=InputFieldType.Text, styling=FormStyling)
+contactForm = Form(name="ContactForm", description="Form to contact us", inputFields={nameField, emailField, messageField}, styling=FormStyling)
+submitButton = Button(name="SubmitButton", description="Submit contact form", label="Send", buttonType=ButtonType.RaisedButton, actionType=ButtonActionType.SubmitForm, styling=ButtonStyling)
+footer = ViewComponent(name="Footer", description="Footer of the page", styling=FooterStyling)
+WebPageScreen = Screen(name="WebPageScreen", description="Main web page screen", x_dpi="x_dpi", y_dpi="y_dpi", screen_size="Medium", view_elements={mainMenu, contactForm, submitButton, footer}, is_main_page=True, layout=ScreenLayout)
+WebModule = Module(name="WebModule", screens={WebPageScreen})
+gui_model = GUIModel(name="RealEstateApp", package="com.example.realestate", versionCode="1", versionName="1.0", description="Real estate web application", screenCompatibility=True, modules={WebModule})
