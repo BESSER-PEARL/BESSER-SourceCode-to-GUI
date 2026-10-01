@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "total_elements": 1,
+    "matched_elements": 1,
+    "element_coverage": 1.0,
+    "id_match_rate": 1.0,
+    "label_match_rate": 1.0,
+    "overall_score": 1.0
+  },
+  "details": {
+    "buttons": [
+      {
+        "name": "AddToChartButton",
+        "label": "AddToChart",
+        "action_type": "Add",
+        "name_found": true,
+        "label_found": true,
+        "found": true
+      }
+    ],
+    "forms": [],
+    "input_fields": [],
+    "data_lists": [],
+    "view_components": []
+  }
+}

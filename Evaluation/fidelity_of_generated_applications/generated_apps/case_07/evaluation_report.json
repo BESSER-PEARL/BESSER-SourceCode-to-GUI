@@ -1,0 +1,64 @@
+{
+  "summary": {
+    "total_elements": 7,
+    "matched_elements": 7,
+    "element_coverage": 1.0,
+    "id_match_rate": 1.0,
+    "label_match_rate": 1.0,
+    "overall_score": 1.0
+  },
+  "details": {
+    "buttons": [
+      {
+        "name": "OutgoingOrdersTab",
+        "label": "OutgoingOrders",
+        "action_type": "Navigate",
+        "name_found": true,
+        "label_found": true,
+        "found": true
+      },
+      {
+        "name": "CurrentInventoryTab",
+        "label": "CurrentInventory",
+        "action_type": "Navigate",
+        "name_found": true,
+        "label_found": true,
+        "found": true
+      },
+      {
+        "name": "IncomingPurchaseTab",
+        "label": "IncomingPurchase",
+        "action_type": "Navigate",
+        "name_found": true,
+        "label_found": true,
+        "found": true
+      }
+    ],
+    "forms": [
+      {
+        "name": "IncomingPurchaseForm",
+        "found": true
+      },
+      {
+        "name": "CurrentInventoryForm",
+        "found": true
+      }
+    ],
+    "input_fields": [
+      {
+        "name": "InputField1",
+        "form": "IncomingPurchaseForm",
+        "field_type": "Text",
+        "found": true
+      },
+      {
+        "name": "InputField1",
+        "form": "CurrentInventoryForm",
+        "field_type": "Text",
+        "found": true
+      }
+    ],
+    "data_lists": [],
+    "view_components": []
+  }
+}
