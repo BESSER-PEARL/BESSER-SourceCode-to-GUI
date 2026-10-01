@@ -1,0 +1,109 @@
+{
+  "buttons": [
+    {
+      "name": "SavedReportsAddButton"
+    }
+  ],
+  "forms": [],
+  "input_fields": [
+    {
+      "name": "SearchInput"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "TopNavbar"
+    },
+    {
+      "name": "CompanyBrandLink"
+    },
+    {
+      "name": "BodyContainer"
+    },
+    {
+      "name": "Sidebar"
+    },
+    {
+      "name": "SavedReportsHeader"
+    },
+    {
+      "name": "SavedReportsTitle"
+    },
+    {
+      "name": "MainContent"
+    },
+    {
+      "name": "CardList"
+    },
+    {
+      "name": "CardAllProjects"
+    },
+    {
+      "name": "AllProjectsTitle"
+    },
+    {
+      "name": "AllProjectsIcon"
+    },
+    {
+      "name": "AllProjectsValue"
+    },
+    {
+      "name": "AllProjectsStat"
+    },
+    {
+      "name": "CardTeamMembers"
+    },
+    {
+      "name": "TeamMembersTitle"
+    },
+    {
+      "name": "TeamMembersIcon"
+    },
+    {
+      "name": "TeamMembersValue"
+    },
+    {
+      "name": "TeamMembersStat"
+    },
+    {
+      "name": "CardTotalBudget"
+    },
+    {
+      "name": "TotalBudgetTitle"
+    },
+    {
+      "name": "TotalBudgetIcon"
+    },
+    {
+      "name": "TotalBudgetValue"
+    },
+    {
+      "name": "TotalBudgetStat"
+    },
+    {
+      "name": "CardNewCustomers"
+    },
+    {
+      "name": "NewCustomersTitle"
+    },
+    {
+      "name": "NewCustomersIcon"
+    },
+    {
+      "name": "NewCustomersValue"
+    },
+    {
+      "name": "NewCustomersStat"
+    },
+    {
+      "name": "ProjectsSection"
+    },
+    {
+      "name": "ProjectsHeader"
+    },
+    {
+      "name": "ProjectsHeaderTitle"
+    }
+  ]
+}

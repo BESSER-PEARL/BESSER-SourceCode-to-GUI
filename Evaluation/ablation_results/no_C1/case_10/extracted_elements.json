@@ -1,0 +1,64 @@
+{
+  "buttons": [
+    {
+      "name": "GenerateButton",
+      "label": "Generate"
+    },
+    {
+      "name": "ClearButton"
+    },
+    {
+      "name": "DownloadButton"
+    }
+  ],
+  "forms": [
+    {
+      "name": "TTSGenerationForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "OpenAIKeyField"
+    },
+    {
+      "name": "InputTextField"
+    },
+    {
+      "name": "OutputFileNameField"
+    },
+    {
+      "name": "SelectVoiceField"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "NoDataListFound"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "TTSTitleHeader"
+    },
+    {
+      "name": "IntroParagraph"
+    },
+    {
+      "name": "UpdatesParagraph"
+    },
+    {
+      "name": "PromoParagraph"
+    },
+    {
+      "name": "CharCountAndCost"
+    },
+    {
+      "name": "SuccessMessage"
+    },
+    {
+      "name": "AudioPlayer"
+    },
+    {
+      "name": "ErrorMessage"
+    }
+  ]
+}

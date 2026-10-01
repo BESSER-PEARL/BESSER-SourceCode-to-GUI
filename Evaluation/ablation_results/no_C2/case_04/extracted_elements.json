@@ -1,0 +1,60 @@
+{
+  "buttons": [
+    {
+      "name": "SearchButton"
+    },
+    {
+      "name": "TailwindCssLink"
+    },
+    {
+      "name": "AlpineJsLink"
+    }
+  ],
+  "forms": [
+    {
+      "name": "ImageSearchForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "SearchQuery"
+    },
+    {
+      "name": "ImageTypeSelect"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "ImagesGrid"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "Main"
+    },
+    {
+      "name": "Container"
+    },
+    {
+      "name": "Hero"
+    },
+    {
+      "name": "HeroHeadline"
+    },
+    {
+      "name": "HeroTitle"
+    },
+    {
+      "name": "HeroSubtitle"
+    },
+    {
+      "name": "SearchBoxSection"
+    },
+    {
+      "name": "PhotosSection"
+    },
+    {
+      "name": "Footer"
+    }
+  ]
+}

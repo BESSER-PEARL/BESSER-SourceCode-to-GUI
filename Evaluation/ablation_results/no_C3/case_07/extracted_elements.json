@@ -1,0 +1,111 @@
+{
+  "buttons": [
+    {
+      "name": "ClearAllButton",
+      "label": "Clear All"
+    },
+    {
+      "name": "CurrentInventoryTab",
+      "label": "Current Inventory"
+    },
+    {
+      "name": "IncomingPurchaseTab",
+      "label": "Incoming Purchase"
+    },
+    {
+      "name": "OutgoingOrdersTab",
+      "label": "Outgoing Orders"
+    },
+    {
+      "name": "ClearCurrentInventoryButton",
+      "label": "Clear Inventory"
+    },
+    {
+      "name": "AddCurrentInventoryButton",
+      "label": "Add"
+    },
+    {
+      "name": "ResetCurrentInventoryButton",
+      "label": "Reset"
+    },
+    {
+      "name": "ClearIncomingButton",
+      "label": "Clear Incoming"
+    },
+    {
+      "name": "AddIncomingOrderButton",
+      "label": "Add"
+    },
+    {
+      "name": "ResetIncomingOrderButton",
+      "label": "Reset"
+    },
+    {
+      "name": "ClearOutgoingButton",
+      "label": "Clear Outgoing"
+    },
+    {
+      "name": "AddOutgoingOrderButton",
+      "label": "Add"
+    },
+    {
+      "name": "ResetOutgoingOrderButton",
+      "label": "Reset"
+    }
+  ],
+  "forms": [],
+  "input_fields": [
+    {
+      "name": "CurrentProductNameInput"
+    },
+    {
+      "name": "CurrentProductBrandInput"
+    },
+    {
+      "name": "CurrentQuantityInput"
+    },
+    {
+      "name": "CurrentPriceInput"
+    },
+    {
+      "name": "IncomingProductNameInput"
+    },
+    {
+      "name": "IncomingProductBrandInput"
+    },
+    {
+      "name": "IncomingQuantityInput"
+    },
+    {
+      "name": "IncomingPriceInput"
+    },
+    {
+      "name": "OutgoingProductNameInput"
+    },
+    {
+      "name": "OutgoingProductBrandInput"
+    },
+    {
+      "name": "OutgoingQuantityInput"
+    },
+    {
+      "name": "OutgoingPriceInput"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "CurrentInventoryTable"
+    },
+    {
+      "name": "IncomingInventoryTable"
+    },
+    {
+      "name": "OutgoingInventoryTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "InventoryManagementView"
+    }
+  ]
+}

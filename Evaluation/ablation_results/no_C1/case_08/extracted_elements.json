@@ -1,0 +1,46 @@
+{
+  "buttons": [
+    {
+      "name": "AddItemButton",
+      "label": "Add Item"
+    },
+    {
+      "name": "RemoveItemButton"
+    }
+  ],
+  "forms": [
+    {
+      "name": "addItemForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "itemName"
+    },
+    {
+      "name": "itemQuantity"
+    },
+    {
+      "name": "itemThreshold"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "inventoryTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "GroceryInventoryTrackerTitle"
+    },
+    {
+      "name": "AddItemSectionTitle"
+    },
+    {
+      "name": "InventoryListSectionTitle"
+    },
+    {
+      "name": "MainContainer"
+    }
+  ]
+}

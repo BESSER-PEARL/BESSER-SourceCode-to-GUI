@@ -1,0 +1,121 @@
+{
+  "buttons": [
+    {
+      "name": "ClearAllButton",
+      "label": "Clear All"
+    },
+    {
+      "name": "CurrentInventoryTabButton",
+      "label": "Current Inventory"
+    },
+    {
+      "name": "IncomingPurchaseTabButton",
+      "label": "Incoming Purchase"
+    },
+    {
+      "name": "OutgoingOrdersTabButton",
+      "label": "Outgoing Orders"
+    },
+    {
+      "name": "ClearCurrentInventoryButton",
+      "label": "Clear Inventory"
+    },
+    {
+      "name": "AddCurrentInventoryButton",
+      "label": "Add"
+    },
+    {
+      "name": "ResetCurrentInventoryFormButton",
+      "label": "Reset"
+    },
+    {
+      "name": "ClearIncomingButton",
+      "label": "Clear Incoming"
+    },
+    {
+      "name": "AddIncomingOrderButton",
+      "label": "Add"
+    },
+    {
+      "name": "ResetIncomingOrderFormButton",
+      "label": "Reset"
+    },
+    {
+      "name": "ClearOutgoingButton",
+      "label": "Clear Outgoing"
+    },
+    {
+      "name": "AddOutgoingOrderButton",
+      "label": "Add"
+    },
+    {
+      "name": "ResetOutgoingOrderFormButton",
+      "label": "Reset"
+    }
+  ],
+  "forms": [
+    {
+      "name": "CurrentInventoryForm"
+    },
+    {
+      "name": "IncomingOrderForm"
+    },
+    {
+      "name": "OutgoingOrderForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "CurrentProductNameField"
+    },
+    {
+      "name": "CurrentProductBrandField"
+    },
+    {
+      "name": "CurrentQuantityField"
+    },
+    {
+      "name": "CurrentPriceField"
+    },
+    {
+      "name": "IncomingProductNameField"
+    },
+    {
+      "name": "IncomingProductBrandField"
+    },
+    {
+      "name": "IncomingQuantityField"
+    },
+    {
+      "name": "IncomingPriceField"
+    },
+    {
+      "name": "OutgoingProductNameField"
+    },
+    {
+      "name": "OutgoingProductBrandField"
+    },
+    {
+      "name": "OutgoingQuantityField"
+    },
+    {
+      "name": "OutgoingPriceField"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "CurrentInventoryTable"
+    },
+    {
+      "name": "IncomingInventoryTable"
+    },
+    {
+      "name": "OutgoingInventoryTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "InventoryManagementView"
+    }
+  ]
+}

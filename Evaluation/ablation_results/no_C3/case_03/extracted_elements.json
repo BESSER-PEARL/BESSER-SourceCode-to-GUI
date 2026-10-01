@@ -1,0 +1,24 @@
+{
+  "buttons": [
+    {
+      "name": "HomeWikiSearchButton",
+      "label": "Wiki Search"
+    },
+    {
+      "name": "FeelingLuckyButton",
+      "label": "I"
+    },
+    {
+      "name": "ResultWikiSearchButton",
+      "label": "Wiki Search"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "WikipediaSearchView"
+    }
+  ]
+}

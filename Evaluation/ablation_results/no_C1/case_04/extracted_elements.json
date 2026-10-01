@@ -1,0 +1,32 @@
+{
+  "buttons": [
+    {
+      "name": "SearchButton"
+    }
+  ],
+  "forms": [],
+  "input_fields": [
+    {
+      "name": "SearchQueryInput"
+    },
+    {
+      "name": "ImageTypeSelect"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "PhotosGrid"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "HeroHeadline"
+    },
+    {
+      "name": "Footer"
+    },
+    {
+      "name": "ImageGalleryRoot"
+    }
+  ]
+}

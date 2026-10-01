@@ -1,0 +1,63 @@
+{
+  "buttons": [
+    {
+      "name": "CreateContactButton",
+      "label": "Create Contact"
+    },
+    {
+      "name": "TabFormButton",
+      "label": "Form"
+    },
+    {
+      "name": "TabContactsButton",
+      "label": "Contacts"
+    }
+  ],
+  "forms": [
+    {
+      "name": "ContactForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "FirstNameInput"
+    },
+    {
+      "name": "SurnameInput"
+    },
+    {
+      "name": "AgeInput"
+    },
+    {
+      "name": "NumberInput"
+    },
+    {
+      "name": "EmailInput"
+    },
+    {
+      "name": "AddressInput"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "ContactsTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "Header"
+    },
+    {
+      "name": "Main"
+    },
+    {
+      "name": "FormSection"
+    },
+    {
+      "name": "ContactsSection"
+    },
+    {
+      "name": "Footer"
+    }
+  ]
+}

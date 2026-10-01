@@ -1,0 +1,80 @@
+{
+  "buttons": [
+    {
+      "name": "add_to_chart",
+      "label": "Add to Chart"
+    }
+  ],
+  "forms": [],
+  "input_fields": [
+    {
+      "name": "tab-1"
+    },
+    {
+      "name": "tab-2"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "container"
+    },
+    {
+      "name": "slider"
+    },
+    {
+      "name": "slide"
+    },
+    {
+      "name": "slider_images_list"
+    },
+    {
+      "name": "product-info"
+    },
+    {
+      "name": "title_h2"
+    },
+    {
+      "name": "price"
+    },
+    {
+      "name": "info-wrapper"
+    },
+    {
+      "name": "tab_1"
+    },
+    {
+      "name": "tab_1_label"
+    },
+    {
+      "name": "tab_1_content"
+    },
+    {
+      "name": "tab_1_paragraph"
+    },
+    {
+      "name": "tab_2"
+    },
+    {
+      "name": "tab_2_label"
+    },
+    {
+      "name": "tab_2_content"
+    },
+    {
+      "name": "tab_2_details_list"
+    },
+    {
+      "name": "detail_item_1"
+    },
+    {
+      "name": "detail_item_2"
+    },
+    {
+      "name": "detail_item_3"
+    },
+    {
+      "name": "buy"
+    }
+  ]
+}

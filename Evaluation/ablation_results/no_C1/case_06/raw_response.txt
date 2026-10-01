@@ -1,0 +1,255 @@
+```python
+##################################
+#  Extracted GUI elements (HTML) #
+##################################
+
+# ---------- Styling (generic defaults) ----------
+ScreenLayout = Layout(
+    layout_type=LayoutType.FLEX,
+    orientation="vertical",
+    gap="10px",
+    alignment=JustificationType.CENTER
+)
+
+defaultColor = Color(background_color="", text_color="", border_color="")
+defaultPosition = Position(p_type=PositionType.RELATIVE, top="", left="", right="", bottom="", alignment="", z_index=0)
+defaultSize = Size(width="", height="auto", padding="0", margin="0", font_size="", icon_size="", unit_size=UnitSize.PIXELS)
+defaultStyling = Styling(size=defaultSize, position=defaultPosition, color=defaultColor)
+
+# ---------- ViewComponents (tabs / headings treated as view components) ----------
+employeeTabView: ViewComponent = ViewComponent(
+    name="EmployeeTab",
+    description="Tab selector: Employee",
+    styling=defaultStyling
+)
+
+hirerTabView: ViewComponent = ViewComponent(
+    name="HirerTab",
+    description="Tab selector: Hirer",
+    styling=defaultStyling
+)
+
+employeeHeading: ViewComponent = ViewComponent(
+    name="EmployeeRegisterHeading",
+    description="Heading: Apply as a Employee",
+    styling=defaultStyling
+)
+
+hirerHeading: ViewComponent = ViewComponent(
+    name="HirerRegisterHeading",
+    description="Heading: Apply as a Hirer",
+    styling=defaultStyling
+)
+
+welcomeHeading: ViewComponent = ViewComponent(
+    name="WelcomeHeading",
+    description="Heading: Welcome",
+    styling=defaultStyling
+)
+
+welcomeMessage: ViewComponent = ViewComponent(
+    name="WelcomeMessage",
+    description="Text: You are 30 seconds away from earning your own money!",
+    styling=defaultStyling
+)
+
+# ---------- Buttons ----------
+loginButton: Button = Button(
+    name="LoginButton",
+    description="Submit input used as Login",
+    label="Login",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Login,
+    styling=defaultStyling
+)
+
+employeeRegisterButton: Button = Button(
+    name="EmployeeRegisterButton",
+    description="Submit registration for Employee",
+    label="Register",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.SubmitForm,
+    styling=defaultStyling
+)
+
+hirerRegisterButton: Button = Button(
+    name="HirerRegisterButton",
+    description="Submit registration for Hirer",
+    label="Register",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.SubmitForm,
+    styling=defaultStyling
+)
+
+# ---------- Employee form input fields ----------
+empFirstName: InputField = InputField(
+    name="EmployeeFirstName",
+    description="First Name",
+    field_type=InputFieldType.Text,
+    validationRules="required (implied by '*')",
+    styling=defaultStyling
+)
+
+empLastName: InputField = InputField(
+    name="EmployeeLastName",
+    description="Last Name",
+    field_type=InputFieldType.Text,
+    validationRules="required (implied by '*')",
+    styling=defaultStyling
+)
+
+empPassword: InputField = InputField(
+    name="EmployeePassword",
+    description="Password",
+    field_type=InputFieldType.Password,
+    validationRules="required (implied by '*')",
+    styling=defaultStyling
+)
+
+empConfirmPassword: InputField = InputField(
+    name="EmployeeConfirmPassword",
+    description="Confirm Password",
+    field_type=InputFieldType.Password,
+    validationRules="required (implied by '*')",
+    styling=defaultStyling
+)
+
+empGenderMale: InputField = InputField(
+    name="EmployeeGenderMale",
+    description="Gender option: Male",
+    field_type=InputFieldType.Text,
+    validationRules="radio(name=gender, value=male)",
+    styling=defaultStyling
+)
+
+empGenderFemale: InputField = InputField(
+    name="EmployeeGenderFemale",
+    description="Gender option: Female",
+    field_type=InputFieldType.Text,
+    validationRules="radio(name=gender, value=female)",
+    styling=defaultStyling
+)
+
+empEmail: InputField = InputField(
+    name="EmployeeEmail",
+    description="Your Email",
+    field_type=InputFieldType.Email,
+    validationRules="required (implied by '*')",
+    styling=defaultStyling
+)
+
+empPhone: InputField = InputField(
+    name="EmployeePhone",
+    description="Your Phone",
+    field_type=InputFieldType.Tel,
+    validationRules="minlength=10, maxlength=10",
+    styling=defaultStyling
+)
+
+empSecurityQuestion: InputField = InputField(
+    name="EmployeeSecurityQuestion",
+    description="Security Question (select)",
+    field_type=InputFieldType.Text,
+    validationRules="select required (implied by disabled placeholder)",
+    styling=defaultStyling
+)
+
+empSecurityAnswer: InputField = InputField(
+    name="EmployeeSecurityAnswer",
+    description="Enter Your Answer",
+    field_type=InputFieldType.Text,
+    validationRules="required (implied by '*')",
+    styling=defaultStyling
+)
+
+employeeRegisterForm: Form = Form(
+    name="EmployeeRegisterForm",
+    description="Form for applying as an Employee",
+    inputFields={
+        empFirstName, empLastName, empPassword, empConfirmPassword,
+        empGenderMale, empGenderFemale,
+        empEmail, empPhone, empSecurityQuestion, empSecurityAnswer
+    },
+    styling=defaultStyling
+)
+
+# ---------- Hirer form input fields ----------
+hirerFirstName: InputField = InputField(
+    name="HirerFirstName",
+    description="First Name",
+    field_type=InputFieldType.Text,
+    validationRules="required (implied by '*')",
+    styling=defaultStyling
+)
+
+hirerLastName: InputField = InputField(
+    name="HirerLastName",
+    description="Last Name",
+    field_type=InputFieldType.Text,
+    validationRules="required (implied by '*')",
+    styling=defaultStyling
+)
+
+hirerEmail: InputField = InputField(
+    name="HirerEmail",
+    description="Email",
+    field_type=InputFieldType.Email,
+    validationRules="required (implied by '*')",
+    styling=defaultStyling
+)
+
+hirerPhone: InputField = InputField(
+    name="HirerPhone",
+    description="Phone",
+    field_type=InputFieldType.Tel,
+    validationRules="minlength=10, maxlength=10",
+    styling=defaultStyling
+)
+
+hirerPassword: InputField = InputField(
+    name="HirerPassword",
+    description="Password",
+    field_type=InputFieldType.Password,
+    validationRules="required (implied by '*')",
+    styling=defaultStyling
+)
+
+hirerConfirmPassword: InputField = InputField(
+    name="HirerConfirmPassword",
+    description="Confirm Password",
+    field_type=InputFieldType.Password,
+    validationRules="required (implied by '*')",
+    styling=defaultStyling
+)
+
+hirerSecurityQuestion: InputField = InputField(
+    name="HirerSecurityQuestion",
+    description="Security Question (select)",
+    field_type=InputFieldType.Text,
+    validationRules="select required (implied by disabled placeholder)",
+    styling=defaultStyling
+)
+
+hirerSecurityAnswer: InputField = InputField(
+    name="HirerSecurityAnswer",
+    description="Answer",
+    field_type=InputFieldType.Text,
+    validationRules="required (implied by '*')",
+    styling=defaultStyling
+)
+
+hirerRegisterForm: Form = Form(
+    name="HirerRegisterForm",
+    description="Form for applying as a Hirer",
+    inputFields={
+        hirerFirstName, hirerLastName, hirerEmail, hirerPhone,
+        hirerPassword, hirerConfirmPassword,
+        hirerSecurityQuestion, hirerSecurityAnswer
+    },
+    styling=defaultStyling
+)
+
+# ---------- DataLists (none found in HTML) ----------
+# No <table>, <ul> data listing, or repeating dataset structure is present as a list component.
+# Keeping a placeholder empty list is NOT required, so no DataList objects are created.
+```

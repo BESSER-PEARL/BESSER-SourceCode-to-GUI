@@ -1,0 +1,150 @@
+```python
+##################################
+#   Extracted GUI elements only  #
+##################################
+
+# ---- Styling (lightweight defaults; HTML provides classes but no explicit CSS values) ----
+DefaultLayout = Layout(
+    layout_type=LayoutType.FLEX,
+    orientation="vertical",
+    gap="10px",
+    alignment=JustificationType.CENTER
+)
+
+defaultPosition = Position(
+    p_type=PositionType.RELATIVE,
+    top="",
+    left="",
+    right="",
+    bottom="",
+    alignment="",
+    z_index=0
+)
+defaultSize = Size(
+    width="",
+    height="auto",
+    padding="",
+    margin="",
+    font_size="",
+    icon_size="",
+    unit_size=UnitSize.AUTO
+)
+defaultColor = Color(
+    background_color="",
+    text_color="",
+    border_color=""
+)
+defaultStyling = Styling(size=defaultSize, position=defaultPosition, color=defaultColor)
+
+
+# =========================
+# Home Page (div.home)
+# =========================
+
+# View component for headline text: <h1 class="headline">Wikipedia Search Engine</h1>
+homeHeadline: ViewComponent = ViewComponent(
+    name="HomeHeadline",
+    description="Headline text: Wikipedia Search Engine",
+    styling=defaultStyling
+)
+
+# Input: <input type="search" ... id="wiki-search-input">
+homeSearchInput: InputField = InputField(
+    name="WikiSearchInput",
+    description="Search input on home page (placeholder: Search Wikipedia...)",
+    field_type=InputFieldType.Search,
+    validationRules="",
+    styling=defaultStyling
+)
+
+# Button: <button ...>Wiki Search</button>
+homeWikiSearchButton: Button = Button(
+    name="HomeWikiSearchButton",
+    description="Submit Wikipedia search from home page",
+    label="Wiki Search",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Search,
+    targetScreen=None,
+    styling=defaultStyling
+)
+
+# Anchor styled as button: <a ...>I'm Feeling Lucky</a>
+homeFeelingLuckyButton: Button = Button(
+    name="FeelingLuckyButton",
+    description="Open a random Wikipedia page in a new tab",
+    label="I'm Feeling Lucky",
+    buttonType=ButtonType.TextButton,
+    actionType=ButtonActionType.Navigate,
+    targetScreen=None,  # external navigation (http://en.wikipedia.org/wiki/Special:Random)
+    styling=defaultStyling
+)
+
+# Form: <form class="wiki-search-form"> ... </form>
+homeSearchForm: Form = Form(
+    name="HomeWikiSearchForm",
+    description="Home page search form for Wikipedia",
+    inputFields={homeSearchInput},
+    styling=defaultStyling
+)
+
+
+# =========================
+# Results Page (div.result.hidden)
+# =========================
+
+# Header title: <h1>Wikipedia Search</h1>
+resultsTitle: ViewComponent = ViewComponent(
+    name="ResultsTitle",
+    description="Results page header title: Wikipedia Search",
+    styling=defaultStyling
+)
+
+# Input: <input type="text" ... id="result-wiki-search-form-input">
+resultsSearchInput: InputField = InputField(
+    name="ResultsWikiSearchInput",
+    description="Search input on results page (placeholder: Search Wikipedia...)",
+    field_type=InputFieldType.Text,
+    validationRules="",
+    styling=defaultStyling
+)
+
+# Button: <button class="btn result-btn-wiki">Wiki Search</button>
+resultsWikiSearchButton: Button = Button(
+    name="ResultsWikiSearchButton",
+    description="Submit Wikipedia search from results page",
+    label="Wiki Search",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Search,
+    targetScreen=None,
+    styling=defaultStyling
+)
+
+# Form: <form class="result-wiki-search-form"> ... </form>
+resultsSearchForm: Form = Form(
+    name="ResultsWikiSearchForm",
+    description="Results page search form for Wikipedia",
+    inputFields={resultsSearchInput},
+    styling=defaultStyling
+)
+
+# Results container: <div class="display-results"></div>
+# Represented as a DataList (list content will be populated dynamically by JS)
+resultsDataSource: Collection = Collection(
+    name="WikipediaSearchResultsSource",
+    type=CollectionSourceType.List
+)
+
+searchResultsList: DataList = DataList(
+    name="WikipediaSearchResultsList",
+    description="List of Wikipedia search results rendered inside .display-results",
+    list_sources={resultsDataSource},
+    styling=defaultStyling
+)
+
+# Optional view component for the section wrapper: <section class="search-results">
+searchResultsSection: ViewComponent = ViewComponent(
+    name="SearchResultsSection",
+    description="Container section for search results",
+    styling=defaultStyling
+)
+```

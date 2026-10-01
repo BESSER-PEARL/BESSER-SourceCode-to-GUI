@@ -1,0 +1,34 @@
+{
+  "buttons": [
+    {
+      "name": "SupheaderIntroducing",
+      "label": "INTRODUCING"
+    },
+    {
+      "name": "MainHeader",
+      "label": "Responsive HTML email templates"
+    },
+    {
+      "name": "MainParagraph"
+    },
+    {
+      "name": "ViewOnGitHubButton",
+      "label": "View on GitHub"
+    },
+    {
+      "name": "SubscriptionSettingsLink",
+      "label": "subscription settings"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "ResponsiveEmailTemplateView"
+    },
+    {
+      "name": "EmailWrapper"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+```python
+##################################
+#  GUI elements extracted from   #
+#   Contact Manager (HTML)       #
+##################################
+
+# Note: This output focuses on instantiating the requested metamodel objects:
+# Button, Form, InputField, DataList, ViewComponent.
+
+
+############################
+# ViewComponents (sections) #
+############################
+
+headerView: ViewComponent = ViewComponent(
+    name="Header",
+    description="Header containing the app title and tab items"
+)
+
+mainView: ViewComponent = ViewComponent(
+    name="Main",
+    description="Main container holding the Form and Contacts sections"
+)
+
+formSectionView: ViewComponent = ViewComponent(
+    name="FormSection",
+    description="Section that contains the contact creation form"
+)
+
+contactsSectionView: ViewComponent = ViewComponent(
+    name="ContactsSection",
+    description="Section that contains the contacts table/list"
+)
+
+footerView: ViewComponent = ViewComponent(
+    name="Footer",
+    description="Footer containing copyright information"
+)
+
+
+############################
+# Form + InputFields        #
+############################
+
+firstNameField: InputField = InputField(
+    name="FirstNameInput",
+    description="Input for first name",
+    field_type=InputFieldType.Text,
+    validationRules="",
+    styling=None
+)
+
+surnameField: InputField = InputField(
+    name="SurnameInput",
+    description="Input for family name/surname",
+    field_type=InputFieldType.Text,
+    validationRules="",
+    styling=None
+)
+
+ageField: InputField = InputField(
+    name="AgeInput",
+    description="Input for age",
+    field_type=InputFieldType.Number,
+    validationRules="",
+    styling=None
+)
+
+numberField: InputField = InputField(
+    name="NumberInput",
+    description="Input for phone/number",
+    field_type=InputFieldType.Number,
+    validationRules="",
+    styling=None
+)
+
+emailField: InputField = InputField(
+    name="EmailInput",
+    description="Input for email",
+    field_type=InputFieldType.Email,
+    validationRules="",
+    styling=None
+)
+
+addressField: InputField = InputField(
+    name="AddressInput",
+    description="Input for address",
+    field_type=InputFieldType.Text,
+    validationRules="",
+    styling=None
+)
+
+contactForm: Form = Form(
+    name="ContactForm",
+    description="Form to create a new contact",
+    inputFields={
+        firstNameField,
+        surnameField,
+        ageField,
+        numberField,
+        emailField,
+        addressField
+    },
+    styling=None
+)
+
+
+############################
+# Buttons                   #
+############################
+
+createContactButton: Button = Button(
+    name="CreateContactButton",
+    description="Submit the form to create a contact",
+    label="Create Contact",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.SubmitForm,
+    targetScreen=None,
+    styling=None
+)
+
+# Tab items are <li> elements, not <button>; represent as buttons for navigation between views.
+tabFormButton: Button = Button(
+    name="TabFormButton",
+    description="Switch to Form tab/section",
+    label="Form",
+    buttonType=ButtonType.TextButton,
+    actionType=ButtonActionType.Navigate,
+    targetScreen=None,  # not defined in provided HTML
+    styling=None
+)
+
+tabContactsButton: Button = Button(
+    name="TabContactsButton",
+    description="Switch to Contacts tab/section",
+    label="Contacts",
+    buttonType=ButtonType.TextButton,
+    actionType=ButtonActionType.Navigate,
+    targetScreen=None,  # not defined in provided HTML
+    styling=None
+)
+
+
+############################
+# DataList (contacts table) #
+############################
+
+contactsTableList: DataList = DataList(
+    name="ContactsTable",
+    description="List/table of saved contacts (First Name, Surname, Age, Number, Email, Address)",
+    list_sources=set(),  # no explicit datasource in the HTML
+    styling=None
+)
+```

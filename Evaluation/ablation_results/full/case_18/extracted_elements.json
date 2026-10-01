@@ -1,0 +1,43 @@
+{
+  "buttons": [
+    {
+      "name": "CreateContactButton",
+      "label": "Create Contact"
+    }
+  ],
+  "forms": [
+    {
+      "name": "ContactForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "FirstNameInput"
+    },
+    {
+      "name": "FamilyNameInput"
+    },
+    {
+      "name": "AgeInput"
+    },
+    {
+      "name": "NumberInput"
+    },
+    {
+      "name": "EmailInput"
+    },
+    {
+      "name": "AddressInput"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "ContactsTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "ContactManagerView"
+    }
+  ]
+}

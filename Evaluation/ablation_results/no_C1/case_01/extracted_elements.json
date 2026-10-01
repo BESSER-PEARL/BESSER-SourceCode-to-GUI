@@ -1,0 +1,24 @@
+{
+  "buttons": [
+    {
+      "name": "ViewOnGitHubButton"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "SupHeaderIntroducing"
+    },
+    {
+      "name": "MainHeaderResponsiveEmailTemplates"
+    },
+    {
+      "name": "BodyParagraphMobileFriendly"
+    },
+    {
+      "name": "FooterSubscriptionSettings"
+    }
+  ]
+}

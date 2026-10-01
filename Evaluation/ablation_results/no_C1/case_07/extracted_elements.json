@@ -1,0 +1,146 @@
+{
+  "buttons": [
+    {
+      "name": "NavbarToggleButton",
+      "label": "Toggle navigation"
+    },
+    {
+      "name": "HomeNavButton",
+      "label": "Home"
+    },
+    {
+      "name": "MoreInfoNavButton",
+      "label": "More Info"
+    },
+    {
+      "name": "LoginNavButton",
+      "label": "Login"
+    },
+    {
+      "name": "RegisterNavButton",
+      "label": "Register"
+    },
+    {
+      "name": "ClearAllButton"
+    },
+    {
+      "name": "CurrentInventoryTabButton",
+      "label": "Current Inventory"
+    },
+    {
+      "name": "IncomingPurchaseTabButton",
+      "label": "Incoming Purchase"
+    },
+    {
+      "name": "OutgoingOrdersTabButton",
+      "label": "Outgoing Orders"
+    },
+    {
+      "name": "ClearCurrentInventoryButton"
+    },
+    {
+      "name": "ClearIncomingButton"
+    },
+    {
+      "name": "ClearOutgoingButton"
+    },
+    {
+      "name": "AddCurrentInventoryButton"
+    },
+    {
+      "name": "ResetCurrentInventoryButton",
+      "label": "Reset"
+    },
+    {
+      "name": "AddIncomingOrderButton"
+    },
+    {
+      "name": "ResetIncomingOrderButton",
+      "label": "Reset"
+    },
+    {
+      "name": "AddOutgoingOrderButton"
+    },
+    {
+      "name": "ResetOutgoingOrderButton",
+      "label": "Reset"
+    }
+  ],
+  "forms": [
+    {
+      "name": "CurrentInventoryForm"
+    },
+    {
+      "name": "IncomingPurchaseForm"
+    },
+    {
+      "name": "OutgoingOrdersForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "current_order_product_name"
+    },
+    {
+      "name": "current_order_product_brand"
+    },
+    {
+      "name": "current_order_product_quantity"
+    },
+    {
+      "name": "current_order_product_price"
+    },
+    {
+      "name": "incoming_order_product_name"
+    },
+    {
+      "name": "incoming_order_product_brand"
+    },
+    {
+      "name": "incoming_order_product_quantity"
+    },
+    {
+      "name": "incoming_order_product_price"
+    },
+    {
+      "name": "outgoing_order_product_name"
+    },
+    {
+      "name": "outgoing_order_product_brand"
+    },
+    {
+      "name": "outgoing_order_product_quantity"
+    },
+    {
+      "name": "outgoing_order_product_price"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "current_inventory_list"
+    },
+    {
+      "name": "incoming_inventory_list"
+    },
+    {
+      "name": "outgoing_inventory_list"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "NavbarBrand"
+    },
+    {
+      "name": "InventoryManagerHeading"
+    },
+    {
+      "name": "CurrentInventoryTabPane"
+    },
+    {
+      "name": "IncomingPurchaseTabPane"
+    },
+    {
+      "name": "OutgoingOrdersTabPane"
+    }
+  ]
+}

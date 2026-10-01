@@ -1,0 +1,48 @@
+{
+  "buttons": [
+    {
+      "name": "HomeWikiSearchButton",
+      "label": "Wiki Search"
+    },
+    {
+      "name": "FeelingLuckyButton",
+      "label": "I"
+    },
+    {
+      "name": "ResultsWikiSearchButton",
+      "label": "Wiki Search"
+    }
+  ],
+  "forms": [
+    {
+      "name": "HomeWikiSearchForm"
+    },
+    {
+      "name": "ResultsWikiSearchForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "WikiSearchInput"
+    },
+    {
+      "name": "ResultsWikiSearchInput"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "WikipediaSearchResultsList"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "HomeHeadline"
+    },
+    {
+      "name": "ResultsTitle"
+    },
+    {
+      "name": "SearchResultsSection"
+    }
+  ]
+}

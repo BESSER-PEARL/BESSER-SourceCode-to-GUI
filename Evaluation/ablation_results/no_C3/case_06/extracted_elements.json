@@ -1,0 +1,83 @@
+{
+  "buttons": [
+    {
+      "name": "LoginButton",
+      "label": "Login"
+    },
+    {
+      "name": "EmployeeTabButton",
+      "label": "Employee"
+    },
+    {
+      "name": "HirerTabButton",
+      "label": "Hirer"
+    },
+    {
+      "name": "EmpGenderMaleRadio",
+      "label": "Male"
+    },
+    {
+      "name": "EmpGenderFemaleRadio",
+      "label": "Female"
+    },
+    {
+      "name": "EmpRegisterButton",
+      "label": "Register"
+    },
+    {
+      "name": "HirerRegisterButton",
+      "label": "Register"
+    }
+  ],
+  "forms": [],
+  "input_fields": [
+    {
+      "name": "EmpFirstNameInput"
+    },
+    {
+      "name": "EmpLastNameInput"
+    },
+    {
+      "name": "EmpPasswordInput"
+    },
+    {
+      "name": "EmpConfirmPasswordInput"
+    },
+    {
+      "name": "EmpEmailInput"
+    },
+    {
+      "name": "EmpPhoneInput"
+    },
+    {
+      "name": "EmpSecurityAnswerInput"
+    },
+    {
+      "name": "HirerFirstNameInput"
+    },
+    {
+      "name": "HirerLastNameInput"
+    },
+    {
+      "name": "HirerEmailInput"
+    },
+    {
+      "name": "HirerPhoneInput"
+    },
+    {
+      "name": "HirerPasswordInput"
+    },
+    {
+      "name": "HirerConfirmPasswordInput"
+    },
+    {
+      "name": "HirerSecurityAnswerInput"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "UserRegistrationView"
+    }
+  ]
+}

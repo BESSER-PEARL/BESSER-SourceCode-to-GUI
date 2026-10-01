@@ -1,0 +1,64 @@
+{
+  "buttons": [
+    {
+      "name": "form-field-submit",
+      "label": "Create Contact"
+    }
+  ],
+  "forms": [
+    {
+      "name": "form-field"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "form-field-firstname"
+    },
+    {
+      "name": "form-field-surname"
+    },
+    {
+      "name": "form-field-age"
+    },
+    {
+      "name": "form-field-number"
+    },
+    {
+      "name": "form-field-email"
+    },
+    {
+      "name": "form-field-address"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "contacts-table"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "header"
+    },
+    {
+      "name": "header_title"
+    },
+    {
+      "name": "main"
+    },
+    {
+      "name": "form_section"
+    },
+    {
+      "name": "contacts_section"
+    },
+    {
+      "name": "footer"
+    },
+    {
+      "name": "copyright"
+    },
+    {
+      "name": "copyright-year"
+    }
+  ]
+}

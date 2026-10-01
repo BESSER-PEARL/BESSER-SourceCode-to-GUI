@@ -1,0 +1,112 @@
+{
+  "buttons": [
+    {
+      "name": "progress_account_setup",
+      "label": "Account Setup"
+    },
+    {
+      "name": "progress_social_profiles",
+      "label": "Social Profiles"
+    },
+    {
+      "name": "progress_personal_details",
+      "label": "Personal Details"
+    },
+    {
+      "name": "fs1_title",
+      "label": "Create your account"
+    },
+    {
+      "name": "fs1_subtitle",
+      "label": "This is step 1"
+    },
+    {
+      "name": "next_1",
+      "label": "Next"
+    },
+    {
+      "name": "fs2_title",
+      "label": "Social Profiles"
+    },
+    {
+      "name": "fs2_subtitle",
+      "label": "Your presence on the social network"
+    },
+    {
+      "name": "previous_2",
+      "label": "Previous"
+    },
+    {
+      "name": "next_2",
+      "label": "Next"
+    },
+    {
+      "name": "fs3_title",
+      "label": "Personal Details"
+    },
+    {
+      "name": "fs3_subtitle",
+      "label": "We will never sell it"
+    },
+    {
+      "name": "previous_3",
+      "label": "Previous"
+    },
+    {
+      "name": "submit",
+      "label": "Submit"
+    }
+  ],
+  "forms": [
+    {
+      "name": "msform"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "email"
+    },
+    {
+      "name": "pass"
+    },
+    {
+      "name": "cpass"
+    },
+    {
+      "name": "twitter"
+    },
+    {
+      "name": "facebook"
+    },
+    {
+      "name": "gplus"
+    },
+    {
+      "name": "fname"
+    },
+    {
+      "name": "lname"
+    },
+    {
+      "name": "phone"
+    },
+    {
+      "name": "address"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "progressbar"
+    },
+    {
+      "name": "fieldset_1"
+    },
+    {
+      "name": "fieldset_2"
+    },
+    {
+      "name": "fieldset_3"
+    }
+  ]
+}

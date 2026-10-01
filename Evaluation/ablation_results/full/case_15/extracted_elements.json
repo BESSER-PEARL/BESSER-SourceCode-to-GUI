@@ -1,0 +1,134 @@
+{
+  "buttons": [
+    {
+      "name": "AddNewEmployeeButton",
+      "label": "Add New Employee"
+    },
+    {
+      "name": "BulkDeleteEmployeeButton",
+      "label": "Delete"
+    },
+    {
+      "name": "EditEmployeeRowButton",
+      "label": "Edit"
+    },
+    {
+      "name": "DeleteEmployeeRowButton",
+      "label": "Delete"
+    },
+    {
+      "name": "PaginationPreviousButton",
+      "label": "Previous"
+    },
+    {
+      "name": "PaginationPage1Button",
+      "label": "1"
+    },
+    {
+      "name": "PaginationPage2Button",
+      "label": "2"
+    },
+    {
+      "name": "PaginationPage3Button",
+      "label": "3"
+    },
+    {
+      "name": "PaginationPage4Button",
+      "label": "4"
+    },
+    {
+      "name": "PaginationPage5Button",
+      "label": "5"
+    },
+    {
+      "name": "PaginationNextButton",
+      "label": "Next"
+    },
+    {
+      "name": "AddEmployeeCancelButton",
+      "label": "Cancel"
+    },
+    {
+      "name": "AddEmployeeSubmitButton",
+      "label": "Add"
+    },
+    {
+      "name": "EditEmployeeCancelButton",
+      "label": "Cancel"
+    },
+    {
+      "name": "EditEmployeeSaveButton",
+      "label": "Save"
+    },
+    {
+      "name": "DeleteEmployeeCancelButton",
+      "label": "Cancel"
+    },
+    {
+      "name": "DeleteEmployeeConfirmButton",
+      "label": "Delete"
+    }
+  ],
+  "forms": [
+    {
+      "name": "AddEmployeeForm"
+    },
+    {
+      "name": "EditEmployeeForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "SelectAllCheckbox"
+    },
+    {
+      "name": "EmployeeRowCheckbox1"
+    },
+    {
+      "name": "EmployeeRowCheckbox2"
+    },
+    {
+      "name": "EmployeeRowCheckbox3"
+    },
+    {
+      "name": "EmployeeRowCheckbox4"
+    },
+    {
+      "name": "EmployeeRowCheckbox5"
+    },
+    {
+      "name": "AddEmployeeNameField"
+    },
+    {
+      "name": "AddEmployeeEmailField"
+    },
+    {
+      "name": "AddEmployeeAddressField"
+    },
+    {
+      "name": "AddEmployeePhoneField"
+    },
+    {
+      "name": "EditEmployeeNameField"
+    },
+    {
+      "name": "EditEmployeeEmailField"
+    },
+    {
+      "name": "EditEmployeeAddressField"
+    },
+    {
+      "name": "EditEmployeePhoneField"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "EmployeeTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "EmployeeManagementView"
+    }
+  ]
+}

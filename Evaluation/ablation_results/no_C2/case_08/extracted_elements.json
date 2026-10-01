@@ -1,0 +1,42 @@
+{
+  "buttons": [
+    {
+      "name": "AddItemButton"
+    }
+  ],
+  "forms": [
+    {
+      "name": "AddItemForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "ItemName"
+    },
+    {
+      "name": "ItemQuantity"
+    },
+    {
+      "name": "ItemThreshold"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "InventoryTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "TitleH1"
+    },
+    {
+      "name": "Container"
+    },
+    {
+      "name": "AddItemH2"
+    },
+    {
+      "name": "InventoryListH2"
+    }
+  ]
+}

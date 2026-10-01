@@ -1,0 +1,11 @@
+{
+  "buttons": [],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "ResponsiveUpWebDesignView"
+    }
+  ]
+}

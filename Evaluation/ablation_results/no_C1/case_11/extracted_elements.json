@@ -1,0 +1,48 @@
+{
+  "buttons": [
+    {
+      "name": "AddToChartButton",
+      "label": "Add to Chart"
+    }
+  ],
+  "forms": [],
+  "input_fields": [
+    {
+      "name": "Tab1Radio"
+    },
+    {
+      "name": "Tab2Radio"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "SliderImagesList"
+    },
+    {
+      "name": "DetailsList"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "Container"
+    },
+    {
+      "name": "Slider"
+    },
+    {
+      "name": "ProductInfo"
+    },
+    {
+      "name": "InfoWrapper"
+    },
+    {
+      "name": "Tab1"
+    },
+    {
+      "name": "Tab2"
+    },
+    {
+      "name": "BuySection"
+    }
+  ]
+}

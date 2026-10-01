@@ -1,0 +1,49 @@
+{
+  "buttons": [
+    {
+      "name": "explain",
+      "label": "Explain Answer"
+    },
+    {
+      "name": "submit",
+      "label": "Submit"
+    },
+    {
+      "name": "next",
+      "label": "Next Question"
+    }
+  ],
+  "forms": [],
+  "input_fields": [
+    {
+      "name": "answer"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "page_title"
+    },
+    {
+      "name": "quiz_container"
+    },
+    {
+      "name": "question"
+    },
+    {
+      "name": "result"
+    },
+    {
+      "name": "modal"
+    },
+    {
+      "name": "modal_content"
+    },
+    {
+      "name": "close"
+    },
+    {
+      "name": "explanation"
+    }
+  ]
+}

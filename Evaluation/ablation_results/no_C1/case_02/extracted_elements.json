@@ -1,0 +1,31 @@
+{
+  "buttons": [
+    {
+      "name": "ExploreTemplatesButton",
+      "label": "Explore templates"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "LogoLink"
+    },
+    {
+      "name": "HeroImageLink"
+    },
+    {
+      "name": "GeneralTemplateCard"
+    },
+    {
+      "name": "TransactionalTemplateCard"
+    },
+    {
+      "name": "PromotionalTemplateCard"
+    },
+    {
+      "name": "ExplorationalTemplateCard"
+    }
+  ]
+}

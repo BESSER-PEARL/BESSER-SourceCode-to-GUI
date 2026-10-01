@@ -1,0 +1,105 @@
+{
+  "buttons": [
+    {
+      "name": "ClearAllButton"
+    },
+    {
+      "name": "ClearInventoryButton"
+    },
+    {
+      "name": "AddCurrentInventoryButton"
+    },
+    {
+      "name": "ResetCurrentInventoryButton"
+    },
+    {
+      "name": "ClearIncomingButton"
+    },
+    {
+      "name": "AddIncomingOrderButton"
+    },
+    {
+      "name": "ResetIncomingOrderButton"
+    }
+  ],
+  "forms": [
+    {
+      "name": "CurrentInventoryForm"
+    },
+    {
+      "name": "IncomingOrderForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "current_order_product_name"
+    },
+    {
+      "name": "current_order_product_brand"
+    },
+    {
+      "name": "current_order_product_quantity"
+    },
+    {
+      "name": "current_order_product_price"
+    },
+    {
+      "name": "incoming_order_product_name"
+    },
+    {
+      "name": "incoming_order_product_brand"
+    },
+    {
+      "name": "incoming_order_product_quantity"
+    },
+    {
+      "name": "incoming_order_product_price"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "CurrentInventoryTable"
+    },
+    {
+      "name": "IncomingInventoryTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "Header"
+    },
+    {
+      "name": "Navbar"
+    },
+    {
+      "name": "Main"
+    },
+    {
+      "name": "Container"
+    },
+    {
+      "name": "PageHeading"
+    },
+    {
+      "name": "Tabs"
+    },
+    {
+      "name": "CurrentInventoryTab"
+    },
+    {
+      "name": "CurrentInventoryHeading"
+    },
+    {
+      "name": "IncomingPurchaseTab"
+    },
+    {
+      "name": "IncomingProductHeading"
+    },
+    {
+      "name": "OutgoingOrdersTab"
+    },
+    {
+      "name": "OutgoingOrdersHeading"
+    }
+  ]
+}

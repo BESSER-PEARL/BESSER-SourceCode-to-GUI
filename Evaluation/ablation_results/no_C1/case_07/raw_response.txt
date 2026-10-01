@@ -1,0 +1,395 @@
+```python
+##################################
+# GUI elements extracted from HTML
+##################################
+
+# NOTE:
+# - This output instantiates only: Button, Form, InputField, DataList, ViewComponent
+# - Styling/layout/screens/modules are intentionally omitted per your request.
+# - Some HTML <button> elements act as "tab selectors" (Bootstrap tabs); they are modeled as Buttons with actionType=View.
+# - HTML <table><tbody id="..."> lists are modeled as DataList objects (collection type "Table" implied by HTML).
+
+# -----------------------------
+# ViewComponents (non-button UI)
+# -----------------------------
+
+navbarBrand: ViewComponent = ViewComponent(
+    name="NavbarBrand",
+    description="Navbar brand/title link: 'Inventory Management'"
+)
+
+inventoryManagerHeading: ViewComponent = ViewComponent(
+    name="InventoryManagerHeading",
+    description="Main heading displaying 'Inventory Manager'"
+)
+
+# Tab panes as view components (containers/sections in UI, represented as ViewComponent here)
+currentInventoryPane: ViewComponent = ViewComponent(
+    name="CurrentInventoryTabPane",
+    description="Tab content pane for Current Inventory"
+)
+incomingPurchasePane: ViewComponent = ViewComponent(
+    name="IncomingPurchaseTabPane",
+    description="Tab content pane for Incoming Purchase"
+)
+outgoingOrdersPane: ViewComponent = ViewComponent(
+    name="OutgoingOrdersTabPane",
+    description="Tab content pane for Outgoing Orders"
+)
+
+# -----------------------------
+# Buttons (including nav links and tabs)
+# -----------------------------
+
+# Navbar toggler
+navbarToggleButton: Button = Button(
+    name="NavbarToggleButton",
+    description="Toggles the navbar collapse on small screens",
+    label="Toggle navigation",
+    buttonType=ButtonType.IconButton,
+    actionType=ButtonActionType.View,
+    targetScreen=None,
+    styling=None
+)
+
+# Navbar links (modeled as navigation buttons)
+homeNavButton: Button = Button(
+    name="HomeNavButton",
+    description="Navigate to Home",
+    label="Home",
+    buttonType=ButtonType.TextButton,
+    actionType=ButtonActionType.Navigate,
+    targetScreen=None,
+    styling=None
+)
+
+moreInfoNavButton: Button = Button(
+    name="MoreInfoNavButton",
+    description="Navigate to More Info",
+    label="More Info",
+    buttonType=ButtonType.TextButton,
+    actionType=ButtonActionType.Navigate,
+    targetScreen=None,
+    styling=None
+)
+
+loginNavButton: Button = Button(
+    name="LoginNavButton",
+    description="Navigate to Login",
+    label="Login",
+    buttonType=ButtonType.TextButton,
+    actionType=ButtonActionType.Login,
+    targetScreen=None,
+    styling=None
+)
+
+registerNavButton: Button = Button(
+    name="RegisterNavButton",
+    description="Navigate to Register",
+    label="Register",
+    buttonType=ButtonType.TextButton,
+    actionType=ButtonActionType.Navigate,
+    targetScreen=None,
+    styling=None
+)
+
+# Global action
+clearAllButton: Button = Button(
+    name="ClearAllButton",
+    description="Clears all inventory lists (onclick=clearAll())",
+    label="Clear All",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Delete,
+    targetScreen=None,
+    styling=None
+)
+
+# Tab selector buttons
+currentInventoryTabButton: Button = Button(
+    name="CurrentInventoryTabButton",
+    description="Selects the 'Current Inventory' tab",
+    label="Current Inventory",
+    buttonType=ButtonType.TextButton,
+    actionType=ButtonActionType.View,
+    targetScreen=None,
+    styling=None
+)
+
+incomingPurchaseTabButton: Button = Button(
+    name="IncomingPurchaseTabButton",
+    description="Selects the 'Incoming Purchase' tab",
+    label="Incoming Purchase",
+    buttonType=ButtonType.TextButton,
+    actionType=ButtonActionType.View,
+    targetScreen=None,
+    styling=None
+)
+
+outgoingOrdersTabButton: Button = Button(
+    name="OutgoingOrdersTabButton",
+    description="Selects the 'Outgoing Orders' tab",
+    label="Outgoing Orders",
+    buttonType=ButtonType.TextButton,
+    actionType=ButtonActionType.View,
+    targetScreen=None,
+    styling=None
+)
+
+# Section clear buttons
+clearCurrentInventoryButton: Button = Button(
+    name="ClearCurrentInventoryButton",
+    description="Clears the current inventory list (onclick=clearCurrentInventory())",
+    label="Clear Inventory",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Delete,
+    targetScreen=None,
+    styling=None
+)
+
+clearIncomingButton: Button = Button(
+    name="ClearIncomingButton",
+    description="Clears the incoming inventory list (onclick=clearIncomingOrder())",
+    label="Clear Incoming",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Delete,
+    targetScreen=None,
+    styling=None
+)
+
+clearOutgoingButton: Button = Button(
+    name="ClearOutgoingButton",
+    description="Clears the outgoing inventory list (onclick=clearOutgoingOrder())",
+    label="Clear Outgoing",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Delete,
+    targetScreen=None,
+    styling=None
+)
+
+# Form buttons: Current Inventory
+addCurrentInventoryButton: Button = Button(
+    name="AddCurrentInventoryButton",
+    description="Adds an item to current inventory (onclick=addCurrentInventory())",
+    label="Add",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Add,
+    targetScreen=None,
+    styling=None
+)
+
+resetCurrentInventoryButton: Button = Button(
+    name="ResetCurrentInventoryButton",
+    description="Resets the current inventory form",
+    label="Reset",
+    buttonType=ButtonType.OutlinedButton,
+    actionType=ButtonActionType.Cancel,
+    targetScreen=None,
+    styling=None
+)
+
+# Form buttons: Incoming Purchase
+addIncomingOrderButton: Button = Button(
+    name="AddIncomingOrderButton",
+    description="Adds an item to incoming purchase list (onclick=addIncomingOrder())",
+    label="Add",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Add,
+    targetScreen=None,
+    styling=None
+)
+
+resetIncomingOrderButton: Button = Button(
+    name="ResetIncomingOrderButton",
+    description="Resets the incoming purchase form",
+    label="Reset",
+    buttonType=ButtonType.OutlinedButton,
+    actionType=ButtonActionType.Cancel,
+    targetScreen=None,
+    styling=None
+)
+
+# Form buttons: Outgoing Orders
+addOutgoingOrderButton: Button = Button(
+    name="AddOutgoingOrderButton",
+    description="Adds an item to outgoing orders list (onclick=addOutgoingOrder())",
+    label="Add",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Add,
+    targetScreen=None,
+    styling=None
+)
+
+resetOutgoingOrderButton: Button = Button(
+    name="ResetOutgoingOrderButton",
+    description="Resets the outgoing orders form",
+    label="Reset",
+    buttonType=ButtonType.OutlinedButton,
+    actionType=ButtonActionType.Cancel,
+    targetScreen=None,
+    styling=None
+)
+
+# -----------------------------
+# Forms + InputFields
+# -----------------------------
+
+# Current Inventory form fields
+currentProductNameField: InputField = InputField(
+    name="current_order_product_name",
+    description="Current inventory: Product Name (required)",
+    field_type=InputFieldType.Text,
+    validationRules="required",
+    styling=None
+)
+
+currentProductBrandField: InputField = InputField(
+    name="current_order_product_brand",
+    description="Current inventory: Product Brand (required)",
+    field_type=InputFieldType.Text,
+    validationRules="required",
+    styling=None
+)
+
+currentProductQuantityField: InputField = InputField(
+    name="current_order_product_quantity",
+    description="Current inventory: Quantity (required)",
+    field_type=InputFieldType.Number,
+    validationRules="required",
+    styling=None
+)
+
+currentProductPriceField: InputField = InputField(
+    name="current_order_product_price",
+    description="Current inventory: Product Price (required)",
+    field_type=InputFieldType.Number,
+    validationRules="required",
+    styling=None
+)
+
+currentInventoryForm: Form = Form(
+    name="CurrentInventoryForm",
+    description="Form to add items to current inventory",
+    inputFields={
+        currentProductNameField,
+        currentProductBrandField,
+        currentProductQuantityField,
+        currentProductPriceField,
+    },
+    styling=None
+)
+
+# Incoming Purchase form fields
+incomingProductNameField: InputField = InputField(
+    name="incoming_order_product_name",
+    description="Incoming purchase: Product Name (required)",
+    field_type=InputFieldType.Text,
+    validationRules="required",
+    styling=None
+)
+
+incomingProductBrandField: InputField = InputField(
+    name="incoming_order_product_brand",
+    description="Incoming purchase: Product Brand (required)",
+    field_type=InputFieldType.Text,
+    validationRules="required",
+    styling=None
+)
+
+incomingProductQuantityField: InputField = InputField(
+    name="incoming_order_product_quantity",
+    description="Incoming purchase: Quantity (required)",
+    field_type=InputFieldType.Number,
+    validationRules="required",
+    styling=None
+)
+
+incomingProductPriceField: InputField = InputField(
+    name="incoming_order_product_price",
+    description="Incoming purchase: Product Price (required)",
+    field_type=InputFieldType.Number,
+    validationRules="required",
+    styling=None
+)
+
+incomingPurchaseForm: Form = Form(
+    name="IncomingPurchaseForm",
+    description="Form to add items to incoming purchases",
+    inputFields={
+        incomingProductNameField,
+        incomingProductBrandField,
+        incomingProductQuantityField,
+        incomingProductPriceField,
+    },
+    styling=None
+)
+
+# Outgoing Orders form fields
+outgoingProductNameField: InputField = InputField(
+    name="outgoing_order_product_name",
+    description="Outgoing orders: Product Name (required)",
+    field_type=InputFieldType.Text,
+    validationRules="required",
+    styling=None
+)
+
+outgoingProductBrandField: InputField = InputField(
+    name="outgoing_order_product_brand",
+    description="Outgoing orders: Product Brand (required)",
+    field_type=InputFieldType.Text,
+    validationRules="required",
+    styling=None
+)
+
+outgoingProductQuantityField: InputField = InputField(
+    name="outgoing_order_product_quantity",
+    description="Outgoing orders: Quantity (required)",
+    field_type=InputFieldType.Number,
+    validationRules="required",
+    styling=None
+)
+
+outgoingProductPriceField: InputField = InputField(
+    name="outgoing_order_product_price",
+    description="Outgoing orders: Product Price (required)",
+    field_type=InputFieldType.Number,
+    validationRules="required",
+    styling=None
+)
+
+outgoingOrdersForm: Form = Form(
+    name="OutgoingOrdersForm",
+    description="Form to add items to outgoing orders",
+    inputFields={
+        outgoingProductNameField,
+        outgoingProductBrandField,
+        outgoingProductQuantityField,
+        outgoingProductPriceField,
+    },
+    styling=None
+)
+
+# -----------------------------
+# DataLists (tables)
+# -----------------------------
+
+currentInventoryList: DataList = DataList(
+    name="current_inventory_list",
+    description="Table listing current inventory items",
+    list_sources=set(),  # No explicit data source in static HTML
+    styling=None
+)
+
+incomingInventoryList: DataList = DataList(
+    name="incoming_inventory_list",
+    description="Table listing incoming purchase items",
+    list_sources=set(),  # No explicit data source in static HTML
+    styling=None
+)
+
+outgoingInventoryList: DataList = DataList(
+    name="outgoing_inventory_list",
+    description="Table listing outgoing order items",
+    list_sources=set(),  # No explicit data source in static HTML
+    styling=None
+)
+```

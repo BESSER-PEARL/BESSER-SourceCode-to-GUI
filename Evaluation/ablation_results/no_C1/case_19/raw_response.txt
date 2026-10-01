@@ -1,0 +1,110 @@
+```python
+##################################
+#      GUI model definition      #
+##################################
+
+######## Styling definitions ########
+
+# Screen / section layout (best-effort from plain HTML structure)
+authScreenLayout = Layout(
+    layout_type=LayoutType.FLEX,
+    orientation="vertical",
+    gap="10px",
+    alignment=JustificationType.CENTER
+)
+
+# Generic input styling (no CSS provided in HTML, so keep minimal defaults)
+inputColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#CCCCCC")
+inputPosition = Position(p_type=PositionType.RELATIVE, top="", left="", right="", bottom="", alignment="", z_index=0)
+inputSize = Size(width="100%", height="auto", padding="8px", margin="6px 0", font_size="14px", icon_size="", unit_size=UnitSize.PIXELS)
+inputStyling = Styling(size=inputSize, position=inputPosition, color=inputColor)
+
+# Submit button styling
+submitBtnColor = Color(background_color="#007BFF", text_color="#FFFFFF", border_color="#0056b3")
+submitBtnPosition = Position(p_type=PositionType.RELATIVE, top="", left="", right="", bottom="", alignment="", z_index=0)
+submitBtnSize = Size(width="", height="40px", padding="8px", margin="10px 0", font_size="14px", icon_size="", unit_size=UnitSize.PIXELS)
+submitBtnStyling = Styling(size=submitBtnSize, position=submitBtnPosition, color=submitBtnColor)
+
+# Rules button styling
+rulesBtnColor = Color(background_color="#6C757D", text_color="#FFFFFF", border_color="#545B62")
+rulesBtnPosition = Position(p_type=PositionType.RELATIVE, top="", left="", right="", bottom="", alignment="", z_index=0)
+rulesBtnSize = Size(width="", height="40px", padding="8px", margin="10px 0", font_size="14px", icon_size="", unit_size=UnitSize.PIXELS)
+rulesBtnStyling = Styling(size=rulesBtnSize, position=rulesBtnPosition, color=rulesBtnColor)
+
+# Rules view component styling (div#rules)
+rulesBoxColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#CED4DA")
+rulesBoxPosition = Position(p_type=PositionType.RELATIVE, top="", left="", right="", bottom="", alignment="", z_index=0)
+rulesBoxSize = Size(width="100%", height="auto", padding="10px", margin="10px 0", font_size="14px", icon_size="", unit_size=UnitSize.PIXELS)
+rulesBoxStyling = Styling(size=rulesBoxSize, position=rulesBoxPosition, color=rulesBoxColor)
+
+
+######## ViewComponent definitions (non-form UI blocks) ########
+
+# Section heading / page content container as a ViewComponent (best-effort)
+authenticationSection: ViewComponent = ViewComponent(
+    name="AuthenticationSection",
+    description="Container section for user authentication UI"
+)
+
+# Rules container (div#rules) as a ViewComponent
+rulesView: ViewComponent = ViewComponent(
+    name="RulesView",
+    description="Displays username/password rules",
+    styling=rulesBoxStyling
+)
+
+
+######## InputFields extracted from <input> ########
+
+usernameField: InputField = InputField(
+    name="UsernameInput",
+    description="Username input field",
+    field_type=InputFieldType.Text,
+    validationRules="required; minlength=3; maxlength=15 (note: HTML has typo maxlenth); pattern=[a-zA-Z0-9]+",
+    styling=inputStyling
+)
+
+passwordField: InputField = InputField(
+    name="PasswordInput",
+    description="Password input field",
+    field_type=InputFieldType.Password,
+    validationRules="required; minlength=8; maxlength=15; pattern=[a-zA-Z0-9]+",
+    styling=inputStyling
+)
+
+
+######## Buttons extracted from <input type='submit'> and <button> ########
+
+submitButton: Button = Button(
+    name="SubmitButton",
+    description="Submit authentication form",
+    label="Submit",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.SubmitForm,
+    styling=submitBtnStyling
+)
+
+rulesButton: Button = Button(
+    name="RulesButton",
+    description="Show authentication rules",
+    label="Rules",
+    buttonType=ButtonType.TextButton,
+    actionType=ButtonActionType.Help,
+    styling=rulesBtnStyling
+)
+
+
+######## Form extracted from <form> ########
+
+authenticationForm: Form = Form(
+    name="AuthenticationForm",
+    description="Form to authenticate user with username and password",
+    inputFields={usernameField, passwordField},
+    styling=None
+)
+
+
+######## DataList (none found in HTML) ########
+# No table/ul that represents a data-driven list with a DataSource was defined in the HTML.
+# Therefore, no DataList is instantiated for this file.
+```

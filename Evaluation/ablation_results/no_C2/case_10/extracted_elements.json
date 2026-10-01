@@ -1,0 +1,71 @@
+{
+  "buttons": [
+    {
+      "name": "GenerateButton",
+      "label": "Generate"
+    },
+    {
+      "name": "ClearButton",
+      "label": "Clear"
+    },
+    {
+      "name": "DownloadButton",
+      "label": "Download"
+    }
+  ],
+  "forms": [
+    {
+      "name": "TTSForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "openKey"
+    },
+    {
+      "name": "inputText"
+    },
+    {
+      "name": "outputFileName"
+    },
+    {
+      "name": "selectVoice"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "Container"
+    },
+    {
+      "name": "HeaderText"
+    },
+    {
+      "name": "WelcomeParagraph"
+    },
+    {
+      "name": "UpdateParagraph"
+    },
+    {
+      "name": "NewLinkParagraph"
+    },
+    {
+      "name": "InstructionParagraph"
+    },
+    {
+      "name": "ButtonBar"
+    },
+    {
+      "name": "SuccessMessage"
+    },
+    {
+      "name": "ListenParagraph"
+    },
+    {
+      "name": "AudioPlayer"
+    },
+    {
+      "name": "ErrorMessage"
+    }
+  ]
+}

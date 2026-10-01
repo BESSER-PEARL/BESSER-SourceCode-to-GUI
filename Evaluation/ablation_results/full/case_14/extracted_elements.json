@@ -1,0 +1,91 @@
+{
+  "buttons": [
+    {
+      "name": "CompanyNameLink",
+      "label": "Company name"
+    },
+    {
+      "name": "SignOutLink",
+      "label": "Sign out"
+    },
+    {
+      "name": "ProjectsDownloadIcon"
+    },
+    {
+      "name": "RadarChartMoreButton"
+    },
+    {
+      "name": "BarChartMoreButton"
+    },
+    {
+      "name": "DoughnutChartMoreButton"
+    }
+  ],
+  "forms": [],
+  "input_fields": [
+    {
+      "name": "SearchInput"
+    },
+    {
+      "name": "ProjectActionsSelect"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "ProjectsTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "DashboardView"
+    },
+    {
+      "name": "TopNavBar"
+    },
+    {
+      "name": "Sidebar"
+    },
+    {
+      "name": "AllProjectsCard"
+    },
+    {
+      "name": "TeamMembersCard"
+    },
+    {
+      "name": "TotalBudgetCard"
+    },
+    {
+      "name": "NewCustomersCard"
+    },
+    {
+      "name": "CardsRow"
+    },
+    {
+      "name": "ProjectsSection"
+    },
+    {
+      "name": "RadarChartCanvas"
+    },
+    {
+      "name": "BarChartCanvas"
+    },
+    {
+      "name": "DoughnutChartCanvas"
+    },
+    {
+      "name": "RadarChart"
+    },
+    {
+      "name": "BarChart"
+    },
+    {
+      "name": "DoughnutChart"
+    },
+    {
+      "name": "ChartsRow"
+    },
+    {
+      "name": "MainContent"
+    }
+  ]
+}

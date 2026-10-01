@@ -1,0 +1,267 @@
+```python
+##################################
+#   Extracted GUI elements model #
+##################################
+
+# Assumptions:
+# - Only instantiating: Button, Form, InputField, DataList, ViewComponent (per request).
+# - Styling is left as None unless strongly implied by HTML.
+# - The main list is represented by the <table> as a DataList.
+# - <select> controls are represented as InputFields (type=Text, with validationRules noting "select").
+
+# ---------------------------
+# ViewComponents (non-button)
+# ---------------------------
+
+volunteersPageHeader: ViewComponent = ViewComponent(
+    name="VolunteersHeader",
+    description="Page title 'Volunteers'",
+    styling=None
+)
+
+emailListModal: ViewComponent = ViewComponent(
+    name="EmailListModal",
+    description="Modal dialog showing a list of email addresses",
+    styling=None
+)
+
+paginationTop: ViewComponent = ViewComponent(
+    name="PaginationControlsTop",
+    description="Pagination controls (top of table)",
+    styling=None
+)
+
+paginationBottom: ViewComponent = ViewComponent(
+    name="PaginationControlsBottom",
+    description="Pagination controls (bottom of table)",
+    styling=None
+)
+
+sorterContainer: ViewComponent = ViewComponent(
+    name="SorterControls",
+    description="Order-by controls for sorting volunteers list",
+    styling=None
+)
+
+# ------------
+# InputFields
+# ------------
+
+searchFieldSelector: InputField = InputField(
+    name="SearchFieldSelector",
+    description="Select field to search by (ng-model='selected')",
+    field_type=InputFieldType.Text,
+    validationRules="select; ng-model=selected; ng-options=item.title for item in fieldTable",
+    styling=None
+)
+
+searchTextInput: InputField = InputField(
+    name="VolunteerSearchInput",
+    description="Search volunteers text input (ng-model='search')",
+    field_type=InputFieldType.Search,
+    validationRules="type=text; placeholder='Search volunteers...'",
+    styling=None
+)
+
+resultsPerPageSelect: InputField = InputField(
+    name="ResultsPerPage",
+    description="Results per page selector (ng-model='resultlimit')",
+    field_type=InputFieldType.Number,
+    validationRules="select; options=[1,3,5,10,20,100]; ng-init=resultlimit=5",
+    styling=None
+)
+
+# -------------------------
+# DataList (table of rows)
+# -------------------------
+
+volunteersTableList: DataList = DataList(
+    name="VolunteersTable",
+    description="Table listing volunteer records with sortable columns and action buttons",
+    list_sources=set(),  # HTML indicates Angular 'names' collection; no explicit DataSource object requested
+    styling=None
+)
+
+# -----
+# Form
+# -----
+
+formNameField: InputField = InputField(
+    name="VolunteerName",
+    description="Volunteer name input",
+    field_type=InputFieldType.Text,
+    validationRules="required; ng-minlength=5; ng-pattern=/^[a-zA-Z...]+$/u; placeholder='Type name here...'; id=form-name",
+    styling=None
+)
+
+formEmailField: InputField = InputField(
+    name="VolunteerEmail",
+    description="Volunteer email input",
+    field_type=InputFieldType.Email,
+    validationRules="required; type=email; placeholder='Type email here...'",
+    styling=None
+)
+
+formPhoneField: InputField = InputField(
+    name="VolunteerPhone",
+    description="Volunteer phone input",
+    field_type=InputFieldType.Tel,
+    validationRules="required; ng-minlength=10; pattern=^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}$; placeholder='Type phone number here...'; id=form-phone",
+    styling=None
+)
+
+formStatusSelect: InputField = InputField(
+    name="VolunteerStatus",
+    description="Volunteer status selector",
+    field_type=InputFieldType.Text,
+    validationRules="select; name=status; ng-init=status='APPLIED'; options=[APPLIED,APPROVED,WITHDRAWN,DISMISSED,BANNED]",
+    styling=None
+)
+
+volunteerModalForm: Form = Form(
+    name="VolunteerForm",
+    description="Modal form for creating/updating a volunteer record",
+    inputFields={formNameField, formEmailField, formPhoneField, formStatusSelect},
+    styling=None
+)
+
+# --------
+# Buttons
+# --------
+
+emailAllButton: Button = Button(
+    name="EmailAllVolunteersButton",
+    description="Email all filtered volunteers",
+    label="Email All Volunteers",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Send,
+    targetScreen=None,
+    styling=None
+)
+
+viewEmailListButton: Button = Button(
+    name="ViewEmailListButton",
+    description="Open modal showing list of email addresses",
+    label="View List of Email Addresses",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.View,
+    targetScreen=None,
+    styling=None
+)
+
+# Sort buttons (Order by)
+sortByNameButton: Button = Button(
+    name="SortByNameButton",
+    description="Sort volunteers by name",
+    label="Name",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Sort,
+    targetScreen=None,
+    styling=None
+)
+
+sortByPhoneButton: Button = Button(
+    name="SortByPhoneButton",
+    description="Sort volunteers by phone",
+    label="Phone",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Sort,
+    targetScreen=None,
+    styling=None
+)
+
+sortByEmailButton: Button = Button(
+    name="SortByEmailButton",
+    description="Sort volunteers by email",
+    label="Email",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Sort,
+    targetScreen=None,
+    styling=None
+)
+
+sortByStatusButton: Button = Button(
+    name="SortByStatusButton",
+    description="Sort volunteers by status",
+    label="Status",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Sort,
+    targetScreen=None,
+    styling=None
+)
+
+sortBySubmittedButton: Button = Button(
+    name="SortBySubmittedButton",
+    description="Sort volunteers by submission time",
+    label="Submited",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Sort,
+    targetScreen=None,
+    styling=None
+)
+
+# Table row action buttons (per volunteer row)
+editVolunteerButton: Button = Button(
+    name="EditVolunteerButton",
+    description="Edit a volunteer record (per row action)",
+    label="Edit",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Edit,
+    targetScreen=None,
+    styling=None
+)
+
+deleteVolunteerButton: Button = Button(
+    name="DeleteVolunteerButton",
+    description="Delete a volunteer record (per row action)",
+    label="Delete",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Delete,
+    targetScreen=None,
+    styling=None
+)
+
+# Modal form buttons
+createVolunteerButton: Button = Button(
+    name="CreateVolunteerButton",
+    description="Create new volunteer record from modal form",
+    label="Create",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Add,
+    targetScreen=None,
+    styling=None
+)
+
+updateVolunteerButton: Button = Button(
+    name="UpdateVolunteerButton",
+    description="Save changes to an existing volunteer record from modal form",
+    label="Save Changes",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Save,
+    targetScreen=None,
+    styling=None
+)
+
+closeVolunteerModalButton: Button = Button(
+    name="CloseVolunteerModalButton",
+    description="Close the volunteer modal form",
+    label="Close",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Cancel,
+    targetScreen=None,
+    styling=None
+)
+
+floatingOpenCreateFormButton: Button = Button(
+    name="OpenCreateVolunteerModalFloatingButton",
+    description="Floating action button to open the create volunteer modal",
+    label="Add",
+    buttonType=ButtonType.FloatingActionButton,
+    actionType=ButtonActionType.OpenForm,
+    targetScreen=None,
+    styling=None
+)
+
+# (Optional) Table header sort click targets also exist (ID/Name/Phone/Email/Status/Submitted),
+# but primary explicit "Order by" buttons above already cover sorting controls.
+```

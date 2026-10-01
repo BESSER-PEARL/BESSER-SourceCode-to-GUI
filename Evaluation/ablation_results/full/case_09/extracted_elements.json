@@ -1,0 +1,53 @@
+{
+  "buttons": [
+    {
+      "name": "ExplainAnswerButton",
+      "label": "Explain Answer"
+    },
+    {
+      "name": "SubmitAnswerButton",
+      "label": "Submit"
+    },
+    {
+      "name": "CloseModalControl",
+      "label": "\u00d7"
+    },
+    {
+      "name": "NextQuestionButton",
+      "label": "Next Question"
+    }
+  ],
+  "forms": [],
+  "input_fields": [
+    {
+      "name": "AnswerInput"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "InteractiveQuizView"
+    },
+    {
+      "name": "InteractiveQuizTitle"
+    },
+    {
+      "name": "QuestionTitle"
+    },
+    {
+      "name": "ResultText"
+    },
+    {
+      "name": "QuizContainer"
+    },
+    {
+      "name": "Modal"
+    },
+    {
+      "name": "ModalContent"
+    },
+    {
+      "name": "ExplanationText"
+    }
+  ]
+}

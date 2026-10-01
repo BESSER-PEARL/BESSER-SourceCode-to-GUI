@@ -1,0 +1,112 @@
+```python
+##################################
+#      GUI model definition      #
+##################################
+
+# NOTE:
+# This output instantiates ONLY the requested metamodel objects:
+# Button, Form, InputField, DataList, and ViewComponent.
+# (No Screen/Module/GUIModel objects are created here.)
+
+#############################
+# ViewComponent definitions #
+#############################
+
+titleH1: ViewComponent = ViewComponent(
+    name="GroceryInventoryTrackerTitle",
+    description="Main page title: 'Grocery Inventory Tracker'."
+)
+
+addItemSectionTitle: ViewComponent = ViewComponent(
+    name="AddItemSectionTitle",
+    description="Section header: 'Add Item'."
+)
+
+inventoryListSectionTitle: ViewComponent = ViewComponent(
+    name="InventoryListSectionTitle",
+    description="Section header: 'Inventory List'."
+)
+
+containerDiv: ViewComponent = ViewComponent(
+    name="MainContainer",
+    description="Container wrapping the add-item form and the inventory table (div.container)."
+)
+
+#############################
+# InputField definitions    #
+#############################
+
+itemNameField: InputField = InputField(
+    name="itemName",
+    description="Input for item name.",
+    field_type=InputFieldType.Text,
+    validationRules="required",
+    styling=None
+)
+
+itemQuantityField: InputField = InputField(
+    name="itemQuantity",
+    description="Input for item quantity.",
+    field_type=InputFieldType.Number,
+    validationRules="required",
+    styling=None
+)
+
+itemThresholdField: InputField = InputField(
+    name="itemThreshold",
+    description="Input for alert threshold (quantity threshold triggering alert styling).",
+    field_type=InputFieldType.Number,
+    validationRules="required",
+    styling=None
+)
+
+#############################
+# Button definitions        #
+#############################
+
+addItemButton: Button = Button(
+    name="AddItemButton",
+    description="Submit the form to add an item to the inventory table.",
+    label="Add Item",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.SubmitForm,
+    targetScreen=None,
+    styling=None
+)
+
+# Button created dynamically in table rows via JS:
+# <button onclick="removeItem(this)">Remove</button>
+removeItemButton: Button = Button(
+    name="RemoveItemButton",
+    description="Remove an item row from the inventory list (created per-row dynamically).",
+    label="Remove",
+    buttonType=ButtonType.TextButton,
+    actionType=ButtonActionType.Delete,
+    targetScreen=None,
+    styling=None
+)
+
+#############################
+# Form definition           #
+#############################
+
+addItemForm: Form = Form(
+    name="addItemForm",
+    description="Form to add a grocery inventory item (name, quantity, threshold).",
+    inputFields={itemNameField, itemQuantityField, itemThresholdField},
+    styling=None
+)
+
+#############################
+# DataList definition       #
+#############################
+
+# Inventory is presented as a <table id="inventoryTable">.
+# We model it as a DataList; the data is populated via JS (initialItems + user additions).
+inventoryTableList: DataList = DataList(
+    name="inventoryTable",
+    description="Inventory list presented as a table with columns: Item Name, Quantity, Alert Threshold, Actions.",
+    list_sources=set(),  # No explicit backend/collection datasource declared in HTML; populated client-side.
+    styling=None
+)
+```

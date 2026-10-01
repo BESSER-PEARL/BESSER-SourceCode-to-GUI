@@ -1,0 +1,35 @@
+{
+  "buttons": [],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "PageTitleH1"
+    },
+    {
+      "name": "ContainerSection"
+    },
+    {
+      "name": "RowContainer"
+    },
+    {
+      "name": "Column1"
+    },
+    {
+      "name": "Column2"
+    },
+    {
+      "name": "Column3"
+    },
+    {
+      "name": "Column4"
+    },
+    {
+      "name": "Column5"
+    },
+    {
+      "name": "Column6"
+    }
+  ]
+}

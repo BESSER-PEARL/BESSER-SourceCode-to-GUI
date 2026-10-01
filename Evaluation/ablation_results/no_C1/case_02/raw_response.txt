@@ -1,0 +1,105 @@
+```python
+##################################
+#   Extracted GUI elements model #
+##################################
+
+# NOTE:
+# The provided HTML is an email template. It contains links styled as buttons, images,
+# and text blocks. There are NO <form>, <input>, or data-driven list/table widgets in it.
+# So: Form/InputField/DataList are not instantiated (none found).
+
+############################
+# Styling definitions
+############################
+
+# Screen-level layout (email-like vertical stacking)
+EmailScreenLayout = Layout(
+    layout_type=LayoutType.STACK,
+    orientation="vertical",
+    gap="15px",
+    alignment=JustificationType.CENTER,
+    padding="0",
+    margin="0",
+    wrap=True
+)
+
+# Generic link/button styling (derived from the "Explore templates" CTA)
+ctaColor = Color(background_color="#0B5073", text_color="#FFFFFF", border_color="#0B5073")
+ctaPosition = Position(p_type=PositionType.RELATIVE, top="", left="", right="", bottom="", alignment="CENTER", z_index=0)
+ctaSize = Size(width="240px", height="auto", padding="12px 24px", margin="0", font_size="17px", icon_size="", unit_size=UnitSize.PIXELS)
+ctaStyling = Styling(size=ctaSize, position=ctaPosition, color=ctaColor)
+
+# Generic view component styling (for linked items)
+linkItemColor = Color(background_color="#FFFFFF", text_color="#0B5073", border_color="#FFFFFF")
+linkItemPosition = Position(p_type=PositionType.RELATIVE, top="", left="", right="", bottom="", alignment="", z_index=0)
+linkItemSize = Size(width="auto", height="auto", padding="0", margin="0", font_size="17px", icon_size="", unit_size=UnitSize.AUTO)
+linkItemStyling = Styling(size=linkItemSize, position=linkItemPosition, color=linkItemColor)
+
+
+############################
+# ViewComponents (non-button UI elements)
+############################
+
+# Logo link (anchor + img)
+logoLinkComponent: ViewComponent = ViewComponent(
+    name="LogoLink",
+    description="Logo image linking to the template repository",
+    styling=None
+)
+
+# Hero image link (anchor + img)
+heroImageComponent: ViewComponent = ViewComponent(
+    name="HeroImageLink",
+    description="Hero image linking to the template repository",
+    styling=None
+)
+
+# Grid item link components (each floater block is effectively a linked card)
+generalTemplateComponent: ViewComponent = ViewComponent(
+    name="GeneralTemplateCard",
+    description="Linked grid item card: General template",
+    styling=linkItemStyling
+)
+
+transactionalTemplateComponent: ViewComponent = ViewComponent(
+    name="TransactionalTemplateCard",
+    description="Linked grid item card: Transactional template",
+    styling=linkItemStyling
+)
+
+promotionalTemplateComponent: ViewComponent = ViewComponent(
+    name="PromotionalTemplateCard",
+    description="Linked grid item card: Promotional template",
+    styling=linkItemStyling
+)
+
+explorationalTemplateComponent: ViewComponent = ViewComponent(
+    name="ExplorationalTemplateCard",
+    description="Linked grid item card: Explorational template",
+    styling=linkItemStyling
+)
+
+
+############################
+# Buttons (detected CTA button)
+############################
+
+exploreTemplatesButton: Button = Button(
+    name="ExploreTemplatesButton",
+    description="Primary call-to-action to explore templates",
+    label="Explore templates",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Navigate,
+    targetScreen=None,   # external navigation (URL) in the HTML; no internal Screen target provided
+    styling=ctaStyling
+)
+
+
+############################
+# Absent elements in this HTML
+############################
+
+# No <form> element => no Form instance
+# No <input> element => no InputField instances
+# No table/list bound to a data source => no DataList instance
+```

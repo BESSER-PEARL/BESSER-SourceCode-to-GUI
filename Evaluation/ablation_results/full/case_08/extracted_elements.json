@@ -1,0 +1,37 @@
+{
+  "buttons": [
+    {
+      "name": "AddItemButton",
+      "label": "Add Item"
+    }
+  ],
+  "forms": [
+    {
+      "name": "AddItemForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "ItemNameField"
+    },
+    {
+      "name": "ItemQuantityField"
+    },
+    {
+      "name": "ItemThresholdField"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "InventoryTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "GroceryInventoryView"
+    },
+    {
+      "name": "MainContainer"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+```python
+##################################
+#      GUI elements extracted    #
+##################################
+
+# ---- Styling (best-effort, inferred from bootstrap classes / ids) ----
+ScreenLayout = Layout(
+    layout_type=LayoutType.FLEX,
+    orientation="vertical",
+    gap="15px",
+    alignment=JustificationType.CENTER
+)
+
+containerColor = Color(background_color="", text_color="", border_color="")
+containerPosition = Position(p_type=PositionType.RELATIVE, top="", left="", right="", bottom="", alignment="", z_index=0)
+containerSize = Size(width="100%", height="auto", padding="", margin="", font_size="", icon_size="", unit_size=UnitSize.PERCENTAGE)
+containerStyling = Styling(size=containerSize, position=containerPosition, color=containerColor)
+
+inputColor = Color(background_color="#FFFFFF", text_color="#000000", border_color="#CED4DA")
+inputPosition = Position(p_type=PositionType.RELATIVE, top="", left="", right="", bottom="", alignment="", z_index=0)
+inputSize = Size(width="100%", height="auto", padding="", margin="", font_size="", icon_size="", unit_size=UnitSize.PERCENTAGE)
+inputStyling = Styling(size=inputSize, position=inputPosition, color=inputColor)
+
+successButtonColor = Color(background_color="#198754", text_color="#FFFFFF", border_color="#198754")  # Bootstrap btn-success
+buttonPosition = Position(p_type=PositionType.RELATIVE, top="", left="", right="", bottom="", alignment="", z_index=0)
+buttonSize = Size(width="", height="auto", padding="", margin="", font_size="", icon_size="", unit_size=UnitSize.PIXELS)
+successButtonStyling = Styling(size=buttonSize, position=buttonPosition, color=successButtonColor)
+
+hiddenContainerPosition = Position(p_type=PositionType.RELATIVE, top="", left="", right="", bottom="", alignment="", z_index=0)
+hiddenContainerStyling = Styling(size=None, position=hiddenContainerPosition, color=None)
+
+# ---- ViewComponents (containers / regions inferred from divs/spans) ----
+containerView: ViewComponent = ViewComponent(
+    name="Container",
+    description="Top-level container wrapping phone input, 2FA input, and notification box.",
+    styling=containerStyling
+)
+
+phoneInputRegion: ViewComponent = ViewComponent(
+    name="PhoneInputRegion",
+    description="Region containing phone number input and submit button.",
+    styling=None
+)
+
+twoFAInputRegion: ViewComponent = ViewComponent(
+    name="TwoFactorInputRegion",
+    description="Region containing 2FA code input and submit button (initially hidden).",
+    styling=hiddenContainerStyling
+)
+
+notificationBox: ViewComponent = ViewComponent(
+    name="NotificationBox",
+    description="Region for success/error notifications.",
+    styling=None
+)
+
+successSpan: ViewComponent = ViewComponent(
+    name="SuccessMessage",
+    description="Placeholder span for success message.",
+    styling=None
+)
+
+errorSpan: ViewComponent = ViewComponent(
+    name="ErrorMessage",
+    description="Placeholder span for error message.",
+    styling=None
+)
+
+# ---- InputFields extracted from <input> ----
+telephoneField: InputField = InputField(
+    name="TelephoneInput",
+    description="Telephone number input (placeholder: 1-212-555-1234).",
+    field_type=InputFieldType.Text,
+    validationRules="",
+    styling=inputStyling
+)
+
+twoFactorCodeField: InputField = InputField(
+    name="TwoFactorCodeInput",
+    description="Two-factor authentication code input (placeholder: XXXXXX).",
+    field_type=InputFieldType.Text,
+    validationRules="",
+    styling=inputStyling
+)
+
+# ---- Forms (inferred: each submit button belongs to a logical form region) ----
+phoneForm: Form = Form(
+    name="PhoneForm",
+    description="Form for entering a phone number and requesting a 2FA code.",
+    inputFields={telephoneField},
+    styling=None
+)
+
+twoFactorForm: Form = Form(
+    name="TwoFactorForm",
+    description="Form for entering a received 2FA code.",
+    inputFields={twoFactorCodeField},
+    styling=None
+)
+
+# ---- Buttons extracted from <button> ----
+send2FACodeButton: Button = Button(
+    name="SendTwoFactorCodeButton",
+    description="Requests sending a two-factor authentication code (onclick=processPhone()).",
+    label="Send Me a Two-Factor Authentication Code",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Send,
+    targetScreen=None,
+    styling=successButtonStyling
+)
+
+submit2FACodeButton: Button = Button(
+    name="SubmitTwoFactorCodeButton",
+    description="Submits the two-factor authentication code (onclick=processCode()).",
+    label="Submit My Two-Factor Authentication Code",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.SubmitForm,
+    targetScreen=None,
+    styling=successButtonStyling
+)
+
+# ---- DataList ----
+# No <ul>/<ol>/<table> or other list structure present in the provided HTML.
+# Therefore, no DataList instances are created.
+```

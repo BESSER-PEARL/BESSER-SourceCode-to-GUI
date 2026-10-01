@@ -1,0 +1,78 @@
+{
+  "buttons": [
+    {
+      "name": "AddNewContactButton",
+      "label": "Add new Contact"
+    },
+    {
+      "name": "AddRandomContactButton",
+      "label": "Add two random Contacts"
+    },
+    {
+      "name": "PrintListButton",
+      "label": "Print contacts to console"
+    },
+    {
+      "name": "EmptyButton",
+      "label": "Empty"
+    },
+    {
+      "name": "SaveButton",
+      "label": "Save"
+    },
+    {
+      "name": "LoadButton",
+      "label": "Load"
+    },
+    {
+      "name": "GitHubSourceButton",
+      "label": "See source code on GitHub"
+    }
+  ],
+  "forms": [
+    {
+      "name": "InputForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "NameInput"
+    },
+    {
+      "name": "AgeInput"
+    },
+    {
+      "name": "EmailInput"
+    },
+    {
+      "name": "CityInput"
+    },
+    {
+      "name": "ZipCodeInput"
+    },
+    {
+      "name": "CountryInput"
+    },
+    {
+      "name": "SearchInput"
+    },
+    {
+      "name": "MatchDisplay"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "ContactManagerView"
+    },
+    {
+      "name": "TopDiv"
+    },
+    {
+      "name": "SearchDiv"
+    },
+    {
+      "name": "ContactsContainer"
+    }
+  ]
+}

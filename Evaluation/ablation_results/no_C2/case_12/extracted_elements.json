@@ -1,0 +1,45 @@
+{
+  "buttons": [
+    {
+      "name": "HeadingH1"
+    },
+    {
+      "name": "Column1",
+      "label": "Wow! I"
+    },
+    {
+      "name": "Column2",
+      "label": "Wow! I"
+    },
+    {
+      "name": "Column3",
+      "label": "Wow! I"
+    },
+    {
+      "name": "Column4",
+      "label": "Wow! I"
+    },
+    {
+      "name": "Column5",
+      "label": "Wow! I"
+    },
+    {
+      "name": "Column6",
+      "label": "Wow! I"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "HeaderContainer"
+    },
+    {
+      "name": "SectionContainer"
+    },
+    {
+      "name": "RowContainer"
+    }
+  ]
+}

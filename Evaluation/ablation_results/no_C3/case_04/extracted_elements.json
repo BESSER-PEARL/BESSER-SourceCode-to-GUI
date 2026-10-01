@@ -1,0 +1,15 @@
+{
+  "buttons": [
+    {
+      "name": "SearchButton"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "ImageGalleryView"
+    }
+  ]
+}

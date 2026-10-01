@@ -1,0 +1,59 @@
+{
+  "buttons": [
+    {
+      "name": "sub",
+      "label": "Submit"
+    },
+    {
+      "name": "rule",
+      "label": "Rules"
+    }
+  ],
+  "forms": [
+    {
+      "name": "authentication"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "username"
+    },
+    {
+      "name": "password"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "rules_list"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "header"
+    },
+    {
+      "name": "header_note"
+    },
+    {
+      "name": "CheckBox"
+    },
+    {
+      "name": "page_title"
+    },
+    {
+      "name": "rules"
+    },
+    {
+      "name": "rule_item_1"
+    },
+    {
+      "name": "rule_item_2"
+    },
+    {
+      "name": "rule_item_3"
+    },
+    {
+      "name": "rule_item_4"
+    }
+  ]
+}

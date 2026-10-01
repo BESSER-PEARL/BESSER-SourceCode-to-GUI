@@ -1,0 +1,16 @@
+{
+  "buttons": [
+    {
+      "name": "AddToChartButton",
+      "label": "Add to Chart"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "ProductInfoView"
+    }
+  ]
+}

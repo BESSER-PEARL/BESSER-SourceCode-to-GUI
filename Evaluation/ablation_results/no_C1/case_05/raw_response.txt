@@ -1,0 +1,203 @@
+```python
+##################################
+#  Extracted GUI element objects #
+##################################
+
+# ---- Styling (generic/default, since HTML provides no concrete CSS values) ----
+ScreenLayout = Layout(
+    layout_type=LayoutType.FLEX,
+    orientation="vertical",
+    gap="10px",
+    alignment=JustificationType.CENTER
+)
+
+defaultPosition = Position(p_type=PositionType.RELATIVE, top="", left="", right="", bottom="", alignment="", z_index=0)
+defaultSize = Size(width="auto", height="auto", padding="0", margin="0", font_size="", icon_size="", unit_size=UnitSize.AUTO)
+defaultColor = Color(background_color="", text_color="", border_color="")
+defaultStyling = Styling(size=defaultSize, position=defaultPosition, color=defaultColor)
+
+# ---- ViewComponents (non-form UI components found) ----
+
+# Progress bar list (<ul id="progressbar"> ... </ul>)
+progressbarDataSource = Collection(name="ProgressbarSteps", type=CollectionSourceType.List)
+progressbarList: DataList = DataList(
+    name="Progressbar",
+    description="Multi-step progress indicator with steps: Account Setup, Social Profiles, Personal Details",
+    list_sources={progressbarDataSource},
+    styling=defaultStyling
+)
+
+# Step titles/subtitles as generic ViewComponents (h2/h3 elements)
+vc_step1_title: ViewComponent = ViewComponent(
+    name="Step1Title",
+    description="Heading: Create your account",
+    styling=defaultStyling
+)
+vc_step1_subtitle: ViewComponent = ViewComponent(
+    name="Step1Subtitle",
+    description="Subheading: This is step 1",
+    styling=defaultStyling
+)
+
+vc_step2_title: ViewComponent = ViewComponent(
+    name="Step2Title",
+    description="Heading: Social Profiles",
+    styling=defaultStyling
+)
+vc_step2_subtitle: ViewComponent = ViewComponent(
+    name="Step2Subtitle",
+    description="Subheading: Your presence on the social network",
+    styling=defaultStyling
+)
+
+vc_step3_title: ViewComponent = ViewComponent(
+    name="Step3Title",
+    description="Heading: Personal Details",
+    styling=defaultStyling
+)
+vc_step3_subtitle: ViewComponent = ViewComponent(
+    name="Step3Subtitle",
+    description="Subheading: We will never sell it",
+    styling=defaultStyling
+)
+
+# ---- InputFields extracted from <input> and <textarea> ----
+
+# Fieldset 1
+emailField: InputField = InputField(
+    name="email",
+    description="Email",
+    field_type=InputFieldType.Email,
+    validationRules="",
+    styling=defaultStyling
+)
+passwordField: InputField = InputField(
+    name="pass",
+    description="Password",
+    field_type=InputFieldType.Password,
+    validationRules="",
+    styling=defaultStyling
+)
+confirmPasswordField: InputField = InputField(
+    name="cpass",
+    description="Confirm Password",
+    field_type=InputFieldType.Password,
+    validationRules="",
+    styling=defaultStyling
+)
+
+# Fieldset 2
+twitterField: InputField = InputField(
+    name="twitter",
+    description="Twitter",
+    field_type=InputFieldType.Text,
+    validationRules="",
+    styling=defaultStyling
+)
+facebookField: InputField = InputField(
+    name="facebook",
+    description="Facebook",
+    field_type=InputFieldType.Text,
+    validationRules="",
+    styling=defaultStyling
+)
+gplusField: InputField = InputField(
+    name="gplus",
+    description="Google Plus",
+    field_type=InputFieldType.Text,
+    validationRules="",
+    styling=defaultStyling
+)
+
+# Fieldset 3
+firstNameField: InputField = InputField(
+    name="fname",
+    description="First Name",
+    field_type=InputFieldType.Text,
+    validationRules="",
+    styling=defaultStyling
+)
+lastNameField: InputField = InputField(
+    name="lname",
+    description="Last Name",
+    field_type=InputFieldType.Text,
+    validationRules="",
+    styling=defaultStyling
+)
+phoneField: InputField = InputField(
+    name="phone",
+    description="Phone",
+    field_type=InputFieldType.Tel,
+    validationRules="",
+    styling=defaultStyling
+)
+addressField: InputField = InputField(
+    name="address",
+    description="Address",
+    field_type=InputFieldType.Text,
+    validationRules="",
+    styling=defaultStyling
+)
+
+# ---- Buttons extracted from <input type="button"> and <a>Submit</a> ----
+nextButton_step1: Button = Button(
+    name="NextButtonStep1",
+    description="Go to Social Profiles step",
+    label="Next",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Next,
+    targetScreen=None,
+    styling=defaultStyling
+)
+
+previousButton_step2: Button = Button(
+    name="PreviousButtonStep2",
+    description="Go back to Account Setup step",
+    label="Previous",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Back,
+    targetScreen=None,
+    styling=defaultStyling
+)
+nextButton_step2: Button = Button(
+    name="NextButtonStep2",
+    description="Go to Personal Details step",
+    label="Next",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Next,
+    targetScreen=None,
+    styling=defaultStyling
+)
+
+previousButton_step3: Button = Button(
+    name="PreviousButtonStep3",
+    description="Go back to Social Profiles step",
+    label="Previous",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Back,
+    targetScreen=None,
+    styling=defaultStyling
+)
+
+submitButton: Button = Button(
+    name="SubmitButton",
+    description="Submit the multi-step form (implemented as a link in HTML)",
+    label="Submit",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.SubmitForm,
+    targetScreen=None,
+    styling=defaultStyling
+)
+
+# ---- Form extracted from <form id="msform"> ----
+msForm: Form = Form(
+    name="msform",
+    description="Multi-step form for account setup, social profiles, and personal details",
+    inputFields={
+        emailField, passwordField, confirmPasswordField,
+        twitterField, facebookField, gplusField,
+        firstNameField, lastNameField, phoneField, addressField
+    },
+    styling=defaultStyling
+)
+```

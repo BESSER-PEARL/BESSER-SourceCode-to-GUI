@@ -1,0 +1,101 @@
+{
+  "buttons": [
+    {
+      "name": "LoginButton",
+      "label": "Login"
+    },
+    {
+      "name": "EmployeeRegisterButton",
+      "label": "Register"
+    },
+    {
+      "name": "HirerRegisterButton",
+      "label": "Register"
+    }
+  ],
+  "forms": [
+    {
+      "name": "EmployeeRegisterForm"
+    },
+    {
+      "name": "HirerRegisterForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "EmployeeFirstName"
+    },
+    {
+      "name": "EmployeeLastName"
+    },
+    {
+      "name": "EmployeePassword"
+    },
+    {
+      "name": "EmployeeConfirmPassword"
+    },
+    {
+      "name": "EmployeeGenderMale"
+    },
+    {
+      "name": "EmployeeGenderFemale"
+    },
+    {
+      "name": "EmployeeEmail"
+    },
+    {
+      "name": "EmployeePhone"
+    },
+    {
+      "name": "EmployeeSecurityQuestion"
+    },
+    {
+      "name": "EmployeeSecurityAnswer"
+    },
+    {
+      "name": "HirerFirstName"
+    },
+    {
+      "name": "HirerLastName"
+    },
+    {
+      "name": "HirerEmail"
+    },
+    {
+      "name": "HirerPhone"
+    },
+    {
+      "name": "HirerPassword"
+    },
+    {
+      "name": "HirerConfirmPassword"
+    },
+    {
+      "name": "HirerSecurityQuestion"
+    },
+    {
+      "name": "HirerSecurityAnswer"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "EmployeeTab"
+    },
+    {
+      "name": "HirerTab"
+    },
+    {
+      "name": "EmployeeRegisterHeading"
+    },
+    {
+      "name": "HirerRegisterHeading"
+    },
+    {
+      "name": "WelcomeHeading"
+    },
+    {
+      "name": "WelcomeMessage"
+    }
+  ]
+}

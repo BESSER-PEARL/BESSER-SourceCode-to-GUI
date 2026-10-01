@@ -1,0 +1,126 @@
+```python
+##################################
+#      GUI model definition      #
+##################################
+
+####### Styling definitions ################
+
+# Overall email "screen" layout (single-column, centered content typical of email templates)
+EmailScreenLayout = Layout(
+    layout_type=LayoutType.FLEX,
+    orientation="vertical",
+    gap="15px",
+    alignment=JustificationType.CENTER,
+)
+
+# Generic text blocks (header/paragraph/footer) share the same dark background and white text in this template
+BaseEmailColor = Color(background_color="#2D3445", text_color="#FFFFFF", border_color="")
+
+basePosition = Position(
+    p_type=PositionType.RELATIVE,
+    top="",
+    left="",
+    right="",
+    bottom="",
+    alignment="center",
+    z_index=0,
+)
+
+# Header-like blocks
+headerSize = Size(width="100%", height="auto", padding="0", margin="0", font_size="24px", icon_size="", unit_size=UnitSize.PERCENTAGE)
+headerStyling = Styling(size=headerSize, position=basePosition, color=BaseEmailColor)
+
+# Paragraph blocks
+paragraphSize = Size(width="100%", height="auto", padding="0", margin="0", font_size="17px", icon_size="", unit_size=UnitSize.PERCENTAGE)
+paragraphStyling = Styling(size=paragraphSize, position=basePosition, color=BaseEmailColor)
+
+# Footer block (gray text)
+footerColor = Color(background_color="#2D3445", text_color="#828999", border_color="")
+footerSize = Size(width="100%", height="auto", padding="0", margin="0", font_size="13px", icon_size="", unit_size=UnitSize.PERCENTAGE)
+footerStyling = Styling(size=footerSize, position=basePosition, color=footerColor)
+
+# CTA button styling (orange background from bgcolor="#E9703E")
+ctaColor = Color(background_color="#E9703E", text_color="#FFFFFF", border_color="")
+ctaSize = Size(width="240px", height="auto", padding="12px 24px", margin="0", font_size="17px", icon_size="", unit_size=UnitSize.PIXELS)
+ctaPosition = Position(p_type=PositionType.INLINE, top="", left="", right="", bottom="", alignment="center", z_index=10)
+ctaStyling = Styling(size=ctaSize, position=ctaPosition, color=ctaColor)
+
+
+##################################
+# ViewComponent definitions (non-button visual blocks)
+##################################
+
+# Supheader text: "INTRODUCING"
+supHeaderText: ViewComponent = ViewComponent(
+    name="SupHeaderIntroducing",
+    description="Supheader text block displaying 'INTRODUCING'",
+    styling=paragraphStyling,
+)
+
+# Header text: "Responsive HTML email templates"
+mainHeaderText: ViewComponent = ViewComponent(
+    name="MainHeaderResponsiveEmailTemplates",
+    description="Main header text block",
+    styling=headerStyling,
+)
+
+# Paragraph text block
+bodyParagraph: ViewComponent = ViewComponent(
+    name="BodyParagraphMobileFriendly",
+    description="Paragraph describing mobile-friendly email design",
+    styling=paragraphStyling,
+)
+
+# Footer text block (includes subscription settings link)
+footerText: ViewComponent = ViewComponent(
+    name="FooterSubscriptionSettings",
+    description="Footer with subscription settings link and explanatory text",
+    styling=footerStyling,
+)
+
+
+##################################
+# Button definitions
+##################################
+
+# CTA Button: "View on GitHub"
+viewOnGithubButton: Button = Button(
+    name="ViewOnGitHubButton",
+    description="CTA button linking to the email templates repository",
+    label="View on GitHub",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Navigate,
+    targetScreen=None,  # external link; no internal Screen target provided in HTML
+    styling=ctaStyling,
+)
+
+
+##################################
+# Form / InputField / DataList definitions
+##################################
+
+# No <form> or <input> elements in this HTML email
+# No tabular/list data bound to a data source (no DataList candidates)
+
+
+##################################
+# Optional: Screen to contain extracted elements
+##################################
+
+EmailTemplateScreen: Screen = Screen(
+    name="ResponsiveEmailTemplateScreen",
+    description="Single-screen representation of the responsive HTML email template content",
+    x_dpi="x_dpi",
+    y_dpi="y_dpi",
+    screen_size="Medium",
+    is_main_page=True,
+    view_elements={
+        supHeaderText,
+        mainHeaderText,
+        bodyParagraph,
+        viewOnGithubButton,
+        footerText,
+    },
+    layout=EmailScreenLayout,
+)
+```

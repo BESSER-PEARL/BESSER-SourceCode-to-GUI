@@ -1,0 +1,104 @@
+{
+  "buttons": [
+    {
+      "name": "EmailAllVolunteersButton",
+      "label": "Email All Volunteers"
+    },
+    {
+      "name": "ViewEmailListButton",
+      "label": "View List of Email Addresses"
+    },
+    {
+      "name": "SortByNameButton",
+      "label": "Name"
+    },
+    {
+      "name": "SortByPhoneButton",
+      "label": "Phone"
+    },
+    {
+      "name": "SortByEmailButton",
+      "label": "Email"
+    },
+    {
+      "name": "SortByStatusButton",
+      "label": "Status"
+    },
+    {
+      "name": "SortBySubmittedButton",
+      "label": "Submited"
+    },
+    {
+      "name": "EditVolunteerButton"
+    },
+    {
+      "name": "DeleteVolunteerButton"
+    },
+    {
+      "name": "CreateVolunteerButton",
+      "label": "Create"
+    },
+    {
+      "name": "UpdateVolunteerButton",
+      "label": "Save Changes"
+    },
+    {
+      "name": "CloseVolunteerModalButton",
+      "label": "Close"
+    },
+    {
+      "name": "OpenCreateVolunteerModalFloatingButton",
+      "label": "Add"
+    }
+  ],
+  "forms": [
+    {
+      "name": "VolunteerForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "SearchFieldSelector"
+    },
+    {
+      "name": "VolunteerSearchInput"
+    },
+    {
+      "name": "ResultsPerPage"
+    },
+    {
+      "name": "VolunteerName"
+    },
+    {
+      "name": "VolunteerEmail"
+    },
+    {
+      "name": "VolunteerPhone"
+    },
+    {
+      "name": "VolunteerStatus"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "VolunteersTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "VolunteersHeader"
+    },
+    {
+      "name": "EmailListModal"
+    },
+    {
+      "name": "PaginationControlsTop"
+    },
+    {
+      "name": "PaginationControlsBottom"
+    },
+    {
+      "name": "SorterControls"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "buttons": [
+    {
+      "name": "NextButtonStep1",
+      "label": "Next"
+    },
+    {
+      "name": "PreviousButtonStep2",
+      "label": "Previous"
+    },
+    {
+      "name": "NextButtonStep2",
+      "label": "Next"
+    },
+    {
+      "name": "PreviousButtonStep3",
+      "label": "Previous"
+    },
+    {
+      "name": "SubmitButton"
+    }
+  ],
+  "forms": [
+    {
+      "name": "msform"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "email"
+    },
+    {
+      "name": "pass"
+    },
+    {
+      "name": "cpass"
+    },
+    {
+      "name": "twitter"
+    },
+    {
+      "name": "facebook"
+    },
+    {
+      "name": "gplus"
+    },
+    {
+      "name": "fname"
+    },
+    {
+      "name": "lname"
+    },
+    {
+      "name": "phone"
+    },
+    {
+      "name": "address"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "Progressbar"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "Step1Title"
+    },
+    {
+      "name": "Step1Subtitle"
+    },
+    {
+      "name": "Step2Title"
+    },
+    {
+      "name": "Step2Subtitle"
+    },
+    {
+      "name": "Step3Title"
+    },
+    {
+      "name": "Step3Subtitle"
+    }
+  ]
+}

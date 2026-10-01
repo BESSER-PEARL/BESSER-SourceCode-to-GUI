@@ -1,0 +1,16 @@
+{
+  "buttons": [
+    {
+      "name": "ExploreTemplatesButton",
+      "label": "Explore templates"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "ResponsiveEmailTemplatesView"
+    }
+  ]
+}

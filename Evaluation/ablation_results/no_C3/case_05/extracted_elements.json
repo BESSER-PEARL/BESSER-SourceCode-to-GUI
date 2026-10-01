@@ -1,0 +1,28 @@
+{
+  "buttons": [
+    {
+      "name": "NextButtonStep1",
+      "label": "Next"
+    },
+    {
+      "name": "PreviousButtonStep2",
+      "label": "Previous"
+    },
+    {
+      "name": "NextButtonStep2",
+      "label": "Next"
+    },
+    {
+      "name": "PreviousButtonStep3",
+      "label": "Previous"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "MultiStepFormView"
+    }
+  ]
+}

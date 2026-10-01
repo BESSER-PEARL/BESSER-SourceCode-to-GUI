@@ -1,0 +1,33 @@
+{
+  "buttons": [
+    {
+      "name": "ViewOnGitHubButton"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "Background"
+    },
+    {
+      "name": "Wrapper"
+    },
+    {
+      "name": "Supheader"
+    },
+    {
+      "name": "Header"
+    },
+    {
+      "name": "Paragraph"
+    },
+    {
+      "name": "Line"
+    },
+    {
+      "name": "Footer"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "buttons": [
+    {
+      "name": "SubmitButton",
+      "label": "Submit"
+    },
+    {
+      "name": "RulesButton",
+      "label": "Rules"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [
+    {
+      "name": "RulesList"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "AuthenticationView"
+    }
+  ]
+}

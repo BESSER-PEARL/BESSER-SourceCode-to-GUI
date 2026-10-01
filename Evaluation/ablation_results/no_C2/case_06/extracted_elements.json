@@ -1,0 +1,117 @@
+{
+  "buttons": [
+    {
+      "name": "LoginButton",
+      "label": "Login"
+    },
+    {
+      "name": "EmployeeRegisterButton"
+    },
+    {
+      "name": "HirerRegisterButton"
+    }
+  ],
+  "forms": [
+    {
+      "name": "EmployeeRegisterForm"
+    },
+    {
+      "name": "HirerRegisterForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "EmpFirstName"
+    },
+    {
+      "name": "EmpLastName"
+    },
+    {
+      "name": "EmpPassword"
+    },
+    {
+      "name": "EmpConfirmPassword"
+    },
+    {
+      "name": "EmpGenderMale"
+    },
+    {
+      "name": "EmpGenderFemale"
+    },
+    {
+      "name": "EmpEmail"
+    },
+    {
+      "name": "EmpPhone"
+    },
+    {
+      "name": "EmpSecurityQuestion"
+    },
+    {
+      "name": "EmpSecurityAnswer"
+    },
+    {
+      "name": "HirerFirstName"
+    },
+    {
+      "name": "HirerLastName"
+    },
+    {
+      "name": "HirerEmail"
+    },
+    {
+      "name": "HirerPhone"
+    },
+    {
+      "name": "HirerPassword"
+    },
+    {
+      "name": "HirerConfirmPassword"
+    },
+    {
+      "name": "HirerSecurityQuestion"
+    },
+    {
+      "name": "HirerSecurityAnswer"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "UserRagistrationContainer"
+    },
+    {
+      "name": "ContainerRegister"
+    },
+    {
+      "name": "MainRow"
+    },
+    {
+      "name": "RegisterLeft"
+    },
+    {
+      "name": "WelcomeHeading"
+    },
+    {
+      "name": "WelcomeText"
+    },
+    {
+      "name": "RegisterRight"
+    },
+    {
+      "name": "TabContent"
+    },
+    {
+      "name": "EmployeeTabPane"
+    },
+    {
+      "name": "EmployeeHeading"
+    },
+    {
+      "name": "HirerTabPane"
+    },
+    {
+      "name": "HirerHeading"
+    }
+  ]
+}

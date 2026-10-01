@@ -1,0 +1,16 @@
+{
+  "buttons": [
+    {
+      "name": "ViewOnGitHubButton",
+      "label": "View on GitHub"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "ResponsiveHTMLEmailTemplatesView"
+    }
+  ]
+}

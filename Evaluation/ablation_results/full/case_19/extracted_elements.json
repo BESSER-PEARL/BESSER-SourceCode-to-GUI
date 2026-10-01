@@ -1,0 +1,40 @@
+{
+  "buttons": [
+    {
+      "name": "SubmitButton",
+      "label": "Submit"
+    },
+    {
+      "name": "RulesButton",
+      "label": "Rules"
+    }
+  ],
+  "forms": [
+    {
+      "name": "AuthenticationForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "UsernameInput"
+    },
+    {
+      "name": "PasswordInput"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "AuthenticationView"
+    },
+    {
+      "name": "HeaderHintText"
+    },
+    {
+      "name": "AuthenticationTitle"
+    },
+    {
+      "name": "RulesList"
+    }
+  ]
+}

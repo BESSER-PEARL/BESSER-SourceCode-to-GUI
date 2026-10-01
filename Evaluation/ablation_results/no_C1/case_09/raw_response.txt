@@ -1,0 +1,146 @@
+```python
+##################################
+#      GUI model definition      #
+##################################
+
+####### Styling definitions ################
+
+# Generic screen layout (quiz page is essentially a vertical stack of elements)
+QuizScreenLayout = Layout(
+    layout_type=LayoutType.FLEX,
+    orientation="vertical",
+    gap="12px",
+    alignment=JustificationType.CENTER
+)
+
+# Default styling for inputs/buttons in this quiz (HTML provides no explicit CSS here)
+defaultPosition = Position(p_type=PositionType.RELATIVE, top="", left="", right="", bottom="", alignment="", z_index=0)
+defaultSize = Size(width="", height="auto", padding="8px", margin="6px", font_size="14px", icon_size="", unit_size=UnitSize.PIXELS)
+defaultColor = Color(background_color="", text_color="", border_color="")
+defaultStyling = Styling(size=defaultSize, position=defaultPosition, color=defaultColor)
+
+
+####### ViewComponents (non-interactive text/display placeholders) ########
+
+quizTitle: ViewComponent = ViewComponent(
+    name="InteractiveQuizTitle",
+    description="Page title: Interactive Quiz",
+    styling=defaultStyling
+)
+
+questionText: ViewComponent = ViewComponent(
+    name="QuestionText",
+    description="Displays the current question (h2#question)",
+    styling=defaultStyling
+)
+
+resultText: ViewComponent = ViewComponent(
+    name="ResultText",
+    description="Displays feedback/result text (p#result)",
+    styling=defaultStyling
+)
+
+modalContainer: ViewComponent = ViewComponent(
+    name="ExplanationModal",
+    description="Modal container for explanation dialog (div#modal.modal)",
+    styling=defaultStyling
+)
+
+modalContent: ViewComponent = ViewComponent(
+    name="ExplanationModalContent",
+    description="Inner modal content container (div.modal-content)",
+    styling=defaultStyling
+)
+
+closeModalControl: ViewComponent = ViewComponent(
+    name="CloseModalControl",
+    description="Close control for modal (span.close ×)",
+    styling=defaultStyling
+)
+
+explanationText: ViewComponent = ViewComponent(
+    name="ExplanationText",
+    description="Displays the explanation text (p#explanation)",
+    styling=defaultStyling
+)
+
+
+####### InputField ################
+
+answerInput: InputField = InputField(
+    name="AnswerInput",
+    description="Text input for the user's answer (input#answer)",
+    field_type=InputFieldType.Text,
+    validationRules="",
+    styling=defaultStyling
+)
+
+
+####### Form ################
+# (No <form> tag exists in the HTML; create a logical form grouping for the quiz answer submission.)
+quizAnswerForm: Form = Form(
+    name="QuizAnswerForm",
+    description="Logical form grouping the answer input and actions (submit/explain)",
+    inputFields={answerInput},
+    styling=defaultStyling
+)
+
+
+####### Buttons ################
+
+explainButton: Button = Button(
+    name="ExplainAnswerButton",
+    description='Button to show explanation for the current answer (button#explain "Explain Answer")',
+    label="Explain Answer",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Help,
+    styling=defaultStyling
+)
+
+submitButton: Button = Button(
+    name="SubmitAnswerButton",
+    description='Button to submit the answer (button#submit "Submit")',
+    label="Submit",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.SubmitForm,
+    styling=defaultStyling
+)
+
+nextQuestionButton: Button = Button(
+    name="NextQuestionButton",
+    description='Button to proceed to the next question (button#next "Next Question")',
+    label="Next Question",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Next,
+    styling=defaultStyling
+)
+
+
+####### DataList ################
+# No list/table/collection element exists in the given HTML; therefore no DataList is instantiated.
+
+
+####### Optional (if you want a screen/module/gui_model like the examples) #######
+# QuizScreen: Screen = Screen(
+#     name="InteractiveQuizScreen",
+#     description="Interactive quiz screen with answer input, submission, and explanation modal.",
+#     x_dpi="x_dpi",
+#     y_dpi="y_dpi",
+#     screen_size="Medium",
+#     view_elements={
+#         quizTitle,
+#         questionText,
+#         quizAnswerForm,
+#         explainButton,
+#         submitButton,
+#         resultText,
+#         modalContainer,
+#         modalContent,
+#         closeModalControl,
+#         explanationText,
+#         nextQuestionButton
+#     },
+#     is_main_page=True,
+#     layout=QuizScreenLayout
+# )
+```

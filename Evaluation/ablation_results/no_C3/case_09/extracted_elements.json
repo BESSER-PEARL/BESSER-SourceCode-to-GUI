@@ -1,0 +1,28 @@
+{
+  "buttons": [
+    {
+      "name": "ExplainAnswerButton",
+      "label": "Explain Answer"
+    },
+    {
+      "name": "SubmitAnswerButton",
+      "label": "Submit"
+    },
+    {
+      "name": "NextQuestionButton",
+      "label": "Next Question"
+    }
+  ],
+  "forms": [],
+  "input_fields": [
+    {
+      "name": "AnswerInput"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "InteractiveQuizView"
+    }
+  ]
+}

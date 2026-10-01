@@ -1,0 +1,106 @@
+```python
+##################################
+#   Extracted GUI elements only  #
+##################################
+
+# Styling (lightweight defaults since HTML has no explicit inline styles)
+container_layout = Layout(
+    layout_type=LayoutType.FLEX,
+    orientation="vertical",
+    gap="10px",
+    alignment=JustificationType.CENTER,
+)
+
+row_layout = Layout(
+    layout_type=LayoutType.ROW,
+    orientation="horizontal",
+    gap="10px",
+    alignment=JustificationType.SPACE_BETWEEN,
+)
+
+default_position = Position(
+    p_type=PositionType.RELATIVE,
+    top="",
+    left="",
+    right="",
+    bottom="",
+    alignment="",
+    z_index=0,
+)
+
+default_size = Size(
+    width="auto",
+    height="auto",
+    padding="0",
+    margin="0",
+    font_size="",
+    icon_size="",
+    unit_size=UnitSize.AUTO,
+)
+
+default_color = Color(
+    background_color="",
+    text_color="",
+    border_color="",
+)
+
+default_styling = Styling(size=default_size, position=default_position, color=default_color)
+
+# --- ViewComponents extracted from HTML ---
+
+# <h1>Responsive 'Up' Web Design... The Future</h1>
+page_title: ViewComponent = ViewComponent(
+    name="PageTitleH1",
+    description="Heading: Responsive 'Up' Web Design... The Future",
+    styling=default_styling,
+)
+
+# <section class="container"> ... </section>
+container_section: ViewComponent = ViewComponent(
+    name="ContainerSection",
+    description="Section container holding the responsive columns",
+    styling=Styling(size=default_size, position=default_position, color=default_color),
+)
+
+# <div class="row"> ... </div>
+row_container: ViewComponent = ViewComponent(
+    name="RowContainer",
+    description="Row containing multiple column items",
+    styling=Styling(size=default_size, position=default_position, color=default_color),
+)
+
+# <div class="col">Wow! I'm A Column</div> (x6)
+col_1: ViewComponent = ViewComponent(
+    name="Column1",
+    description="Column item with text: Wow! I'm A Column",
+    styling=default_styling,
+)
+col_2: ViewComponent = ViewComponent(
+    name="Column2",
+    description="Column item with text: Wow! I'm A Column",
+    styling=default_styling,
+)
+col_3: ViewComponent = ViewComponent(
+    name="Column3",
+    description="Column item with text: Wow! I'm A Column",
+    styling=default_styling,
+)
+col_4: ViewComponent = ViewComponent(
+    name="Column4",
+    description="Column item with text: Wow! I'm A Column",
+    styling=default_styling,
+)
+col_5: ViewComponent = ViewComponent(
+    name="Column5",
+    description="Column item with text: Wow! I'm A Column",
+    styling=default_styling,
+)
+col_6: ViewComponent = ViewComponent(
+    name="Column6",
+    description="Column item with text: Wow! I'm A Column",
+    styling=default_styling,
+)
+
+# No <button>, <form>, <input>, <select>/<datalist>, <table>/<ul>/<ol> were present in the provided HTML,
+# so no Button, Form, InputField, or DataList objects are instantiated for this snippet.
+```

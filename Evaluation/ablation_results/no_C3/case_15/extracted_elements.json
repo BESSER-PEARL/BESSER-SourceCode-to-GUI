@@ -1,0 +1,100 @@
+{
+  "buttons": [
+    {
+      "name": "AddNewEmployeeButton",
+      "label": "Add New Employee"
+    },
+    {
+      "name": "DeleteEmployeesButton",
+      "label": "Delete"
+    },
+    {
+      "name": "PreviousPageButton",
+      "label": "Previous"
+    },
+    {
+      "name": "Page1Button",
+      "label": "1"
+    },
+    {
+      "name": "Page2Button",
+      "label": "2"
+    },
+    {
+      "name": "Page3Button"
+    },
+    {
+      "name": "Page4Button",
+      "label": "4"
+    },
+    {
+      "name": "Page5Button",
+      "label": "5"
+    },
+    {
+      "name": "NextPageButton",
+      "label": "Next"
+    },
+    {
+      "name": "AddEmployeeCancelButton",
+      "label": "Cancel"
+    },
+    {
+      "name": "AddEmployeeSubmitButton",
+      "label": "Add"
+    },
+    {
+      "name": "EditEmployeeCancelButton",
+      "label": "Cancel"
+    },
+    {
+      "name": "EditEmployeeSubmitButton",
+      "label": "Save"
+    },
+    {
+      "name": "DeleteEmployeeCancelButton",
+      "label": "Cancel"
+    },
+    {
+      "name": "DeleteEmployeeSubmitButton",
+      "label": "Delete"
+    }
+  ],
+  "forms": [],
+  "input_fields": [
+    {
+      "name": "AddEmployeeNameInput"
+    },
+    {
+      "name": "AddEmployeeEmailInput"
+    },
+    {
+      "name": "AddEmployeeAddressInput"
+    },
+    {
+      "name": "AddEmployeePhoneInput"
+    },
+    {
+      "name": "EditEmployeeNameInput"
+    },
+    {
+      "name": "EditEmployeeEmailInput"
+    },
+    {
+      "name": "EditEmployeeAddressInput"
+    },
+    {
+      "name": "EditEmployeePhoneInput"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "EmployeeTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "EmployeeListView"
+    }
+  ]
+}

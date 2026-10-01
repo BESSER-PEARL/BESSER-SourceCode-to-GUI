@@ -1,0 +1,199 @@
+```python
+##################################
+#   Extracted GUI elements only  #
+##################################
+
+# ---- Styling (generic defaults; HTML does not provide explicit CSS here) ----
+default_position = Position(
+    p_type=PositionType.RELATIVE, top="", left="", right="", bottom="", alignment="", z_index=0
+)
+default_size = Size(
+    width="auto", height="auto", padding="0", margin="0", font_size="", icon_size="", unit_size=UnitSize.AUTO
+)
+default_color = Color(background_color="", text_color="", border_color="")
+default_styling = Styling(size=default_size, position=default_position, color=default_color)
+
+
+# ---- ViewComponents / Containers inferred from <div> regions ----
+top_div: ViewComponent = ViewComponent(
+    name="topDiv",
+    description="Top-level container div",
+    styling=default_styling,
+)
+
+search_div: ViewComponent = ViewComponent(
+    name="searchDiv",
+    description="Search area container div",
+    styling=default_styling,
+)
+
+contacts_div: ViewComponent = ViewComponent(
+    name="contacts",
+    description="Container where the contacts table/list is rendered",
+    styling=default_styling,
+)
+
+contacts_list_view: ViewComponent = ViewComponent(
+    name="ContactsListView",
+    description="View for displaying and managing the list of contacts",
+    styling=default_styling,
+)
+
+
+# ---- Form and InputFields ----
+name_input: InputField = InputField(
+    name="name",
+    description="Contact name",
+    field_type=InputFieldType.Text,
+    validationRules="required; placeholder='First Last'",
+    styling=default_styling,
+)
+
+age_input: InputField = InputField(
+    name="age",
+    description="Contact age",
+    field_type=InputFieldType.Number,
+    validationRules="required; min=0; max=120",
+    styling=default_styling,
+)
+
+email_input: InputField = InputField(
+    name="email",
+    description="Contact email",
+    field_type=InputFieldType.Email,
+    validationRules="required",
+    styling=default_styling,
+)
+
+city_input: InputField = InputField(
+    name="city",
+    description="Contact city",
+    field_type=InputFieldType.Text,
+    validationRules="",
+    styling=default_styling,
+)
+
+zip_code_input: InputField = InputField(
+    name="zipCode",
+    description="Contact zip code",
+    field_type=InputFieldType.Number,
+    validationRules="min=0; max=99999; placeholder='00000'",
+    styling=default_styling,
+)
+
+country_input: InputField = InputField(
+    name="country",
+    description="Contact country",
+    field_type=InputFieldType.Text,
+    validationRules="",
+    styling=default_styling,
+)
+
+input_form: Form = Form(
+    name="inputForm",
+    description="Form to add a new contact (onsubmit=formSubmitted())",
+    inputFields={
+        name_input,
+        age_input,
+        email_input,
+        city_input,
+        zip_code_input,
+        country_input,
+    },
+    styling=default_styling,
+)
+
+
+# ---- Search-related InputFields ----
+search_input: InputField = InputField(
+    name="searchInput",
+    description="Search contact by name",
+    field_type=InputFieldType.Search,
+    validationRules="placeholder='First Last'",
+    styling=default_styling,
+)
+
+match_display_input: InputField = InputField(
+    name="match-display",
+    description="Displays match status / filter summary (readonly)",
+    field_type=InputFieldType.Text,
+    validationRules="readonly; placeholder='Displaying all contacts.'",
+    styling=default_styling,
+)
+
+
+# ---- Buttons ----
+add_new_contact_button: Button = Button(
+    name="AddNewContactButton",
+    description="Submit the add-contact form",
+    label="Add new Contact",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.SubmitForm,
+    targetScreen=None,
+    styling=default_styling,
+)
+
+add_random_contacts_button: Button = Button(
+    name="addRandomContact",
+    description="Add two random contacts",
+    label="Add two random Contacts",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Add,
+    targetScreen=None,
+    styling=default_styling,
+)
+
+print_list_button: Button = Button(
+    name="printList",
+    description="Print contacts to console",
+    label="Print contacts to console",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.View,
+    targetScreen=None,
+    styling=default_styling,
+)
+
+empty_button: Button = Button(
+    name="EmptyButton",
+    description="Empty the contacts list (onclick=emptyList())",
+    label="Empty",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Delete,
+    targetScreen=None,
+    styling=default_styling,
+)
+
+save_button: Button = Button(
+    name="SaveButton",
+    description="Save contacts (onclick=cm.save())",
+    label="Save",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Save,
+    targetScreen=None,
+    styling=default_styling,
+)
+
+load_button: Button = Button(
+    name="LoadButton",
+    description="Load contacts (onclick=loadList())",
+    label="Load",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.OpenForm,
+    targetScreen=None,
+    styling=default_styling,
+)
+
+
+# ---- DataList (contacts table placeholder) ----
+contacts_collection_source: Collection = Collection(
+    name="ContactsCollection",
+    type=CollectionSourceType.Table,   # inferred from "click on the corresponding table header" + TABLE placeholder
+)
+
+contacts_data_list: DataList = DataList(
+    name="ContactsDataList",
+    description="List/table of contacts (sortable by header)",
+    list_sources={contacts_collection_source},
+    styling=default_styling,
+)
+```

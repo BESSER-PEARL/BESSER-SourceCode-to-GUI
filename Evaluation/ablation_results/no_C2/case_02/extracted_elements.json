@@ -1,0 +1,72 @@
+{
+  "buttons": [
+    {
+      "name": "ExploreTemplatesButton"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "BackgroundSectionBlue"
+    },
+    {
+      "name": "WrapperTop"
+    },
+    {
+      "name": "Preheader"
+    },
+    {
+      "name": "HeaderText"
+    },
+    {
+      "name": "SubheaderText"
+    },
+    {
+      "name": "ParagraphText"
+    },
+    {
+      "name": "BackgroundSectionWhite"
+    },
+    {
+      "name": "WrapperGrid"
+    },
+    {
+      "name": "FloaterItem1"
+    },
+    {
+      "name": "GridItemTitle1"
+    },
+    {
+      "name": "GridItemText1"
+    },
+    {
+      "name": "FloaterItem2"
+    },
+    {
+      "name": "GridItemTitle2"
+    },
+    {
+      "name": "GridItemText2"
+    },
+    {
+      "name": "FloaterItem3"
+    },
+    {
+      "name": "GridItemTitle3"
+    },
+    {
+      "name": "GridItemText3"
+    },
+    {
+      "name": "FloaterItem4"
+    },
+    {
+      "name": "GridItemTitle4"
+    },
+    {
+      "name": "GridItemText4"
+    }
+  ]
+}

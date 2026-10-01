@@ -1,0 +1,47 @@
+{
+  "buttons": [
+    {
+      "name": "SendTwoFactorCodeButton"
+    },
+    {
+      "name": "SubmitTwoFactorCodeButton"
+    }
+  ],
+  "forms": [
+    {
+      "name": "PhoneForm"
+    },
+    {
+      "name": "TwoFactorForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "TelephoneInput"
+    },
+    {
+      "name": "TwoFactorCodeInput"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "Container"
+    },
+    {
+      "name": "PhoneInputRegion"
+    },
+    {
+      "name": "TwoFactorInputRegion"
+    },
+    {
+      "name": "NotificationBox"
+    },
+    {
+      "name": "SuccessMessage"
+    },
+    {
+      "name": "ErrorMessage"
+    }
+  ]
+}

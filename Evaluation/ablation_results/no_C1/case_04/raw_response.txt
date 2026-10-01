@@ -1,0 +1,133 @@
+```python
+##################################
+#   Extracted GUI elements (HTML) #
+##################################
+# NOTE:
+# - HTML contains: one search button, one search input, one select (treated as InputField),
+#   one image grid (treated as DataList), plus high-level ViewComponents (hero headline, footer).
+# - No explicit <form> tag in the provided HTML, so no Form is instantiated.
+
+############################
+# Styling (best-effort)
+############################
+
+# Page/container layout (Tailwind suggests centered container, vertical stacking)
+MainScreenLayout = Layout(
+    layout_type=LayoutType.FLEX,
+    orientation="vertical",
+    gap="24px",
+    alignment=JustificationType.CENTER,
+    padding="0px",
+    margin="0px",
+    wrap=True
+)
+
+# Shared styling for the search bar row
+SearchBarColor = Color(background_color="#FFFFFF", text_color="#4B5563", border_color="#E5E7EB")  # gray-600 text, gray-200 border
+SearchBarPosition = Position(p_type=PositionType.RELATIVE, top="", left="", right="", bottom="", alignment="", z_index=0)
+SearchBarSize = Size(width="100%", height="auto", padding="12px", margin="0px", font_size="14px", icon_size="", unit_size=UnitSize.PERCENTAGE)
+SearchBarStyling = Styling(size=SearchBarSize, position=SearchBarPosition, color=SearchBarColor)
+
+# Button styling (icon-only search button)
+SearchButtonColor = Color(background_color="transparent", text_color="#4B5563", border_color="transparent")
+SearchButtonPosition = Position(p_type=PositionType.INLINE, top="", left="", right="", bottom="", alignment="", z_index=0)
+SearchButtonSize = Size(width="24px", height="24px", padding="0px", margin="0px", font_size="", icon_size="20px", unit_size=UnitSize.PIXELS)
+SearchButtonStyling = Styling(size=SearchButtonSize, position=SearchButtonPosition, color=SearchButtonColor)
+
+# Input styling
+SearchInputColor = Color(background_color="transparent", text_color="#111827", border_color="transparent")  # gray-900-ish
+SearchInputPosition = Position(p_type=PositionType.INLINE, top="", left="", right="", bottom="", alignment="", z_index=0)
+SearchInputSize = Size(width="100%", height="auto", padding="0px", margin="0px", font_size="14px", icon_size="", unit_size=UnitSize.PERCENTAGE)
+SearchInputStyling = Styling(size=SearchInputSize, position=SearchInputPosition, color=SearchInputColor)
+
+# Select styling (modeled as InputField)
+SelectColor = Color(background_color="transparent", text_color="#111827", border_color="transparent")
+SelectPosition = Position(p_type=PositionType.INLINE, top="", left="", right="", bottom="", alignment="", z_index=0)
+SelectSize = Size(width="auto", height="auto", padding="0px", margin="0px", font_size="14px", icon_size="", unit_size=UnitSize.AUTO)
+SelectStyling = Styling(size=SelectSize, position=SelectPosition, color=SelectColor)
+
+# DataList styling for photo grid
+PhotosGridColor = Color(background_color="#FFFFFF", text_color="#111827", border_color="transparent")
+PhotosGridPosition = Position(p_type=PositionType.RELATIVE, top="", left="", right="", bottom="", alignment="", z_index=0)
+PhotosGridSize = Size(width="100%", height="auto", padding="0px", margin="20px 0px", font_size="", icon_size="", unit_size=UnitSize.PERCENTAGE)
+PhotosGridStyling = Styling(size=PhotosGridSize, position=PhotosGridPosition, color=PhotosGridColor)
+
+
+############################
+# ViewComponents (non-input)
+############################
+
+heroHeadline: ViewComponent = ViewComponent(
+    name="HeroHeadline",
+    description="Hero section headline and supporting text: 'Stunning free images & royalty free stock'.",
+    styling=None
+)
+
+footerComponent: ViewComponent = ViewComponent(
+    name="Footer",
+    description="Footer with 'Made by tailwindcss & alpinejs' links and heart icon.",
+    styling=None
+)
+
+imageGalleryComponent: ViewComponent = ViewComponent(
+    name="ImageGalleryRoot",
+    description="Root component initialized with Alpine.js imageGallery() and fetches Pixabay images.",
+    styling=None
+)
+
+
+############################
+# Inputs (search UI)
+############################
+
+searchQueryInput: InputField = InputField(
+    name="SearchQueryInput",
+    description="Search input for images (x-model='q', type='search', Enter triggers getImages()).",
+    field_type=InputFieldType.Search,
+    validationRules="",
+    styling=SearchInputStyling
+)
+
+imageTypeSelectInput: InputField = InputField(
+    name="ImageTypeSelect",
+    description="Select image type filter (x-model='image_type' with options all/photo/illustration/vector).",
+    field_type=InputFieldType.Text,  # select modeled as a text-like input in this metamodel
+    validationRules="allowed: all|photo|illustration|vector",
+    styling=SelectStyling
+)
+
+
+############################
+# Button (search)
+############################
+
+searchButton: Button = Button(
+    name="SearchButton",
+    description="Icon button to trigger image search (Alpine @click='getImages()').",
+    label="Search",
+    buttonType=ButtonType.IconButton,
+    actionType=ButtonActionType.Search,
+    targetScreen=None,
+    styling=SearchButtonStyling
+)
+
+
+############################
+# DataList (photo results)
+############################
+
+# Images come from a remote API via JS; represent as a collection source.
+pixabayImagesSource: Collection = Collection(
+    name="PixabayImagesCollection",
+    type=CollectionSourceType.Grid
+)
+
+photosGrid: DataList = DataList(
+    name="PhotosGrid",
+    description="Grid of photos rendered by template x-for='image in images' (links to largeImageURL).",
+    list_sources={pixabayImagesSource},
+    styling=PhotosGridStyling
+)
+
+# No <form> element in this HTML, so no Form instance is created.
+```

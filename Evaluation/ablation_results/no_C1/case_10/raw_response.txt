@@ -1,0 +1,181 @@
+```python
+##################################
+#   Extracted GUI elements (TTS) #
+##################################
+
+# ---- Styling (generic defaults; HTML provides little explicit styling) ----
+ScreenLayout = Layout(
+    layout_type=LayoutType.FLEX,
+    orientation="vertical",
+    gap="12px",
+    alignment=JustificationType.CENTER
+)
+
+defaultPosition = Position(
+    p_type=PositionType.RELATIVE,
+    top="", left="", right="", bottom="",
+    alignment="",
+    z_index=0
+)
+
+defaultSize = Size(
+    width="auto",
+    height="auto",
+    padding="0",
+    margin="0",
+    font_size="",
+    icon_size="",
+    unit_size=UnitSize.AUTO
+)
+
+defaultColor = Color(
+    background_color="",
+    text_color="",
+    border_color=""
+)
+
+defaultStyling = Styling(size=defaultSize, position=defaultPosition, color=defaultColor)
+
+buttonSize = Size(width="auto", height="40px", padding="8px", margin="6px", font_size="14px", icon_size="", unit_size=UnitSize.PIXELS)
+buttonColor = Color(background_color="", text_color="", border_color="")
+buttonStyling = Styling(size=buttonSize, position=defaultPosition, color=buttonColor)
+
+inputSize = Size(width="100%", height="auto", padding="8px", margin="6px", font_size="14px", icon_size="", unit_size=UnitSize.PERCENTAGE)
+inputStyling = Styling(size=inputSize, position=defaultPosition, color=defaultColor)
+
+
+# ---- ViewComponents (non-form informational/output components) ----
+ttsHeaderView: ViewComponent = ViewComponent(
+    name="TTSTitleHeader",
+    description="Page title: OpenAI Text To Speech Generation",
+    styling=defaultStyling
+)
+
+introParagraphView: ViewComponent = ViewComponent(
+    name="IntroParagraph",
+    description="Introductory text and instructions (includes API key link and warning)",
+    styling=defaultStyling
+)
+
+updatesParagraphView: ViewComponent = ViewComponent(
+    name="UpdatesParagraph",
+    description="Updates paragraph (id=update)",
+    styling=defaultStyling
+)
+
+promoParagraphView: ViewComponent = ViewComponent(
+    name="PromoParagraph",
+    description="Promotional paragraph with link to ChatGPT-4o JS example",
+    styling=defaultStyling
+)
+
+charCountCostView: ViewComponent = ViewComponent(
+    name="CharCountAndCost",
+    description="Character count and estimated cost display (span#charCount, span#cost)",
+    styling=defaultStyling
+)
+
+successMessageView: ViewComponent = ViewComponent(
+    name="SuccessMessage",
+    description="Success message container (div#successMessage)",
+    styling=defaultStyling
+)
+
+audioPlayerView: ViewComponent = ViewComponent(
+    name="AudioPlayer",
+    description="Audio player to listen to generated voice (audio#audioPlayer, controls, initially disabled)",
+    styling=defaultStyling
+)
+
+errorMessageView: ViewComponent = ViewComponent(
+    name="ErrorMessage",
+    description="Error message container (div#errorMessage)",
+    styling=defaultStyling
+)
+
+
+# ---- InputFields (from input/textarea/select) ----
+openAiKeyField: InputField = InputField(
+    name="OpenAIKeyField",
+    description="Input your OpenAI API key (input#openKey, required)",
+    field_type=InputFieldType.Text,
+    validationRules="required",
+    styling=inputStyling
+)
+
+inputTextField: InputField = InputField(
+    name="InputTextField",
+    description="Input Text (textarea#inputText, required, max 4096 chars noted in placeholder, rows=10)",
+    field_type=InputFieldType.Text,
+    validationRules="required; maxLength≈4096 (per placeholder)",
+    styling=inputStyling
+)
+
+outputFileNameField: InputField = InputField(
+    name="OutputFileNameField",
+    description="Output file name (input#outputFileName, required)",
+    field_type=InputFieldType.Text,
+    validationRules="required",
+    styling=inputStyling
+)
+
+selectVoiceField: InputField = InputField(
+    name="SelectVoiceField",
+    description="Voice selection (select#selectVoice, required; options: echo, alloy, fable, coral, ash, sage, onyx, nova, shimmer)",
+    field_type=InputFieldType.Text,
+    validationRules="required",
+    styling=inputStyling
+)
+
+
+# ---- Form ----
+ttsForm: Form = Form(
+    name="TTSGenerationForm",
+    description="Form to generate TTS (onsubmit=submitForm(event))",
+    inputFields={openAiKeyField, inputTextField, outputFileNameField, selectVoiceField},
+    styling=defaultStyling
+)
+
+
+# ---- Buttons ----
+generateButton: Button = Button(
+    name="GenerateButton",
+    description="Submit form to generate audio",
+    label="Generate",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.SubmitForm,
+    targetScreen=None,
+    styling=buttonStyling
+)
+
+clearButton: Button = Button(
+    name="ClearButton",
+    description="Clear the form (onclick=clearForm())",
+    label="Clear",
+    buttonType=ButtonType.OutlinedButton,
+    actionType=ButtonActionType.Cancel,
+    targetScreen=None,
+    styling=buttonStyling
+)
+
+downloadButton: Button = Button(
+    name="DownloadButton",
+    description="Download generated audio (onclick=downloadButtonClick())",
+    label="Download",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Save,
+    targetScreen=None,
+    styling=buttonStyling
+)
+
+
+# ---- DataList (none found in provided HTML) ----
+# No <ul>/<ol>/<table> or list-backed repeating structure is present in the HTML.
+# Kept as an empty placeholder to satisfy the requested object types.
+emptyDataList: DataList = DataList(
+    name="NoDataListFound",
+    description="No DataList/table/list element detected in the provided HTML",
+    list_sources=set(),
+    styling=defaultStyling
+)
+```

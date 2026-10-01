@@ -1,0 +1,173 @@
+```python
+##################################
+#  GUI elements extracted (HTML) #
+##################################
+
+# Note: No <form> tag exists in the provided HTML.
+# The HTML contains: one <button>, two <input type="radio">, and two <ul> lists.
+# Also, the page can be represented by a single ViewComponent container.
+
+######## Styling (basic/defaults) ########
+
+ScreenLayout = Layout(
+    layout_type=LayoutType.FLEX,
+    orientation="vertical",
+    gap="12px",
+    alignment=JustificationType.CENTER
+)
+
+basePosition = Position(
+    p_type=PositionType.RELATIVE,
+    top="",
+    left="",
+    right="",
+    bottom="",
+    alignment="",
+    z_index=0
+)
+
+baseSize = Size(
+    width="auto",
+    height="auto",
+    padding="0",
+    margin="0",
+    font_size="",
+    icon_size="",
+    unit_size=UnitSize.AUTO
+)
+
+baseColor = Color(
+    background_color="",
+    text_color="",
+    border_color=""
+)
+
+baseStyling = Styling(size=baseSize, position=basePosition, color=baseColor)
+
+
+##################################
+# ViewComponents (containers)     #
+##################################
+
+containerView: ViewComponent = ViewComponent(
+    name="Container",
+    description="Top-level container div#container",
+    styling=baseStyling
+)
+
+sliderView: ViewComponent = ViewComponent(
+    name="Slider",
+    description="Slider container div#slider with nav.slide",
+    styling=baseStyling
+)
+
+productInfoView: ViewComponent = ViewComponent(
+    name="ProductInfo",
+    description="Product info container div#product-info (title, price, tabs, buy section)",
+    styling=baseStyling
+)
+
+tabsWrapperView: ViewComponent = ViewComponent(
+    name="InfoWrapper",
+    description="Tabs wrapper div.info-wrapper",
+    styling=baseStyling
+)
+
+tab1View: ViewComponent = ViewComponent(
+    name="Tab1",
+    description="First tab container (Description)",
+    styling=baseStyling
+)
+
+tab2View: ViewComponent = ViewComponent(
+    name="Tab2",
+    description="Second tab container (Details)",
+    styling=baseStyling
+)
+
+buySectionView: ViewComponent = ViewComponent(
+    name="BuySection",
+    description="Buy section container div.buy",
+    styling=baseStyling
+)
+
+
+##################################
+# InputFields (radio inputs)      #
+##################################
+
+tab1Radio: InputField = InputField(
+    name="Tab1Radio",
+    description="Radio input for Description tab (input#tab-1, name=tab-group-1, checked)",
+    field_type=InputFieldType.Text,   # radio not present in metamodel; mapped to Text
+    validationRules="type=radio; name=tab-group-1; checked=true",
+    styling=baseStyling
+)
+
+tab2Radio: InputField = InputField(
+    name="Tab2Radio",
+    description="Radio input for Details tab (input#tab-2, name=tab-group-1)",
+    field_type=InputFieldType.Text,   # radio not present in metamodel; mapped to Text
+    validationRules="type=radio; name=tab-group-1",
+    styling=baseStyling
+)
+
+
+##################################
+# DataLists (ul lists)            #
+##################################
+
+# No explicit datasource is defined in HTML, so we attach an empty collection datasource placeholder.
+sliderImagesSource: Collection = Collection(
+    name="SliderImagesSource",
+    type=CollectionSourceType.List
+)
+
+detailsItemsSource: Collection = Collection(
+    name="DetailsItemsSource",
+    type=CollectionSourceType.List
+)
+
+sliderImagesList: DataList = DataList(
+    name="SliderImagesList",
+    description="List of slider images inside nav.slide > ul",
+    list_sources={sliderImagesSource},
+    styling=baseStyling
+)
+
+detailsList: DataList = DataList(
+    name="DetailsList",
+    description="Details bullet list inside the Details tab content",
+    list_sources={detailsItemsSource},
+    styling=baseStyling
+)
+
+
+##################################
+# Button                          #
+##################################
+
+addToCartButtonStyling = Styling(
+    size=Size(width="auto", height="40", padding="8px", margin="0", font_size="14", icon_size="", unit_size=UnitSize.PIXELS),
+    position=basePosition,
+    color=Color(background_color="", text_color="", border_color="")
+)
+
+addToChartButton: Button = Button(
+    name="AddToChartButton",
+    description="Button in buy section: 'Add to Chart'",
+    label="Add to Chart",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Add,   # inferred from label intent
+    targetScreen=None,
+    styling=addToCartButtonStyling
+)
+
+
+##################################
+# Form (none in HTML)             #
+##################################
+
+# No <form> element exists; creating no Form instance.
+# If you require a Form for the tab radio-group behavior, it would be artificial and is omitted.
+```

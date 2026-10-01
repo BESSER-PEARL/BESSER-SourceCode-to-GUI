@@ -1,0 +1,149 @@
+{
+  "buttons": [
+    {
+      "name": "AddNewEmployeeButton",
+      "label": "Add New Employee"
+    },
+    {
+      "name": "BulkDeleteButton",
+      "label": "Delete"
+    },
+    {
+      "name": "RowEditButton",
+      "label": "Edit"
+    },
+    {
+      "name": "RowDeleteButton",
+      "label": "Delete"
+    },
+    {
+      "name": "PreviousPageButton",
+      "label": "Previous"
+    },
+    {
+      "name": "Page1Button",
+      "label": "1"
+    },
+    {
+      "name": "Page2Button",
+      "label": "2"
+    },
+    {
+      "name": "Page3Button",
+      "label": "3"
+    },
+    {
+      "name": "Page4Button",
+      "label": "4"
+    },
+    {
+      "name": "Page5Button",
+      "label": "5"
+    },
+    {
+      "name": "NextPageButton",
+      "label": "Next"
+    },
+    {
+      "name": "AddEmployeeCancelButton",
+      "label": "Cancel"
+    },
+    {
+      "name": "AddEmployeeSubmitButton",
+      "label": "Add"
+    },
+    {
+      "name": "AddEmployeeCloseXButton"
+    },
+    {
+      "name": "EditEmployeeCancelButton",
+      "label": "Cancel"
+    },
+    {
+      "name": "EditEmployeeSaveButton",
+      "label": "Save"
+    },
+    {
+      "name": "EditEmployeeCloseXButton"
+    },
+    {
+      "name": "DeleteEmployeeCancelButton",
+      "label": "Cancel"
+    },
+    {
+      "name": "DeleteEmployeeConfirmButton",
+      "label": "Delete"
+    },
+    {
+      "name": "DeleteEmployeeCloseXButton"
+    }
+  ],
+  "forms": [
+    {
+      "name": "AddEmployeeForm"
+    },
+    {
+      "name": "EditEmployeeForm"
+    },
+    {
+      "name": "DeleteEmployeeForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "SelectAllCheckbox"
+    },
+    {
+      "name": "RowCheckbox1"
+    },
+    {
+      "name": "RowCheckbox2"
+    },
+    {
+      "name": "RowCheckbox3"
+    },
+    {
+      "name": "RowCheckbox4"
+    },
+    {
+      "name": "RowCheckbox5"
+    },
+    {
+      "name": "AddEmployeeName"
+    },
+    {
+      "name": "AddEmployeeEmail"
+    },
+    {
+      "name": "AddEmployeeAddress"
+    },
+    {
+      "name": "AddEmployeePhone"
+    },
+    {
+      "name": "EditEmployeeName"
+    },
+    {
+      "name": "EditEmployeeEmail"
+    },
+    {
+      "name": "EditEmployeeAddress"
+    },
+    {
+      "name": "EditEmployeePhone"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "EmployeesTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "ManageEmployeesHeader"
+    },
+    {
+      "name": "EmployeesCRUDView"
+    }
+  ]
+}

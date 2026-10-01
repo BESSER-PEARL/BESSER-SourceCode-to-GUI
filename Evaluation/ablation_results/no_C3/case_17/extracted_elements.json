@@ -1,0 +1,36 @@
+{
+  "buttons": [
+    {
+      "name": "AddNewContactButton",
+      "label": "Add new Contact"
+    },
+    {
+      "name": "AddRandomContactsButton",
+      "label": "Add two random Contacts"
+    },
+    {
+      "name": "PrintContactsButton",
+      "label": "Print contacts to console"
+    },
+    {
+      "name": "EmptyListButton",
+      "label": "Empty"
+    },
+    {
+      "name": "SaveListButton",
+      "label": "Save"
+    },
+    {
+      "name": "LoadListButton",
+      "label": "Load"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "ContactManagerView"
+    }
+  ]
+}

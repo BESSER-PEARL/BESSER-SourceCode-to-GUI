@@ -1,0 +1,47 @@
+{
+  "buttons": [
+    {
+      "name": "send2faButton"
+    },
+    {
+      "name": "submit2faButton"
+    }
+  ],
+  "forms": [
+    {
+      "name": "phoneForm"
+    },
+    {
+      "name": "twoFactorForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "telephone"
+    },
+    {
+      "name": "two-factor-auth"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "container"
+    },
+    {
+      "name": "phone-input"
+    },
+    {
+      "name": "2fa-input"
+    },
+    {
+      "name": "notification-box"
+    },
+    {
+      "name": "success"
+    },
+    {
+      "name": "error"
+    }
+  ]
+}

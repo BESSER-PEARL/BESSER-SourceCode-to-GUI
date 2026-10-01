@@ -1,0 +1,111 @@
+{
+  "buttons": [
+    {
+      "name": "CompanyNameLink",
+      "label": "Company name"
+    },
+    {
+      "name": "SignOutLink",
+      "label": "Sign out"
+    },
+    {
+      "name": "DashboardNavLink",
+      "label": "Dashboard"
+    },
+    {
+      "name": "OrdersNavLink",
+      "label": "Orders"
+    },
+    {
+      "name": "ProductsNavLink",
+      "label": "Products"
+    },
+    {
+      "name": "CustomersNavLink",
+      "label": "Customers"
+    },
+    {
+      "name": "ReportsNavLink",
+      "label": "Reports"
+    },
+    {
+      "name": "IntegrationsNavLink",
+      "label": "Integrations"
+    },
+    {
+      "name": "SavedReportsAddLink"
+    },
+    {
+      "name": "CurrentMonthNavLink",
+      "label": "Current month"
+    },
+    {
+      "name": "LastQuarterNavLink",
+      "label": "Last quarter"
+    },
+    {
+      "name": "SocialEngagementNavLink",
+      "label": "Social engagement"
+    },
+    {
+      "name": "YearEndSaleNavLink",
+      "label": "Year-end sale"
+    },
+    {
+      "name": "OngoingProjectsDownloadButton"
+    },
+    {
+      "name": "RadarChartMenuButton"
+    },
+    {
+      "name": "RadarChartMenuItemAction",
+      "label": "Action"
+    },
+    {
+      "name": "RadarChartMenuItemAnotherAction",
+      "label": "Another action"
+    },
+    {
+      "name": "RadarChartMenuItemSomethingElse",
+      "label": "Something else here"
+    },
+    {
+      "name": "BarChartMenuButton"
+    },
+    {
+      "name": "BarChartMenuItemAction",
+      "label": "Action"
+    },
+    {
+      "name": "BarChartMenuItemAnotherAction",
+      "label": "Another action"
+    },
+    {
+      "name": "BarChartMenuItemSomethingElse",
+      "label": "Something else here"
+    },
+    {
+      "name": "DoughnutChartMenuButton"
+    },
+    {
+      "name": "DoughnutChartMenuItemAction",
+      "label": "Action"
+    },
+    {
+      "name": "DoughnutChartMenuItemAnotherAction",
+      "label": "Another action"
+    },
+    {
+      "name": "DoughnutChartMenuItemSomethingElse",
+      "label": "Something else here"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "DashboardView"
+    }
+  ]
+}

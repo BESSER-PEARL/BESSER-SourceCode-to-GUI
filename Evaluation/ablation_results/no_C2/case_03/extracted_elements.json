@@ -1,0 +1,99 @@
+{
+  "buttons": [
+    {
+      "name": "btn-wiki",
+      "label": "Wiki Search"
+    },
+    {
+      "name": "btn-lucky",
+      "label": "I"
+    },
+    {
+      "name": "result-btn-wiki",
+      "label": "Wiki Search"
+    }
+  ],
+  "forms": [
+    {
+      "name": "wiki-search-form"
+    },
+    {
+      "name": "result-wiki-search-form"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "wiki-search-input"
+    },
+    {
+      "name": "result-wiki-search-form-input"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "display-results"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "main"
+    },
+    {
+      "name": "home"
+    },
+    {
+      "name": "home_container"
+    },
+    {
+      "name": "home_row_1"
+    },
+    {
+      "name": "home_row_1_col"
+    },
+    {
+      "name": "headline"
+    },
+    {
+      "name": "home_row_2"
+    },
+    {
+      "name": "home_row_2_col"
+    },
+    {
+      "name": "attribution"
+    },
+    {
+      "name": "attribution_text"
+    },
+    {
+      "name": "result"
+    },
+    {
+      "name": "header"
+    },
+    {
+      "name": "result_header_container"
+    },
+    {
+      "name": "result_header_row"
+    },
+    {
+      "name": "result_header_left"
+    },
+    {
+      "name": "result_header_right"
+    },
+    {
+      "name": "result_title"
+    },
+    {
+      "name": "result_container"
+    },
+    {
+      "name": "search-results"
+    },
+    {
+      "name": "search-results_col"
+    }
+  ]
+}

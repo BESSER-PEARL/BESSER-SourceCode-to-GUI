@@ -1,0 +1,387 @@
+```python
+##################################
+# GUI elements extracted from HTML
+##################################
+
+# Assumes the GUI metamodel classes/enums are available in scope:
+# Button, Form, InputField, DataList, ViewComponent
+# plus Styling, Size, Position, Color, Layout and enums (LayoutType, PositionType, UnitSize, etc.)
+# DataSourceElement, Collection, CollectionSourceType
+
+############################
+# Styling (light defaults) #
+############################
+
+pageLayout = Layout(layout_type=LayoutType.FLEX, orientation="vertical", gap="10px", alignment=JustificationType.CENTER)
+
+defaultPos = Position(p_type=PositionType.RELATIVE, top="", left="", right="", bottom="", alignment="", z_index=0)
+defaultSize = Size(width="auto", height="auto", padding="0", margin="0", font_size="", icon_size="", unit_size=UnitSize.PIXELS)
+defaultColor = Color(background_color="", text_color="", border_color="")
+defaultStyling = Styling(size=defaultSize, position=defaultPos, color=defaultColor)
+
+modalSize = Size(width="auto", height="auto", padding="10px", margin="0", font_size="", icon_size="", unit_size=UnitSize.PIXELS)
+modalStyling = Styling(size=modalSize, position=defaultPos, color=defaultColor)
+
+tableSize = Size(width="100%", height="auto", padding="0", margin="0", font_size="", icon_size="", unit_size=UnitSize.PERCENTAGE)
+tableStyling = Styling(size=tableSize, position=defaultPos, color=defaultColor)
+
+########################
+# ViewComponents (UI)  #
+########################
+
+# Page title/header area
+manageEmployeesHeader: ViewComponent = ViewComponent(
+    name="ManageEmployeesHeader",
+    description="Header title 'Manage Employees'",
+    styling=defaultStyling
+)
+
+# Action buttons (top-right)
+addNewEmployeeButton: Button = Button(
+    name="AddNewEmployeeButton",
+    description="Opens modal to add a new employee",
+    label="Add New Employee",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.OpenForm,
+    styling=defaultStyling
+)
+
+bulkDeleteButton: Button = Button(
+    name="BulkDeleteButton",
+    description="Opens modal to delete selected employees",
+    label="Delete",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Delete,
+    styling=defaultStyling
+)
+
+# Table / list of employees
+employeesDataSource: Collection = Collection(
+    name="EmployeesTableSource",
+    type=CollectionSourceType.Table
+)
+
+employeesTable: DataList = DataList(
+    name="EmployeesTable",
+    description="Employee table with columns Name, Email, Address, Phone and row actions",
+    list_sources={employeesDataSource},
+    styling=tableStyling
+)
+
+# Select-all checkbox (modeled as an input field)
+selectAllCheckbox: InputField = InputField(
+    name="SelectAllCheckbox",
+    description="Select all rows checkbox in table header",
+    field_type=InputFieldType.Text,   # metamodel has no Checkbox type; mapped to Text
+    validationRules="",
+    styling=defaultStyling
+)
+
+# Row selection checkboxes (modeled as input fields)
+rowCheckbox1: InputField = InputField(
+    name="RowCheckbox1",
+    description="Select row checkbox (checkbox1)",
+    field_type=InputFieldType.Text,
+    validationRules="",
+    styling=defaultStyling
+)
+rowCheckbox2: InputField = InputField(
+    name="RowCheckbox2",
+    description="Select row checkbox (checkbox2)",
+    field_type=InputFieldType.Text,
+    validationRules="",
+    styling=defaultStyling
+)
+rowCheckbox3: InputField = InputField(
+    name="RowCheckbox3",
+    description="Select row checkbox (checkbox3)",
+    field_type=InputFieldType.Text,
+    validationRules="",
+    styling=defaultStyling
+)
+rowCheckbox4: InputField = InputField(
+    name="RowCheckbox4",
+    description="Select row checkbox (checkbox4)",
+    field_type=InputFieldType.Text,
+    validationRules="",
+    styling=defaultStyling
+)
+rowCheckbox5: InputField = InputField(
+    name="RowCheckbox5",
+    description="Select row checkbox (checkbox5)",
+    field_type=InputFieldType.Text,
+    validationRules="",
+    styling=defaultStyling
+)
+
+# Per-row action buttons (appear for each row; modeled once as reusable buttons)
+rowEditButton: Button = Button(
+    name="RowEditButton",
+    description="Opens modal to edit an employee",
+    label="Edit",
+    buttonType=ButtonType.IconButton,
+    actionType=ButtonActionType.Edit,
+    styling=defaultStyling
+)
+
+rowDeleteButton: Button = Button(
+    name="RowDeleteButton",
+    description="Opens modal to delete an employee",
+    label="Delete",
+    buttonType=ButtonType.IconButton,
+    actionType=ButtonActionType.Delete,
+    styling=defaultStyling
+)
+
+# Pagination controls (anchors; modeled as buttons)
+previousPageButton: Button = Button(
+    name="PreviousPageButton",
+    description="Go to previous page",
+    label="Previous",
+    buttonType=ButtonType.TextButton,
+    actionType=ButtonActionType.Back,
+    styling=defaultStyling
+)
+
+page1Button: Button = Button(
+    name="Page1Button",
+    description="Go to page 1",
+    label="1",
+    buttonType=ButtonType.TextButton,
+    actionType=ButtonActionType.Navigate,
+    styling=defaultStyling
+)
+
+page2Button: Button = Button(
+    name="Page2Button",
+    description="Go to page 2",
+    label="2",
+    buttonType=ButtonType.TextButton,
+    actionType=ButtonActionType.Navigate,
+    styling=defaultStyling
+)
+
+page3Button: Button = Button(
+    name="Page3Button",
+    description="Go to page 3",
+    label="3",
+    buttonType=ButtonType.TextButton,
+    actionType=ButtonActionType.Navigate,
+    styling=defaultStyling
+)
+
+page4Button: Button = Button(
+    name="Page4Button",
+    description="Go to page 4",
+    label="4",
+    buttonType=ButtonType.TextButton,
+    actionType=ButtonActionType.Navigate,
+    styling=defaultStyling
+)
+
+page5Button: Button = Button(
+    name="Page5Button",
+    description="Go to page 5",
+    label="5",
+    buttonType=ButtonType.TextButton,
+    actionType=ButtonActionType.Navigate,
+    styling=defaultStyling
+)
+
+nextPageButton: Button = Button(
+    name="NextPageButton",
+    description="Go to next page",
+    label="Next",
+    buttonType=ButtonType.TextButton,
+    actionType=ButtonActionType.Next,
+    styling=defaultStyling
+)
+
+############################
+# Add Employee Modal / Form #
+############################
+
+addEmployeeNameField: InputField = InputField(
+    name="AddEmployeeName",
+    description="Employee name (required)",
+    field_type=InputFieldType.Text,
+    validationRules="required",
+    styling=defaultStyling
+)
+
+addEmployeeEmailField: InputField = InputField(
+    name="AddEmployeeEmail",
+    description="Employee email (required)",
+    field_type=InputFieldType.Email,
+    validationRules="required",
+    styling=defaultStyling
+)
+
+addEmployeeAddressField: InputField = InputField(
+    name="AddEmployeeAddress",
+    description="Employee address (required) (textarea mapped to Text)",
+    field_type=InputFieldType.Text,
+    validationRules="required",
+    styling=defaultStyling
+)
+
+addEmployeePhoneField: InputField = InputField(
+    name="AddEmployeePhone",
+    description="Employee phone (required)",
+    field_type=InputFieldType.Text,
+    validationRules="required",
+    styling=defaultStyling
+)
+
+addEmployeeCancelButton: Button = Button(
+    name="AddEmployeeCancelButton",
+    description="Cancel add employee and close modal",
+    label="Cancel",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Cancel,
+    styling=defaultStyling
+)
+
+addEmployeeSubmitButton: Button = Button(
+    name="AddEmployeeSubmitButton",
+    description="Submit add employee form",
+    label="Add",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.SubmitForm,
+    styling=defaultStyling
+)
+
+addEmployeeCloseXButton: Button = Button(
+    name="AddEmployeeCloseXButton",
+    description="Close add employee modal (X button)",
+    label="×",
+    buttonType=ButtonType.IconButton,
+    actionType=ButtonActionType.Cancel,
+    styling=defaultStyling
+)
+
+addEmployeeForm: Form = Form(
+    name="AddEmployeeForm",
+    description="Form in Add Employee modal",
+    inputFields={addEmployeeNameField, addEmployeeEmailField, addEmployeeAddressField, addEmployeePhoneField},
+    styling=modalStyling
+)
+
+#############################
+# Edit Employee Modal / Form #
+#############################
+
+editEmployeeNameField: InputField = InputField(
+    name="EditEmployeeName",
+    description="Employee name (required)",
+    field_type=InputFieldType.Text,
+    validationRules="required",
+    styling=defaultStyling
+)
+
+editEmployeeEmailField: InputField = InputField(
+    name="EditEmployeeEmail",
+    description="Employee email (required)",
+    field_type=InputFieldType.Email,
+    validationRules="required",
+    styling=defaultStyling
+)
+
+editEmployeeAddressField: InputField = InputField(
+    name="EditEmployeeAddress",
+    description="Employee address (required) (textarea mapped to Text)",
+    field_type=InputFieldType.Text,
+    validationRules="required",
+    styling=defaultStyling
+)
+
+editEmployeePhoneField: InputField = InputField(
+    name="EditEmployeePhone",
+    description="Employee phone (required)",
+    field_type=InputFieldType.Text,
+    validationRules="required",
+    styling=defaultStyling
+)
+
+editEmployeeCancelButton: Button = Button(
+    name="EditEmployeeCancelButton",
+    description="Cancel edit employee and close modal",
+    label="Cancel",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Cancel,
+    styling=defaultStyling
+)
+
+editEmployeeSaveButton: Button = Button(
+    name="EditEmployeeSaveButton",
+    description="Submit edit employee form",
+    label="Save",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Save,
+    styling=defaultStyling
+)
+
+editEmployeeCloseXButton: Button = Button(
+    name="EditEmployeeCloseXButton",
+    description="Close edit employee modal (X button)",
+    label="×",
+    buttonType=ButtonType.IconButton,
+    actionType=ButtonActionType.Cancel,
+    styling=defaultStyling
+)
+
+editEmployeeForm: Form = Form(
+    name="EditEmployeeForm",
+    description="Form in Edit Employee modal",
+    inputFields={editEmployeeNameField, editEmployeeEmailField, editEmployeeAddressField, editEmployeePhoneField},
+    styling=modalStyling
+)
+
+###############################
+# Delete Employee Modal / Form #
+###############################
+
+deleteEmployeeCancelButton: Button = Button(
+    name="DeleteEmployeeCancelButton",
+    description="Cancel delete and close modal",
+    label="Cancel",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Cancel,
+    styling=defaultStyling
+)
+
+deleteEmployeeConfirmButton: Button = Button(
+    name="DeleteEmployeeConfirmButton",
+    description="Confirm deletion",
+    label="Delete",
+    buttonType=ButtonType.RaisedButton,
+    actionType=ButtonActionType.Confirm,
+    styling=defaultStyling
+)
+
+deleteEmployeeCloseXButton: Button = Button(
+    name="DeleteEmployeeCloseXButton",
+    description="Close delete employee modal (X button)",
+    label="×",
+    buttonType=ButtonType.IconButton,
+    actionType=ButtonActionType.Cancel,
+    styling=defaultStyling
+)
+
+deleteEmployeeForm: Form = Form(
+    name="DeleteEmployeeForm",
+    description="Form in Delete Employee modal (confirmation)",
+    inputFields=set(),
+    styling=modalStyling
+)
+
+############################
+# Higher-level ViewComponent #
+############################
+
+employeesCRUDView: ViewComponent = ViewComponent(
+    name="EmployeesCRUDView",
+    description="CRUD table for managing employees with add/edit/delete modals and pagination",
+    styling=defaultStyling
+)
+```

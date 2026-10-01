@@ -1,0 +1,75 @@
+{
+  "buttons": [
+    {
+      "name": "AddNewContactButton",
+      "label": "Add new Contact"
+    },
+    {
+      "name": "addRandomContact",
+      "label": "Add two random Contacts"
+    },
+    {
+      "name": "printList",
+      "label": "Print contacts to console"
+    },
+    {
+      "name": "EmptyButton"
+    },
+    {
+      "name": "SaveButton"
+    },
+    {
+      "name": "LoadButton"
+    }
+  ],
+  "forms": [
+    {
+      "name": "inputForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "name"
+    },
+    {
+      "name": "age"
+    },
+    {
+      "name": "email"
+    },
+    {
+      "name": "city"
+    },
+    {
+      "name": "zipCode"
+    },
+    {
+      "name": "country"
+    },
+    {
+      "name": "searchInput"
+    },
+    {
+      "name": "match-display"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "ContactsDataList"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "topDiv"
+    },
+    {
+      "name": "searchDiv"
+    },
+    {
+      "name": "contacts"
+    },
+    {
+      "name": "ContactsListView"
+    }
+  ]
+}

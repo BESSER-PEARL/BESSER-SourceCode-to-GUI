@@ -1,0 +1,62 @@
+{
+  "buttons": [
+    {
+      "name": "EmailAllButton"
+    },
+    {
+      "name": "ViewEmailListButton"
+    },
+    {
+      "name": "OrderByNameButton",
+      "label": "Name"
+    },
+    {
+      "name": "OrderByPhoneButton",
+      "label": "Phone"
+    },
+    {
+      "name": "OrderByEmailButton",
+      "label": "Email"
+    },
+    {
+      "name": "OrderByStatusButton",
+      "label": "Status"
+    },
+    {
+      "name": "OrderBySubmittedButton",
+      "label": "Submited"
+    },
+    {
+      "name": "EditVolunteerButton",
+      "label": "Edit"
+    },
+    {
+      "name": "DeleteVolunteerButton",
+      "label": "Delete"
+    },
+    {
+      "name": "CreateVolunteerButton",
+      "label": "Create"
+    },
+    {
+      "name": "UpdateVolunteerButton",
+      "label": "Save Changes"
+    },
+    {
+      "name": "CloseVolunteerModalButton",
+      "label": "Close"
+    },
+    {
+      "name": "FloatingAddVolunteerButton",
+      "label": "add"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "VolunteersListView"
+    }
+  ]
+}

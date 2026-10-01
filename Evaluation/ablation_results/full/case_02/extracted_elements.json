@@ -1,0 +1,47 @@
+{
+  "buttons": [
+    {
+      "name": "ExploreTemplatesButton",
+      "label": "Explore templates"
+    },
+    {
+      "name": "GeneralTemplateLink",
+      "label": "Gerenal template"
+    },
+    {
+      "name": "TransactionalTemplateLink",
+      "label": "Transactional template"
+    },
+    {
+      "name": "PromotionalTemplateLink",
+      "label": "Promotional template"
+    },
+    {
+      "name": "ExplorationalTemplateLink",
+      "label": "Explorational template"
+    }
+  ],
+  "forms": [],
+  "input_fields": [],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "ResponsiveEmailTemplateView"
+    },
+    {
+      "name": "TopBlueSection"
+    },
+    {
+      "name": "WhiteContentSection"
+    },
+    {
+      "name": "HeaderText"
+    },
+    {
+      "name": "SubHeaderText"
+    },
+    {
+      "name": "IntroParagraph"
+    }
+  ]
+}

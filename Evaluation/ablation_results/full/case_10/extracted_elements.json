@@ -1,0 +1,74 @@
+{
+  "buttons": [
+    {
+      "name": "GenerateButton",
+      "label": "Generate"
+    },
+    {
+      "name": "ClearButton",
+      "label": "Clear"
+    },
+    {
+      "name": "DownloadButton",
+      "label": "Download"
+    }
+  ],
+  "forms": [
+    {
+      "name": "TTSGenerationForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "OpenKeyInput"
+    },
+    {
+      "name": "InputTextArea"
+    },
+    {
+      "name": "OutputFileNameInput"
+    },
+    {
+      "name": "SelectVoiceSelect"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "OpenAITextToSpeechGenerationView"
+    },
+    {
+      "name": "MainContainer"
+    },
+    {
+      "name": "PageTitle"
+    },
+    {
+      "name": "IntroParagraph"
+    },
+    {
+      "name": "UpdatesParagraph"
+    },
+    {
+      "name": "NewFeatureParagraph"
+    },
+    {
+      "name": "InstructionParagraph"
+    },
+    {
+      "name": "CharCountInfo"
+    },
+    {
+      "name": "SuccessMessage"
+    },
+    {
+      "name": "AudioPlayer"
+    },
+    {
+      "name": "AudioParagraph"
+    },
+    {
+      "name": "ErrorMessage"
+    }
+  ]
+}

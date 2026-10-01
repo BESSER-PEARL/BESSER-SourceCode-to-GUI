@@ -1,0 +1,150 @@
+{
+  "buttons": [
+    {
+      "name": "CompanyNameButton",
+      "label": "Company name"
+    },
+    {
+      "name": "SignOutButton",
+      "label": "Sign out"
+    },
+    {
+      "name": "DashboardNavButton",
+      "label": "Dashboard"
+    },
+    {
+      "name": "OrdersNavButton",
+      "label": "Orders"
+    },
+    {
+      "name": "ProductsNavButton",
+      "label": "Products"
+    },
+    {
+      "name": "CustomersNavButton",
+      "label": "Customers"
+    },
+    {
+      "name": "ReportsNavButton",
+      "label": "Reports"
+    },
+    {
+      "name": "IntegrationsNavButton",
+      "label": "Integrations"
+    },
+    {
+      "name": "SavedReportsAddButton"
+    },
+    {
+      "name": "CurrentMonthReportButton",
+      "label": "Current month"
+    },
+    {
+      "name": "LastQuarterReportButton",
+      "label": "Last quarter"
+    },
+    {
+      "name": "SocialEngagementReportButton",
+      "label": "Social engagement"
+    },
+    {
+      "name": "YearEndSaleReportButton",
+      "label": "Year-end sale"
+    },
+    {
+      "name": "RadarChartMenuButton",
+      "label": "More"
+    },
+    {
+      "name": "BarChartMenuButton",
+      "label": "More"
+    },
+    {
+      "name": "DoughnutChartMenuButton",
+      "label": "More"
+    },
+    {
+      "name": "RadarDropdownActionButton",
+      "label": "Action"
+    },
+    {
+      "name": "RadarDropdownAnotherActionButton",
+      "label": "Another action"
+    },
+    {
+      "name": "RadarDropdownSomethingElseButton",
+      "label": "Something else here"
+    },
+    {
+      "name": "BarDropdownActionButton",
+      "label": "Action"
+    },
+    {
+      "name": "BarDropdownAnotherActionButton",
+      "label": "Another action"
+    },
+    {
+      "name": "BarDropdownSomethingElseButton",
+      "label": "Something else here"
+    },
+    {
+      "name": "DoughnutDropdownActionButton",
+      "label": "Action"
+    },
+    {
+      "name": "DoughnutDropdownAnotherActionButton",
+      "label": "Another action"
+    },
+    {
+      "name": "DoughnutDropdownSomethingElseButton",
+      "label": "Something else here"
+    }
+  ],
+  "forms": [
+    {
+      "name": "ProjectActionsForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "SearchInput"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "OngoingProjectsTable"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "TopNavbar"
+    },
+    {
+      "name": "SidebarNavigation"
+    },
+    {
+      "name": "AllProjectsCard"
+    },
+    {
+      "name": "TeamMembersCard"
+    },
+    {
+      "name": "TotalBudgetCard"
+    },
+    {
+      "name": "NewCustomersCard"
+    },
+    {
+      "name": "OngoingProjectsSection"
+    },
+    {
+      "name": "RadarChartComponent"
+    },
+    {
+      "name": "BarChartComponent"
+    },
+    {
+      "name": "DoughnutChartComponent"
+    }
+  ]
+}

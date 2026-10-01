@@ -1,0 +1,34 @@
+{
+  "buttons": [
+    {
+      "name": "SearchIconButton"
+    },
+    {
+      "name": "TailwindcssLink",
+      "label": "tailwindcss"
+    },
+    {
+      "name": "AlpinejsLink",
+      "label": "alpinejs"
+    }
+  ],
+  "forms": [],
+  "input_fields": [
+    {
+      "name": "ImageSearchField"
+    },
+    {
+      "name": "ImageTypeSelect"
+    }
+  ],
+  "data_lists": [
+    {
+      "name": "PhotosGrid"
+    }
+  ],
+  "view_components": [
+    {
+      "name": "ImageGalleryView"
+    }
+  ]
+}

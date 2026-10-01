@@ -1,0 +1,59 @@
+{
+  "buttons": [
+    {
+      "name": "AddToChartButton",
+      "label": "Add to Chart"
+    }
+  ],
+  "forms": [],
+  "input_fields": [
+    {
+      "name": "DescriptionRadio"
+    },
+    {
+      "name": "DetailsRadio"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "ProductDetailView"
+    },
+    {
+      "name": "Container"
+    },
+    {
+      "name": "Slider"
+    },
+    {
+      "name": "ProductInfo"
+    },
+    {
+      "name": "ProductTitle"
+    },
+    {
+      "name": "ProductPrice"
+    },
+    {
+      "name": "InfoWrapper"
+    },
+    {
+      "name": "DescriptionTab"
+    },
+    {
+      "name": "DescriptionLabel"
+    },
+    {
+      "name": "DescriptionContent"
+    },
+    {
+      "name": "DetailsTab"
+    },
+    {
+      "name": "DetailsLabel"
+    },
+    {
+      "name": "BuyContainer"
+    }
+  ]
+}

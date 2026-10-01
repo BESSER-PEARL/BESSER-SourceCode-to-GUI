@@ -1,0 +1,71 @@
+{
+  "buttons": [
+    {
+      "name": "githubLink"
+    },
+    {
+      "name": "addNewContact"
+    },
+    {
+      "name": "addRandomContact"
+    },
+    {
+      "name": "printList"
+    },
+    {
+      "name": "emptyList",
+      "label": "Empty"
+    },
+    {
+      "name": "saveList",
+      "label": "Save"
+    },
+    {
+      "name": "loadList",
+      "label": "Load"
+    }
+  ],
+  "forms": [
+    {
+      "name": "inputForm"
+    }
+  ],
+  "input_fields": [
+    {
+      "name": "name"
+    },
+    {
+      "name": "age"
+    },
+    {
+      "name": "email"
+    },
+    {
+      "name": "city"
+    },
+    {
+      "name": "zipCode"
+    },
+    {
+      "name": "country"
+    },
+    {
+      "name": "searchInput"
+    },
+    {
+      "name": "match-display"
+    }
+  ],
+  "data_lists": [],
+  "view_components": [
+    {
+      "name": "topDiv"
+    },
+    {
+      "name": "searchDiv"
+    },
+    {
+      "name": "contacts"
+    }
+  ]
+}
