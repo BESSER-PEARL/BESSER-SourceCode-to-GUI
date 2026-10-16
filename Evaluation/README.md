@@ -57,6 +57,7 @@ Evaluation/
 │   ├── no_C3/
 │   ├── ablation_results.csv
 │   └── ablation_summary.csv
+|── Baseline Comparison/                  # RQ4: comparison with rule-based and LLM baselines
 ├── stability_results/                    # RQ5: extraction stability across 3 runs
 │   ├── case_NN/
 │   ├── per_run_results.csv
