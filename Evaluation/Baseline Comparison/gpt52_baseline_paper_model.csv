@@ -1,0 +1,20 @@
+case_id,category,model_id,model_label,model_type,element_coverage,id_match_rate,label_match_rate,overall_score
+case_01,Category#1_Social Apps,gpt-5.2,GPT-5.2 (paper baseline),closed-flagship,1.0,1.0,1.0,1.0
+case_02,Category#1_Social Apps,gpt-5.2,GPT-5.2 (paper baseline),closed-flagship,1.0,1.0,1.0,1.0
+case_03,Category#2_Search Engines,gpt-5.2,GPT-5.2 (paper baseline),closed-flagship,1.0,1.0,1.0,1.0
+case_04,Category#2_Search Engines,gpt-5.2,GPT-5.2 (paper baseline),closed-flagship,1.0,1.0,1.0,1.0
+case_05,Category#3_Registration,gpt-5.2,GPT-5.2 (paper baseline),closed-flagship,1.0,1.0,1.0,1.0
+case_06,Category#3_Registration,gpt-5.2,GPT-5.2 (paper baseline),closed-flagship,1.0,1.0,1.0,1.0
+case_07,Category#4_Inventory,gpt-5.2,GPT-5.2 (paper baseline),closed-flagship,1.0,1.0,1.0,1.0
+case_08,Category#4_Inventory,gpt-5.2,GPT-5.2 (paper baseline),closed-flagship,1.0,1.0,1.0,1.0
+case_09,Category#5_Educational,gpt-5.2,GPT-5.2 (paper baseline),closed-flagship,1.0,1.0,1.0,1.0
+case_10,Category#5_Educational,gpt-5.2,GPT-5.2 (paper baseline),closed-flagship,1.0,1.0,1.0,1.0
+case_11,Category#6_E-Commerce,gpt-5.2,GPT-5.2 (paper baseline),closed-flagship,1.0,1.0,1.0,1.0
+case_12,Category#6_E-Commerce,gpt-5.2,GPT-5.2 (paper baseline),closed-flagship,1.0,1.0,1.0,1.0
+case_14,Category#7_Dashboard,gpt-5.2,GPT-5.2 (paper baseline),closed-flagship,1.0,1.0,1.0,1.0
+case_15,Category#8_CRUD Applications,gpt-5.2,GPT-5.2 (paper baseline),closed-flagship,1.0,1.0,1.0,1.0
+case_16,Category#8_CRUD Applications,gpt-5.2,GPT-5.2 (paper baseline),closed-flagship,1.0,1.0,1.0,1.0
+case_17,Category#9_Contact Manager,gpt-5.2,GPT-5.2 (paper baseline),closed-flagship,1.0,1.0,1.0,1.0
+case_18,Category#9_Contact Manager,gpt-5.2,GPT-5.2 (paper baseline),closed-flagship,1.0,1.0,1.0,1.0
+case_19,Category#10_Authentication,gpt-5.2,GPT-5.2 (paper baseline),closed-flagship,1.0,1.0,1.0,1.0
+case_20,Category#10_Authentication,gpt-5.2,GPT-5.2 (paper baseline),closed-flagship,1.0,1.0,1.0,1.0
